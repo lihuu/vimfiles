@@ -8,14 +8,15 @@ set shiftwidth=4
 set expandtab
 set background=dark
 set cursorline
-"set termguicolors
+set termguicolors
 "colorscheme torte
 colorscheme molokai
 "set fdm=indent
 "set sourcecode folding
 set fdm=marker
 "set guifont=Consolas:h14
-set guifont=DejaVu\ Sans\ Mono:h13
+"set guifont=DejaVu\ Sans\ Mono:h13
+set guifont=Fira\ Code:h13:i
 let $LANG='en'
 set langmenu='en'
 source $VIMRUNTIME/vimrc_example.vim
@@ -120,6 +121,10 @@ filetype plugin indent on
 
 "nerdtree 按键映射
 nmap <F5> :NERDTreeToggle<cr>
+"+---------------------------------------------------------
+"|自定义按键
+"|
+"+---------------------------------------------------------
 
 imap <c-d> <ESC>ddi
 
@@ -136,6 +141,4 @@ au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 "vim-markdown configuration
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
-
-
 
