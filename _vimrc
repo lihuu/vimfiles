@@ -119,15 +119,25 @@ filetype plugin indent on
 
 
 
-"nerdtree 按键映射
-nmap <F5> :NERDTreeToggle<cr>
+"
 "+---------------------------------------------------------
 "|自定义按键
 "|
 "+---------------------------------------------------------
+"nerdtree 按键映射
+noremap <F5> :NERDTreeToggle<cr>
+"insert 模式中删除一行
+inoremap <c-d> <ESC>ddi
+inoremap <c-u>  <ESC>~i
 
-imap <c-d> <ESC>ddi
+"打开vim配置文件的映射
+nnoremap <leader>ev :vsplit $MYVIMRC
+"配置文件生效的映射
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
+
+
+"
 "Extral Configuration
 let g:jsx_ext_required=0
 
