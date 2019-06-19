@@ -30,6 +30,7 @@ set nobackup
 set noundofile
 
 
+
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
@@ -79,12 +80,10 @@ Plugin 'gtags.vim'
 Plugin 'gtk-vim-syntax'
 Plugin 'jQuery'
 Plugin 'matchit.zip'
-"Plugin 'xml.vim'
+Plugin 'xml.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-powerline'
-
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'calleerlandsson/pick.vim'
@@ -151,4 +150,7 @@ au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 "vim-markdown configuration
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
+
+"leader key config
+"let mapleader=""
 
