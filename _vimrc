@@ -15,8 +15,8 @@ colorscheme molokai
 "set sourcecode folding
 set fdm=marker
 "set guifont=Consolas:h14
-"set guifont=DejaVu\ Sans\ Mono:h13
-set guifont=Fira\ Code:h13:i
+set guifont=DejaVu\ Sans\ Mono:h13:i
+"set guifont=Fira\ Code:h13:i
 let $LANG='en'
 set langmenu='en'
 source $VIMRUNTIME/vimrc_example.vim
@@ -28,6 +28,7 @@ set fileencodings=utf-8,chinese,latin-1,latin1
 set encoding=utf-8
 set nobackup
 set noundofile
+"set pythonthreedll=python36.dll
 
 
 set diffexpr=MyDiff()
@@ -62,55 +63,71 @@ endfunction
 
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
-set rtp+=$VIM/vimfiles/bundle/Vundle.vim
-call vundle#begin('$VIM/vimfiles/bundle/')
-Plugin 'EasyMotion'
-Plugin 'FuzzyFinder'
-Plugin 'Gundo'
-Plugin 'JSON.vim'
-Plugin 'JavaScript-Indent'
-Plugin 'L9'
-Plugin 'Mark'
-Plugin 'PasteBin.vim'
-Plugin 'VisIncr'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ack.vim'
-Plugin 'gtags.vim'
-Plugin 'gtk-vim-syntax'
-Plugin 'jQuery'
-Plugin 'matchit.zip'
-"Plugin 'xml.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'Lokaltog/vim-powerline'
+"set rtp+=$VIM/vimfiles//Vundle.vim
+call plug#begin('$VIM/vimfiles/plugged/')
+Plug 'easymotion/vim-easymotion'
+"Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+"Plug 'FuzzyFinder'
+"Plug 'Gundo'
+Plug 'elzr/vim-json'
+"Plug 'JavaScript-Indent'
+"Plug 'L9'
+"Plug 'Mark'
+"Plug 'PasteBin.vim'
+""'Plug 'VisIncr'
+
+"左边的文件树
+Plug 'scrooloose/nerdtree'
+"ack命令
+Plug 'mileszs/ack.vim'
+"Plug 'gtags.vim'
+"Plug 'gtk-vim-syntax'
+"Plug 'jQuery'
+"Plug 'matchit.zip'
+"Plug 'xml.vim'
+Plug 'tpope/vim-surround'
+Plug 'Lokaltog/vim-powerline'
+Plug 'othree/html5.vim'
+
+"Javascript 相关的插件
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'isRuslan/vim-es6'
+
+"语法检查
+Plug 'scrooloose/syntastic'
+
+"emmet
+Plug 'mattn/emmet-vim'
 
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'calleerlandsson/pick.vim'
-Plugin 'chr4/nginx.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'vimwiki/vimwiki'
-Plugin 'groenewege/vim-less'
-Plugin 'Raimondi/delimitMate'
-Plugin 'hail2u/vim-css3-syntax' 
+"Nginx 配置文件高亮
+Plug 'chr4/nginx.vim'
+
+Plug 'calleerlandsson/pick.vim'
+Plug 'hail2u/vim-css3-syntax' 
+Plug 'groenewege/vim-less'
+Plug 'Raimondi/delimitMate'
 "彩虹括号
-Plugin 'luochen1990/rainbow'
-"Plugin 
-Plugin 'plasticboy/vim-markdown'
-Plugin 'tyru/open-browser.vim'
-Plugin 'iamcco/markdown-preview.vim'
+Plug 'luochen1990/rainbow'
+"Plug Markdown config
+Plug 'plasticboy/vim-markdown'
+Plug 'tyru/open-browser.vim'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'vimwiki/vimwiki'
+
+
 if has('gui_running')
-    Plugin 'vim-multiple-cursors'
+"    Plug 'vim-multiple-cursors'
 endif
 if v:version < 704
-    Plugin 'Pydiction'
-    Plugin 'Python-mode-klen'
+    Plug 'Pydiction'
+    Plug 'Python-mode-klen'
 endif
 
 
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 "vim-script的仓库
