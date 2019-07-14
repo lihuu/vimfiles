@@ -92,13 +92,18 @@ Plug 'othree/html5.vim'
 "Javascript 相关的插件
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'isRuslan/vim-es6'
+Plug 'isruslan/vim-es6'
+"Plug 'https://github.com/isRuslan/vim-es6.git'
 
 "语法检查
 Plug 'scrooloose/syntastic'
 
 "emmet
 Plug 'mattn/emmet-vim'
+
+"xml
+Plug 'othree/xml.vim'
+Plug 'sukima/xmledit'
 
 
 "Nginx 配置文件高亮
