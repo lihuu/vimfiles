@@ -93,6 +93,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'groenewege/vim-less'
 Plugin 'Raimondi/delimitMate'
 Plugin 'hail2u/vim-css3-syntax' 
+Plugin 'DrawIt'
 "彩虹括号
 Plugin 'luochen1990/rainbow'
 "Plugin 
