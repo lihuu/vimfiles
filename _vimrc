@@ -121,6 +121,15 @@ Plug 'tyru/open-browser.vim'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'vimwiki/vimwiki'
 
+"Git config 
+"
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'flazz/vim-colorschemes'
+
+Plug 'mhinz/vim-startify'
+
 
 if has('gui_running')
 "    Plug 'vim-multiple-cursors'
