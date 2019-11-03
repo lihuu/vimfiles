@@ -14,8 +14,8 @@ colorscheme molokai
 "set fdm=indent
 "set sourcecode folding
 set fdm=marker
-"set guifont=Consolas:h14
-set guifont=DejaVu\ Sans\ Mono:h13:i
+set guifont=Consolas:h14:i
+"set guifont=DejaVu\ Sans\ Mono:h13:i
 "set guifont=Fira\ Code:h13:i
 let $LANG='en'
 set langmenu='en'
