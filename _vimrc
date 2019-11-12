@@ -101,20 +101,20 @@ Plug 'scrooloose/syntastic'
 "emmet
 Plug 'mattn/emmet-vim'
 
-"xml
+"language syntax 
 Plug 'othree/xml.vim'
 Plug 'sukima/xmledit'
-
-
-"Nginx 配置文件高亮
 Plug 'chr4/nginx.vim'
-
 Plug 'calleerlandsson/pick.vim'
 Plug 'hail2u/vim-css3-syntax' 
 Plug 'groenewege/vim-less'
 Plug 'Raimondi/delimitMate'
+Plug 'cespare/vim-toml'
+Plug 'toml-lang/toml'
+"
 "彩虹括号
 Plug 'luochen1990/rainbow'
+
 "Plug Markdown config
 Plug 'plasticboy/vim-markdown'
 Plug 'tyru/open-browser.vim'
