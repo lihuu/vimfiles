@@ -131,7 +131,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'mhinz/vim-startify'
 
 Plug 'honza/vim-snippets'
-Plug 'airblade/vim-rooter'
+"Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
