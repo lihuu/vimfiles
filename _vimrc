@@ -135,17 +135,14 @@ Plug 'honza/vim-snippets'
 Plug 'vim-scripts/DrawIt'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
+Plug 'neoclide/coc.nvim',{'branch':'release'}
+
+
 
 
 if has('gui_running')
 "    Plug 'vim-multiple-cursors'
 endif
-if v:version < 704
-    Plug 'Pydiction'
-    Plug 'Python-mode-klen'
-endif
-
-
 
 call plug#end()
 filetype plugin indent on
