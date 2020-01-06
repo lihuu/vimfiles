@@ -93,7 +93,6 @@ Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'isruslan/vim-es6'
-"Plug 'https://github.com/isRuslan/vim-es6.git'
 
 "语法检查
 Plug 'scrooloose/syntastic'
@@ -127,17 +126,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'flazz/vim-colorschemes'
-
 Plug 'mhinz/vim-startify'
-
 Plug 'honza/vim-snippets'
 "Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 Plug 'neoclide/coc.nvim',{'branch':'release'}
-
-
 
 
 if has('gui_running')
@@ -149,17 +144,15 @@ filetype plugin indent on
 
 "vim-script的仓库
 
-
-
-
-
 "
 "+---------------------------------------------------------
 "|自定义按键
 "|
 "+---------------------------------------------------------
 "nerdtree 按键映射
-noremap <F5> :NERDTreeToggle<cr>
+let mapleader="\<space>"
+noremap <leader>f :NERDTreeToggle<cr>
+
 "insert 模式中删除一行
 inoremap <c-d> <ESC>ddi
 inoremap <c-u>  <ESC>~i
@@ -186,5 +179,4 @@ au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
 
-let mapleader="\<space>"
 
