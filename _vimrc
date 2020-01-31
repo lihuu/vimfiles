@@ -64,8 +64,8 @@ endfunction
 
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
-"set rtp+=$VIM/vimfiles//Vundle.vim
-call plug#begin('$VIM/vimfiles/plugged/')
+set rtp+=$HOME/vimfiles/autoload/plug.vim
+call plug#begin('$HOME/vimfiles/plugged/')
 Plug 'easymotion/vim-easymotion'
 "Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 "Plug 'FuzzyFinder'
