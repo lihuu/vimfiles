@@ -152,7 +152,7 @@ filetype plugin indent on
 "+---------------------------------------------------------
 "nerdtree 按键映射
 let mapleader="\<space>"
-noremap <leader>f :NERDTreeToggle<cr>
+
 
 "insert 模式中删除一行
 inoremap <c-d> <ESC>ddi
@@ -176,8 +176,26 @@ let g:vimwiki_list = [{'path': 'D:/OneDrive/mywiki/'}]
 let delimitMate_matchpairs="(:),[:],{:}"
 au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
-"vim-markdown configuration
+"*****************vim-markdown configuration start *********
+
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
+
+"*****************vim-markdown configuration end ***********
+
+"****************prettier config start****************
+
+let g:prettier#autoformat = 0                                                                                       
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+"g:prettier#config#parser = 'babylon'
+let g:prettier#config#parser='babylon'
+"****************prettier config end*****************
+
+
+source $HOME/vimfiles/coc-config.vim
+
+
+noremap <leader>f :NERDTreeToggle<cr>
+
 
 
