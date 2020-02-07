@@ -30,6 +30,11 @@ set encoding=utf-8
 set nobackup
 "set nowritebackup
 set noundofile
+"set noeb
+"set bell-style none
+set noerrorbells
+set novisualbell
+set vb t_vb=
 "set pythonthreedll=python36.dll
 
 
@@ -130,9 +135,11 @@ let g:prettier#config#parser='babylon'
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
     source $HOME/vimfiles/clang.vim
+    source $HOME/vimfiles/markdown-preview-config.vim
 else
     source ~/.vim/coc-config.vim
     source ~/.vim/clang.vim
+    source ~/.vim/markdown-preview-config.vim
 endif
 
 
