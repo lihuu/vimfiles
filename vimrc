@@ -6,11 +6,14 @@ syntax enable
 set ts=4
 set shiftwidth=4
 set expandtab
-set background=dark
+"set background=dark
 set cursorline
-set termguicolors
+"set termguicolors
 "colorscheme torte
 colorscheme molokai
+if ! has('gui_running')
+    set t_Co=256
+endif
 "set fdm=indent
 "set sourcecode folding
 set fdm=marker
