@@ -19,7 +19,9 @@ Plug 'mileszs/ack.vim'
 "Plug 'matchit.zip'
 "Plug 'xml.vim'
 Plug 'tpope/vim-surround'
-Plug 'Lokaltog/vim-powerline'
+"Plug 'Lokaltog/vim-powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/html5.vim'
 
 "Javascript 相关的插件
