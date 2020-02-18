@@ -1,3 +1,5 @@
+let s:isWindows = has('win16') || has('win32') || has('win64')
+
 set nocompatible
 set laststatus=2
 syntax on
@@ -37,8 +39,12 @@ set noundofile
 "set bell-style none
 set noerrorbells
 set novisualbell
-set vb t_vb=
+"set vb t_vb=""
 "set pythonthreedll=python36.dll
+set visualbell t_vb=
+if s:isWindows && (has("autocmd") && has("gui"))
+    au GUIEnter * set t_vb=
+endif
 
 
 set diffexpr=MyDiff()
@@ -73,7 +79,6 @@ endfunction
 
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
-let s:isWindows = has('win16') || has('win32') || has('win64')
 if s:isWindows
     set rtp+=$HOME/vimfiles/autoload/plug.vim
     call plug#begin('$HOME/vimfiles/plugged/')
