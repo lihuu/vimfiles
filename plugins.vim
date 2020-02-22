@@ -71,7 +71,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typ
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 
 
+
 if has('gui_running')
-"    Plug 'vim-multiple-cursors'
+    Plug 'terryma/vim-multiple-cursors'
 endif
 
