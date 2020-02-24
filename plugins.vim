@@ -70,6 +70,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typ
 
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+
 
 
 if has('gui_running')
