@@ -31,7 +31,12 @@ let g:mkdp_open_ip = ''
 
 " specify browser to open preview page
 " default: ''
-let g:mkdp_browser = 'Chrome'
+if has('win16')||has('win32')||has('win64')
+    let g:mkdp_browser = 'chrome'
+else
+    let g:mkdp_browser = ''
+endif
+
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
