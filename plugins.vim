@@ -72,6 +72,7 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
+Plug 'vim-scripts/c.vim'
 
 
 
