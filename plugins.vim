@@ -73,6 +73,7 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 
+Plug 'ctrlpvim/ctrlp.vim'
 
 
 if has('gui_running')
