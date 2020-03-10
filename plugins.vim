@@ -74,6 +74,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim'
 
+Plug 'ctrlpvim/ctrlp.vim'
 
 
 if has('gui_running')
