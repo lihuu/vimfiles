@@ -120,7 +120,7 @@ let g:jsx_ext_required=0
 
 "wiki configuration
 "
-let g:vimwiki_list = [{'path': 'D:/OneDrive/mywiki/'}]
+let g:vimwiki_list = [{'path': '~/OneDrive/mywiki/'}]
 
 let delimitMate_matchpairs="(:),[:],{:}"
 au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
