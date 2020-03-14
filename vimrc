@@ -168,3 +168,11 @@ noremap <c-l> 5l
 "let g:airline_theme='molokai'
 let g:airline_theme='luna'
 
+"
+"
+"Config for emmet-vim
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_mode='i' " value: n i v a
+"remap the default <C-Y> leader
+"let g:user_emmet_leader_key='<C-Z>'
