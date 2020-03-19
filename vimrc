@@ -176,3 +176,4 @@ autocmd FileType html,css EmmetInstall
 let g:user_emmet_mode='i' " value: n i v a
 "remap the default <C-Y> leader
 "let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_expandabbr_key='<C-e>'
