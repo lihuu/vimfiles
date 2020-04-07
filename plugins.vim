@@ -48,7 +48,6 @@ Plug 'toml-lang/toml'
 "
 "彩虹括号
 Plug 'luochen1990/rainbow'
-
 "Plug Markdown config
 Plug 'plasticboy/vim-markdown'
 Plug 'tyru/open-browser.vim'
@@ -67,15 +66,11 @@ Plug 'honza/vim-snippets'
 "Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-
 Plug 'neoclide/coc.nvim',{'branch':'release'}
-
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim'
-
 Plug 'ctrlpvim/ctrlp.vim'
-
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim'
 
