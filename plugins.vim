@@ -76,6 +76,8 @@ Plug 'vim-scripts/c.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'davidhalter/jedi-vim'
+
 
 if has('gui_running')
     Plug 'terryma/vim-multiple-cursors'
