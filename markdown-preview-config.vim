@@ -32,7 +32,7 @@ let g:mkdp_open_ip = ''
 " specify browser to open preview page
 " default: ''
 if has('win16')||has('win32')||has('win64')
-    let g:mkdp_browser = 'chrome'
+    let g:mkdp_browser = ''
 else
     let g:mkdp_browser = ''
 endif
