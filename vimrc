@@ -178,3 +178,21 @@ let g:user_emmet_mode='i' " value: n i v a
 "remap the default <C-Y> leader
 "let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_expandabbr_key='<C-e>'
+
+"CtrlP config
+" MacOSX/Linux
+" Windows
+
+if s:isWindows
+    set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+else
+    set wildignore+=*/tmp/*,*.so,*.swp,*.zip     
+endif
+
+"let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|.idea|node_modules)$'
+let g:ctrlp_root_markers = ['pom.xml','build.gradle']
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|\.idea|node_modules)$',
+  \ 'file': '\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }

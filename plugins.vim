@@ -17,9 +17,7 @@ Plug 'mileszs/ack.vim'
 "Plug 'gtk-vim-syntax'
 "Plug 'jQuery'
 "Plug 'matchit.zip'
-"Plug 'xml.vim'
 Plug 'tpope/vim-surround'
-"Plug 'Lokaltog/vim-powerline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/html5.vim'
@@ -63,7 +61,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'flazz/vim-colorschemes'
 Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
-"Plug 'airblade/vim-rooter'
+Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'neoclide/coc.nvim',{'branch':'release'}
@@ -73,6 +71,8 @@ Plug 'vim-scripts/c.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 
 if has('gui_running')

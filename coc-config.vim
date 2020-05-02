@@ -1,6 +1,7 @@
 "****************************coc.nvim configuration*********************
 "coc.nvim configuration
-let g:coc_global_extensions=['coc-json','coc-css','coc-tsserver','coc-html','coc-marketplace','coc-git','coc-lua','coc-java','coc-python','coc-jedi','coc-xml','coc-yaml','coc-go','coc-make','coc-clangd']
+let g:coc_global_extensions=['coc-json','coc-css','coc-tsserver','coc-html','coc-marketplace','coc-git','coc-lua','coc-java','coc-python','coc-jedi','coc-xml','coc-yaml','coc-go','coc-clangd']
+"coc-make
 set cmdheight=1
 set updatetime=300
 " don't give |ins-completion-menu| messages.
