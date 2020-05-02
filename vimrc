@@ -16,6 +16,7 @@ set autoread
 colorscheme molokai
 if ! has('gui_running')
     set t_Co=256
+    set mouse=a
 endif
 "set fdm=indent
 "set sourcecode folding
