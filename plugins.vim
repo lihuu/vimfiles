@@ -68,7 +68,7 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim'
 Plug 'junegunn/fzf.vim'
