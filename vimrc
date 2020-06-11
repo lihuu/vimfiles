@@ -200,3 +200,9 @@ let g:user_emmet_expandabbr_key='<C-e>'
 
 "Config for fzf
 noremap <c-p> :Files<cr>
+
+
+"Config for vim-rooter
+"
+let g:rooter_silent_chdir = 1
+
