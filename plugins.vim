@@ -72,6 +72,7 @@ Plug 'vim-scripts/c.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'pprovost/vim-ps1'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 
