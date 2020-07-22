@@ -10,9 +10,9 @@ Plug 'elzr/vim-json'
 ""'Plug 'VisIncr'
 
 "左边的文件树
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
 "ack命令
-Plug 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim',{'on':'Ack'}
 "Plug 'gtags.vim'
 "Plug 'gtk-vim-syntax'
 "Plug 'jQuery'
@@ -67,7 +67,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typ
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
-Plug 'vim-scripts/c.vim'
+Plug 'vim-scripts/c.vim',{'for':'c'}
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
