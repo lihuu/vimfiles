@@ -70,7 +70,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
-Plug 'vim-scripts/groovy.vim'
+Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
 Plug 'junegunn/fzf.vim',{'on':'Files'}
 Plug 'pprovost/vim-ps1'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
