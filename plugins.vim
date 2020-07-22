@@ -34,24 +34,24 @@ Plug 'scrooloose/syntastic'
 Plug 'mattn/emmet-vim'
 
 "language syntax 
-Plug 'othree/xml.vim'
+Plug 'othree/xml.vim',{'for':'xml'}
 Plug 'sukima/xmledit'
 Plug 'chr4/nginx.vim'
 Plug 'calleerlandsson/pick.vim'
 Plug 'hail2u/vim-css3-syntax' 
-Plug 'groenewege/vim-less'
+Plug 'groenewege/vim-less',{'for':'less'}
 Plug 'Raimondi/delimitMate'
-Plug 'cespare/vim-toml'
-Plug 'toml-lang/toml'
+Plug 'cespare/vim-toml',{'for':'toml'}
+Plug 'toml-lang/toml',{'for':'toml'}
 "
 "彩虹括号
 Plug 'luochen1990/rainbow'
 "Plug Markdown config
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown',{'for':'markdown'}
 Plug 'tyru/open-browser.vim'
 "Plug 'iamcco/markdown-preview.vim'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' ,'for':'markdown' }
 Plug 'vimwiki/vimwiki'
 
 "Git config 
@@ -71,7 +71,7 @@ Plug 'vim-scripts/c.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim',{'on':'Files'}
 Plug 'pprovost/vim-ps1'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
