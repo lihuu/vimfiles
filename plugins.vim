@@ -58,6 +58,7 @@ Plug 'vimwiki/vimwiki'
 "
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
 Plug 'flazz/vim-colorschemes'
 Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
@@ -74,6 +75,15 @@ Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
 Plug 'junegunn/fzf.vim',{'on':'Files'}
 Plug 'pprovost/vim-ps1'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'preservim/nerdcommenter'
+
+if has('gui_running')
+"File icons plugin
+"需要安装字体 https://github.com/ryanoasis/nerd-fonts.git
+" brew tap homebrew/cask-fonts
+" brew cask install font-hack-nerd-font
+    Plug 'ryanoasis/vim-devicons'
+endif
 
 
 if has('gui_running')

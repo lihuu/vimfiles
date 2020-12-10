@@ -1,5 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/lihu'
-let g:netrw_dirhist_2='/home/lihu/git'
-let g:netrw_dirhist_3='/home/lihu'
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/lihu/Repositories/git/react-app/src/counter'
+let g:netrw_dirhist_1='/Users/lihu/Repositories/git/react-app/src/counter/reducers'

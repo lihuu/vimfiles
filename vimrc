@@ -8,6 +8,7 @@ syntax enable
 set ts=4
 set shiftwidth=4
 set expandtab
+"set encoding=UTF-8
 "set background=dark
 set cursorline
 set autoread
