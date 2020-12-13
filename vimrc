@@ -23,7 +23,8 @@ endif
 "set sourcecode folding
 set fdm=marker
 if s:isWindows && has("gui_running")
-    set guifont=Consolas:h14:i
+    "set guifont=Consolas:h14:i
+    set guifont=Consolas\ NF:h14:i
 else
     set guifont=Monospace\ Italic\ 12
 endif

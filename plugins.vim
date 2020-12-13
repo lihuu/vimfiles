@@ -1,44 +1,42 @@
-Plug 'easymotion/vim-easymotion'
 "Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 "Plug 'FuzzyFinder'
 "Plug 'Gundo'
-Plug 'elzr/vim-json'
 "Plug 'JavaScript-Indent'
 "Plug 'L9'
 "Plug 'Mark'
 "Plug 'PasteBin.vim'
-""'Plug 'VisIncr'
-
-"左边的文件树
-Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
-"ack命令
-Plug 'mileszs/ack.vim',{'on':'Ack'}
+"Plug 'VisIncr'
 "Plug 'gtags.vim'
 "Plug 'gtk-vim-syntax'
 "Plug 'jQuery'
 "Plug 'matchit.zip'
+
+Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
+Plug 'mileszs/ack.vim',{'on':'Ack'}
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
+Plug 'elzr/vim-json'
 
 "Javascript 相关的插件
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'isruslan/vim-es6'
+Plug 'mxw/vim-jsx'
 
 "语法检查
 Plug 'scrooloose/syntastic'
 
-"emmet
-Plug 'mattn/emmet-vim'
 
 "language syntax 
 Plug 'othree/xml.vim',{'for':'xml'}
-Plug 'sukima/xmledit'
+Plug 'sukima/xmledit',{'for':'xml'}
 Plug 'chr4/nginx.vim'
 Plug 'calleerlandsson/pick.vim'
-Plug 'hail2u/vim-css3-syntax' 
+Plug 'hail2u/vim-css3-syntax',{'for':'css'}
 Plug 'groenewege/vim-less',{'for':'less'}
 Plug 'Raimondi/delimitMate'
 Plug 'cespare/vim-toml',{'for':'toml'}
@@ -49,8 +47,6 @@ Plug 'luochen1990/rainbow'
 "Plug Markdown config
 Plug 'plasticboy/vim-markdown',{'for':'markdown'}
 Plug 'tyru/open-browser.vim'
-"Plug 'iamcco/markdown-preview.vim'
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' ,'for':'markdown' }
 Plug 'vimwiki/vimwiki'
 
@@ -69,7 +65,6 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim',{'for':'c'}
-"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
 Plug 'junegunn/fzf.vim',{'on':'Files'}
@@ -78,15 +73,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdcommenter'
 
 if has('gui_running')
-"File icons plugin
-"需要安装字体 https://github.com/ryanoasis/nerd-fonts.git
-" brew tap homebrew/cask-fonts
-" brew cask install font-hack-nerd-font
+    "File icons plugin
+    "需要安装字体 https://github.com/ryanoasis/nerd-fonts.git
+    "在MacOs中，如果安装了homebrew
+    " brew tap homebrew/cask-fonts
+    " brew cask install font-hack-nerd-font
     Plug 'ryanoasis/vim-devicons'
-endif
-
-
-if has('gui_running')
     Plug 'terryma/vim-multiple-cursors'
 endif
 
