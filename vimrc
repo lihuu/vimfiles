@@ -117,10 +117,11 @@ let mapleader="\<space>"
 
 "insert 模式中删除一行
 inoremap <c-d> <ESC>ddi
+"insert 模式大小写切换
 inoremap <c-u>  <ESC>~i
 
 "打开vim配置文件的映射
-nnoremap <leader>ev :vsplit $MYVIMRC
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 "配置文件生效的映射
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
