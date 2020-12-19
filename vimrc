@@ -3,7 +3,8 @@ let s:isWindows = has('win16') || has('win32') || has('win64')
 set nocompatible
 set laststatus=2
 syntax on
-set nu
+set number
+"set relativenumber
 syntax enable
 set ts=4
 set shiftwidth=4
