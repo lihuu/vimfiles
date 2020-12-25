@@ -79,6 +79,7 @@ if has('gui_running')
     " brew tap homebrew/cask-fonts
     " brew cask install font-hack-nerd-font
     Plug 'ryanoasis/vim-devicons'
-    Plug 'terryma/vim-multiple-cursors'
+    "Plug 'terryma/vim-multiple-cursors'
+    "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 endif
 
