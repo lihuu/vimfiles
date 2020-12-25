@@ -19,6 +19,12 @@ Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim
 5. PlugStatus：检查插件状态
 6. PlugDiff：查看插件等待升级的内容
 7. PlugSnapshot：创建回滚到当前插件的脚本
+### 其他
+#### coc.nvim
+**coc-lua**插件
+这个插件依赖了[lua-lsp](https://github.com/Alloyed/lua-lsp)这个工具。
+lua-lsp可以通过`luarocks`这个包管理器安装，在Mac系统中，可能没有`luarocks`这个包管理器。
+需要使用`brew install luarocks`先安装lua的包管理器。
 
 
 
