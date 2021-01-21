@@ -25,14 +25,16 @@ set mousehide		" Hide the mouse when typing text
 set fdm=marker
 "set guifont=Menlo:h16
 set macligatures
+"set guifont=Fira\ Code:h16
 set guifont=FiraCode\ Nerd\ Font:h16
-"set guifont=Menlo\ Regular:h16
-"set guifont=Menlo\ Regular:h16
+"set guifont=Menlo\ Regular:h20
 set t_Co=256
 set background=dark
+set transparency=20
 
 set autoread
 "colorscheme macvim
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
+
 
