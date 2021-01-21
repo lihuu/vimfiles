@@ -20,6 +20,7 @@ colorscheme molokai
 if ! has('gui_running')
     set t_Co=256
     set mouse=a
+    set transparency=20
 endif
 "set fdm=indent
 "set sourcecode folding
