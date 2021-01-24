@@ -20,7 +20,6 @@ colorscheme molokai
 if ! has('gui_running')
     set t_Co=256
     set mouse=a
-    set transparency=20
 endif
 "set fdm=indent
 "set sourcecode folding
@@ -30,6 +29,10 @@ if s:isWindows && has("gui_running")
     set guifont=Consolas\ NF:h14:i
 else
     set guifont=Monospace\ Italic\ 12
+endif
+
+if has("gui_running")
+    set transparency=20
 endif
 
 
