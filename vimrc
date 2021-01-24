@@ -1,4 +1,6 @@
 let s:isWindows = has('win16') || has('win32') || has('win64')
+let s:isMac = has('mac')
+let s:isLinux = has('linux')
 
 set nocompatible
 set laststatus=2
@@ -31,7 +33,7 @@ else
     set guifont=Monospace\ Italic\ 12
 endif
 
-if has("gui_running")
+if s:isMac && has("gui_running")
     set transparency=20
 endif
 
