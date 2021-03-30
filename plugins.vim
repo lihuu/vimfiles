@@ -79,6 +79,8 @@ if has('gui_running')
     " brew tap homebrew/cask-fonts
     " brew cask install font-hack-nerd-font
     Plug 'ryanoasis/vim-devicons'
+    "基于Ai的代码补全工具，但是需要依赖YouComplete
+    "Plug 'codota/tabnine-vim'
     "Plug 'terryma/vim-multiple-cursors'
     "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 endif
