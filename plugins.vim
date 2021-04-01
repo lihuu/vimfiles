@@ -27,6 +27,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
 Plug 'mxw/vim-jsx'
 
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 "语法检查
 Plug 'scrooloose/syntastic'
 
