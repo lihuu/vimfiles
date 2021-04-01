@@ -74,9 +74,12 @@ Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim',{'for':'c'}
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
-Plug 'junegunn/fzf.vim',{'on':'Files'}
 Plug 'pprovost/vim-ps1'
+
+"使用ctrl+t在新的标签中打开，ctrl+v或者ctrl+x
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim',{'on':'Files'}
+
 Plug 'preservim/nerdcommenter'
 
 if has('gui_running')
