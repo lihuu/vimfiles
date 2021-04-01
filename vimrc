@@ -118,10 +118,14 @@ filetype plugin indent on
 "|自定义按键
 "|
 "+---------------------------------------------------------
-"nerdtree 按键映射
+"nerdtree 
 let mapleader="\<space>"
 
+"nerdtree 配置文件
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * silent NERDTreeMirror
 
+"
 "insert 模式中删除一行
 inoremap <c-d> <ESC>ddi
 "insert 模式大小写切换

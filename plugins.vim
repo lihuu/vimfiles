@@ -11,7 +11,11 @@
 "Plug 'jQuery'
 "Plug 'matchit.zip'
 
-Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
+"nerdtree 这个插件相关的插件
+"Plug 'preservim/nerdtree',{'on':'NERDTreeToggle'}
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'mileszs/ack.vim',{'on':'Ack'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
