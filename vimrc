@@ -158,7 +158,8 @@ let g:vim_markdown_toc_autofit = 1
 "****************prettier config start****************
 
 let g:prettier#autoformat = 0                                                                                       
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 "g:prettier#config#parser = 'babylon'
 let g:prettier#config#parser='babylon'
 "****************prettier config end*****************

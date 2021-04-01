@@ -26,17 +26,15 @@ Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'elzr/vim-json'
 
-"Javascript 相关的插件
+"Javascript typescript reactjs 相关的插件
 Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
 Plug 'mxw/vim-jsx'
-
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
 "语法检查
 Plug 'scrooloose/syntastic'
-
 
 "language syntax 
 Plug 'othree/xml.vim',{'for':'xml'}
@@ -72,7 +70,7 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim',{'for':'c'}
-Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim',{'for':'python'}
 Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
 Plug 'pprovost/vim-ps1'
 
@@ -89,7 +87,7 @@ if has('gui_running')
     " brew tap homebrew/cask-fonts
     " brew cask install font-hack-nerd-font
     Plug 'ryanoasis/vim-devicons'
-    "基于Ai的代码补全工具，但是需要依赖YouComplete
+    "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
     "Plug 'codota/tabnine-vim'
     "Plug 'terryma/vim-multiple-cursors'
     "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
