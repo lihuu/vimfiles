@@ -9,6 +9,11 @@ Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim
 4. git
     windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)工具直接安装，`scoop install fzf`
 ## 一些插件的使用说明
+### emmet 插件
+emmet插件使用的是`mattn/emmet-vim`，补全的快捷键修改了为`<c-e>`，触发模式设置为仅编辑模式，在编辑模式下面使用`<c-e>`会补全。
+
+emmet的语法参考[官方网站](https://emmet.io/)
+
 ### vim-plug
 一个轻量级的插件管理器。
 一些基本的使用命令：
@@ -25,6 +30,32 @@ Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim
 这个插件依赖了[lua-lsp](https://github.com/Alloyed/lua-lsp)这个工具。
 lua-lsp可以通过`luarocks`这个包管理器安装，在Mac系统中，可能没有`luarocks`这个包管理器。
 需要使用`brew install luarocks`先安装lua的包管理器。
+
+## vim 的一些使用技巧
+
+### 普通模式
+
+#### 基本的命令
+vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的结构。
+
+##### 动词
+
+* `d`，删除，英文单词（delete）。
+* `c`，修改，英文单词（change）。
+* `y`，复制，英文单词（yank），在vim中其实就是复制（copy），只不过这里的复制，默认是把内容复制到vim的寄存器中，而不是我们的系统的剪切板。
+
+##### 名词
+* `w`，单词，英文单词（word）。
+* `s`，句子，英文单词（sentence）。
+* `p`，段落，英文单词（paragraph）。
+
+#### 文本对象操作 (Text Object)
+
+
+
+
+
+
 
 
 
