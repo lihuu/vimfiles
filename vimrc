@@ -1,8 +1,28 @@
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')
 let s:isLinux = has('linux')
+silent function! OSX()
+    return has('macunix')||has('mac')
+endfunction
 
-set nocompatible
+silent function! LINUS()
+    return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+
+silent function! WINDOWS()
+    return (has('win32')||has('win64'))
+endfunction
+
+set nocompatible "Must be first line
+
+if !WINDOWS()
+    set shell=/bin/zsh
+endif
+
+"if WINDOWS()
+"    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+"endif
+
 set laststatus=2
 syntax on
 set number
