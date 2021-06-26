@@ -7,7 +7,10 @@ Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim
 2. yarn
 3. fzf
 4. git
-    windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)工具直接安装，`scoop install fzf`
+
+>windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)工具直接安装，`scoop install fzf`
+
+    
 ## 一些插件的使用说明
 ### emmet 插件
 emmet插件使用的是`mattn/emmet-vim`，补全的快捷键修改了为`<c-e>`，触发模式设置为仅编辑模式，在编辑模式下面使用`<c-e>`会补全。
@@ -26,6 +29,13 @@ emmet的语法参考[官方网站](https://emmet.io/)
 7. PlugSnapshot：创建回滚到当前插件的脚本
 ### 其他
 #### coc.nvim
+coc.nvim 这个插件对nodejs有版本的要求，可能系统默认的版本不能符合要求。
+```bash
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
 **coc-lua**插件
 这个插件依赖了[lua-lsp](https://github.com/Alloyed/lua-lsp)这个工具。
 lua-lsp可以通过`luarocks`这个包管理器安装，在Mac系统中，可能没有`luarocks`这个包管理器。
