@@ -1,6 +1,28 @@
 let s:isWindows = has('win16') || has('win32') || has('win64')
+let s:isMac = has('mac')
+let s:isLinux = has('linux')
+silent function! OSX()
+    return has('macunix')||has('mac')
+endfunction
 
-set nocompatible
+silent function! LINUS()
+    return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+
+silent function! WINDOWS()
+    return (has('win32')||has('win64'))
+endfunction
+
+set nocompatible "Must be first line
+
+if !WINDOWS()
+    set shell=/bin/zsh
+endif
+
+"if WINDOWS()
+"    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+"endif
+
 set laststatus=2
 syntax on
 set number
@@ -20,7 +42,6 @@ colorscheme molokai
 if ! has('gui_running')
     set t_Co=256
     set mouse=a
-    set transparency=20
 endif
 "set fdm=indent
 "set sourcecode folding
@@ -30,6 +51,10 @@ if s:isWindows && has("gui_running")
     set guifont=Consolas\ NF:h14:i
 else
     set guifont=Monospace\ Italic\ 12
+endif
+
+if s:isMac && has("gui_running")
+    set transparency=20
 endif
 
 
@@ -113,10 +138,14 @@ filetype plugin indent on
 "|自定义按键
 "|
 "+---------------------------------------------------------
-"nerdtree 按键映射
+"nerdtree 
 let mapleader="\<space>"
 
+"nerdtree 配置文件
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * silent NERDTreeMirror
 
+"
 "insert 模式中删除一行
 inoremap <c-d> <ESC>ddi
 "insert 模式大小写切换
@@ -149,7 +178,8 @@ let g:vim_markdown_toc_autofit = 1
 "****************prettier config start****************
 
 let g:prettier#autoformat = 0                                                                                       
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 "g:prettier#config#parser = 'babylon'
 let g:prettier#config#parser='babylon'
 "****************prettier config end*****************
@@ -191,6 +221,8 @@ let g:user_emmet_mode='i' " value: n i v a
 "remap the default <C-Y> leader
 "let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_expandabbr_key='<C-e>'
+
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 "CtrlP config
 " MacOSX/Linux

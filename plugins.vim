@@ -11,7 +11,11 @@
 "Plug 'jQuery'
 "Plug 'matchit.zip'
 
-Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
+"nerdtree 这个插件相关的插件
+"Plug 'preservim/nerdtree',{'on':'NERDTreeToggle'}
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'mileszs/ack.vim',{'on':'Ack'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
@@ -22,14 +26,15 @@ Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'elzr/vim-json'
 
-"Javascript 相关的插件
+"Javascript typescript reactjs 相关的插件
 Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 "语法检查
 Plug 'scrooloose/syntastic'
-
 
 "language syntax 
 Plug 'othree/xml.vim',{'for':'xml'}
@@ -60,16 +65,19 @@ Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript','typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'neoclide/coc.nvim',{'branch':'release'}
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim',{'for':'c'}
-Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim',{'for':'python'}
 Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
-Plug 'junegunn/fzf.vim',{'on':'Files'}
 Plug 'pprovost/vim-ps1'
+
+"使用ctrl+t在新的标签中打开，ctrl+v或者ctrl+x
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim',{'on':'Files'}
+
 Plug 'preservim/nerdcommenter'
 
 if has('gui_running')
@@ -79,6 +87,8 @@ if has('gui_running')
     " brew tap homebrew/cask-fonts
     " brew cask install font-hack-nerd-font
     Plug 'ryanoasis/vim-devicons'
+    "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
+    "Plug 'codota/tabnine-vim'
     "Plug 'terryma/vim-multiple-cursors'
     "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 endif
