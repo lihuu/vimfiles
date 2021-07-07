@@ -2,3 +2,5 @@
 /vimfiles/bundle/
 plugged
 *.swp
+.DS_Store
+
