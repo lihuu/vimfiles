@@ -91,5 +91,7 @@ if has('gui_running')
     "Plug 'codota/tabnine-vim'
     "Plug 'terryma/vim-multiple-cursors'
     "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    "Plug 'starcraftman/vim-eclim'
 endif
+
 
