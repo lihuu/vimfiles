@@ -1,65 +1,65 @@
 ## vimfiles
-windowsϵͳ��
-��$HOMEĿ¼��ִ��`git clone https://github.com/lihuu/vimfiles.git`
-Linux����Macos�ڣ�$Ŀ¼ִ��`git clone https://github.com/lihuu/vimfiles.git .vim`
-### ��Ҫ���ⰲװ������
+windows系统中
+在$HOME目录中执行`git clone https://github.com/lihuu/vimfiles.git`
+Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim`
+### 需要额外安装的依赖
 1. nodejs
 2. yarn
 3. fzf
 4. git
 
->windows �п���ʹ��[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)����ֱ�Ӱ�װ��`scoop install fzf`
+>windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)工具直接安装，`scoop install fzf`
 
     
-## һЩ�����ʹ��˵��
-### emmet ���
-emmet���ʹ�õ���`mattn/emmet-vim`����ȫ�Ŀ�ݼ��޸���Ϊ`<c-e>`������ģʽ����Ϊ���༭ģʽ���ڱ༭ģʽ����ʹ��`<c-e>`�Ჹȫ��
+## 一些插件的使用说明
+### emmet 插件
+emmet插件使用的是`mattn/emmet-vim`，补全的快捷键修改了为`<c-e>`，触发模式设置为仅编辑模式，在编辑模式下面使用`<c-e>`会补全。
 
-emmet���﷨�ο�[�ٷ���վ](https://emmet.io/)
+emmet的语法参考[官方网站](https://emmet.io/)
 
 ### vim-plug
-һ���������Ĳ����������
-һЩ������ʹ�����
-1. PlugInstall����װ���
-2. PlugUpdate�����²��
-3. PlugClean���������
-4. PlugUpgrade������vim-plug����
-5. PlugStatus�������״̬
-6. PlugDiff���鿴����ȴ�����������
-7. PlugSnapshot�������ع�����ǰ����Ľű�
-### ����
+一个轻量级的插件管理器。
+一些基本的使用命令：
+1. PlugInstall：安装插件
+2. PlugUpdate：更新插件
+3. PlugClean：清理插件
+4. PlugUpgrade：更新vim-plug自身
+5. PlugStatus：检查插件状态
+6. PlugDiff：查看插件等待升级的内容
+7. PlugSnapshot：创建回滚到当前插件的脚本
+### 其他
 #### coc.nvim
-coc.nvim ��������nodejs�а汾��Ҫ�󣬿���ϵͳĬ�ϵİ汾���ܷ���Ҫ��
+coc.nvim 这个插件对nodejs有版本的要求，可能系统默认的版本不能符合要求。
 ```bash
 # Using Ubuntu
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-**coc-lua**���
-������������[lua-lsp](https://github.com/Alloyed/lua-lsp)������ߡ�
-lua-lsp����ͨ��`luarocks`�������������װ����Macϵͳ�У�����û��`luarocks`�������������
-��Ҫʹ��`brew install luarocks`�Ȱ�װlua�İ���������
+**coc-lua**插件
+这个插件依赖了[lua-lsp](https://github.com/Alloyed/lua-lsp)这个工具。
+lua-lsp可以通过`luarocks`这个包管理器安装，在Mac系统中，可能没有`luarocks`这个包管理器。
+需要使用`brew install luarocks`先安装lua的包管理器。
 
-## vim ��һЩʹ�ü���
+## vim 的一些使用技巧
 
-### ��ͨģʽ
+### 普通模式
 
-#### ����������
-vim ������Ľṹ����������Ӣ�ĵ��﷨�������� + ���ʣ��Ľṹ��
+#### 基本的命令
+vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的结构。
 
-##### ����
+##### 动词
 
-* `d`��ɾ����Ӣ�ĵ��ʣ�delete����
-* `c`���޸ģ�Ӣ�ĵ��ʣ�change����
-* `y`�����ƣ�Ӣ�ĵ��ʣ�yank������vim����ʵ���Ǹ��ƣ�copy����ֻ��������ĸ��ƣ�Ĭ���ǰ����ݸ��Ƶ�vim�ļĴ����У����������ǵ�ϵͳ�ļ��а塣
+* `d`，删除，英文单词（delete）。
+* `c`，修改，英文单词（change）。
+* `y`，复制，英文单词（yank），在vim中其实就是复制（copy），只不过这里的复制，默认是把内容复制到vim的寄存器中，而不是我们的系统的剪切板。
 
-##### ����
-* `w`�����ʣ�Ӣ�ĵ��ʣ�word����
-* `s`�����ӣ�Ӣ�ĵ��ʣ�sentence����
-* `p`�����䣬Ӣ�ĵ��ʣ�paragraph����
+##### 名词
+* `w`，单词，英文单词（word）。
+* `s`，句子，英文单词（sentence）。
+* `p`，段落，英文单词（paragraph）。
 
-#### �ı�������� (Text Object)
+#### 文本对象操作 (Text Object)
 
 
 
