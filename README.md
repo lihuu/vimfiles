@@ -5,8 +5,14 @@ Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.
 ### 需要额外安装的依赖
 1. nodejs
 2. yarn
-3. fzf
-4. git
+3. fzf 
+   Linux 使用git安装的方式，使用包管理器安装，安装的版本可能比较旧
+   ```bash
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install 
+  ```
+4. 
+5. git
 
 >windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)工具直接安装，`scoop install fzf`
 
