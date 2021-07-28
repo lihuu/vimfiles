@@ -37,6 +37,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'scrooloose/syntastic'
 
 "language syntax 
+Plug 'sheerun/vim-polyglot'
 Plug 'othree/xml.vim',{'for':'xml'}
 Plug 'sukima/xmledit',{'for':'xml'}
 Plug 'chr4/nginx.vim'
@@ -60,7 +61,10 @@ Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+"colorschemes
 Plug 'flazz/vim-colorschemes'
+Plug 'phanviet/vim-monokai-pro'
+
 Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'

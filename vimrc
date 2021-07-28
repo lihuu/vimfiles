@@ -250,3 +250,5 @@ noremap <c-p> :Files<cr>
 "
 let g:rooter_silent_chdir = 1
 
+"colorscheme monokai_pro
+
