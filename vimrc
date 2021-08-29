@@ -20,6 +20,17 @@ if !WINDOWS()
 endif
 
 "if WINDOWS()
+"  set directory=%USERDATA%.vim\swap//
+"else
+"  set directory=$HOME/.vim/swap//
+"endif
+"
+"
+
+set noswapfile
+set foldmethod=diff
+
+"if WINDOWS()
 "    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 "endif
 

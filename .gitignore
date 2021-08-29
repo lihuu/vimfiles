@@ -3,4 +3,5 @@
 plugged
 *.swp
 .DS_Store
+*.swo
 
