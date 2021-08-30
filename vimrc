@@ -210,6 +210,7 @@ noremap <leader>f :NERDTreeToggle<cr>
 "switch tab
 noremap <leader>h <esc>:tabprevious<cr>
 noremap <leader>l <esc>:tabnext<cr>
+noremap <leader>bn <esc>:tabnew<cr>
 "sort lines
 noremap <leader>s :sort<cr>
 
@@ -255,6 +256,7 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 "Config for fzf
 noremap <c-p> :Files<cr>
+
 
 
 "Config for vim-rooter
