@@ -27,7 +27,7 @@ endif
 "
 "
 
-set noswapfile
+"set noswapfile
 set foldmethod=diff
 
 "if WINDOWS()
