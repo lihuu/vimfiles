@@ -47,7 +47,10 @@ set expandtab
 "set background=dark
 set cursorline
 set autoread
-"set termguicolors
+
+if has('termguicolors')
+  set termguicolors
+endif
 "colorscheme torte
 colorscheme molokai
 if ! has('gui_running')
