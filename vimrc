@@ -267,4 +267,12 @@ noremap <c-p> :Files<cr>
 let g:rooter_silent_chdir = 1
 
 "colorscheme monokai_pro
+"
+"au GUIEnter * call libcallnr("vimtweak32.dll", "SetAlpha", 234)
+"
+
+if WINDOWS()
+    autocmd GUIEnter * silent! WToggleClean
+    autocmd GUIEnter * silent! WSetAlpha 234
+endif
 
