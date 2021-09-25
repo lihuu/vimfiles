@@ -271,6 +271,7 @@ let g:rooter_silent_chdir = 1
 "au GUIEnter * call libcallnr("vimtweak32.dll", "SetAlpha", 234)
 "
 
+"透明度设置
 if WINDOWS()
     autocmd GUIEnter * silent! WToggleClean
     autocmd GUIEnter * silent! WSetAlpha 234
