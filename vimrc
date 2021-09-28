@@ -208,12 +208,23 @@ else
     source ~/.vim/markdown-preview-config.vim
 endif
 
+"文件相关的操作
+noremap <leader>fn :NERDTreeToggle<cr>
+if s:isWindows
+  noremap <leader>fp :e $HOME/vimfiles/vimrc<cr>
+else
+  noremap <leader>fp :e ~/.vim/vimrc<cr>
+endif
+noremap <leader>ff :Files<cr>
 
-noremap <leader>f :NERDTreeToggle<cr>
+
+"
 "switch tab
 noremap <leader>h <esc>:tabprevious<cr>
 noremap <leader>l <esc>:tabnext<cr>
+
 noremap <leader>bn <esc>:tabnew<cr>
+noremap <leader>bb :Buffers<cr>
 "sort lines
 noremap <leader>s :sort<cr>
 
@@ -259,7 +270,6 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 "Config for fzf
 noremap <c-p> :Files<cr>
-
 
 
 "Config for vim-rooter
