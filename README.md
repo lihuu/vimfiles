@@ -1,29 +1,44 @@
-## vimfiles
+
+
+## vim 配置文件
+
 windows系统中
 在$HOME目录中执行`git clone https://github.com/lihuu/vimfiles.git`
 Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim`
-### 需要额外安装的依赖
-1. nodejs
-2. yarn
-3. fzf 
-   Linux 使用git安装的方式，使用包管理器安装，安装的版本可能比较旧
-   ```bash
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install 
-  ```
-4. 
-5. git
+####  需要额外安装的依赖
+#####  nodejs
 
->windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)工具直接安装，`scoop install fzf`
+```bash
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
-    
-## 一些插件的使用说明
-### emmet 插件
+#####  yarn
+
+```bash
+npm install -g yarn
+```
+
+#####  fzf 
+Linux 使用git安装的方式，使用包管理器安装，安装的版本可能比较旧
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install 
+```
+   windows 中可以使用[scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)    工具直接安装，`scoop install fzf`
+
+##### ack
+
+Linux平台不必多说，windows 平台直接使用 `scoop install ack`
+
+###  一些插件的使用说明
+#### emmet 插件
 emmet插件使用的是`mattn/emmet-vim`，补全的快捷键修改了为`<c-e>`，触发模式设置为仅编辑模式，在编辑模式下面使用`<c-e>`会补全。
 
 emmet的语法参考[官方网站](https://emmet.io/)
 
-### vim-plug
+#### vim-plug
 一个轻量级的插件管理器。
 一些基本的使用命令：
 1. PlugInstall：安装插件
@@ -47,11 +62,11 @@ sudo apt-get install -y nodejs
 lua-lsp可以通过`luarocks`这个包管理器安装，在Mac系统中，可能没有`luarocks`这个包管理器。
 需要使用`brew install luarocks`先安装lua的包管理器。
 
-## vim 的一些使用技巧
+### vim 的一些使用技巧
 
-### 普通模式
+#### 普通模式
 
-#### 基本的命令
+##### 基本的命令
 vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的结构。
 
 ##### 动词

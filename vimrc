@@ -157,7 +157,6 @@ let mapleader="\<space>"
 
 "nerdtree 配置文件
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * silent NERDTreeMirror
 
 "
 "insert 模式中删除一行
@@ -209,7 +208,6 @@ else
 endif
 
 "文件相关的操作
-noremap <leader>fn :NERDTreeToggle<cr>
 if s:isWindows
   noremap <leader>fp :e $HOME/vimfiles/vimrc<cr>
 else
@@ -219,12 +217,6 @@ noremap <leader>ff :Files<cr>
 
 
 "
-"switch tab
-noremap <leader>h <esc>:tabprevious<cr>
-noremap <leader>l <esc>:tabnext<cr>
-
-noremap <leader>bn <esc>:tabnew<cr>
-noremap <leader>bb :Buffers<cr>
 "sort lines
 noremap <leader>s :sort<cr>
 
@@ -286,4 +278,45 @@ if WINDOWS()
     autocmd GUIEnter * silent! WToggleClean
     autocmd GUIEnter * silent! WSetAlpha 234
 endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+noremap <leader>nn :NERDTreeToggle<cr>
+noremap <leader>fn :NERDTreeToggle<cr>
+noremap <leader>nb :NERDTreeFromBookmark<Space>
+noremap <leader>nf :NERDTreeFind<cr>
+autocmd BufWinEnter * silent NERDTreeMirror
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => git gutter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gitgutter_enabled=0
+nnoremap <silent> <leader>gg :GitGutterToggle<cr>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tab 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <leader>h :tabprevious<cr>
+noremap <leader>l :tabnext<cr>
+
+noremap <leader>tn :tabnew<cr>
+noremap <leader>to :tabonly<cr>
+noremap <leader>tc :tabclose<cr>
+noremap <leader>tm :tabmove<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => buffer 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <leader>bb :Buffers<cr>
+
+
 
