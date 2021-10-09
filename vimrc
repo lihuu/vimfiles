@@ -291,6 +291,7 @@ noremap <leader>fn :NERDTreeToggle<cr>
 noremap <leader>nb :NERDTreeFromBookmark<Space>
 noremap <leader>nf :NERDTreeFind<cr>
 autocmd BufWinEnter * silent NERDTreeMirror
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
