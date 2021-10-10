@@ -1,6 +1,7 @@
 let s:isWindows = has('win16') || has('win32') || has('win64')
-let s:isMac = has('mac')
+let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
+let s:isNvim = has('nvim')
 silent function! OSX()
     return has('macunix')||has('mac')
 endfunction
@@ -199,22 +200,17 @@ let g:prettier#config#parser='babylon'
 
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
-    source $HOME/vimfiles/clang.vim
+    source $HOME/vimfiles/run.vim
     source $HOME/vimfiles/markdown-preview-config.vim
 else
     source ~/.vim/coc-config.vim
-    source ~/.vim/clang.vim
+    source ~/.vim/run.vim
     source ~/.vim/markdown-preview-config.vim
 endif
 
-"文件相关的操作
-if s:isWindows
-  noremap <leader>fp :e $HOME/vimfiles/vimrc<cr>
-else
-  noremap <leader>fp :e ~/.vim/vimrc<cr>
-endif
-noremap <leader>ff :Files<cr>
+noremap <leader>fp :e $MYVIMRC<cr>
 
+noremap <leader>ff :Files<cr>
 
 "
 "sort lines

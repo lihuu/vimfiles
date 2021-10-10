@@ -12,11 +12,13 @@ func! CompileAndRun()
 		exec "!time java %<"
 	elseif &filetype == 'sh'
 		:!time bash %
+	elseif &filetype == 'lua'
+        exec "!lua %"
+    elseif (&filetype == 'js'|| &filetype == 'javascript.jsx')
+        "some common javascript file will be treat as jsx file
+        exec "!time node %"
 	elseif &filetype == 'python'
 		exec "!time python2.7 %"
-
-    elseif &filetype == 'lua'
-        exec "!lua %"
     elseif &filetype == 'html'
         exec "!firefox % &"
     elseif &filetype == 'go'
