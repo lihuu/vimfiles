@@ -261,7 +261,6 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 ""  \ }
 
 "Config for fzf
-noremap <c-p> :Files<cr>
 
 
 "Config for vim-rooter
@@ -315,9 +314,28 @@ noremap <leader>tm :tabmove<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => buffer 
+" => fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:fzf_layout = { 'down': '40%' }
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
+
 noremap <leader>bb :Buffers<cr>
+noremap <c-p> :Files<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
