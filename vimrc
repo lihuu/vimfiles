@@ -1,7 +1,16 @@
+"Auto fold config ---- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
 let s:isNvim = has('nvim')
+"函数尽量用大写字母开头
+"没有作用域限制的函数必须以一个大写字母开头!
 silent function! OSX()
     return has('macunix')||has('mac')
 endfunction
@@ -13,6 +22,7 @@ endfunction
 silent function! WINDOWS()
     return (has('win32')||has('win64'))
 endfunction
+
 
 set nocompatible "Must be first line
 
@@ -43,6 +53,7 @@ set number
 syntax enable
 set ts=4
 set shiftwidth=4
+set textwidth=100
 set expandtab
 "set encoding=UTF-8
 "set background=dark
@@ -101,6 +112,7 @@ endif
 
 
 set diffexpr=MyDiff()
+"Diff function {{{
 function MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
@@ -129,6 +141,7 @@ function MyDiff()
     let &shellxquote=l:shxq_sav
   endif
 endfunction
+" }}}
 
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
