@@ -42,9 +42,6 @@ else
         let s:configPath="~/.vim"
     endif
 endif
-
-echom s:configPath
-
 " }}}
 
 set nocompatible "Must be first line
