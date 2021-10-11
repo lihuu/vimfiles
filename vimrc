@@ -5,24 +5,47 @@ augroup filetype_vim
 augroup END
 " }}}
 
+
+"
+" Detect os type {{{
+"函数尽量用大写字母开头
+"没有作用域限制的函数必须以一个大写字母开头!
+silent function! OSX()
+return has('macunix')||has('mac')
+endfunction
+
+silent function! LINUS()
+return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+
+silent function! WINDOWS()
+return (has('win32')||has('win64'))
+endfunction
+" }}}
+
+"Script wide variables  {{{
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
 let s:isNvim = has('nvim')
-"函数尽量用大写字母开头
-"没有作用域限制的函数必须以一个大写字母开头!
-silent function! OSX()
-    return has('macunix')||has('mac')
-endfunction
 
-silent function! LINUS()
-    return has('unix') && !has('macunix') && !has('win32unix')
-endfunction
+if s:isNvim
+    if s:isWindows
+        let s:configPath="$HOME/AppData/Local/nvim"
+    else
+        let s:configPath="~/.config/nvim"
+    endif
+else
+    if s:isWindows
+        let s:configPath="$HOME/vimfiles"
+    else
+        let s:configPath="~/.vim"
+    endif
+endif
 
-silent function! WINDOWS()
-    return (has('win32')||has('win64'))
-endfunction
+echom s:configPath
 
+" }}}
 
 set nocompatible "Must be first line
 
@@ -61,7 +84,7 @@ set cursorline
 set autoread
 
 if has('termguicolors')
-  set termguicolors
+    set termguicolors
 endif
 "colorscheme torte
 colorscheme molokai
@@ -114,32 +137,32 @@ endif
 set diffexpr=MyDiff()
 "Diff function {{{
 function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      if empty(&shellxquote)
-        let l:shxq_sav = ''
-        set shellxquote&
-      endif
-      let cmd = '"' . $VIMRUNTIME . '\diff"'
+    let opt = '-a --binary '
+    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+    let arg1 = v:fname_in
+    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+    let arg2 = v:fname_new
+    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+    let arg3 = v:fname_out
+    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+    if $VIMRUNTIME =~ ' '
+        if &sh =~ '\<cmd'
+            if empty(&shellxquote)
+                let l:shxq_sav = ''
+                set shellxquote&
+            endif
+            let cmd = '"' . $VIMRUNTIME . '\diff"'
+        else
+            let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+        endif
     else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+        let cmd = $VIMRUNTIME . '\diff'
     endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
-  if exists('l:shxq_sav')
-    let &shellxquote=l:shxq_sav
-  endif
+    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
+    if exists('l:shxq_sav')
+        let &shellxquote=l:shxq_sav
+    endif
 endfunction
 " }}}
 
@@ -148,12 +171,12 @@ filetype off
 if s:isWindows
     set rtp+=$HOME/vimfiles/autoload/plug.vim
     call plug#begin('$HOME/vimfiles/plugged/')
-        source $HOME/vimfiles/plugins.vim
+    source $HOME/vimfiles/plugins.vim
     call plug#end()
 else
     "set rtp+=~/.vim/autoload/plug.vim
     call plug#begin('~/.vim/plugged')
-        source ~/.vim/plugins.vim
+    source ~/.vim/plugins.vim
     call plug#end()
 endif
 
@@ -256,9 +279,9 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 " Windows
 
 "if s:isWindows
-    "set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+"set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
 "else
-    "set wildignore+=*/tmp/*,*.so,*.swp,*.zip     
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     
 "endif
 
 "let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|.idea|node_modules)$'
@@ -327,19 +350,19 @@ noremap <leader>tm :tabmove<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:fzf_layout = { 'down': '40%' }
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'border':  ['fg', 'Ignore'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
 
 command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
 
