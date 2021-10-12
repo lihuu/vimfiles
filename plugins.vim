@@ -1,3 +1,4 @@
+"Deleted plugins {{{
 "Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 "Plug 'FuzzyFinder'
 "Plug 'Gundo'
@@ -10,6 +11,10 @@
 "Plug 'gtk-vim-syntax'
 "Plug 'jQuery'
 "Plug 'matchit.zip'
+"Plug 'codota/tabnine-vim'
+"Plug 'terryma/vim-multiple-cursors'
+"Plug 'starcraftman/vim-eclim'
+" }}}
 
 "nerdtree 这个插件相关的插件
 "Plug 'preservim/nerdtree',{'on':'NERDTreeToggle'}
@@ -84,7 +89,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim',{'on':['Files','Buffers']}
 
 Plug 'preservim/nerdcommenter'
+Plug 'machakann/vim-highlightedyank'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+"Gui only plugins
 if has('gui_running')
     "File icons plugin
     "需要安装字体 https://github.com/ryanoasis/nerd-fonts.git
@@ -94,10 +102,6 @@ if has('gui_running')
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-scripts/wimproved.vim'
     "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
-    "Plug 'codota/tabnine-vim'
-    "Plug 'terryma/vim-multiple-cursors'
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-    "Plug 'starcraftman/vim-eclim'
 endif
 
 
