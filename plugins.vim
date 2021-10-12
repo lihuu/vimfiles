@@ -96,7 +96,7 @@ if has('gui_running')
     "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
     "Plug 'codota/tabnine-vim'
     "Plug 'terryma/vim-multiple-cursors'
-    "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     "Plug 'starcraftman/vim-eclim'
 endif
 
