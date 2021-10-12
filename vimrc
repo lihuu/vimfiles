@@ -312,7 +312,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__','node_modules']
 let g:NERDTreeWinSize=35
 noremap <leader>nn :NERDTreeToggle<cr>
 noremap <leader>fn :NERDTreeToggle<cr>
