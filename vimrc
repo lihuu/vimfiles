@@ -397,8 +397,6 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-visual-multi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -406,3 +404,8 @@ let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
 let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-highlightedyank config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:highlightedyank_highlight_duration = 100
