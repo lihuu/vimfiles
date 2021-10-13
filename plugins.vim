@@ -57,7 +57,7 @@ Plug 'toml-lang/toml',{'for':'toml'}
 "彩虹括号
 Plug 'luochen1990/rainbow'
 "Plug Markdown config
-Plug 'plasticboy/vim-markdown',{'for':'markdown'}
+Plug 'plasticboy/vim-markdown', {'for':'markdown'}
 Plug 'tyru/open-browser.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' ,'for':'markdown' }
 Plug 'vimwiki/vimwiki'
@@ -66,6 +66,7 @@ Plug 'vimwiki/vimwiki'
 "
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 
 "colorschemes
 Plug 'flazz/vim-colorschemes'

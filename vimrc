@@ -166,7 +166,7 @@ endfunction
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
 if s:isWindows
-    set rtp+=$HOME/vimfiles/autoload/plug.vim
+    "set rtp+=$HOME/vimfiles/autoload/plug.vim
     call plug#begin('$HOME/vimfiles/plugged/')
     source $HOME/vimfiles/plugins.vim
     call plug#end()
@@ -241,7 +241,7 @@ else
     source ~/.vim/markdown-preview-config.vim
 endif
 
-noremap <leader>fp :e $MYVIMRC<cr>
+noremap <leader>fp :vsplit $MYVIMRC<cr>
 
 noremap <leader>ff :Files<cr>
 
