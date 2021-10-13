@@ -231,7 +231,7 @@ let g:vim_markdown_toc_autofit = 1
 let g:prettier#autoformat = 0                                                                                       
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
-let g:prettier#config#parser='babylon'
+"let g:prettier#config#parser='babylon'
 
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
@@ -269,7 +269,9 @@ autocmd FileType html,css EmmetInstall
 let g:user_emmet_mode='i' " value: n i v a
 let g:user_emmet_expandabbr_key='<C-e>'
 
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+"autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+"
+"autocmd! PrettierFileDetect BufNewFile,BufReadPost *.js,*jsx setfiletype javascript
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
