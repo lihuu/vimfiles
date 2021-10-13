@@ -105,4 +105,6 @@ if has('gui_running')
     "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
 endif
 
+Plug 'dstein64/vim-startuptime'
+
 
