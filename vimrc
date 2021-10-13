@@ -166,7 +166,7 @@ endfunction
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
 if s:isWindows
-    "set rtp+=$HOME/vimfiles/autoload/plug.vim
+    set rtp+=$HOME/vimfiles/autoload/plug.vim
     call plug#begin('$HOME/vimfiles/plugged/')
     source $HOME/vimfiles/plugins.vim
     call plug#end()
@@ -208,28 +208,30 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 "Extral Configuration
 let g:jsx_ext_required=0
 
-"wiki configuration
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim wiki
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vimwiki_list = [{'path': '~/OneDrive/mywiki/'}]
 
 let delimitMate_matchpairs="(:),[:],{:}"
 au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 "*****************vim-markdown configuration start *********
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
 
-"*****************vim-markdown configuration end ***********
 
-"****************prettier config start****************
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => prettier 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:prettier#autoformat = 0                                                                                       
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
-"g:prettier#config#parser = 'babylon'
 let g:prettier#config#parser='babylon'
-"****************prettier config end*****************
 
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
@@ -241,7 +243,7 @@ else
     source ~/.vim/markdown-preview-config.vim
 endif
 
-noremap <leader>fp :vsplit $MYVIMRC<cr>
+noremap <leader>fp :e $MYVIMRC<cr>
 
 noremap <leader>ff :Files<cr>
 
@@ -259,47 +261,22 @@ noremap <c-l> 5l
 "let g:airline_theme='molokai'
 let g:airline_theme='luna'
 
-"
-"
-"Config for emmet-vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => emmet-vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_mode='i' " value: n i v a
-"remap the default <C-Y> leader
-"let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_expandabbr_key='<C-e>'
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
-"CtrlP config
-" MacOSX/Linux
-" Windows
 
-"if s:isWindows
-"set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
-"else
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     
-"endif
-
-"let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|.idea|node_modules)$'
-"let g:ctrlp_root_markers = ['pom.xml','build.gradle']
-"let g:ctrlp_custom_ignore = {
-""  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|\.idea|node_modules)$',
-""  \ 'file': '\.(exe|so|dll)$',
-""  \ 'link': 'some_bad_symbolic_links',
-""  \ }
-
-"Config for fzf
-
-
-"Config for vim-rooter
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-rooter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rooter_silent_chdir = 1
 
-"colorscheme monokai_pro
-"
-"au GUIEnter * call libcallnr("vimtweak32.dll", "SetAlpha", 234)
-"
 
 "透明度设置
 if WINDOWS()
@@ -318,8 +295,13 @@ noremap <leader>nn :NERDTreeToggle<cr>
 noremap <leader>fn :NERDTreeToggle<cr>
 noremap <leader>nb :NERDTreeFromBookmark<Space>
 noremap <leader>nf :NERDTreeFind<cr>
-autocmd BufWinEnter * silent NERDTreeMirror
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+augroup loadNeardTree
+    autocmd!
+    "autocmd BufWinEnter * silent NERDTreeMirror
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+augroup END
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

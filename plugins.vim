@@ -17,8 +17,8 @@
 " }}}
 
 "nerdtree 这个插件相关的插件
-"Plug 'preservim/nerdtree',{'on':'NERDTreeToggle'}
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree',{'on':'NERDTreeToggle'}
+"Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
