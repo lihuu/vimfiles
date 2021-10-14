@@ -101,12 +101,7 @@ endif
 
 
 "nerdtree 按键映射
-noremap <leader>f :NERDTreeToggle<cr>
-
-if !(has('win16') || has('win32') || has('win64'))
-    "source ~/.config/nvim/clang.vim
-    source ~/.config/nvim/run.vim
-endif
+noremap <leader>fn :NERDTreeToggle<cr>
 
 let g:airline_theme='luna'
 
