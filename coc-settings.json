@@ -1,14 +1,21 @@
 {
-    "coc.preferences.extensionUpdateCheck": "never",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "coc.preferences.formatOnSaveFiletypes": [
-        "css",
-        "jsx",
-        "javascript",
-        "markdown",
-        "less",
-        "typescript",
-        "typescriptreact",
-        "html"
-    ]
+  "coc.preferences.extensionUpdateCheck": "never",
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "jsx",
+    "javascript",
+    "markdown",
+    "less",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+  "prettier.disableSuccessMessage": true,
+  "prettier.printWidth": 80,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "prettier.bracketSpacing": true,
+  "prettier.semi": true
 }
