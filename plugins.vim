@@ -33,9 +33,11 @@ Plug 'mattn/emmet-vim'
 Plug 'elzr/vim-json'
 
 "Javascript typescript reactjs 相关的插件
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
-Plug 'mxw/vim-jsx'
+"Plug 'mxw/vim-jsx'
+Plug 'yuezk/vim-js'
+"Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
