@@ -7,3 +7,5 @@ plugged
 *.swn
 *.un~
 *.swm
+
+.netrwhist

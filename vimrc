@@ -226,12 +226,14 @@ let g:vim_markdown_toc_autofit = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => prettier 
+" => coc-prettier 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:prettier#autoformat = 0                                                                                       
-"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 "let g:prettier#config#parser='babylon'
+
 
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
