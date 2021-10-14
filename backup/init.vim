@@ -1,10 +1,5 @@
 " |eovim config
 " +-------------+--------------+----------+----------+
-"
-let s:isWindows = has('win16') || has('win32') || has('win64')
-let s:isMac = has('mac')||has('macunix')
-let s:isLinux = has('linux')
-let s:isNvim = has('nvim')
 
 set hidden
 set nocompatible
@@ -44,15 +39,96 @@ set noundofile
 
 "set pythonthreedll=python36.dll
 filetype off
-if s:isWindows
-    call plug#begin('~/.config/nvim/plugged')
-    source $HOME/AppData/Local/nvim/plugins.vim
-    call plug#end()
-else
-    call plug#begin('~/.config/nvim/plugged')
-    source $HOME/.config/nvim/plugins.vim
-    call plug#end()
-endif
+call plug#begin('~/.config/nvim/plugged')
+
+"左边的文件树
+Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'mileszs/ack.vim',{'on':'Ack'}
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"
+"Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+"
+Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
+Plug 'elzr/vim-json', {'for':'json'}
+
+"Javascript 相关的插件
+Plug 'pangloss/vim-javascript'
+Plug 'isruslan/vim-es6'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
+"语法检查
+Plug 'scrooloose/syntastic'
+
+"Language Syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'othree/xml.vim',{'for':'xml'}
+Plug 'sukima/xmledit',{'for':'xml'}
+Plug 'chr4/nginx.vim'
+Plug 'calleerlandsson/pick.vim'
+Plug 'hail2u/vim-css3-syntax',{'for':'css'}
+Plug 'groenewege/vim-less',{'for':'less'}
+Plug 'Raimondi/delimitMate'
+Plug 'cespare/vim-toml',{'for':'toml'}
+Plug 'toml-lang/toml',{'for':'toml'}
+
+
+Plug 'luochen1990/rainbow'
+
+"
+Plug 'plasticboy/vim-markdown',{'for':'markdown'}
+Plug 'tyru/open-browser.vim'
+Plug 'iamcco/markdown-preview.nvim',{'do':'cd app & yarn install','for':'markdown'}
+Plug 'vimwiki/vimwiki'
+
+
+"Git config 
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'flazz/vim-colorschemes'
+Plug 'phanviet/vim-monokai-pro'
+
+Plug 'mhinz/vim-startify'
+Plug 'honza/vim-snippets'
+Plug 'airblade/vim-rooter'
+"<leader>di start Drawit and <leader>ds to stop drawit
+Plug 'vim-scripts/DrawIt'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'gr    aphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'vim-scripts/c.vim', {'for':['c','cpp']}
+Plug 'tfnico/vim-gradle'
+Plug 'vim-scripts/Gundo'
+Plug 'vim-scripts/JavaScript-Indent'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/Mark'
+Plug 'vim-scripts/gtags.vim',{'for':'c'}
+Plug 'vim-scripts/jQuery'
+"Plug 'PasteBin.vim'
+""'Plug 'VisIncr'
+"Plug 'davidhalter/jedi-vim',{'for':'python'}
+"Plug 'vim-scripts/FuzzyFinder'
+"Plug 'gtk-vim-syntax'
+"Plug 'matchit.zip'
+"Plug 'Lokaltog/vim-powerline'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim',{'on':['Files','Buffers']}
+
+
+Plug 'pprovost/vim-ps1'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'dylon/vim-antlr'
+"Plug 'neovim/nvim-lspconfig'
+
+call plug#end()
 
 filetype plugin indent on
 
