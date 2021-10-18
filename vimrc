@@ -348,7 +348,7 @@ let g:fzf_colors =
             \ 'spinner': ['fg', 'Label'],
             \ 'header':  ['fg', 'Comment'] }
 
-command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
+"command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
 
 noremap <leader>bb :Buffers<cr>
 noremap <c-p> :Files<cr>
