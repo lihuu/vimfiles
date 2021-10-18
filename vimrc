@@ -243,7 +243,6 @@ endif
 
 noremap <leader>fp :e $MYVIMRC<cr>
 
-noremap <leader>ff :Files<cr>
 
 "
 "sort lines
@@ -351,7 +350,7 @@ let g:fzf_colors =
 "command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
 
 noremap <leader>bb :Buffers<cr>
-noremap <c-p> :Files<cr>
+noremap <leader>ff :Files<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
