@@ -277,9 +277,13 @@ let g:user_emmet_expandabbr_key='<C-e>'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rooter_silent_chdir = 1
 let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json','pom.xml']
 
 
-"透明度设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 透明度设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 if WINDOWS()
     autocmd GUIEnter * silent! WToggleClean
     autocmd GUIEnter * silent! WSetAlpha 234
