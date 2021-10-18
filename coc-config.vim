@@ -1,7 +1,7 @@
 "****************************coc.nvim configuration*********************
 "coc.nvim configuration
 "coc-tabnine
-let g:coc_global_extensions=['coc-sh','coc-json','coc-css','coc-tsserver','coc-html','coc-marketplace','coc-git','coc-lua','coc-java','coc-pyright','coc-xml','coc-yaml','coc-go','coc-clangd','coc-prettier','coc-tabnine']
+let g:coc_global_extensions=['coc-sh','coc-json','coc-css','coc-tsserver','coc-html','coc-marketplace','coc-git','coc-lua','coc-java','coc-pyright','coc-xml','coc-yaml','coc-go','coc-clangd','coc-prettier','coc-tabnine','coc-styled-components']
 "https://www.tabnine.com/welcome
 "Tabnine::config
 "Tabnine的具体配置

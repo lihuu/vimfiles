@@ -4,9 +4,6 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
-
-
-"
 " Detect os type {{{
 "函数尽量用大写字母开头
 "没有作用域限制的函数必须以一个大写字母开头!
@@ -22,7 +19,6 @@ silent function! WINDOWS()
 return (has('win32')||has('win64'))
 endfunction
 " }}}
-
 "Script wide variables  {{{
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
@@ -396,3 +392,15 @@ let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
 " => vim-highlightedyank config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:highlightedyank_highlight_duration = 100
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-startify config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   MRU']            },
+          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ { 'type': 'commands',  'header': ['   Commands']       },
+          \ ]
+
+
