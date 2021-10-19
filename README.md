@@ -32,6 +32,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 Linux平台不必多说，windows 平台直接使用 `scoop install ack`
 
+
+##### 字体
+有些插件会依赖powerline 字体 ，需要安装这些字体
+
+https://github.com/powerline/fonts
+
 ###  一些插件的使用说明
 #### emmet 插件
 emmet插件使用的是`mattn/emmet-vim`，补全的快捷键修改了为`<c-e>`，触发模式设置为仅编辑模式，在编辑模式下面使用`<c-e>`会补全。
