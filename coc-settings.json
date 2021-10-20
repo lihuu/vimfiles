@@ -1,6 +1,4 @@
 {
-  "snippets.ultisnips.usePythonx": false,
-  "snippets.ultisnips.enable": false,
   "coc.preferences.extensionUpdateCheck": "never",
   "java.errors.incompleteClasspath.severity": "ignore",
   "coc.preferences.formatOnSaveFiletypes": [

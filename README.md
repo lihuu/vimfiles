@@ -32,6 +32,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 Linux平台不必多说，windows 平台直接使用 `scoop install ack`
 
+##### python
+python目前不能安装python3.10的，会出现版本的问题
+安装完成之后如果出现 python 相关错误的，需要单独安装 python-neovim 包，执行
+`pip install neovim` 安装即可
 
 ##### 字体
 有些插件会依赖powerline 字体 ，需要安装这些字体
