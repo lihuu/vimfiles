@@ -45,11 +45,11 @@ set noundofile
 "set pythonthreedll=python36.dll
 filetype off
 if s:isWindows
-    call plug#begin('~/.config/nvim/plugged')
+    call plug#begin('~/vimfiles/plugged')
     source $HOME/AppData/Local/nvim/plugins.vim
     call plug#end()
 else
-    call plug#begin('~/.config/nvim/plugged')
+    call plug#begin('~/.vim/plugged')
     source $HOME/.config/nvim/plugins.vim
     call plug#end()
 endif
