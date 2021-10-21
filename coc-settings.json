@@ -8,8 +8,7 @@
     "markdown",
     "less",
     "typescript",
-    "typescriptreact",
-    "html"
+    "typescriptreact"
   ],
   "prettier.disableSuccessMessage": true,
   "prettier.printWidth": 80,
