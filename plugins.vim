@@ -90,7 +90,7 @@ Plug 'pprovost/vim-ps1'
 "使用ctrl+t在新的标签中打开，ctrl+v或者ctrl+x
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'junegunn/fzf.vim',{'on':['Files','Buffers']}
-Plug 'lihuu/fzf.vim',{'on':['Files','Buffers']}
+Plug 'lihuu/fzf.vim',{'on':['Files','Buffers','Rg']}
 
 Plug 'preservim/nerdcommenter'
 Plug 'machakann/vim-highlightedyank'
