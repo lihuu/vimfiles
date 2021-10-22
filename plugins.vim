@@ -74,6 +74,7 @@ Plug 'junegunn/gv.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'phanviet/vim-monokai-pro'
 
+Plug 'andreshazard/vim-freemarker'
 Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'

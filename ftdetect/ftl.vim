@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.ftl set ft=html
+"au BufRead,BufNewFile *.ftl set ft=html
