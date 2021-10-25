@@ -16,5 +16,6 @@
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "all",
   "prettier.bracketSpacing": true,
-  "prettier.semi": true
+  "prettier.semi": true,
+  "prettier.tslintIntegration": false
 }
