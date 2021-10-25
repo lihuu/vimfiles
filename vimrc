@@ -67,10 +67,13 @@ set number
 "设置相对的行号
 "set relativenumber
 syntax enable
+
+"tab替换为空格，大小设置为4
 set ts=4
 set shiftwidth=4
-set textwidth=100
 set expandtab
+
+set textwidth=100
 "set encoding=UTF-8
 "set background=dark
 set cursorline
@@ -199,6 +202,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 "配置文件生效的映射
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+autocmd FileType html set tabstop=2 shiftwidth=2
 
 "
 "Extral Configuration
