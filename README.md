@@ -1,5 +1,4 @@
 
-
 ## vim 配置文件
 
 windows系统中
@@ -95,13 +94,12 @@ vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的�
 #### vim-surround插件使用
 [官方地址](https://github.com/tpope/vim-surround)
 
+#### vim-startify插件使用
+##### 简单的Session处理
 
-
-
-
-
-
-
-
-
-
+```vim   
+:SLoad 加载一个Session
+:SSave 保存一个Session
+:SDelete 删除一个Session
+:SClose 关闭当前的Session
+```
