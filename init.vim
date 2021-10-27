@@ -152,3 +152,6 @@ let g:user_emmet_expandabbr_key='<C-e>'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:highlightedyank_highlight_duration = 100
 
+
+noremap <leader>fp :e $MYVIMRC<cr>
+
