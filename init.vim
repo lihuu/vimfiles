@@ -117,9 +117,9 @@ noremap <c-h> 5h
 noremap <c-l> 5l
 
 "fzf 
-noremap <c-p> :Files<cr>
+noremap <leader>ff :Files<cr>
 "noremap <c-o> :Buffers<cr>
-noremap <c-o> :Buffers<cr>
+noremap <leader>bb :Buffers<cr>
 noremap <leader>F :Rg<cr>
 let g:fzf_preview_window = []
 let g:fzf_layout = {'down':'40%'}
