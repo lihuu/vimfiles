@@ -32,6 +32,7 @@ set fdm=marker
 "set guifont=Fira\ Code:h15:i
 "set guifont=DejaVu\ Sans\ Mono:h13:i
 "set guifont=Fira\ Code:h13:i
+
 let $LANG='en'
 set langmenu='en'
 behave mswin
@@ -41,6 +42,7 @@ set nobackup
 set nowritebackup
 set noundofile
 
+source $VIMRUNTIME/mswin.vim
 
 "set pythonthreedll=python36.dll
 filetype off
