@@ -40,6 +40,12 @@ else
 endif
 " }}}
 
+"augroup filetyp_js
+""  autocmd!
+""  autocmd FileType javascript,typescriptreact,typescript setlocal foldmethod=syntax
+""  autocmd FileType javascript,typescriptreact,typescript setlocal foldlevelstart=99
+"augroup END
+
 set nocompatible "Must be first line
 
 if !WINDOWS()
