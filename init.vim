@@ -49,6 +49,7 @@ filetype off
 if s:isWindows
     call plug#begin('~/vimfiles/plugged')
     source $HOME/AppData/Local/nvim/plugins.vim
+    Plug 'equalsraf/neovim-gui-shim'
     call plug#end()
 else
     call plug#begin('~/.vim/plugged')
