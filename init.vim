@@ -92,6 +92,10 @@ au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit=1
 
+let g:prettier#autoformat = 0                                                                                       
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
+
 if s:isWindows
   source $HOME/AppData/Local/nvim/coc-config.vim
   source $HOME/AppData/Local/nvim/markdown-preview-config.vim
