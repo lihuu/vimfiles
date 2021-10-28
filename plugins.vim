@@ -31,7 +31,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'elzr/vim-json'
-Plug 'turbio/bracey.vim', {'for':'html','on':'Bracey','do':'npm install --prefix server'}
+Plug 'turbio/bracey.vim', {'for':'html','on':'Bracey','do':'cd server & npm install'}
 "Javascript typescript reactjs 相关的插件
 "Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
