@@ -161,6 +161,8 @@ let g:highlightedyank_highlight_duration = 100
 noremap <leader>fp :e $MYVIMRC<cr>
 
 let g:bracey_browser_command = 'chrome'
+let g:bracey_server_log=$HOME+"/bracey.log"
+
 
 set foldlevelstart=99
 autocmd FileType typescriptreact,javascript,typescript setlocal fdm=syntax
