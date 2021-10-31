@@ -69,6 +69,7 @@ function config.lualine()
     }
 end
 
+--https://github.com/kyazdani42/nvim-tree.lua
 function config.nvim_tree()
     local tree_cb = require'nvim-tree.config'.nvim_tree_callback
     require('nvim-tree').setup {
@@ -81,11 +82,24 @@ function config.nvim_tree()
         update_cwd = true,
         highlight_opened_files = true,
         auto_ignore_ft = {'startify', 'dashboard'},
+        update_to_buf_dir   = {
+            enable = true,
+            auto_open = true,
+          },
         update_focused_file = {
             enable = true,
             update_cwd = true,
             ignore_list = {}
         },
+        diagnostics = {
+            enable = false,
+            icons = {
+              hint = "",
+              info = "",
+              warning = "",
+              error = "",
+            }
+          },
         view = {
             width = 30,
             side = 'left',
