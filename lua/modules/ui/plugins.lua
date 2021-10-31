@@ -15,19 +15,25 @@ ui['hoob3rt/lualine.nvim'] = {
     after = 'nvim-gps',
     config = conf.lualine
 }
---ui['glepnir/dashboard-nvim'] = {opt = true, event = "BufWinEnter"}
 ui['mhinz/vim-startify'] = {opt = true, event = "BufWinEnter"}
 ui['kyazdani42/nvim-tree.lua'] = {
     opt = true,
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
     config = conf.nvim_tree
 }
-ui['lewis6991/gitsigns.nvim'] = {
-    opt = true,
+-- ui['lewis6991/gitsigns.nvim'] = {
+    -- opt = true,
+    -- event = {'BufRead', 'BufNewFile'},
+    -- config = conf.gitsigns,
+    -- requires = {'nvim-lua/plenary.nvim', opt = true}
+    -- windows 平台不能使用
+-- }
+
+ui['airblade/vim-gitgutter'] = {
+    opt=true,
     event = {'BufRead', 'BufNewFile'},
-    config = conf.gitsigns,
-    requires = {'nvim-lua/plenary.nvim', opt = true}
 }
+
 ui['lukas-reineke/indent-blankline.nvim'] = {
     opt = true,
     event = 'BufRead',

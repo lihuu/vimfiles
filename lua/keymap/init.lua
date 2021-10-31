@@ -34,10 +34,10 @@ local plug_map = {
     ["n|<leader>pc"] = map_cr("PackerClean"):with_silent():with_noremap()
         :with_nowait(),
     -- Lsp mapp work when insertenter and lsp start
-    ["n|<leader>li"] = map_cr("LspInfo"):with_noremap():with_silent()
-        :with_nowait(),
-    ["n|<leader>lr"] = map_cr("LspRestart"):with_noremap():with_silent()
-        :with_nowait(),
+    --["n|<leader>li"] = map_cr("LspInfo"):with_noremap():with_silent()
+     --   :with_nowait(),
+    --["n|<leader>lr"] = map_cr("LspRestart"):with_noremap():with_silent()
+     --   :with_nowait(),
     ["n|g["] = map_cr('Lspsaga diagnostic_jump_next'):with_noremap()
         :with_silent(),
     ["n|g]"] = map_cr('Lspsaga diagnostic_jump_prev'):with_noremap()
@@ -57,8 +57,8 @@ local plug_map = {
     ["n|<A-d>"] = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
     ["t|<A-d>"] = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap()
         :with_silent(),
-    ["n|<Leader>g"] = map_cu("Lspsaga open_floaterm gitui"):with_noremap()
-        :with_silent(),
+    --["n|<Leader>g"] = map_cu("Lspsaga open_floaterm gitui"):with_noremap()
+     --   :with_silent(),
     -- Plugin trouble
     ["n|gt"] = map_cr('TroubleToggle'):with_noremap():with_silent(),
     ["n|gR"] = map_cr('TroubleToggle lsp_references'):with_noremap()
@@ -157,7 +157,16 @@ local plug_map = {
     ["n|<leader>do"] = map_cr("lua require('dap').step_out()"):with_noremap()
         :with_silent(),
     ["n|<leader>dl"] = map_cr("lua require('dap').repl.open()"):with_noremap()
-        :with_silent()
+        :with_silent(),
+    -- Tab config
+    ["n|<leader>bh"] = map_cr('BufferLineCyclePrev'):with_noremap():with_silent(),
+    ["n|<leader>bl"] = map_cr('BufferLineCycleNext'):with_noremap():with_silent(),
+    ["n|<leader>tn"] = map_cr('tabnew'):with_noremap():with_silent(),
+    ["n|<leader>bc"] = map_cr('BufferLinePickClose'):with_noremap():with_silent(),
+    ["n|<leader>tm"] = map_cr('tabmove'):with_noremap():with_silent(),
+    ["n|<leader>h"] = map_cr('tabprevious'):with_noremap():with_silent(),
+    ["n|<leader>l"] = map_cr('tabnext'):with_noremap():with_silent(),
+    ["n|<leader>tc"] = map_cr('tabclose'):with_noremap():with_silent(),
 };
 
 bind.nvim_load_mapping(plug_map)

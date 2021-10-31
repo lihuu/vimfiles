@@ -1,4 +1,6 @@
+local global = require('core.global')
 local config = {}
+
 
 function config.edge()
     vim.cmd [[set background=dark]]
@@ -166,11 +168,11 @@ function config.nvim_bufferline()
     }
 end
 
-function config.gitsigns()
-    if not packer_plugins['plenary.nvim'].loaded then
-        vim.cmd [[packadd plenary.nvim]]
-    end
-    require('gitsigns').setup {
+--function config.gitsigns()
+--    if not packer_plugins['plenary.nvim'].loaded then
+--        vim.cmd [[packadd plenary.nvim]]
+--    end
+    --[[require('gitsigns').setup {
         signs = {
             add = {hl = 'GitGutterAdd', text = '▋'},
             change = {hl = 'GitGutterChange', text = '▋'},
@@ -212,9 +214,11 @@ function config.gitsigns()
         update_debounce = 100,
         status_formatter = nil, -- Use default
         word_diff = false,
-        diff_opts = {internal = true}
-    }
-end
+        use_internal_diff = false,
+        diff_opts = {internal = false}
+    }]]
+
+--end
 
 function config.indent_blankline()
     -- vim.cmd [[highlight IndentTwo guifg=#D08770 guibg=NONE gui=nocombine]]

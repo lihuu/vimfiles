@@ -51,8 +51,7 @@ editor['SmiteshP/nvim-gps'] = {
 editor['sbdchd/neoformat'] = {opt = true, cmd = 'Neoformat'}
 editor['windwp/nvim-ts-autotag'] = {
     opt = true,
-    ft = {'html', 'xml'},
-    config = conf.autotag
+    ft = {'html', 'xml'}
 }
 editor['andymass/vim-matchup'] = {
     opt = true,
