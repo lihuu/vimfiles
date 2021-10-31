@@ -103,3 +103,15 @@ vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的�
 :SDelete 删除一个Session
 :SClose 关闭当前的Session
 ```
+
+#### nvim(>0.5) 使用lua配置
+
+> 注意：如果目录中既存在`init.vim`又存在`init.lua`，neovim 会优先使用 `init.lua`作为配置文件
+
+参考项目
+
+https://github.com/LunarVim/LunarVim
+
+https://github.com/glepnir/nvim.git
+
+https://github.com/ayamir/nvimdots

@@ -1,6 +1,9 @@
 " |eovim config
 " +-------------+--------------+----------+----------+
 "
+"if has('nvim')
+"endif
+
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
