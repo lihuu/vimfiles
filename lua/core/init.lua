@@ -92,6 +92,10 @@ local lihuu_sqlite_config = function()
 end
 
 local load_core = function()
+    if vim.g.vscode then
+        return
+    end
+
     lihuu_statify_config()
     lihuu_sqlite_config()
     local pack = require('core.pack')
