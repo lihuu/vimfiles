@@ -1,12 +1,6 @@
---[[
-Author: lihu
-Date: 2021-10-31 16:59:58
-LastEditors: lihu
-LastEditTime: 2021-10-31 19:02:58
-FilePath: \vimfiles\lua\modules\ui\plugins.lua
---]]
 local ui = {}
 local conf = require('modules.ui.config')
+local global = require('core.global')
 
 ui['kyazdani42/nvim-web-devicons'] = {opt = false}
 ui['sainnhe/edge'] = {opt = false, config = conf.edge}
@@ -21,18 +15,21 @@ ui['kyazdani42/nvim-tree.lua'] = {
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
     config = conf.nvim_tree
 }
--- ui['lewis6991/gitsigns.nvim'] = {
-    -- opt = true,
-    -- event = {'BufRead', 'BufNewFile'},
-    -- config = conf.gitsigns,
-    -- requires = {'nvim-lua/plenary.nvim', opt = true}
-    -- windows 平台不能使用
--- }
-
-ui['airblade/vim-gitgutter'] = {
+if global.is_windows then
+  ui['airblade/vim-gitgutter'] = {
     opt=true,
     event = {'BufRead', 'BufNewFile'},
+  }
+else
+    -- windows 平台不能使用
+ ui['lewis6991/gitsigns.nvim'] = {
+     opt = true,
+     event = {'BufRead', 'BufNewFile'},
+     config = conf.gitsigns,
+     requires = {'nvim-lua/plenary.nvim', opt = true}
 }
+
+end
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
     opt = true,

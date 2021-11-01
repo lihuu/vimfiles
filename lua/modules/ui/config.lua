@@ -182,11 +182,11 @@ function config.nvim_bufferline()
     }
 end
 
---function config.gitsigns()
---    if not packer_plugins['plenary.nvim'].loaded then
---        vim.cmd [[packadd plenary.nvim]]
---    end
-    --[[require('gitsigns').setup {
+function config.gitsigns()
+   if not packer_plugins['plenary.nvim'].loaded then
+        vim.cmd [[packadd plenary.nvim]]
+    end
+    require('gitsigns').setup {
         signs = {
             add = {hl = 'GitGutterAdd', text = '▋'},
             change = {hl = 'GitGutterChange', text = '▋'},
@@ -230,9 +230,9 @@ end
         word_diff = false,
         use_internal_diff = false,
         diff_opts = {internal = false}
-    }]]
+    }
 
---end
+end
 
 function config.indent_blankline()
     -- vim.cmd [[highlight IndentTwo guifg=#D08770 guibg=NONE gui=nocombine]]
