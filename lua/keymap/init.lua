@@ -72,14 +72,14 @@ local plug_map = {
     ["n|<leader>cl"] = map_cr('TroubleToggle loclist'):with_noremap()
         :with_silent(),
     -- Plugin nvim-tree
-    ["n|<C-n>"] = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     ["n|<Leader>nf"] = map_cr('NvimTreeFindFile'):with_noremap():with_silent(),
     ["n|<Leader>nr"] = map_cr('NvimTreeRefresh'):with_noremap():with_silent(),
+    ["n|<leader>fn"] = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     -- Plugin Telescope
     ["n|<Leader>fp"] = map_cu('Telescope project'):with_noremap():with_silent(),
     ["n|<Leader>fe"] = map_cu('DashboardFindHistory'):with_noremap()
         :with_silent(),
-    ["n|<Leader>fr"] = map_cu('Telescope frecency'):with_noremap():with_silent(),
+    --["n|<Leader>fr"] = map_cu('Telescope frecency'):with_noremap():with_silent(),
     --["n|<Leader>ff"] = map_cu('DashboardFindFile'):with_noremap():with_silent(),
     --["n|<Leader>sc"] = map_cu('DashboardChangeColorscheme'):with_noremap()
     --    :with_silent(),
@@ -99,12 +99,12 @@ local plug_map = {
     ["n|T"] = map_cmd("v:lua.enhance_ft_move('T')"):with_expr(),
     ["n|;"] = map_cmd("v:lua.enhance_ft_move(';')"):with_expr(),
     -- Plugin Easymotion
-    ["n|<leader>j"] = map_cmd("v:lua.enhance_move('lnj')"):with_expr(),
-    ["n|<leader>k"] = map_cmd("v:lua.enhance_move('lnk')"):with_expr(),
-    ["n|<leader>f"] = map_cmd("v:lua.enhance_move('lnf')"):with_expr(),
-    ["n|<leader>w"] = map_cmd("v:lua.enhance_move('lnw')"):with_expr(),
-    ["|<leader>f"] = map_cmd("v:lua.enhance_move('lf')"):with_expr(),
-    ["|<leader>w"] = map_cmd("v:lua.enhance_move('lw')"):with_expr(),
+    --["n|<leader>j"] = map_cmd("v:lua.enhance_move('lnj')"):with_expr(),
+    --["n|<leader>k"] = map_cmd("v:lua.enhance_move('lnk')"):with_expr(),
+    --["n|<leader>f"] = map_cmd("v:lua.enhance_move('lnf')"):with_expr(),
+    ["n|<leader><leader>w"] = map_cmd("v:lua.enhance_move('lnw')"):with_expr(),
+    --["|<leader>f"] = map_cmd("v:lua.enhance_move('lf')"):with_expr(),
+    --["|<leader>w"] = map_cmd("v:lua.enhance_move('lw')"):with_expr(),
     -- Plugin EasyAlign
     ["n|ga"] = map_cmd("v:lua.enhance_align('nga')"):with_expr(),
     ["x|ga"] = map_cmd("v:lua.enhance_align('xga')"):with_expr(),

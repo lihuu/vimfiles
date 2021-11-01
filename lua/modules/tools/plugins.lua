@@ -19,11 +19,13 @@ tools['nvim-telescope/telescope-project.nvim'] = {
     opt = true,
     after = 'telescope.nvim'
 }
+--
 tools['nvim-telescope/telescope-frecency.nvim'] = {
     opt = true,
     after = 'telescope.nvim',
-    requires = {{'tami5/sql.nvim', opt = true}}
+    requires = {{'tami5/sqlite.lua', opt = true}}
 }
+
 tools['thinca/vim-quickrun'] = {opt = true, cmd = {'QuickRun', 'Q'}}
 tools['michaelb/sniprun'] = {
     opt = true,

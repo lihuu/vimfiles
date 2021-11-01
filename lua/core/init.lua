@@ -85,6 +85,12 @@ local lihuu_statify_config = function ()
     vim.g.startify_files_number=20
 end
 
+local lihuu_sqlite_config = function()
+    if global.is_windows then
+        vim.g.sqlite_clib_path='C:\\ProgramData\\chocoportable\\lib\\SQLite\\tools\\sqlite3.dll'
+    end
+end
+
 local load_core = function()
     local pack = require('core.pack')
     createdir()
@@ -95,6 +101,7 @@ local load_core = function()
     -- neovide_config()
     neovim_qt_config()
     lihuu_statify_config()
+    lihuu_sqlite_config()
     clipboard_settings()
 
     require('core.options')
