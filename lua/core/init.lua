@@ -92,6 +92,8 @@ local lihuu_sqlite_config = function()
 end
 
 local load_core = function()
+    lihuu_statify_config()
+    lihuu_sqlite_config()
     local pack = require('core.pack')
     createdir()
     disable_distribution_plugins()
@@ -100,8 +102,6 @@ local load_core = function()
     pack.ensure_plugins()
     -- neovide_config()
     neovim_qt_config()
-    lihuu_statify_config()
-    lihuu_sqlite_config()
     clipboard_settings()
 
     require('core.options')
