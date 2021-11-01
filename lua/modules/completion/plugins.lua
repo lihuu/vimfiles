@@ -1,3 +1,10 @@
+--[[
+Author: lihu
+Date: 2021-11-01 08:38:22
+LastEditors: lihu
+LastEditTime: 2021-11-01 10:13:06
+FilePath: \vimfiles\lua\modules\completion\plugins.lua
+--]]
 local completion = {}
 local conf = require('modules.completion.config')
 
@@ -6,12 +13,19 @@ completion['neovim/nvim-lspconfig'] = {
     event = 'BufReadPre',
     config = conf.nvim_lsp
 }
-completion['kabouzeid/nvim-lspinstall'] = {opt = true, after = 'nvim-lspconfig'}
+--https://github.com/kabouzeid/nvim-lspinstall
+--completion['kabouzeid/nvim-lspinstall'] = {opt = true, after = 'nvim-lspconfig'}
+
+--https://github.com/williamboman/nvim-lsp-installer
+completion['williamboman/nvim-lsp-installer'] = {opt = true, after = 'nvim-lspconfig'}
+--https://github.com/glepnir/lspsaga.nvim
 completion['glepnir/lspsaga.nvim'] = {
     opt = true,
     after = 'nvim-lspconfig',
 }
+--显示方法、函数的签名
 completion['ray-x/lsp_signature.nvim'] = {opt = true, after = 'nvim-lspconfig'}
+--补全
 completion['hrsh7th/nvim-cmp'] = {
     config = conf.cmp,
     event = 'InsertEnter',

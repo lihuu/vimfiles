@@ -80,12 +80,12 @@ local plug_map = {
     ["n|<Leader>fe"] = map_cu('DashboardFindHistory'):with_noremap()
         :with_silent(),
     ["n|<Leader>fr"] = map_cu('Telescope frecency'):with_noremap():with_silent(),
-    ["n|<Leader>ff"] = map_cu('DashboardFindFile'):with_noremap():with_silent(),
-    ["n|<Leader>sc"] = map_cu('DashboardChangeColorscheme'):with_noremap()
-        :with_silent(),
-    ["n|<Leader>fw"] = map_cu('DashboardFindWord'):with_noremap():with_silent(),
-    ["n|<Leader>fn"] = map_cu('DashboardNewFile'):with_noremap():with_silent(),
-    ["n|<Leader>fb"] = map_cu('Telescope file_browser'):with_noremap()
+    --["n|<Leader>ff"] = map_cu('DashboardFindFile'):with_noremap():with_silent(),
+    --["n|<Leader>sc"] = map_cu('DashboardChangeColorscheme'):with_noremap()
+    --    :with_silent(),
+    --["n|<Leader>fw"] = map_cu('DashboardFindWord'):with_noremap():with_silent(),
+    --["n|<Leader>fn"] = map_cu('DashboardNewFile'):with_noremap():with_silent(),
+    ["n|<Leader>ff"] = map_cu('Telescope file_browser'):with_noremap()
         :with_silent(),
     ["n|<Leader>fg"] = map_cu('Telescope git_files'):with_noremap()
         :with_silent(),
@@ -167,6 +167,7 @@ local plug_map = {
     ["n|<leader>h"] = map_cr('tabprevious'):with_noremap():with_silent(),
     ["n|<leader>l"] = map_cr('tabnext'):with_noremap():with_silent(),
     ["n|<leader>tc"] = map_cr('tabclose'):with_noremap():with_silent(),
+    -- lsp config
 };
 
 bind.nvim_load_mapping(plug_map)
