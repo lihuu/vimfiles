@@ -91,7 +91,6 @@ end
   local function setup_servers()
     intall_severs()
     lsp_installer.on_server_ready(function(server)
-      local opts = {}
       if server.name=='lua' then
         server:setup({
             capabilities = capabilities,
