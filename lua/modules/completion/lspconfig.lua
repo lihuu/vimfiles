@@ -1,17 +1,17 @@
 if not packer_plugins['nvim-lspconfig'].loaded then
-  vim.cmd [[packadd nvim-lspconfig]]
+    vim.cmd [[packadd nvim-lspconfig]]
 end
 
 if not packer_plugins['lspsaga.nvim'].loaded then
-  vim.cmd [[packadd lspsaga.nvim]]
+    vim.cmd [[packadd lspsaga.nvim]]
 end
 
 if not packer_plugins['nvim-lsp-installer'].loaded then
-  vim.cmd [[packadd nvim-lsp-installer]]
+    vim.cmd [[packadd nvim-lsp-installer]]
 end
 
 if not packer_plugins['lsp_signature.nvim'].loaded then
-  vim.cmd [[packadd lsp_signature.nvim]]
+    vim.cmd [[packadd lsp_signature.nvim]]
 end
 
 local nvim_lsp = require('lspconfig')
@@ -20,7 +20,7 @@ local saga = require('lspsaga')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 capabilities.textDocument.completion.completionItem.documentationFormat = {
-  'markdown', 'plaintext'
+    'markdown', 'plaintext'
 }
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.preselectSupport = true
@@ -29,22 +29,22 @@ capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
 capabilities.textDocument.completion.completionItem.deprecatedSupport = true
 capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
 capabilities.textDocument.completion.completionItem.tagSupport = {
-  valueSet = {1}
+    valueSet = {1}
 }
 capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {'documentation', 'detail', 'additionalTextEdits'}
+    properties = {'documentation', 'detail', 'additionalTextEdits'}
 }
 
 local function custom_attach()
 
-  require('lsp_signature').on_attach({
-      bind = true,
-      use_lspsaga = false,
-      floating_window = true,
-      fix_pos = true,
-      hint_enable = true,
-      hi_parameter = "Search",
-      handler_opts = {"double"}
+    require('lsp_signature').on_attach({
+        bind = true,
+        use_lspsaga = false,
+        floating_window = true,
+        fix_pos = true,
+        hint_enable = true,
+        hi_parameter = "Search",
+        handler_opts = {"double"}
     })
 
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -75,60 +75,60 @@ local function custom_attach()
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-  local lsp_installer = require("nvim-lsp-installer")
-  local function intall_severs()
+local lsp_installer = require("nvim-lsp-installer")
+local function intall_severs()
     local servers = {"tsserver",'bashls','cmake','cssls','clangd','html','jsonls','gopls','jdtls','pyright','powershell_es','lemminx','sumneko_lua','vimls'}
     for _, name in ipairs(servers) do
-      local ok,server = lsp_installer.get_server(name)
-      if ok then
-        if not server:is_installed() then
-          server:install()
+        local ok,server = lsp_installer.get_server(name)
+        if ok then
+            if not server:is_installed() then
+                server:install()
+            end
         end
-      end
     end
-  end
+end
 
-  local function setup_servers()
+local function setup_servers()
     intall_severs()
     lsp_installer.on_server_ready(function(server)
-      if server.name=='lua' then
-        server:setup({
-            capabilities = capabilities,
-            flags = {debounce_text_changes = 500},
-            settings = {
-              Lua = {
-                diagnostics = {globals = {"vim", "packer_plugins"}},
-                workspace = {
-                  library = {
-                    [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-                    [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true
-                  },
-                  maxPreload = 100000,
-                  preloadFileSize = 10000
+        if server.name=='lua' then
+            server:setup({
+                capabilities = capabilities,
+                flags = {debounce_text_changes = 500},
+                settings = {
+                    Lua = {
+                        diagnostics = {globals = {"vim", "packer_plugins"}},
+                        workspace = {
+                            library = {
+                                [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                                [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true
+                            },
+                            maxPreload = 100000,
+                            preloadFileSize = 10000
+                        },
+                        telemetry = {enable = false}
+                    }
                 },
-                telemetry = {enable = false}
-              }
-            },
-            on_attach = custom_attach
-          })
-      else
-        server:setup({
-            capabilities = capabilities,
-            flags = {debounce_text_changes = 500},
-            on_attach = custom_attach
-          })
-      end
+                on_attach = custom_attach
+            })
+        else
+            server:setup({
+                capabilities = capabilities,
+                flags = {debounce_text_changes = 500},
+                on_attach = custom_attach
+            })
+        end
 
-      -- (optional) Customize the options passed to the server
-      -- if server.name == "tsserver" then
-      --     opts.root_dir = function() ... end
-      -- end
+        -- (optional) Customize the options passed to the server
+        -- if server.name == "tsserver" then
+        --     opts.root_dir = function() ... end
+        -- end
 
-      -- This setup() function is exactly the same as lspconfig's setup function.
-      -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/ADVANCED_README.md
+        -- This setup() function is exactly the same as lspconfig's setup function.
+        -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/ADVANCED_README.md
     end)
-  end
+end
 
-  setup_servers()
+setup_servers()
 
 

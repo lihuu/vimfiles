@@ -49,4 +49,11 @@ tools['gelguy/wilder.nvim'] = {
     requires = {{'romgrk/fzy-lua-native', after = 'wilder.nvim'}}
 }
 tools['nathom/filetype.nvim'] = {opt = false}
+tools['prettier/vim-prettier'] = {
+    opt = true,
+    ft= {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
+    cmd={"Prettier"},
+    run='yarn install',
+    config = conf.prettier
+}
 return tools
