@@ -36,6 +36,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 }
 
 local function custom_attach()
+
   require('lsp_signature').on_attach({
       bind = true,
       use_lspsaga = false,
@@ -45,10 +46,11 @@ local function custom_attach()
       hi_parameter = "Search",
       handler_opts = {"double"}
     })
+
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
     -- Enable completion triggered by <c-x><c-o>
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+    --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     -- Mappings.
     local opts = { noremap=true, silent=true }

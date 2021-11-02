@@ -1,10 +1,3 @@
---[[
-Author: lihu
-Date: 2021-11-01 08:38:22
-LastEditors: lihu
-LastEditTime: 2021-11-01 17:58:26
-FilePath: \vimfiles\lua\modules\completion\plugins.lua
---]]
 local completion = {}
 local conf = require('modules.completion.config')
 
@@ -15,6 +8,8 @@ completion['neovim/nvim-lspconfig'] = {
 }
 --https://github.com/kabouzeid/nvim-lspinstall
 --completion['kabouzeid/nvim-lspinstall'] = {opt = true, after = 'nvim-lspconfig'}
+--
+--
 
 --https://github.com/williamboman/nvim-lsp-installer
 completion['williamboman/nvim-lsp-installer'] = {opt = true, after = 'nvim-lspconfig'}
