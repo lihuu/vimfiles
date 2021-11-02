@@ -25,14 +25,14 @@ local plug_map = {
     ["n|<A-8>"] = map_cr("BufferLineGoToBuffer 8"):with_noremap():with_silent(),
     ["n|<A-9>"] = map_cr("BufferLineGoToBuffer 9"):with_noremap():with_silent(),
     -- Packer
-    ["n|<leader>ps"] = map_cr("PackerSync"):with_silent():with_noremap()
-        :with_nowait(),
-    ["n|<leader>pu"] = map_cr("PackerUpdate"):with_silent():with_noremap()
-        :with_nowait(),
-    ["n|<leader>pi"] = map_cr("PackerInstall"):with_silent():with_noremap()
-        :with_nowait(),
-    ["n|<leader>pc"] = map_cr("PackerClean"):with_silent():with_noremap()
-        :with_nowait(),
+    --["n|<leader>ps"] = map_cr("PackerSync"):with_silent():with_noremap()
+        --:with_nowait(),
+    --["n|<leader>pu"] = map_cr("PackerUpdate"):with_silent():with_noremap()
+        --:with_nowait(),
+    --["n|<leader>pi"] = map_cr("PackerInstall"):with_silent():with_noremap()
+        --:with_nowait(),
+    --["n|<leader>pc"] = map_cr("PackerClean"):with_silent():with_noremap()
+        --:with_nowait(),
     -- Lsp mapp work when insertenter and lsp start
     --["n|<leader>li"] = map_cr("LspInfo"):with_noremap():with_silent()
      --   :with_nowait(),
@@ -85,10 +85,9 @@ local plug_map = {
     --    :with_silent(),
     --["n|<Leader>fw"] = map_cu('DashboardFindWord'):with_noremap():with_silent(),
     --["n|<Leader>fn"] = map_cu('DashboardNewFile'):with_noremap():with_silent(),
-    ["n|<Leader>ff"] = map_cu('Telescope file_browser'):with_noremap()
-        :with_silent(),
-    ["n|<Leader>fg"] = map_cu('Telescope git_files'):with_noremap()
-        :with_silent(),
+    ["n|<Leader>ff"] = map_cu('Telescope file_browser'):with_noremap():with_silent(),
+    ["n|<Leader>fg"] = map_cu('Telescope git_files'):with_noremap():with_silent(),
+    ["n|<Leader>bb"] = map_cu('Telescope buffers'):with_noremap():with_silent(),
     -- Plugin accelerate-jk
     ["n|j"] = map_cmd("v:lua.enhance_jk_move('j')"):with_silent():with_expr(),
     ["n|k"] = map_cmd("v:lua.enhance_jk_move('k')"):with_silent():with_expr(),
@@ -160,6 +159,7 @@ local plug_map = {
         :with_silent(),
     -- Tab config
     ["n|<leader>bh"] = map_cr('BufferLineCyclePrev'):with_noremap():with_silent(),
+    ["n|<leader>bp"] = map_cr('BufferLinePick'):with_noremap():with_silent(),
     ["n|<leader>bl"] = map_cr('BufferLineCycleNext'):with_noremap():with_silent(),
     ["n|<leader>tn"] = map_cr('tabnew'):with_noremap():with_silent(),
     ["n|<leader>bc"] = map_cr('BufferLinePickClose'):with_noremap():with_silent(),

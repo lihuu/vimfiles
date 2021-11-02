@@ -98,11 +98,12 @@ local load_core = function()
 
     lihuu_statify_config()
     lihuu_sqlite_config()
-    local pack = require('core.pack')
     createdir()
     disable_distribution_plugins()
     leader_map()
+    require('command'):init()
 
+    local pack = require('core.pack')
     pack.ensure_plugins()
     -- neovide_config()
     neovim_qt_config()
@@ -113,7 +114,6 @@ local load_core = function()
     require('keymap')
     require('core.event')
     pack.load_compile()
-
     vim.cmd [[colorscheme molokai]]
 end
 

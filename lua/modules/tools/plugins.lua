@@ -3,7 +3,7 @@ local conf = require('modules.tools.config')
 
 tools['nvim-telescope/telescope.nvim'] = {
     opt = true,
-    cmd = 'Telescope',
+    cmd = {'Telescope','Rg'},
     config = conf.telescope,
     requires = {
         {'nvim-lua/popup.nvim', opt = true},
