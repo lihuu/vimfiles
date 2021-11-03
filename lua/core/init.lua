@@ -105,7 +105,6 @@ local load_core = function()
 
     local pack = require('core.pack')
     pack.ensure_plugins()
-    -- neovide_config()
     neovim_qt_config()
     clipboard_settings()
 

@@ -1,10 +1,3 @@
---[[
-Author: lihu
-Date: 2021-10-31 16:59:58
-LastEditors: lihu
-LastEditTime: 2021-10-31 22:05:16
-FilePath: \vimfiles\lua\core\event.lua
---]]
 local vim = vim
 local autocmd = {}
 

@@ -91,7 +91,7 @@ end
 local function setup_servers()
     intall_severs()
     lsp_installer.on_server_ready(function(server)
-        if server.name=='lua' then
+        if server.name=='lua' or server.name=='sumneko_lua' then
             server:setup({
                 capabilities = capabilities,
                 flags = {debounce_text_changes = 500},
