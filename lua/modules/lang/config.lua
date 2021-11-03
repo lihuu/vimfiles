@@ -90,8 +90,8 @@ end
 
 function config.lang_org()
     require('orgmode').setup({
-        org_agenda_files = {'~/Sync/org/*'},
-        org_default_notes_file = '~/Sync/org/refile.org'
+        org_agenda_files = {'~/OneDrive/org/*'},
+        org_default_notes_file = '~/OneDrive/org/refile.org'
     })
 end
 

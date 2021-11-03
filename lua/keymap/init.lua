@@ -8,7 +8,6 @@ local plug_map = {
     -- Neoformat
     ["n|<C-A-l>"] = map_cr("Neoformat"):with_noremap():with_silent(),
     -- Bufferline
-    ["n|gb"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
     ["n|<A-j>"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
     ["n|<A-k>"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
     ["n|<A-S-j>"] = map_cr("BufferLineMoveNext"):with_noremap():with_silent(),
@@ -159,10 +158,10 @@ local plug_map = {
         :with_silent(),
     -- Tab config
     ["n|<leader>bh"] = map_cr('BufferLineCyclePrev'):with_noremap():with_silent(),
-    ["n|<leader>bp"] = map_cr('BufferLinePick'):with_noremap():with_silent(),
+    ["n|<leader><leader>b"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
     ["n|<leader>bl"] = map_cr('BufferLineCycleNext'):with_noremap():with_silent(),
     ["n|<leader>tn"] = map_cr('tabnew'):with_noremap():with_silent(),
-    ["n|<leader>bc"] = map_cr('BufferLinePickClose'):with_noremap():with_silent(),
+    ["n|<leader><leader>c"] = map_cr('BufferLinePickClose'):with_noremap():with_silent(),
     ["n|<leader>tm"] = map_cr('tabmove'):with_noremap():with_silent(),
     ["n|<leader>h"] = map_cr('tabprevious'):with_noremap():with_silent(),
     ["n|<leader>l"] = map_cr('tabnext'):with_noremap():with_silent(),

@@ -271,4 +271,8 @@ function config.zen_mode() require('zen-mode').setup {} end
 
 function config.twilight() require('twilight').setup {} end
 
+function config.bqf()
+
+end
+
 return config

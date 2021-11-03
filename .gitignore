@@ -1,4 +1,4 @@
-/vim8*
+/vim8*A
 /vimfiles/bundle/
 plugged
 *.swp
@@ -10,3 +10,4 @@ plugged
 
 .netrwhist
 session
+.vscode

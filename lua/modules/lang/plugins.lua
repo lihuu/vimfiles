@@ -1,10 +1,3 @@
---[[
-Author: lihu
-Date: 2021-10-31 16:59:58
-LastEditors: lihu
-LastEditTime: 2021-10-31 19:17:06
-FilePath: \vimfiles\lua\modules\lang\plugins.lua
---]]
 local lang = {}
 local conf = require('modules.lang.config')
 

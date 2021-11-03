@@ -3,7 +3,9 @@ local conf = require('modules.ui.config')
 local global = require('core.global')
 
 ui['kyazdani42/nvim-web-devicons'] = {opt = false}
+
 ui['sainnhe/edge'] = {opt = false, config = conf.edge}
+--底部的状态栏
 ui['hoob3rt/lualine.nvim'] = {
     opt = true,
     after = 'nvim-gps',
@@ -50,6 +52,12 @@ ui['folke/twilight.nvim'] = {
     opt = true,
     cmd = {'Twilight', 'TwilightEnable'},
     config = conf.twilight
+}
+
+ui['kevinhwang91/nvim-bqf'] = {
+    opt=true,
+    ft="qf",
+    config = conf.bqf
 }
 
 return ui
