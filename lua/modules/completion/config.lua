@@ -67,7 +67,7 @@ function config.cmp()
         -- You can set mappings if you want
         mapping = {
             ['<CR>'] = cmp.mapping.confirm({
-                behavior=cmp.ComfirmBehavior.Replace,
+                behavior=cmp.ConfirmBehavior.Replace,
                 select = true}),
             ['<C-p>'] = cmp.mapping.select_prev_item(),
             ['<C-n>'] = cmp.mapping.select_next_item(),
