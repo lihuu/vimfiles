@@ -77,6 +77,10 @@ function autocmd.load_autocmds()
             {
                 "FileType", "c,cpp",
                 "nnoremap <leader>h :ClangdSwitchSourceHeaderVSplit<CR>"
+            },{
+                "FileType","qf","if mapcheck('<esc>', 'n') ==# '' | nnoremap <buffer><silent> <esc> :cclose<bar>lclose<CR> | endif"
+            },{
+                "FileType","qf","nnoremap <buffer> <CR> <CR>:cclose<CR>"
             }
         },
 
