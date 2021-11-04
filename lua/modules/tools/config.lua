@@ -78,6 +78,7 @@ function config.telescope()
     require('telescope').load_extension('fzy_native')
     require('telescope').load_extension('project')
     require('telescope').load_extension('frecency')
+    vim.cmd [[command! Rg lua require('telescope.builtin').live_grep()]]
 end
 
 function config.trouble()

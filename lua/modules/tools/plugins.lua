@@ -37,7 +37,7 @@ use {
 
 tools['nvim-telescope/telescope.nvim'] = {
     opt = true,
-    cmd = {'Telescope','Rg'},
+    cmd = {'Telescope'},
     config = conf.telescope,
     requires = {
         {'nvim-lua/popup.nvim', opt = true},
