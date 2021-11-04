@@ -38,8 +38,12 @@ function Packer:load_packer()
     end
     packer.init({
         compile_path = packer_compiled,
-        git = {clone_timeout = 120},
-        disable_commands = true
+        git = {
+            clone_timeout = 360,
+            default_url_format='https://hub.fastgit.org/%s'
+        },
+        disable_commands = true,
+        max_jobs = 16
     })
     packer.reset()
     local use = packer.use
