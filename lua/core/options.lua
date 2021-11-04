@@ -77,7 +77,7 @@ local function load_options()
         list = true,
         showtabline = 2,
         winwidth = 30,
-        winminwidth = 10,
+        winminwidth = 1,
         pumheight = 15,
         helpheight = 12,
         previewheight = 12,

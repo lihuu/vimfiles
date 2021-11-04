@@ -170,6 +170,7 @@ end
 
 function config.prettier()
     --TODO prettier config
+    --
 end
 
 return config
