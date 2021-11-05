@@ -99,6 +99,11 @@ editor['rcarriga/nvim-dap-ui'] = {
             opt = true,
             cmd = {'DIInstall', 'DIUninstall', 'DIList'},
             config = conf.dapinstall
+        },
+        {
+            'jbyuki/one-small-step-for-vimkind',
+            opt=true,
+            ft='lua'
         }
     }
 }
