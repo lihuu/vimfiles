@@ -72,6 +72,10 @@ local lihuu_sqlite_config = function()
     end
 end
 
+local lihuu_nvim_tree_config = function ()
+    vim.g.nvim_tree_gitignore=1
+end
+
 local load_core = function()
     if vim.g.vscode then
         return
