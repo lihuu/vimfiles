@@ -19,7 +19,7 @@ function config.cmp()
             format = function(entry, vim_item)
                 local lspkind_icons = {
                     Text = "",
-                    Method = "",
+                    Method = ",
                     Function = "",
                     Constructor = "",
                     Field = "ﰠ",

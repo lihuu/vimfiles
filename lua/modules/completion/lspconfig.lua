@@ -78,7 +78,9 @@ end
 
 local lsp_installer = require("nvim-lsp-installer")
 local function intall_severs()
-    local servers = {"tsserver",'bashls','cmake','cssls','clangd','html','jsonls','gopls','jdtls','pyright','powershell_es','lemminx','sumneko_lua','vimls'}
+    local servers = {"tsserver",'bashls','cmake','cssls','clangd','html','jsonls','gopls','jdtls',
+        'pyright','powershell_es','lemminx','sumneko_lua','vimls','diagnosticls', 'denols','dockerls','cmake','sqlls','yamlls'
+    }
     for _, name in ipairs(servers) do
         local ok,server = lsp_installer.get_server(name)
         if ok then

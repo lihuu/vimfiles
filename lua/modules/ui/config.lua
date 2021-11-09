@@ -79,11 +79,11 @@ function config.nvim_tree()
         disable_netrw = true,
         hijack_netrw = true,
         auto_close = true,
-        update_cwd = true,
+        update_cwd = false,
         highlight_opened_files = true,
         auto_ignore_ft = {'startify', 'dashboard'},
         update_to_buf_dir   = {
-            enable = true,
+            enable = false,
             auto_open = true,
         },
         update_focused_file = {
