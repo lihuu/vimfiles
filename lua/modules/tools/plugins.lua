@@ -90,4 +90,14 @@ tools['prettier/vim-prettier'] = {
     run='yarn install',
     config = conf.prettier
 }
+
+tools['junegunn/fzf.vim']={
+    opt=true,
+    requires={{'junegunn/fzf',opt=true}},
+    cmd={'Files'}
+}
+
+
+
+
 return tools

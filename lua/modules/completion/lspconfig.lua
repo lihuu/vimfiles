@@ -14,9 +14,9 @@ if not packer_plugins['lsp_signature.nvim'].loaded then
     vim.cmd [[packadd lsp_signature.nvim]]
 end
 
-local nvim_lsp = require('lspconfig')
+--local nvim_lsp = require('lspconfig')
 --local lsp_install = require('lspinstall')
-local saga = require('lspsaga')
+--local saga = require('lspsaga')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 
@@ -77,22 +77,25 @@ local function custom_attach()
 end
 
 local lsp_installer = require("nvim-lsp-installer")
-local function intall_severs()
+local function install_severs()
     local servers = {"tsserver",'bashls','cmake','cssls','clangd','html','jsonls','gopls','jdtls',
-        'pyright','powershell_es','lemminx','sumneko_lua','vimls','diagnosticls', 'denols','dockerls','cmake','sqlls','yamlls'
+        'pyright','powershell_es','lemminx','sumneko_lua','vimls','diagnosticls', 
+        'dockerls','sqlls','yamlls'
     }
+        --'denols','dockerls','cmake','sqlls','yamlls'
     for _, name in ipairs(servers) do
         local ok,server = lsp_installer.get_server(name)
         if ok then
             if not server:is_installed() then
                 server:install()
+                print(vim.inspect('start to install lsp server:' .. name))
             end
         end
     end
 end
 
 local function setup_servers()
-    intall_severs()
+    install_severs()
     lsp_installer.on_server_ready(function(server)
         if server.name=='lua' or server.name=='sumneko_lua' then
             server:setup({
@@ -125,7 +128,7 @@ local function setup_servers()
 end
 
 
-nvim_lsp.diagnosticls.setup({
+--[[nvim_lsp.diagnosticls.setup({
     on_attach = custom_attach,
     filetypes={'javascript','javascriptreact','typescriptreact','json','typescript','css','less','markdown','pandoc'},
     init_options={
@@ -181,7 +184,7 @@ nvim_lsp.diagnosticls.setup({
             markdown = 'prettier',
         }
     }
-})
+})]]
 
 setup_servers()
 
