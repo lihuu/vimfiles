@@ -272,7 +272,7 @@ let g:airline_theme='luna'
 " => emmet-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,javasriptreact,typescriptreact EmmetInstall
 let g:user_emmet_mode='i' " value: n i v a
 let g:user_emmet_expandabbr_key='<C-e>'
 
