@@ -341,10 +341,10 @@ function config.dap()
         }
     }
 
-    dap.configurations.lua = { 
+    dap.configurations.lua = {
         { 
-            type = 'nlua', 
-        request = 'attach',
+            type = 'nlua',
+    request = 'attach',
     name = "Attach to running Neovim instance",
     host = function()
       local value = vim.fn.input('Host [127.0.0.1]: ')

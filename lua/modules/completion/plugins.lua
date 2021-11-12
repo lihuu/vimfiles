@@ -54,4 +54,11 @@ completion['github/copilot.vim'] = {
     cmd = "Copilot"
 }
 
+completion['jose-elias-alvarez/nvim-lsp-ts-utils'] = {
+    opt=true,
+    after='nvim-lspconfig',
+    requires={{'jose-elias-alvarez/null-ls.nvim',config=conf.nullls},'nvim-lua/plenary.nvim'},
+}
+
+
 return completion

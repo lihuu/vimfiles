@@ -146,4 +146,10 @@ function config.autopairs()
                  cmp_autopairs.on_confirm_done({map_char = {tex = ''}}))
 end
 
+function config.nullls()
+    require("null-ls").config {}
+    require("lspconfig")["null-ls"].setup {}
+end
+
+
 return config
