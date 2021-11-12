@@ -51,7 +51,9 @@ editor['SmiteshP/nvim-gps'] = {
 editor['sbdchd/neoformat'] = {opt = true, cmd = 'Neoformat'}
 editor['windwp/nvim-ts-autotag'] = {
     opt = true,
-    ft = {'html', 'xml'}
+    after = 'nvim-treesitter',
+    ft = {'html', 'xml','javascriptreact','typescriptreact'},
+    config=conf.autotag
 }
 editor['andymass/vim-matchup'] = {
     opt = true,
