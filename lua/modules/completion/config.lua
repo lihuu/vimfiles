@@ -18,31 +18,31 @@ function config.cmp()
         formatting = {
             format = function(entry, vim_item)
                 local lspkind_icons = {
-                    Text = "",
-                    Method = "",
-                    Function = "",
-                    Constructor = "",
-                    Field = "ﰠ",
-                    Variable = "",
                     Class = "ﴯ",
+                    Color = "",
+                    Constant = "",
+                    Constructor = "",
+                    Enum = "",
+                    EnumMember = "",
+                    Event = "",
+                    Field = "ﰠ",
+                    File = "",
+                    Folder = "",
+                    Function = "",
                     Interface = "",
+                    Keyword = " ",
+                    Method = "",
                     Module = "",
+                    Operator = "",
                     Property = "ﰠ",
+                    Reference = "",
+                    Snippet = "",
+                    Struct = "פּ",
+                    Text = "",
+                    TypeParameter = "",
                     Unit = "塞",
                     Value = "",
-                    Enum = "",
-                    Keyword = "",
-                    Snippet = "",
-                    Color = "",
-                    File = "",
-                    Reference = "",
-                    Folder = "",
-                    EnumMember = "",
-                    Constant = "",
-                    Struct = "פּ",
-                    Event = "",
-                    Operator = "",
-                    TypeParameter = ""
+                    Variable = ""
                 }
                 -- load lspkind icons
                 vim_item.kind = string.format("%s %s",
@@ -50,9 +50,9 @@ function config.cmp()
                                               vim_item.kind)
 
                 vim_item.menu = ({
-                    -- cmp_tabnine = "[TN]",
-                    orgmode = "[ORG]",
+                    cmp_tabnine = "[TN]",
                     nvim_lsp = "[LSP]",
+                    orgmode = "[ORG]",
                     nvim_lua = "[Lua]",
                     buffer = "[BUF]",
                     path = "[PATH]",
@@ -69,11 +69,12 @@ function config.cmp()
             ['<CR>'] = cmp.mapping.confirm({
                 behavior=cmp.ConfirmBehavior.Replace,
                 select = true}),
-            ['<C-p>'] = cmp.mapping.select_prev_item(),
-            ['<C-n>'] = cmp.mapping.select_next_item(),
-            ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-e>'] = cmp.mapping.close(),
+            ["<C-p>"] = cmp.mapping.select_prev_item(),
+            ["<C-n>"] = cmp.mapping.select_next_item(),
+            ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+            ["<C-f>"] = cmp.mapping.scroll_docs(4),
+            ["<C-e>"] = cmp.mapping.close(),
+            ["<C-Space>"] = cmp.mapping.complete(),
             ["<Tab>"] = cmp.mapping(function(fallback)
                 if cmp.visible() then
                     cmp.select_next_item()
@@ -115,10 +116,16 @@ function config.cmp()
 
         -- You should specify your *installed* sources.
         sources = {
-            {name = 'nvim_lsp'}, {name = 'nvim_lua'}, {name = 'luasnip'},
-            {name = 'buffer'}, {name = 'path'}, {name = 'spell'},
-            {name = 'tmux'}, {name = 'orgmode'}
-            -- {name = 'cmp_tabnine'},
+            {name = 'nvim_lsp'},
+            {name = 'path'},
+            {name = 'luasnip'},
+            {name = 'cmp_tabnine'},
+            {name = 'nvim_lua'},
+            {name='treesitter'},
+            {name = 'buffer'},
+            {name = 'spell'},
+            {name = 'tmux'},
+            {name = 'orgmode'},
         }
     }
 end

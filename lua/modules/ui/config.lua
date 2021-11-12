@@ -80,7 +80,11 @@ function config.nvim_tree()
         hijack_netrw = true,
         auto_close = true,
         update_cwd = false,
+        git_hl=1,
         highlight_opened_files = true,
+        allow_resize=1,
+        quit_on_open=0,
+        hide_dotfiles=1,
         auto_ignore_ft = {'startify', 'dashboard'},
         update_to_buf_dir   = {
             enable = false,
@@ -92,7 +96,7 @@ function config.nvim_tree()
             ignore_list = {}
         },
         diagnostics = {
-            enable = false,
+            enable = true,
             icons = {
               hint = "",
               info = "",
@@ -103,7 +107,7 @@ function config.nvim_tree()
         view = {
             width = 30,
             side = 'left',
-            auto_resize = false,
+            auto_resize = true,
             mappings = {
                 custom_only = true,
                 -- list of mappings to set on the tree manually
