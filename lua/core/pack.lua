@@ -40,7 +40,7 @@ function Packer:load_packer()
         compile_path = packer_compiled,
         git = {
             clone_timeout = 360,
-            default_url_format='https://hub.fastgit.org/%s'
+            default_url_format='https://github.com/%s'
         },
         disable_commands = true,
         max_jobs = 16
