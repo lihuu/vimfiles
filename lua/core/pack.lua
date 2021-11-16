@@ -1,7 +1,7 @@
-local fn, uv, api = vim.fn, vim.loop, vim.api
-local vim_path = require('core.global').vim_path
-local data_dir = require('core.global').data_dir
-local modules_dir = vim_path .. '/lua/modules'
+local fn, uv, api, global = vim.fn, vim.loop, vim.api,require('core.global')
+local vim_path = global.vim_path
+local data_dir = global.data_dir
+local modules_dir = global.modules_dir
 local packer_compiled = data_dir .. 'packer_compiled.vim'
 local compile_to_lua = data_dir .. 'lua/_compiled.lua'
 local bak_compiled = data_dir .. 'lua/bak_compiled.lua'
