@@ -97,7 +97,4 @@ tools['junegunn/fzf.vim']={
     cmd={'Files'}
 }
 
-
-
-
 return tools

@@ -110,4 +110,8 @@ editor['rcarriga/nvim-dap-ui'] = {
     }
 }
 
+editor['jbyuki/one-small-step-for-vimkind']={
+    opt=false,
+}
+
 return editor

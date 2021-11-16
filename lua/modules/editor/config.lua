@@ -55,9 +55,9 @@ function config.vim_cursorwod()
     vim.api.nvim_command('augroup user_plugin_cursorword')
     vim.api.nvim_command('autocmd!')
     vim.api.nvim_command(
-        'autocmd FileType NvimTree,lspsagafinder,dashboard let b:cursorword = 0')
+    'autocmd FileType NvimTree,lspsagafinder,dashboard let b:cursorword = 0')
     vim.api.nvim_command(
-        'autocmd WinEnter * if &diff || &pvw | let b:cursorword = 0 | endif')
+    'autocmd WinEnter * if &diff || &pvw | let b:cursorword = 0 | endif')
     vim.api.nvim_command('autocmd InsertEnter * let b:cursorword = 0')
     vim.api.nvim_command('autocmd InsertLeave * let b:cursorword = 1')
     vim.api.nvim_command('augroup END')
@@ -124,17 +124,17 @@ function config.nvim_gps()
             ["method-name"] = ' ' -- Methods (functions inside class-like objects)
         },
         languages = { -- You can disable any language individually here
-            ["c"] = true,
-            ["cpp"] = true,
-            ["go"] = true,
-            ["java"] = true,
-            ["javascript"] = true,
-            ["lua"] = true,
-            ["python"] = true,
-            ["rust"] = true
-        },
-        separator = ' > '
-    })
+        ["c"] = true,
+        ["cpp"] = true,
+        ["go"] = true,
+        ["java"] = true,
+        ["javascript"] = true,
+        ["lua"] = true,
+        ["python"] = true,
+        ["rust"] = true
+    },
+    separator = ' > '
+})
 end
 
 function config.autotag()
@@ -260,7 +260,6 @@ end
 
 function config.dap()
     local dap = require("dap")
-
     dap.adapters.go = function(callback, config)
         local stdout = vim.loop.new_pipe(false)
         local handle
@@ -312,7 +311,7 @@ function config.dap()
     dap.adapters.python = {
         type = 'executable',
         command = os.getenv("HOME") ..
-            '/.local/share/nvim/dapinstall/python_dbg/bin/python',
+        '/.local/share/nvim/dapinstall/python_dbg/bin/python',
         args = {'-m', 'debugpy.adapter'}
     }
     dap.configurations.python = {
@@ -344,25 +343,25 @@ function config.dap()
     dap.configurations.lua = {
         { 
             type = 'nlua',
-    request = 'attach',
-    name = "Attach to running Neovim instance",
-    host = function()
-      local value = vim.fn.input('Host [127.0.0.1]: ')
-      if value ~= "" then
-        return value
-      end
-      return '127.0.0.1'
-    end,
-    port = function()
-      local val = tonumber(vim.fn.input('Port: '))
-      assert(val, "Please provide a port number")
-      return val
-    end,
-  }
-}
+            request = 'attach',
+            name = "Attach to running Neovim instance",
+            host = function()
+                local value = vim.fn.input('Host [127.0.0.1]: ')
+                if value ~= "" then
+                    return value
+                end
+                return '127.0.0.1'
+            end,
+            port = function()
+                local val = tonumber(vim.fn.input('Port: '))
+                assert(val, "Please provide a port number")
+                return val
+            end,
+        }
+    }
 
-    dap.adapters.nlua = function(callback, config)
-        callback({ type = 'server', host = config.host, port = config.port })
+    dap.adapters.nlua = function(callback, con)
+        callback({ type = 'server', host = con.host, port = con.port })
     end
 end
 
@@ -371,6 +370,10 @@ function config.dapinstal()
         installation_path = dap_dir,
         verbosely_call_debuggers = false
     })
+end
+
+function config.osv()
+    require("osv").setup({})
 end
 
 return config

@@ -154,8 +154,8 @@ function config.autopairs()
 end
 
 function config.nullls()
-    --require("null-ls").config {}
-    require("lspconfig")["null-ls"].setup {}
+    require("null-ls").config {}
+    --require("lspconfig")["null-ls"].setup {}
 end
 
 
