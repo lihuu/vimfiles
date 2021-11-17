@@ -52,7 +52,7 @@ editor['sbdchd/neoformat'] = {opt = true, cmd = 'Neoformat'}
 editor['windwp/nvim-ts-autotag'] = {
     opt = true,
     after = 'nvim-treesitter',
-    ft = {'html', 'xml','javascriptreact','typescriptreact'},
+    ft = {'html', 'xml','javascriptreact','typescriptreact','javascript'},
     config=conf.autotag
 }
 editor['andymass/vim-matchup'] = {
@@ -108,10 +108,6 @@ editor['rcarriga/nvim-dap-ui'] = {
             ft='lua'
         }
     }
-}
-
-editor['jbyuki/one-small-step-for-vimkind']={
-    opt=false,
 }
 
 editor['airblade/vim-rooter']={

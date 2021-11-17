@@ -88,7 +88,11 @@ tools['prettier/vim-prettier'] = {
     ft= {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
     cmd={"Prettier"},
     run='yarn install',
-    config = conf.prettier
+    config = conf.prettier,
+    setup=function ()
+        --vim.g.perttier#quickfix_enabled=0
+        vim.cmd([[autocmd BufWritePre  *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync]])
+    end
 }
 
 tools['junegunn/fzf.vim']={

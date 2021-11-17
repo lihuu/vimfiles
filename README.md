@@ -57,6 +57,28 @@ emmet的语法参考[官方网站](https://emmet.io/)
 5. PlugStatus：检查插件状态
 6. PlugDiff：查看插件等待升级的内容
 7. PlugSnapshot：创建回滚到当前插件的脚本
+#### packer
+一个使用`lua`实现的包管理器
+https://github.com/wbthomason/packer.nvim
+##### 特性
+* 声明式的插件描述
+* 支持依赖
+* 支持luarocks 依赖 
+* 支持懒加载
+* 自动编译高效的懒加载代码，提高启动速度
+* 使用lua配置和编写
+* 支持安装hooks
+* 异步安装
+* 支持所动git版本，分支
+* 支持本地的插件 
+##### 基本使用命令
+* PackerCompile
+* PackerClean
+* PackerInstall
+* PackerUpdate
+* PackerSync 相当于先执行 `PackerUpdate` 然后执行 `PackerCompile`
+* PackerLoad 立即加载 opt 插件
+
 ### 其他
 #### coc.nvim
 coc.nvim 这个插件对nodejs有版本的要求，可能系统默认的版本不能符合要求。

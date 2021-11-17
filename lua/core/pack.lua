@@ -132,6 +132,12 @@ function plugins.load_compile()
     vim.cmd [[command! PackerClean lua require('core.pack').clean()]]
     vim.cmd [[autocmd User PackerComplete lua require('core.pack').magic_compile()]]
     vim.cmd [[command! PackerStatus  lua require('packer').status()]]
+    vim.cmd([[
+     augroup packer_user_comfig
+        autocmd!
+        autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    augroup end
+    ]])
 end
 
 return plugins
