@@ -128,7 +128,7 @@ end
 
 local function attach_tsserver(client,bufnr)
     custom_attach(client,bufnr)
-    ts_utils_setup(client)
+    --ts_utils_setup(client)
 end
 
 local lsp_installer = require("nvim-lsp-installer")

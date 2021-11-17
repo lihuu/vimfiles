@@ -114,4 +114,8 @@ editor['jbyuki/one-small-step-for-vimkind']={
     opt=false,
 }
 
+editor['airblade/vim-rooter']={
+    opt=false
+}
+
 return editor
