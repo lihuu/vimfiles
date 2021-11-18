@@ -369,6 +369,7 @@ let g:fzf_colors =
             \ 'spinner': ['fg', 'Label'],
             \ 'header':  ['fg', 'Comment'] }
 
+let g:fzf_external_bash= 'C:\tools\msys64\usr\bin\bash.exe'
 "command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
 
 noremap <leader>bb :Buffers<cr>

@@ -135,7 +135,7 @@ end
 function config.luasnip()
     require('luasnip').config.set_config {
         history = true,
-        updateevents = "TextChanged,TextChangedI"
+       -- updateevents = "TextChanged,TextChangedI"
     }
     require("luasnip/loaders/from_vscode").load()
 end
