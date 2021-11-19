@@ -90,8 +90,9 @@ tools['prettier/vim-prettier'] = {
     run='yarn install',
     config = conf.prettier,
     setup=function ()
+        -- Execute before load this plugin
         --vim.g.perttier#quickfix_enabled=0
-        --vim.cmd([[autocmd BufWritePre  *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync]])
+        vim.cmd([[autocmd BufWritePre  *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync]])
     end
 }
 
