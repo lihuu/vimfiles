@@ -86,7 +86,7 @@ tools['nathom/filetype.nvim'] = {opt = false}
 tools['prettier/vim-prettier'] = {
     opt = true,
     ft= {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
-    cmd={"Prettier"},
+    cmd={"Prettier","PrettierAsync"},
     run='yarn install',
     config = conf.prettier,
     setup=function ()
