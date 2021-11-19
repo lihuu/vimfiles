@@ -116,8 +116,8 @@ let $LANG='en'
 set langmenu='en'
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
 behave mswin
 set fileencodings=utf-8,chinese,latin-1,latin1
 set encoding=utf-8

@@ -36,10 +36,10 @@ Plug 'turbio/bracey.vim', {'for':'html','on':'Bracey','do':'cd server & npm inst
 "Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
 "Plug 'mxw/vim-jsx'
-Plug 'yuezk/vim-js'
+Plug 'yuezk/vim-js', {'for':['javascript']}
 "Plug 'maxmellon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim', {'for':['typescript','typescriptreact']}
+Plug 'peitalin/vim-jsx-typescript',{'for':'typescriptreact'}
 
 "语法检查
 Plug 'scrooloose/syntastic'
@@ -81,12 +81,13 @@ Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript','typescript','typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'neoclide/coc.nvim',{'branch':'release'}
-Plug 'jceb/vim-orgmode'
+"Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim',{'for':'c'}
 Plug 'davidhalter/jedi-vim',{'for':'python'}
+Plug 'machakann/vim-highlightedyank'
 Plug 'vim-scripts/groovy.vim',{'for':'groovy'}
-Plug 'pprovost/vim-ps1'
+Plug 'pprovost/vim-ps1',{'for':'ps1'}
 
 "使用ctrl+t在新的标签中打开，ctrl+v或者ctrl+x
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -109,6 +110,6 @@ if has('gui_running')
     "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
 endif
 
-Plug 'dstein64/vim-startuptime'
+Plug 'dstein64/vim-startuptime',{'on':['StartupTime']}
 
 
