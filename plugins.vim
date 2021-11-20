@@ -97,6 +97,8 @@ Plug 'lihuu/fzf.vim',{'on':['Files','Buffers','Rg']}
 Plug 'preservim/nerdcommenter'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'gregsexton/matchtag',{'for':'html'}
 
 "Gui only plugins
 if has('gui_running')

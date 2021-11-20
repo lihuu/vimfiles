@@ -429,7 +429,15 @@ let g:highlightedyank_highlight_duration = 100
           \ { 'type': 'commands',  'header': ['   Commands']       },
           \ ]
 
-
 let g:startify_files_number = 20
 let g:startify_custom_header_quotes =
       \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-which-key config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
