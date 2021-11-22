@@ -158,7 +158,7 @@ local function setup_servers()
                 flags = {debounce_text_changes = 500},
                 settings = {
                     Lua = {
-                        diagnostics = {globals = {"vim", "packer_plugins"}},
+                        diagnostics = {globals = {"vim", "packer_plugins","hs","spoon"}},
                         workspace = {
                             library = {
                                 [vim.fn.expand "$VIMRUNTIME/lua"] = true,
