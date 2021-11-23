@@ -66,6 +66,15 @@ local lihuu_statify_config = function ()
     vim.g.startify_files_number=20
 end
 
+local lihuu_qf_config = function ()
+    vim.cmd([[
+    augroup auto_close_qf
+    autocmd!
+    autocmd FileType qf nnoremap <buffer><silent> <cr> <cr>:cclose<cr> 
+    augroup END
+    ]])
+end
+
 local lihuu_sqlite_config = function()
     if global.is_windows then
         vim.g.sqlite_clib_path='C:\\ProgramData\\chocoportable\\lib\\SQLite\\tools\\sqlite3.dll'
@@ -136,6 +145,7 @@ local load_core = function()
     require('core.event')
     pack.load_compile()
     vim.cmd [[colorscheme molokai]]
+    --lihuu_qf_config()
 end
 
 load_core()

@@ -80,9 +80,10 @@ function autocmd.load_autocmds()
                 "nnoremap <leader>h :ClangdSwitchSourceHeaderVSplit<CR>"
             },{
                 "FileType","qf","if mapcheck('<esc>', 'n') ==# '' | nnoremap <buffer><silent> <esc> :cclose<bar>lclose<CR> | endif"
-            },{
-                "FileType","qf","nnoremap <buffer><silent> <cr> <CR>:cclose<bar>lclose<CR>"
-            }
+            },
+            --[[{
+                "FileType","qf","nnoremap <buffer><silent> <cr> <cr>:cclose<cr>"
+            }]]--
         },
 
         yank = {
@@ -94,6 +95,7 @@ function autocmd.load_autocmds()
     }
 
     autocmd.nvim_create_augroups(definitions)
+    --vim.api.nvim_command("autocmd FileType qf nnoremap <buffer><silent> <cr> <cr>:cclose<cr>")
 end
 
 autocmd.load_autocmds()
