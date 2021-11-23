@@ -81,7 +81,7 @@ function autocmd.load_autocmds()
             },{
                 "FileType","qf","if mapcheck('<esc>', 'n') ==# '' | nnoremap <buffer><silent> <esc> :cclose<bar>lclose<CR> | endif"
             },{
-                "FileType","qf","nnoremap <buffer> <CR> <CR>:cclose<CR>"
+                "FileType","qf","nnoremap <buffer><silent> <cr> <CR>:cclose<bar>lclose<CR>"
             }
         },
 
