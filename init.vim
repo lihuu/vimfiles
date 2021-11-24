@@ -3,7 +3,6 @@
 let s:isWindows = has('win16') || has('win32') || has('win64')
 if has('nvim-0.5.0.0')
     call v:lua.require("core")
-    source run.vim
     if s:isWindows
         source $HOME/AppData/Local/nvim/run.vim
     else
