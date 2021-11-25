@@ -168,6 +168,7 @@ function MyDiff()
 endfunction
 " }}}
 
+"Load plugins{{{
 filetype off
 "git clone https://github.com/VundleVim/Vundle.vim.git
 if s:isWindows
@@ -183,6 +184,7 @@ else
 endif
 
 filetype plugin indent on
+"}}}
 
 "vim-script的仓库
 
@@ -217,29 +219,32 @@ let g:jsx_ext_required=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim wiki
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim wiki config {{{
 let g:vimwiki_list = [{'path': '~/OneDrive/mywiki/'}]
 
 let delimitMate_matchpairs="(:),[:],{:}"
 au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
+"}}}
 
 "*****************vim-markdown configuration start *********
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => markdown
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+"markdown configuration config {{{
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
-
+" }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc-prettier 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Coc prettier config {{{
 let g:prettier#autoformat = 0                                                                                       
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 "let g:prettier#config#parser='babylon'
-
+"}}}
 
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
@@ -252,7 +257,6 @@ else
 endif
 
 noremap <leader>fp :e $MYVIMRC<cr>
-
 
 "
 "sort lines
@@ -271,6 +275,7 @@ let g:airline_theme='luna'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => emmet-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"emmet-vim config {{{
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,javasriptreact,typescriptreact EmmetInstall
 let g:user_emmet_mode='i' " value: n i v a
@@ -279,15 +284,16 @@ let g:user_emmet_expandabbr_key='<C-e>'
 "autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 "
 "autocmd! PrettierFileDetect BufNewFile,BufReadPost *.js,*jsx setfiletype javascript
-
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-rooter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim-rooter config {{{
 let g:rooter_silent_chdir = 1
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json','pom.xml']
-
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 透明度设置
@@ -301,6 +307,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Nerd Tree config {{{
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__','node_modules']
@@ -315,20 +322,20 @@ augroup loadNeardTree
     "autocmd BufWinEnter * silent NERDTreeMirror
     autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 augroup END
-
-
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => git gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"git gutter config {{{
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>gg :GitGutterToggle<cr>
-
-
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tab 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Tab config {{{
 noremap <leader>h :tabprevious<cr>
 noremap <leader>l :tabnext<cr>
 
@@ -336,11 +343,12 @@ noremap <leader>tn :tabnew<cr>
 noremap <leader>to :tabonly<cr>
 noremap <leader>tc :tabclose<cr>
 noremap <leader>tm :tabmove<cr>
-
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"fzf config {{{
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
   copen
@@ -375,10 +383,12 @@ let g:fzf_external_bash= 'C:\tools\msys64\usr\bin\bash.exe'
 noremap <leader>bb :Buffers<cr>
 noremap <leader>ff :Files<cr>
 
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERD Commenter 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERD Commenter config {{{
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
 
@@ -405,6 +415,7 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-visual-multi
@@ -421,6 +432,7 @@ let g:highlightedyank_highlight_duration = 100
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-startify config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim-startify config {{{
  let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
@@ -432,8 +444,7 @@ let g:highlightedyank_highlight_duration = 100
 let g:startify_files_number = 20
 let g:startify_custom_header_quotes =
       \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
-
-
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-which-key config
