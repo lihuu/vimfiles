@@ -166,6 +166,7 @@ local plug_map = {
     ["n|<leader>h"] = map_cr('tabprevious'):with_noremap():with_silent(),
     ["n|<leader>l"] = map_cr('tabnext'):with_noremap():with_silent(),
     ["n|<leader>tc"] = map_cr('tabclose'):with_noremap():with_silent(),
+    ["n|<leader>bk"] = map_cr('bdelete'):with_noremap():with_silent(),
     -- lsp config
 };
 
