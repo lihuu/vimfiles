@@ -17,12 +17,15 @@ ui['kyazdani42/nvim-tree.lua'] = {
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
     config = conf.nvim_tree
 }
+--[[
+--
 if global.is_windows then
   ui['airblade/vim-gitgutter'] = {
     opt=true,
     event = {'BufRead', 'BufNewFile'},
   }
 else
+--]]
     -- windows 平台不能使用
  ui['lewis6991/gitsigns.nvim'] = {
      opt = true,
@@ -31,7 +34,7 @@ else
      requires = {'nvim-lua/plenary.nvim', opt = true}
 }
 
-end
+--end
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
     opt = true,
