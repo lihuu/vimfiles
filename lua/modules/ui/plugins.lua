@@ -18,24 +18,21 @@ ui['kyazdani42/nvim-tree.lua'] = {
     config = conf.nvim_tree,
     commit='5d8453dfbd34ab00cb3e8ce39660f9a54cdd35f3'
 }
+
 --[[
---
-if global.is_windows then
-  ui['airblade/vim-gitgutter'] = {
+ui['airblade/vim-gitgutter'] = {
     opt=true,
     event = {'BufRead', 'BufNewFile'},
-  }
-else
---]]
-    -- windows 平台不能使用
- ui['lewis6991/gitsigns.nvim'] = {
-     opt = true,
-     event = {'BufRead', 'BufNewFile'},
-     config = conf.gitsigns,
-     requires = {'nvim-lua/plenary.nvim', opt = true}
 }
+--]]
 
---end
+ui['lewis6991/gitsigns.nvim'] = {
+    opt = true,
+    event = {'BufRead', 'BufNewFile'},
+    config = conf.gitsigns,
+    commit='95845ef39ce0a98f68cdfdcf7dd586c5e965acc7',
+    requires = {'nvim-lua/plenary.nvim', opt = true}
+}
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
     opt = true,
@@ -45,6 +42,7 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
 ui['akinsho/nvim-bufferline.lua'] = {
     opt = true,
     event = 'BufRead',
+    commit='463637a3ac86dcaacbcd47aa608f53aaad749696',
     config = conf.nvim_bufferline
 }
 ui['folke/zen-mode.nvim'] = {

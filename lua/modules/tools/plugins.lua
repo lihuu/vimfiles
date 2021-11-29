@@ -99,7 +99,12 @@ tools['prettier/vim-prettier'] = {
 tools['junegunn/fzf.vim']={
     opt=true,
     requires={{'junegunn/fzf',opt=true}},
-    cmd={'Files'}
+    cmd={'Files','Buffers'}
+}
+
+tools['tpope/vim-fugitive']={
+    opt=true,
+    cmd={'Git'}
 }
 
 return tools

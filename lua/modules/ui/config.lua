@@ -181,7 +181,15 @@ function config.nvim_bufferline()
                     text_align = "center",
                     padding = 1
                 }
-            }
+            },
+            close_commandf="bdelete! %d",
+            --[[
+            custom_filter=function (buf_number)
+                if vim.bo[buf_number].filetype ~= "startify" then
+                    return true
+                end
+            end
+            --]]
         }
     }
 end
