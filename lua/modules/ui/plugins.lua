@@ -15,7 +15,8 @@ ui['mhinz/vim-startify'] = {opt = true, event = "BufWinEnter"}
 ui['kyazdani42/nvim-tree.lua'] = {
     opt = true,
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
-    config = conf.nvim_tree
+    config = conf.nvim_tree,
+    commit='5d8453dfbd34ab00cb3e8ce39660f9a54cdd35f3'
 }
 --[[
 --

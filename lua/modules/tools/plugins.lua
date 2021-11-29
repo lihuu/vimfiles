@@ -82,7 +82,7 @@ tools['gelguy/wilder.nvim'] = {
     config = conf.wilder,
     requires = {{'romgrk/fzy-lua-native', after = 'wilder.nvim'}}
 }
-tools['nathom/filetype.nvim'] = {opt = false}
+tools['nathom/filetype.nvim'] = {opt = false,commit='ddef0faedfb561ca2af141a35ab6f256beba8b5a'}
 tools['prettier/vim-prettier'] = {
     opt = true,
     ft= {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
