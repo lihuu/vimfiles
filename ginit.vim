@@ -1,7 +1,17 @@
-" Set Editor Font
+" neovim-qt config
+"
+let s:isWindows = has('win16') || has('win32') || has('win64')
+let s:isMac = has('mac')||has('macunix')
+
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-    GuiFont! Consolas\ NF:h14
+    if s:isWindows
+        GuiFont! Consolas\ NF:h14
+    elseif s:isMac
+        GuiFont! Consolas\ NF:h25
+    else
+        GuiFont! Consolas\ NF:h14
+    endif
 endif
 
 " Disable GUI Tabline
