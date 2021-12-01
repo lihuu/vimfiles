@@ -115,7 +115,7 @@ endif
 "set guifont=Fira\ Code:h13:i
 let $LANG='en'
 set langmenu='en'
-"source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
