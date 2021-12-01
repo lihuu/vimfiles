@@ -62,7 +62,7 @@ Plug 'luochen1990/rainbow'
 Plug 'plasticboy/vim-markdown', {'for':'markdown'}
 Plug 'tyru/open-browser.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' ,'for':'markdown' }
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki',{'for':'vimwiki','on':['VimwikiIndex']}
 
 "Git config 
 "

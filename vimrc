@@ -68,6 +68,7 @@ set foldmethod=diff
 "endif
 
 set laststatus=2
+set ch=1
 syntax on
 set number
 "设置相对的行号
@@ -114,7 +115,7 @@ endif
 "set guifont=Fira\ Code:h13:i
 let $LANG='en'
 set langmenu='en'
-source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
