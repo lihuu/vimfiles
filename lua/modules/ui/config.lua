@@ -200,11 +200,11 @@ function config.gitsigns()
     end
     require('gitsigns').setup {
         signs = {
-            add = {hl = 'GitGutterAdd', text = '▋'},
-            change = {hl = 'GitGutterChange', text = '▋'},
-            delete = {hl = 'GitGutterDelete', text = '▋'},
-            topdelete = {hl = 'GitGutterDeleteChange', text = '▔'},
-            changedelete = {hl = 'GitGutterChange', text = '▎'}
+            add = {hl = 'GitGutterAdd', text = '+',numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
+            change = {hl = 'GitGutterChange', text = '|',numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+            delete = {hl = 'GitGutterDelete', text = '_',numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+            topdelete = {hl = 'GitGutterDeleteChange', text = '=',numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+            changedelete = {hl = 'GitGutterChange', text = '~',numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'}
         },
         keymaps = {
             -- Default keymap options
@@ -239,9 +239,13 @@ function config.gitsigns()
         sign_priority = 6,
         update_debounce = 100,
         status_formatter = nil, -- Use default
+        singlecolumn=true,
+        numhl = false,
+        linehl = false,
         word_diff = false,
         use_internal_diff = false,
-        diff_opts = {internal = false}
+        diff_opts = {internal = false},
+        attach_to_untracked = true,
     }
 
 end
