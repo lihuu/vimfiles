@@ -239,7 +239,7 @@ function config.gitsigns()
         sign_priority = 6,
         update_debounce = 100,
         status_formatter = nil, -- Use default
-        singlecolumn=true,
+        signcolumn=true,
         numhl = false,
         linehl = false,
         word_diff = false,
