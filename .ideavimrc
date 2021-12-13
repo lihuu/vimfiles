@@ -1,13 +1,19 @@
 let mapleader=" "
 
-set easymotion
-set surround
 set showmode
 set showcmd
 set hlsearch
 set incsearch
 set noerrorbells
 set novisualbell
+"Plug start
+Plug 'easymotion/vim-easymotion'
+Plug 'preservim/nerdtree'
+Plug 'machakann/vim-highlightedyank'
+Plug 'chrisbra/matchit'
+Plug 'tpope/vim-surround'
+
+"Plug end
 "set vb t_vb=""
 "set pythonthreedll=python36.dll
 set visualbell t_vb=
