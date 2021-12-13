@@ -107,4 +107,11 @@ tools['tpope/vim-fugitive']={
     cmd={'Git'}
 }
 
+tools['TimUntersberger/neogit']={
+    requires='TimUntersberger/neogit',
+    opt=true,
+    config = conf.neogit,
+    cmd={'Neogit'}
+}
+
 return tools

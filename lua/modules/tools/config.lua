@@ -173,4 +173,10 @@ function config.prettier()
     --
 end
 
+function config.neogit()
+    local neogit = require('neogit')
+    neogit.setup({})
+end
+
+
 return config
