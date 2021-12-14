@@ -33,7 +33,7 @@ local def_map = {
     ["i|<C-a>"] = map_cmd('<ESC>^i'):with_noremap(),
     ["i|<C-s>"] = map_cmd('<Esc>:w<CR>'),
     ["i|<C-q>"] = map_cmd('<Esc>:wq<CR>'),
-    ["i|<S-Insert>"] = map_cmd('"+gP'),
+    ["i|<S-Insert>"] = map_cmd('<Esc>"+gPa'),
     -- command line
     ["c|<C-b>"] = map_cmd('<Left>'):with_noremap(),
     ["c|<C-f>"] = map_cmd('<Right>'):with_noremap(),
