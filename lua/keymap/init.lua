@@ -168,6 +168,9 @@ local plug_map = {
     ["n|<leader>tc"] = map_cr('tabclose'):with_noremap():with_silent(),
     ["n|<leader>bk"] = map_cr('bdelete'):with_noremap():with_silent(),
     -- lsp config
+    --
+    -- neogit config
+    ["n|<leader>gg"] = map_cr('Neogit'):with_noremap():with_silent(),
 };
 
 bind.nvim_load_mapping(plug_map)
