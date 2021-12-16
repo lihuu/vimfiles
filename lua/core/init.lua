@@ -116,7 +116,7 @@ local lihuu_nvim_tree_config = function ()
     vim.g.nvim_tree_show_icons = { git= 1, folders= 1, files= 1, folder_arrows= 1 }
 end
 
-function lihuu_vim_rooter_config()
+local function lihuu_vim_rooter_config()
     vim.g.rooter_patterns={'.git','pom.xml','package.json'}
     vim.g.rooter_silent_chdir=1
     vim.g.rooter_change_directory_for_non_project_files='current'
