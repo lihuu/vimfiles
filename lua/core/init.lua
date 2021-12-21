@@ -1,6 +1,11 @@
 local global = require 'core.global'
 local vim = vim
 
+function _G.dump(...)
+    local objects = vim.tbl_map(vim.inspect,{...})
+    print(unpack(objects))
+end
+
 -- Create cache dir and subs dir
 local createdir = function()
     local data_dir = {
