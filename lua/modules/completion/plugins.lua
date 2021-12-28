@@ -29,8 +29,8 @@ completion['hrsh7th/nvim-cmp'] = {
         {'hrsh7th/cmp-buffer', after = 'cmp_luasnip'},
         {'hrsh7th/cmp-nvim-lsp', after = 'cmp-buffer'},
         {'hrsh7th/cmp-nvim-lua', after = 'cmp-nvim-lsp'},
-        {'andersevenrud/compe-tmux', branch = 'cmp', after = 'cmp-nvim-lua'},
-        {'hrsh7th/cmp-path', after = 'compe-tmux'},
+        {'andersevenrud/cmp-tmux', branch = 'compe', after = 'cmp-nvim-lua'},
+        {'hrsh7th/cmp-path', after = 'cmp-tmux'},
         {'f3fora/cmp-spell', after = 'cmp-path'}
         -- {
         --     'tzachar/cmp-tabnine',
