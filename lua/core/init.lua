@@ -87,7 +87,7 @@ local lihuu_sqlite_config = function()
 end
 
 local lihuu_nvim_tree_config = function ()
-    vim.g.nvim_tree_gitignore=1
+    --vim.g.nvim_tree_gitignore=1
     --"0 by default, closes the tree when you open a file
     vim.g.nvim_tree_quit_on_open = 1
     --"0 by default, this option shows indent markers when folders are open
