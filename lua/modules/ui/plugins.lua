@@ -1,6 +1,7 @@
 local ui = {}
 local conf = require('modules.ui.config')
 local global = require('core.global')
+local commits = require('modules.commits')
 
 ui['kyazdani42/nvim-web-devicons'] = {opt = false}
 
@@ -16,7 +17,7 @@ ui['kyazdani42/nvim-tree.lua'] = {
     opt = true,
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
     config = conf.nvim_tree,
-    commit='5d8453dfbd34ab00cb3e8ce39660f9a54cdd35f3'
+    commit = commits.nvim_tree
 }
 
 --[[
@@ -30,7 +31,7 @@ ui['lewis6991/gitsigns.nvim'] = {
     opt = true,
     event = {'BufRead', 'BufNewFile'},
     config = conf.gitsigns,
-    commit='6bad541a403ceabf4ce777c5c9d2ec2ac99b0ed3',
+    commit = commits.gitsigns,
     requires = {'nvim-lua/plenary.nvim', opt = true}
 }
 
@@ -42,7 +43,7 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
 ui['akinsho/nvim-bufferline.lua'] = {
     opt = true,
     event = 'BufRead',
-    commit='463637a3ac86dcaacbcd47aa608f53aaad749696',
+    commit = commits.nvim_bufferline,
     config = conf.nvim_bufferline
 }
 ui['folke/zen-mode.nvim'] = {

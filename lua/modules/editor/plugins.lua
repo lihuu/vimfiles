@@ -1,5 +1,6 @@
 local editor = {}
 local conf = require('modules.editor.config')
+local commits = require('modules.commits')
 
 editor['junegunn/vim-easy-align'] = {opt = true, cmd = 'EasyAlign'}
 editor['itchyny/vim-cursorword'] = {
@@ -24,7 +25,8 @@ editor['nvim-treesitter/nvim-treesitter'] = {
     opt = true,
     run = ':TSUpdate',
     event = 'BufRead',
-    config = conf.nvim_treesitter
+    config = conf.nvim_treesitter,
+    commit = commits.nvim_treesitter
 }
 editor['nvim-treesitter/nvim-treesitter-textobjects'] = {
     opt = true,
