@@ -1,5 +1,6 @@
 local tools = {}
 local conf = require('modules.tools.config')
+local commits = require('modules.commits')
 
 --[[ 配置文件说明
 use {
@@ -39,6 +40,7 @@ tools['nvim-telescope/telescope.nvim'] = {
     opt = true,
     cmd = {'Telescope'},
     config = conf.telescope,
+    commit = commits.telescope,
     requires = {
         {'nvim-lua/popup.nvim', opt = true},
         {'nvim-lua/plenary.nvim', opt = true}
@@ -46,16 +48,20 @@ tools['nvim-telescope/telescope.nvim'] = {
 }
 tools['nvim-telescope/telescope-fzy-native.nvim'] = {
     opt = true,
-    after = 'telescope.nvim'
+    commit= commits.telescope_fzf_native,
+    after = 'telescope.nvim',
 }
 
 tools['nvim-telescope/telescope-project.nvim'] = {
     opt = true,
+    commit=commits.telescope_project,
     after = 'telescope.nvim'
+
 }
 --
 tools['nvim-telescope/telescope-frecency.nvim'] = {
     opt = true,
+    commit=commits.telescope_frecency,
     after = 'telescope.nvim',
     requires = {{'tami5/sqlite.lua', opt = true}}
 }
@@ -68,6 +74,7 @@ tools['michaelb/sniprun'] = {
 }
 tools['folke/which-key.nvim'] = {
     opt = true,
+    commit=commits.which_key,
     keys = ",",
     config = function() require("which-key").setup {} end
 }

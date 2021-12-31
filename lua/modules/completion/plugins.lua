@@ -22,7 +22,7 @@ completion['glepnir/lspsaga.nvim'] = {
 }
 --显示方法、函数的签名
 completion['ray-x/lsp_signature.nvim'] = {
-    opt = true, 
+    opt = true,
     after = 'nvim-lspconfig',
     commit=commits.lsp_signature
 }
