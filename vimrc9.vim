@@ -74,18 +74,36 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 autocmd FileType html set tabstop=2 shiftwidth=2
 
 
-filetype off
-#git clone https://github.com/VundleVim/Vundle.vim.git
-if isWindows
-    set rtp+=$HOME/vimfiles/autoload/plug.vim
-    legacy call plug#begin('$HOME/vimfiles/plugged/')
-    source $HOME/vimfiles/plugins.vim
-    legacy call plug#end()
-else
-    #set rtp+=~/.vim/autoload/plug.vim
-    legacy call plug#begin('~/.vim/plugged')
-    source ~/.vim/plugins.vim
-    legacy call plug#end()
-endif
 
-filetype plugin indent on
+def g:CompileAndRun()
+	exec "w"
+	if &filetype == 'c'
+		exec "!g++ % -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'cpp'
+		exec "!g++ % -std=c++11 -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'java' 
+		exec "!javac %" 
+		exec "!time java %<"
+	elseif &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'lua'
+        exec "!lua %"
+    elseif &filetype == 'js' || &filetype == 'javascript.jsx' || &filetype == 'javascript'
+        #some common javascript file will be treat as jsx file
+        exec "!node %"
+	elseif &filetype == 'python'
+		exec "!time python2.7 %"
+    elseif &filetype == 'html'
+        exec "!firefox % &"
+    elseif &filetype == 'go'
+        #exec "!go build %<"
+        exec "!time go run %"
+    elseif &filetype == 'mkd'
+        exec "!~/.vim/markdown.pl % > %.html &"
+        exec "!firefox %.html &"
+	endif
+enddef
+
+nmap <F5> :call g:CompileAndRun()<CR>
