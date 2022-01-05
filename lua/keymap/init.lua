@@ -8,6 +8,7 @@ local plug_map = {
     -- Neoformat
     ["n|<C-A-l>"] = map_cr("Neoformat"):with_noremap():with_silent(),
     -- Bufferline
+    --[[
     ["n|<A-j>"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
     ["n|<A-k>"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
     ["n|<A-S-j>"] = map_cr("BufferLineMoveNext"):with_noremap():with_silent(),
@@ -23,6 +24,7 @@ local plug_map = {
     ["n|<A-7>"] = map_cr("BufferLineGoToBuffer 7"):with_noremap():with_silent(),
     ["n|<A-8>"] = map_cr("BufferLineGoToBuffer 8"):with_noremap():with_silent(),
     ["n|<A-9>"] = map_cr("BufferLineGoToBuffer 9"):with_noremap():with_silent(),
+    --]]
     -- Packer
     --["n|<leader>ps"] = map_cr("PackerSync"):with_silent():with_noremap()
         --:with_nowait(),
@@ -157,11 +159,11 @@ local plug_map = {
     ["n|<leader>dl"] = map_cr("lua require('dap').repl.open()"):with_noremap()
         :with_silent(),
     -- Tab config
-    ["n|<leader>bh"] = map_cr('BufferLineCyclePrev'):with_noremap():with_silent(),
-    ["n|<leader><leader>b"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
-    ["n|<leader>bl"] = map_cr('BufferLineCycleNext'):with_noremap():with_silent(),
+    --["n|<leader>bh"] = map_cr('BufferLineCyclePrev'):with_noremap():with_silent(),
+    --["n|<leader><leader>b"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
+    --["n|<leader>bl"] = map_cr('BufferLineCycleNext'):with_noremap():with_silent(),
+    --["n|<leader><leader>c"] = map_cr('BufferLinePickClose'):with_noremap():with_silent(),
     ["n|<leader>tn"] = map_cr('tabnew'):with_noremap():with_silent(),
-    ["n|<leader><leader>c"] = map_cr('BufferLinePickClose'):with_noremap():with_silent(),
     ["n|<leader>tm"] = map_cr('tabmove'):with_noremap():with_silent(),
     ["n|<leader>h"] = map_cr('tabprevious'):with_noremap():with_silent(),
     ["n|<leader>l"] = map_cr('tabnext'):with_noremap():with_silent(),
