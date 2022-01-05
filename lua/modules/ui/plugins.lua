@@ -40,12 +40,15 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
     event = 'BufRead',
     config = conf.indent_blankline
 }
+--[[
+--
 ui['akinsho/nvim-bufferline.lua'] = {
     opt = true,
     event = 'BufRead',
     commit = commits.nvim_bufferline,
     config = conf.nvim_bufferline
 }
+--]]
 ui['folke/zen-mode.nvim'] = {
     opt = true,
     cmd = 'ZenMode',

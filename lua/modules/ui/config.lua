@@ -29,7 +29,7 @@ function config.lualine()
 
     local gps = require("nvim-gps")
 
-    require('lualine').setup {
+    require('lualine').setup({
         options = {
             icons_enabled = true,
             theme = 'onedark',
@@ -66,13 +66,13 @@ function config.lualine()
         },
         tabline = {},
         extensions = {}
-    }
+    })
 end
 
 --https://github.com/kyazdani42/nvim-tree.lua
 function config.nvim_tree()
     local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-    require('nvim-tree').setup {
+    require('nvim-tree').setup({
         git = {
             enable = true,
             ignore=true,
@@ -156,7 +156,7 @@ function config.nvim_tree()
                 }
             }
         }
-    }
+    })
 end
 
 function config.nvim_bufferline()
@@ -258,75 +258,64 @@ function config.gitsigns()
 end
 
 function config.indent_blankline()
-    -- vim.cmd [[highlight IndentTwo guifg=#D08770 guibg=NONE gui=nocombine]]
-    -- vim.cmd [[highlight IndentThree guifg=#EBCB8B guibg=NONE gui=nocombine]]
-    -- vim.cmd [[highlight IndentFour guifg=#A3BE8C guibg=NONE gui=nocombine]]
-    -- vim.cmd [[highlight IndentFive guifg=#5E81AC guibg=NONE gui=nocombine]]
-    -- vim.cmd [[highlight IndentSix guifg=#88C0D0 guibg=NONE gui=nocombine]]
-    -- vim.cmd [[highlight IndentSeven guifg=#B48EAD guibg=NONE gui=nocombine]]
-    -- vim.g.indent_blankline_char_highlight_list = {
-        --     "IndentTwo", "IndentThree", "IndentFour", "IndentFive", "IndentSix",
-        --     "IndentSeven"
-        -- }
-        require("indent_blankline").setup {
-            char = "│",
-            show_first_indent_level = true,
-            filetype_exclude = {
-                "startify", "dashboard", "dotooagenda", "log", "fugitive",
-                "gitcommit", "packer", "vimwiki", "markdown", "json", "txt",
-                "vista", "help", "todoist", "NvimTree", "peekaboo", "git",
-                "TelescopePrompt", "undotree", "flutterToolsOutline", "" -- for all buffers without a file type
-            },
-            buftype_exclude = {"terminal", "nofile"},
-            show_trailing_blankline_indent = false,
-            show_current_context = true,
-            context_patterns = {
-                "class", "function", "method", "block", "list_literal", "selector",
-                "^if", "^table", "if_statement", "while", "for", "type", "var",
-                "import"
+    require("indent_blankline").setup({
+        char = "│",
+        show_first_indent_level = true,
+        filetype_exclude = {
+            "startify", "dashboard", "dotooagenda", "log", "fugitive",
+            "gitcommit", "packer", "vimwiki", "markdown", "json", "txt",
+            "vista", "help", "todoist", "NvimTree", "peekaboo", "git",
+            "TelescopePrompt", "undotree", "flutterToolsOutline", "" -- for all buffers without a file type
+        },
+        buftype_exclude = {"terminal", "nofile"},
+        show_trailing_blankline_indent = false,
+        show_current_context = true,
+        context_patterns = {
+            "class", "function", "method", "block", "list_literal", "selector",
+            "^if", "^table", "if_statement", "while", "for", "type", "var",
+            "import"
+        }
+    })
+    vim.cmd('autocmd CursorMoved * IndentBlanklineRefresh')
+end
+
+function config.zen_mode() require('zen-mode').setup({}) end
+
+function config.twilight() require('twilight').setup({}) end
+
+function config.bqf()
+    require('bqf').setup({
+        auto_enable = true,
+        preview = {
+            win_height = 12,
+            win_vheight = 12,
+            delay_syntax = 80,
+            border_chars = {'┃', '┃', '━', '━', '┏', '┓', '┗', '┛', '█'},
+            should_preview_cb = function(bufnr)
+                local ret = true
+                local filename = vim.api.nvim_buf_get_name(bufnr)
+                local fsize = vim.fn.getfsize(filename)
+                -- file size greater than 100k can't be previewed automatically
+                if fsize > 100 * 1024 then
+                    ret = false
+                end
+                return ret
+            end
+        },
+        func_map = {
+            openc='<CR>',
+            open='o',
+            vsplit = '',
+            ptogglemode = 'z,',
+            stoggleup = '',
+        },
+        filter = {
+            fzf = {
+                action_for = {['ctrl-s'] = 'split'},
+                extra_opts = {'--bind', 'ctrl-o:toggle-all', '--prompt', '> '}
             }
         }
-        -- because lazy load indent-blankline so need readd this autocmd
-        vim.cmd('autocmd CursorMoved * IndentBlanklineRefresh')
-    end
+    })
+end
 
-    function config.zen_mode() require('zen-mode').setup {} end
-
-    function config.twilight() require('twilight').setup {} end
-
-    function config.bqf()
-        require('bqf').setup({
-            auto_enable = true,
-            preview = {
-                win_height = 12,
-                win_vheight = 12,
-                delay_syntax = 80,
-                border_chars = {'┃', '┃', '━', '━', '┏', '┓', '┗', '┛', '█'},
-                should_preview_cb = function(bufnr)
-                    local ret = true
-                    local filename = vim.api.nvim_buf_get_name(bufnr)
-                    local fsize = vim.fn.getfsize(filename)
-                    -- file size greater than 100k can't be previewed automatically
-                    if fsize > 100 * 1024 then
-                        ret = false
-                    end
-                    return ret
-                end
-            },
-            func_map = {
-                openc='<CR>',
-                open='o',
-                vsplit = '',
-                ptogglemode = 'z,',
-                stoggleup = '',
-            },
-            filter = {
-                fzf = {
-                    action_for = {['ctrl-s'] = 'split'},
-                    extra_opts = {'--bind', 'ctrl-o:toggle-all', '--prompt', '> '}
-                }
-            }
-        })
-    end
-
-    return config
+return config
