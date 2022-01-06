@@ -113,5 +113,5 @@ if has('gui_running')
 endif
 
 Plug 'dstein64/vim-startuptime',{'on':['StartupTime']}
-
+Plug 'itchyny/vim-cursorword'
 
