@@ -113,12 +113,35 @@ local lihuu_nvim_tree_config = function ()
     --"1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
     vim.g.nvim_tree_refresh_wait = 500
     vim.g.nvim_tree_window_picker_exclude = { filetype= { 'notify', 'packer', 'qf' }, buftype= { 'terminal' } }
---" Dictionary of buffer option names mapped to a list of option values that
----" indicates to the window picker that the buffer's window should not be
---" selectable.
+    --" Dictionary of buffer option names mapped to a list of option values that
+    ---" indicates to the window picker that the buffer's window should not be
+    --" selectable.
     --" List of filenames that gets highlighted with NvimTreeSpecialFile
     vim.g.nvim_tree_special_files = { README= 1, Makefile= 1, MAKEFILE= 1 }
     vim.g.nvim_tree_show_icons = { git= 1, folders= 1, files= 1, folder_arrows= 1 }
+    vim.g.nvim_tree_icons = {
+        default= '',
+        symlink= '',
+        git= {
+            unstaged= "✗",
+            staged= "✓",
+            unmerged= "",
+            renamed= "➜",
+            untracked= "★",
+            deleted= "",
+            ignored= "◌"
+        },
+        folder= {
+            arrow_open= "",
+            arrow_closed= "",
+            default= "",
+            open= "",
+            empty= "",
+            empty_open= "",
+            symlink= "",
+            symlink_open= "",
+        }
+    }
 end
 
 local function lihuu_vim_rooter_config()

@@ -110,6 +110,9 @@ function config.nvim_tree()
                 warning = "",
                 error = "",
             }
+        },trash={
+            cmd="trash",
+            require_confirm = true
         },
         view = {
             width = 30,
