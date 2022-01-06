@@ -11,6 +11,7 @@ local commits = {
     which_key='312c386ee0eafc925c27869d2be9c11ebdb807eb',
     telescope ='1d1da664eb6505c318d405eea3d633c451edc2d8',
     telescope_fzf_native='b8662b076175e75e6497c59f3e2799b879d7b954',
+    telescope_fzy_native='7b3d2528102f858036627a68821ccf5fc1d78ce4',
     telescope_project='ad33c9eb67de635ded67069af7552d5162497b1e',
     telescope_frecency='979a6f3d882b7b5352cc6a751faa9c9427d40e74',
     matchup='4a5bb96d2d53b704522431e7cf946871af4cdcab'

@@ -46,9 +46,10 @@ tools['nvim-telescope/telescope.nvim'] = {
         {'nvim-lua/plenary.nvim', opt = true}
     }
 }
+
 tools['nvim-telescope/telescope-fzy-native.nvim'] = {
     opt = true,
-    commit= commits.telescope_fzf_native,
+    commit= commits.telescope_fzy_native,
     after = 'telescope.nvim',
 }
 
@@ -58,7 +59,7 @@ tools['nvim-telescope/telescope-project.nvim'] = {
     after = 'telescope.nvim'
 
 }
---
+
 tools['nvim-telescope/telescope-frecency.nvim'] = {
     opt = true,
     commit=commits.telescope_frecency,
