@@ -122,4 +122,8 @@ tools['TimUntersberger/neogit']={
     cmd={'Neogit'}
 }
 
+tools['tpope/vim-surround'] = {
+    opt=false
+}
+
 return tools
