@@ -271,7 +271,8 @@ noremap <c-l> 5l
 "noremap <c-i> 0
 
 "let g:airline_theme='molokai'
-let g:airline_theme='luna'
+"let g:airline_theme='luna'
+let g:airline_theme='virtualenv'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => emmet-vim

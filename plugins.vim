@@ -28,15 +28,15 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'othree/html5.vim',{'for':'html'}
+Plug 'othree/html5.vim', {'for':['html']}
 Plug 'mattn/emmet-vim', {'for':['html','javascript','typescript','typescriptreact','javascriptreact']}
 Plug 'elzr/vim-json',{'for':'json'}
 Plug 'turbio/bracey.vim', {'for':'html','on':'Bracey','do':'cd server & npm install'}
 "Javascript typescript reactjs 相关的插件
 "Plug 'pangloss/vim-javascript'
-Plug 'isruslan/vim-es6'
+Plug 'isruslan/vim-es6', {'for':['javascript','typescript','typescriptreact','javascriptreact']}
 "Plug 'mxw/vim-jsx'
-Plug 'yuezk/vim-js', {'for':['javascript']}
+Plug 'yuezk/vim-js', {'for':['javascript','typescript','typescriptreact','javascriptreact']}
 "Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescriptreact']}
 Plug 'peitalin/vim-jsx-typescript',{'for':'typescriptreact'}
@@ -46,15 +46,15 @@ Plug 'scrooloose/syntastic'
 
 "language syntax 
 Plug 'sheerun/vim-polyglot'
-Plug 'othree/xml.vim',{'for':'xml'}
-Plug 'sukima/xmledit',{'for':'xml'}
-Plug 'chr4/nginx.vim'
+Plug 'othree/xml.vim', {'for':'xml'}
+Plug 'sukima/xmledit', {'for':'xml'}
+Plug 'chr4/nginx.vim', {'for':'nginx'}
 Plug 'calleerlandsson/pick.vim'
-Plug 'hail2u/vim-css3-syntax',{'for':'css'}
-Plug 'groenewege/vim-less',{'for':'less'}
+Plug 'hail2u/vim-css3-syntax', {'for':'css'}
+Plug 'groenewege/vim-less', {'for':'less'}
 Plug 'Raimondi/delimitMate'
-Plug 'cespare/vim-toml',{'for':'toml'}
-Plug 'toml-lang/toml',{'for':'toml'}
+Plug 'cespare/vim-toml', {'for':'toml'}
+Plug 'toml-lang/toml', {'for':'toml'}
 "
 "彩虹括号
 Plug 'luochen1990/rainbow'
