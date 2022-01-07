@@ -74,7 +74,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 autocmd FileType html set tabstop=2 shiftwidth=2
 
 
-
 def g:CompileAndRun()
 	exec "w"
 	if &filetype == 'c'
@@ -107,3 +106,92 @@ def g:CompileAndRun()
 enddef
 
 nmap <F5> :call g:CompileAndRun()<CR>
+
+noremap <leader>h :tabprevious<cr>
+noremap <leader>l :tabnext<cr>
+
+noremap <leader>tn :tabnew<cr>
+noremap <leader>to :tabonly<cr>
+noremap <leader>tc :tabclose<cr>
+noremap <leader>tm :tabmove<cr>
+
+
+g:vim_markdown_folding_disabled = 1
+g:vim_markdown_toc_autofit = 1
+
+
+g:NERDTreeWinPos = "left"
+const NERDTreeShowHidden = 0
+const NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+g:NERDTreeWinSize = 35
+noremap <leader>nn :NERDTreeToggle<cr>
+noremap <leader>fn :NERDTreeToggle<cr>
+noremap <leader>nb :NERDTreeFromBookmark<Space>
+noremap <leader>nf :NERDTreeFind<cr>
+
+augroup loadNeardTree
+    autocmd!
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+augroup END
+
+
+g:gitgutter_enabled = 0
+nnoremap <silent> <leader>gg :GitGutterToggle<cr>
+
+
+
+
+g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
+
+g:fzf_layout = { 'down': '40%' }
+g:fzf_colors = { 'fg':      ['fg', 'Normal'], 'bg':      ['bg', 'Normal'], 'hl':      ['fg', 'Comment'], 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'], 'bg+':     ['bg', 'CursorLine', 'CursorColumn'], 'hl+':     ['fg', 'Statement'], 'info':    ['fg', 'PreProc'], 'border':  ['fg', 'Ignore'], 'prompt':  ['fg', 'Conditional'], 'pointer': ['fg', 'Exception'], 'marker':  ['fg', 'Keyword'], 'spinner': ['fg', 'Label'], 'header':  ['fg', 'Comment'] }
+
+g:fzf_external_bash = 'C:\tools\msys64\usr\bin\bash.exe'
+
+noremap <leader>bb :Buffers<cr>
+noremap <leader>ff :Files<cr>
+
+
+# Create default mappings
+g:NERDCreateDefaultMappings = 1
+
+# Add spaces after comment delimiters by default
+g:NERDSpaceDelims = 1
+
+# Use compact syntax for prettified multi-line comments
+g:NERDCompactSexyComs = 1
+
+# Align line-wise comment delimiters flush left instead of following code indentation
+g:NERDDefaultAlign = 'left'
+
+# Set a language to use its alternate delimiters by default
+g:NERDAltDelims_java = 1
+
+# Add your own custom formats or override the defaults
+g:NERDCustomDelimiters = { 'c': { 'left': '/**', 'right': '*/' } }
+
+# Allow commenting and inverting empty lines (useful when commenting a region)
+g:NERDCommentEmptyLines = 1
+
+# Enable trimming of trailing whitespace when uncommenting
+g:NERDTrimTrailingWhitespace = 1
+
+# Enable NERDCommenterToggle to check all selected lines is commented or not 
+g:NERDToggleCheckAllLines = 1
+
+g:user_emmet_install_global = 0
+autocmd FileType html,css,javasriptreact,typescriptreact EmmetInstall
+g:user_emmet_mode = 'i' # value: n i v a
+g:user_emmet_expandabbr_key = '<C-e>'
+
+
+
+g:highlightedyank_highlight_duration = 100
+
+g:VM_maps = {}
+g:VM_maps['Find Under'] = '<C-d>'           # replace C-n
+g:VM_maps['Find Subword Under'] = '<C-d>'           # replace visual C-n
+
+g:gitgutter_enabled = 0
+nnoremap <silent> <leader>gg :GitGutterToggle<cr>
+

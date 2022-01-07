@@ -40,17 +40,25 @@ else
 endif
 " }}}
 
+if has("vim9script")
+    if s:isWindows
+        source $HOME/vimfiles/vimrc9.vim
+    else
+        source ~/.vim/vimrc9.vim
+    endif
+else
+    if s:isWindows
+        source $HOME/vimfiles/vimrc8.vim
+    else
+        source ~/.vim/vimrc8.vim
+    endif
+endif
+
 "augroup filetyp_js
 ""  autocmd!
 ""  autocmd FileType javascript,typescriptreact,typescript setlocal foldmethod=syntax
 ""  autocmd FileType javascript,typescriptreact,typescript setlocal foldlevelstart=99
 "augroup END
-
-set nocompatible "Must be first line
-
-if !WINDOWS()
-    set shell=/bin/zsh
-endif
 
 "if WINDOWS()
 "  set directory=%USERDATA%.vim\swap//
@@ -61,82 +69,18 @@ endif
 "
 
 "set noswapfile
-set foldmethod=diff
 
 "if WINDOWS()
 "    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 "endif
-
-set laststatus=2
-set ch=1
-syntax on
-set number
-"设置相对的行号
-"set relativenumber
-syntax enable
-
-"tab替换为空格，大小设置为4
-set ts=4
-set shiftwidth=4
-set expandtab
-
-set textwidth=100
-"set encoding=UTF-8
-"set background=dark
-set cursorline
-set autoread
-
-if has('termguicolors')
-    set termguicolors
-endif
-"colorscheme torte
-colorscheme molokai
-if ! has('gui_running')
-    set t_Co=256
-    set mouse=a
-endif
-"set fdm=indent
-"set sourcecode folding
-set fdm=marker
-if s:isWindows && has("gui_running")
-    "set guifont=Consolas:h14:i
-    set guifont=Consolas\ NF:h14:i
-else
-    set guifont=Monospace\ Italic\ 12
-endif
-
-if s:isMac && has("gui_running")
-    set transparency=20
-endif
 
 
 "set guifont=Consolas:h14:i
 "set guifont=Consolas:h14:i
 "set guifont=Fira\ Code:h13:i
 let $LANG='en'
-set langmenu='en'
-source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
-behave mswin
-set fileencodings=utf-8,chinese,latin-1,latin1
-set encoding=utf-8
-set nobackup
-"set nowritebackup
-set noundofile
-"set noeb
-"set bell-style none
-set noerrorbells
-set novisualbell
-"set vb t_vb=""
-"set pythonthreedll=python36.dll
-set visualbell t_vb=
-if s:isWindows && (has("autocmd") && has("gui"))
-    au GUIEnter * set t_vb=
-endif
-
-
 set diffexpr=MyDiff()
 "Diff function {{{
 function MyDiff()
@@ -197,22 +141,6 @@ filetype plugin indent on
 "nerdtree 
 let mapleader="\<space>"
 
-"nerdtree 配置文件
-" Open the existing NERDTree on each new tab.
-
-"
-"insert 模式中删除一行
-"inoremap <c-d> <ESC>ddi
-"insert 模式大小写切换
-inoremap <c-u>  <ESC>~i
-
-"打开vim配置文件的映射
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-"配置文件生效的映射
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-autocmd FileType html set tabstop=2 shiftwidth=2
-
 "
 "Extral Configuration
 let g:jsx_ext_required=0
@@ -227,14 +155,6 @@ let delimitMate_matchpairs="(:),[:],{:}"
 au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
 "}}}
 
-"*****************vim-markdown configuration start *********
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => markdown
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"markdown configuration config {{{
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_toc_autofit = 1
-" }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc-prettier 
@@ -249,11 +169,9 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 if s:isWindows
     source $HOME/vimfiles/coc-config.vim
-    source $HOME/vimfiles/run.vim
     source $HOME/vimfiles/markdown-preview-config.vim
 else
     source ~/.vim/coc-config.vim
-    source ~/.vim/run.vim
     source ~/.vim/markdown-preview-config.vim
 endif
 
@@ -273,15 +191,6 @@ noremap <c-l> 5l
 "let g:airline_theme='molokai'
 "let g:airline_theme='luna'
 let g:airline_theme='virtualenv'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => emmet-vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"emmet-vim config {{{
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,javasriptreact,typescriptreact EmmetInstall
-let g:user_emmet_mode='i' " value: n i v a
-let g:user_emmet_expandabbr_key='<C-e>'
 
 "autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 "
@@ -307,26 +216,6 @@ if WINDOWS()
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Nerd Tree config {{{
-let g:NERDTreeWinPos = "left"
-let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__','node_modules']
-let g:NERDTreeWinSize=35
-noremap <leader>nn :NERDTreeToggle<cr>
-noremap <leader>fn :NERDTreeToggle<cr>
-noremap <leader>nb :NERDTreeFromBookmark<Space>
-noremap <leader>nf :NERDTreeFind<cr>
-
-augroup loadNeardTree
-    autocmd!
-    "autocmd BufWinEnter * silent NERDTreeMirror
-    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-augroup END
-"}}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => git gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "git gutter config {{{
@@ -334,104 +223,6 @@ let g:gitgutter_enabled=0
 nnoremap <silent> <leader>gg :GitGutterToggle<cr>
 "}}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => tab 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Tab config {{{
-noremap <leader>h :tabprevious<cr>
-noremap <leader>l :tabnext<cr>
-
-noremap <leader>tn :tabnew<cr>
-noremap <leader>to :tabonly<cr>
-noremap <leader>tc :tabclose<cr>
-noremap <leader>tm :tabmove<cr>
-"}}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => fzf
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"fzf config {{{
-function! s:build_quickfix_list(lines)
-  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
-  copen
-  cc
-endfunction
-
-let g:fzf_action = {
-  \ 'ctrl-q': function('s:build_quickfix_list'),
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-let g:fzf_layout = { 'down': '40%' }
-let g:fzf_colors =
-            \ { 'fg':      ['fg', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'border':  ['fg', 'Ignore'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
-
-let g:fzf_external_bash= 'C:\tools\msys64\usr\bin\bash.exe'
-"command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse']}, <bang>0)
-
-noremap <leader>bb :Buffers<cr>
-noremap <leader>ff :Files<cr>
-
-"}}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERD Commenter 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERD Commenter config {{{
-" Create default mappings
-let g:NERDCreateDefaultMappings = 1
-
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
-let g:NERDToggleCheckAllLines = 1
-"}}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-visual-multi
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:VM_maps = {}
-let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
-let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-highlightedyank config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:highlightedyank_highlight_duration = 100
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-startify config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vim-startify config {{{
@@ -447,10 +238,4 @@ let g:startify_files_number = 20
 let g:startify_custom_header_quotes =
       \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
 "}}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-which-key config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
