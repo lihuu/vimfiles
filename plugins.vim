@@ -25,8 +25,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mileszs/ack.vim',{'on':'Ack'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 Plug 'othree/html5.vim', {'for':['html']}
 Plug 'mattn/emmet-vim', {'for':['html','javascript','typescript','typescriptreact','javascriptreact']}

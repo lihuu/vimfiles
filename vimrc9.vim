@@ -30,6 +30,7 @@ set expandtab
 set textwidth=100
 set cursorline
 set autoread
+set noshowmode
 
 if has('termguicolors')
     set termguicolors
@@ -194,4 +195,19 @@ g:VM_maps['Find Subword Under'] = '<C-d>'           # replace visual C-n
 
 g:gitgutter_enabled = 0
 nnoremap <silent> <leader>gg :GitGutterToggle<cr>
+
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+g:lightline = {
+      \ 'colorscheme': 'darcula',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
 
