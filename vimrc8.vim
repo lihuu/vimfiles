@@ -1,3 +1,6 @@
+let s:isWindows = has('win16') || has('win32') || has('win64')
+let s:isMac = has('mac')||has('macunix')
+let s:isLinux = has('linux')
 set nocompatible "Must be first line
 if s:isWindows
   set shell=/bin/zsh
