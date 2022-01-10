@@ -16,7 +16,7 @@ endif
 
 set nocompatible
 if !isWindows
-    set shell = /bin/zsh
+    set shell=/bin/zsh
 endif
 set number
 set foldmethod=diff
