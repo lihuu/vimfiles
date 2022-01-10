@@ -67,7 +67,11 @@ tools['nvim-telescope/telescope-frecency.nvim'] = {
     requires = {{'tami5/sqlite.lua', opt = true}}
 }
 
-tools['thinca/vim-quickrun'] = {opt = true, cmd = {'QuickRun', 'Q'}}
+-- https://github.com/thinca/vim-quickrun
+tools['thinca/vim-quickrun'] = {
+    opt = true,
+    cmd = {'QuickRun', 'Q'}
+}
 tools['michaelb/sniprun'] = {
     opt = true,
     run = 'bash ./install.sh',
