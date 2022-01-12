@@ -22,7 +22,6 @@ set nobackup
 set noswapfile
 
 "Custome key mappings
-nnoremap <leader>f :action ReformatCode<CR><esc>
 
 nnoremap <Leader>ga :action GotoAction<CR>
 nnoremap <Leader>gc :action GotoClass<CR>
@@ -35,6 +34,8 @@ nnoremap <Leader>oi :action OptimizeImports<CR>
 "nnoremap <Leader>gb :action Back<CR>
 nmap <Leader>gb <Action>(Back)
 nnoremap <Leader>fw :action Forward<CR>
+nnoremap <Leader>fn <esc>:NERDTreeToggle<CR>
+nnoremap <Leader>fr :action ReformatCode<CR><esc>
 "折叠代码块
 nnoremap <Leader>zf :action CollapseBlock<CR>
 "展开折叠用idea默认的快捷键 <Ctrl+=> 或者展开所有的<Ctrl+Shift+=>
@@ -45,6 +46,9 @@ nnoremap <c-j> 5j
 nnoremap <c-k> 5k
 nnoremap <c-h> 5h
 nnoremap <c-l> 5l
+
+nnoremap <Leader>r <Action>(Run)
+nnoremap <Leader>d <Action>(Debug)
 
 
 
