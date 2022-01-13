@@ -46,10 +46,12 @@ ui['lewis6991/gitsigns.nvim'] = {
     requires = {'nvim-lua/plenary.nvim', opt = true}
 }
 
+-- https://github.com/lukas-reineke/indent-blankline.nvim
 ui['lukas-reineke/indent-blankline.nvim'] = {
     opt = true,
     event = 'BufRead',
-    config = conf.indent_blankline
+    config = conf.indent_blankline,
+    commit = commits.indent_blankline
 }
 --[[
 --

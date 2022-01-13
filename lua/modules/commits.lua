@@ -21,6 +21,7 @@ local commits = {
     zen_mode = 'f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c',
     twilight = '8ab43c0fdc246fdd82382d7ef4ec383f8f755ef9',
     bqf = '5aca44fd316002e65ecd277d6a8a3120e2354a14',
-    todo_comments = '672cd22bd15928434374ac52d0cf38dd250231df'
+    todo_comments = '672cd22bd15928434374ac52d0cf38dd250231df',
+    indent_blankline='0f8df7e43f0cae4c44e0e8383436ad602f333419'
 }
 return commits
