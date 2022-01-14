@@ -36,6 +36,7 @@ use {
   requiring a string which matches one of these patterns, the plugin will be loaded.
 } --]]
 
+-- https://github.com/nvim-telescope/telescope.nvim
 tools['nvim-telescope/telescope.nvim'] = {
     opt = true,
     cmd = {'Telescope'},
@@ -47,12 +48,14 @@ tools['nvim-telescope/telescope.nvim'] = {
     }
 }
 
+-- https://github.com/nvim-telescope/telescope-fzy-native.nvim
 tools['nvim-telescope/telescope-fzy-native.nvim'] = {
     opt = true,
     commit= commits.telescope_fzy_native,
     after = 'telescope.nvim',
 }
 
+-- https://github.com/nvim-telescope/telescope-project.nvim
 tools['nvim-telescope/telescope-project.nvim'] = {
     opt = true,
     commit=commits.telescope_project,
@@ -60,6 +63,7 @@ tools['nvim-telescope/telescope-project.nvim'] = {
 
 }
 
+-- https://github.com/nvim-telescope/telescope-frecency.nvim
 tools['nvim-telescope/telescope-frecency.nvim'] = {
     opt = true,
     commit=commits.telescope_frecency,
@@ -72,29 +76,50 @@ tools['thinca/vim-quickrun'] = {
     opt = true,
     cmd = {'QuickRun', 'Q'}
 }
+
+-- https://github.com/michaelb/sniprun
 tools['michaelb/sniprun'] = {
     opt = true,
     run = 'bash ./install.sh',
     cmd = {"SnipRun", "'<,'>SnipRun"}
 }
+
+-- https://github.com/folke/which-key.nvim
 tools['folke/which-key.nvim'] = {
     opt = true,
     commit=commits.which_key,
     keys = ",",
     config = function() require("which-key").setup {} end
 }
+
+-- https://github.com/folke/trouble.nvim
 tools['folke/trouble.nvim'] = {
     opt = true,
     cmd = {"Trouble", "TroubleToggle", "TroubleRefresh"},
     config = conf.trouble
 }
-tools['dstein64/vim-startuptime'] = {opt = true, cmd = "StartupTime"}
+
+-- https://github.com/dstein64/vim-startuptime
+tools['dstein64/vim-startuptime'] = {
+    opt = true, 
+    cmd = "StartupTime"
+}
+
+-- https://github.com/gelguy/wilder.nvim
 tools['gelguy/wilder.nvim'] = {
     event = "CmdlineEnter",
     config = conf.wilder,
     requires = {{'romgrk/fzy-lua-native', after = 'wilder.nvim'}}
 }
-tools['nathom/filetype.nvim'] = {opt = false,commit='ddef0faedfb561ca2af141a35ab6f256beba8b5a'}
+
+
+-- https://github.com/nathom/filetype.nvim
+tools['nathom/filetype.nvim'] = {
+    opt = false,
+    commit='ddef0faedfb561ca2af141a35ab6f256beba8b5a'
+}
+
+-- https://github.com/prettier/vim-prettier
 tools['prettier/vim-prettier'] = {
     opt = true,
     ft= {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
@@ -108,17 +133,20 @@ tools['prettier/vim-prettier'] = {
     end
 }
 
+-- https://github.com/junegunn/fzf.vim
 tools['junegunn/fzf.vim']={
     opt=true,
     requires={{'junegunn/fzf',opt=true}},
     cmd={'Files','Buffers'}
 }
 
+-- https://github.com/tpope/vim-fugitive
 tools['tpope/vim-fugitive']={
     opt=true,
     cmd={'Git'}
 }
 
+-- https://github.com/TimUntersberger/neogit
 tools['TimUntersberger/neogit']={
     requires='TimUntersberger/neogit',
     opt=true,
@@ -126,6 +154,7 @@ tools['TimUntersberger/neogit']={
     cmd={'Neogit'}
 }
 
+-- https://github.com/tpope/vim-surround
 tools['tpope/vim-surround'] = {
     opt=false
 }

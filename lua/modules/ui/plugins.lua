@@ -23,7 +23,11 @@ ui['hoob3rt/lualine.nvim'] = {
     config = conf.lualine,
     commit = commits.lualine
 }
+
+-- https://github.com/mhinz/vim-startify
 ui['mhinz/vim-startify'] = {opt = true, event = "BufWinEnter"}
+
+-- https://github.com/kyazdani42/nvim-tree.lua
 ui['kyazdani42/nvim-tree.lua'] = {
     opt = true,
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
@@ -38,6 +42,7 @@ event = {'BufRead', 'BufNewFile'},
 }
 --]]
 
+-- https://github.com/lewis6991/gitsigns.nvim
 ui['lewis6991/gitsigns.nvim'] = {
     opt = true,
     event = {'BufRead', 'BufNewFile'},
