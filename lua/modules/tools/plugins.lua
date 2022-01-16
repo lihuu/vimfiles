@@ -116,7 +116,7 @@ tools['gelguy/wilder.nvim'] = {
 -- https://github.com/nathom/filetype.nvim
 tools['nathom/filetype.nvim'] = {
     opt = false,
-    commit='ddef0faedfb561ca2af141a35ab6f256beba8b5a'
+    commit = commits.filetype
 }
 
 -- https://github.com/prettier/vim-prettier
@@ -126,6 +126,7 @@ tools['prettier/vim-prettier'] = {
     cmd={"Prettier","PrettierAsync"},
     run='yarn install',
     config = conf.prettier,
+    commit = commits.prettier,
     setup=function ()
         -- Execute before load this plugin
         --vim.g.perttier#quickfix_enabled=0
@@ -137,13 +138,15 @@ tools['prettier/vim-prettier'] = {
 tools['junegunn/fzf.vim']={
     opt=true,
     requires={{'junegunn/fzf',opt=true}},
+    commit = commits.fzf,
     cmd={'Files','Buffers'}
 }
 
 -- https://github.com/tpope/vim-fugitive
 tools['tpope/vim-fugitive']={
     opt=true,
-    cmd={'Git'}
+    cmd={'Git'},
+    commit = commits.vim_fugitive
 }
 
 -- https://github.com/TimUntersberger/neogit
@@ -151,12 +154,14 @@ tools['TimUntersberger/neogit']={
     requires='TimUntersberger/neogit',
     opt=true,
     config = conf.neogit,
+    commit = commits.neogit,
     cmd={'Neogit'}
 }
 
 -- https://github.com/tpope/vim-surround
 tools['tpope/vim-surround'] = {
-    opt=false
+    opt=false,
+    commit = commits.vim_surround
 }
 
 return tools

@@ -22,6 +22,12 @@ local commits = {
     twilight = '8ab43c0fdc246fdd82382d7ef4ec383f8f755ef9',
     bqf = '5aca44fd316002e65ecd277d6a8a3120e2354a14',
     todo_comments = '672cd22bd15928434374ac52d0cf38dd250231df',
-    indent_blankline='0f8df7e43f0cae4c44e0e8383436ad602f333419'
+    indent_blankline='0f8df7e43f0cae4c44e0e8383436ad602f333419',
+    filetype = 'ada8dcf39de20b30e9c8e0100148e56696704716',
+    prettier = '5e6cca21e12587c02e32a06bf423519eb1e9f1b2',
+    fzf = 'd6aa21476b2854694e6aa7b0941b8992a906c5ec',
+    neogit = '3086635873ae37fc8e28d7de55c2969682104a7d',
+    vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d',
+    vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0'
 }
 return commits
