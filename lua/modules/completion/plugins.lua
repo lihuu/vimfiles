@@ -11,15 +11,16 @@ completion['neovim/nvim-lspconfig'] = {
 
 --https://github.com/williamboman/nvim-lsp-installer
 completion['williamboman/nvim-lsp-installer'] = {
-    opt = true, 
-    after = 'nvim-lspconfig'
+    opt = true,
+    after = 'nvim-lspconfig',
+    commit = commits.lsp_installer
 }
 
 --https://github.com/glepnir/lspsaga.nvim
 completion['glepnir/lspsaga.nvim'] = {
     opt = true,
     after = 'nvim-lspconfig',
-    commit=commits.lspsaga
+    commit = commits.lspsaga
 }
 
 --显示方法、函数的签名
@@ -27,14 +28,13 @@ completion['glepnir/lspsaga.nvim'] = {
 completion['ray-x/lsp_signature.nvim'] = {
     opt = true,
     after = 'nvim-lspconfig',
-    commit=commits.lsp_signature
+    commit = commits.lsp_signature
 }
 --补全
 -- https://github.com/hrsh7th/nvim-cmp
 completion['hrsh7th/nvim-cmp'] = {
     config = conf.cmp,
     event = 'InsertEnter',
-    commit = commits.cmp,
     requires = {
         {'saadparwaiz1/cmp_luasnip', after = 'LuaSnip'},
         {'hrsh7th/cmp-buffer', after = 'cmp_luasnip'},
@@ -58,7 +58,7 @@ completion['L3MON4D3/LuaSnip'] = {
 completion['windwp/nvim-autopairs'] = {
     after = 'nvim-cmp',
     config = conf.autopairs,
-    commit = commits.autopairs
+    --commit = commits.autopairs
 }
 
 --[[
