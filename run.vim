@@ -1,4 +1,3 @@
-"Run compiler
 func! CompileAndRun()
 	exec "w"
 	if &filetype == 'c'
@@ -14,15 +13,13 @@ func! CompileAndRun()
 		:!time bash %
 	elseif &filetype == 'lua'
         exec "!lua %"
-    elseif (&filetype == 'js'|| &filetype == 'javascript.jsx')
-        "some common javascript file will be treat as jsx file
+    elseif (&filetype == 'js' || &filetype =='javascript' || &filetype == 'javascript.jsx')
         exec "!time node %"
 	elseif &filetype == 'python'
 		exec "!time python2.7 %"
     elseif &filetype == 'html'
         exec "!firefox % &"
     elseif &filetype == 'go'
-"        exec "!go build %<"
         exec "!time go run %"
     elseif &filetype == 'mkd'
         exec "!~/.vim/markdown.pl % > %.html &"
@@ -30,7 +27,6 @@ func! CompileAndRun()
 	endif
 endfunc
 
-"Run gdb
 func! Rungdb()
     exec "w"
     exec "!g++ % -std=c++11 -g -o %<"
