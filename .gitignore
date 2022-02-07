@@ -7,6 +7,7 @@ plugged
 *.swn
 *.un~
 *.swm
+*.sw*
 
 .netrwhist
 session

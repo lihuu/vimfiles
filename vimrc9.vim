@@ -69,8 +69,8 @@ endif
 g:mapleader = "\<space>"
 
 inoremap <c-u>  <ESC>~i
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ev :silent! vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :silent! source $MYVIMRC<cr>
 
 autocmd FileType html set tabstop=2 shiftwidth=2
 
@@ -125,10 +125,10 @@ g:NERDTreeWinPos = "left"
 const NERDTreeShowHidden = 0
 const NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
 g:NERDTreeWinSize = 35
-noremap <leader>nn :NERDTreeToggle<cr>
-noremap <leader>fn :NERDTreeToggle<cr>
-noremap <leader>nb :NERDTreeFromBookmark<Space>
-noremap <leader>nf :NERDTreeFind<cr>
+noremap <leader>nn :silent! NERDTreeToggle<cr>
+noremap <leader>fn :silent! NERDTreeToggle<cr>
+noremap <leader>nb :silent! NERDTreeFromBookmark<Space>
+noremap <leader>nf :silent! NERDTreeFind<cr>
 
 augroup loadNeardTree
     autocmd!

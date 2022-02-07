@@ -37,7 +37,7 @@ function config.lualine()
         },
 
         sections = {
-            lualine_a = {'mode'},
+            lualine_a = {'mode','tabs'},
             lualine_b = {{'branch'}, {'diff'}},
             lualine_c = {
                 {'filename'}, {gps.get_location, condition = gps.is_available}
