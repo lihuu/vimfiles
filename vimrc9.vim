@@ -47,7 +47,7 @@ else
     set guifont=Monospace\ Italic\ 12
 endif
 
-if s:isMac && has("gui_running")
+if isMac && has("gui_running")
     set transparency=20
 endif
 set langmenu='en'
