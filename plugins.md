@@ -11,5 +11,3 @@
 * -- https://github.com/TimUntersberger/neogit
 
 * -- https://github.com/tpope/vim-fugitive
-
-

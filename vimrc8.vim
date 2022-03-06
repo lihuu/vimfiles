@@ -126,21 +126,9 @@ noremap <leader>to :tabonly<cr>
 noremap <leader>tc :tabclose<cr>
 noremap <leader>tm :tabmove<cr>
 
-"*****************vim-markdown configuration start *********
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => markdown
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"markdown configuration config {{{
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_toc_autofit = 1
-" }}}
-"
-" 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Nerd Tree config {{{
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__','node_modules']
@@ -155,24 +143,10 @@ augroup loadNeardTree
     "autocmd BufWinEnter * silent NERDTreeMirror
     autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 augroup END
-"}}}
-"
-"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => git gutter
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"git gutter config {{{
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>gg :GitGutterToggle<cr>
-"}}}
-"
-"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => fzf
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"fzf config {{{
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
   copen
@@ -211,7 +185,6 @@ noremap <leader>ff :Files<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERD Commenter 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERD Commenter config {{{
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
 
@@ -238,14 +211,12 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
-"}}}
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => emmet-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"emmet-vim config {{{
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,javasriptreact,typescriptreact EmmetInstall
 let g:user_emmet_mode='i' " value: n i v a
