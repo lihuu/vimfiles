@@ -75,25 +75,25 @@ https://github.com/wbthomason/packer.nvim
 
 ##### 特性
 
--   声明式的插件描述
--   支持依赖
--   支持 luarocks 依赖
--   支持懒加载
--   自动编译高效的懒加载代码，提高启动速度
--   使用 lua 配置和编写
--   支持安装 hooks
--   异步安装
--   支持所动 git 版本，分支
--   支持本地的插件
+- 声明式的插件描述
+- 支持依赖
+- 支持 luarocks 依赖
+- 支持懒加载
+- 自动编译高效的懒加载代码，提高启动速度
+- 使用 lua 配置和编写
+- 支持安装 hooks
+- 异步安装
+- 支持所动 git 版本，分支
+- 支持本地的插件
 
 ##### 基本使用命令
 
--   PackerCompile
--   PackerClean
--   PackerInstall
--   PackerUpdate
--   PackerSync 相当于先执行 `PackerUpdate` 然后执行 `PackerCompile`
--   PackerLoad 立即加载 opt 插件
+- PackerCompile
+- PackerClean
+- PackerInstall
+- PackerUpdate
+- PackerSync 相当于先执行 `PackerUpdate` 然后执行 `PackerCompile`
+- PackerLoad 立即加载 opt 插件
 
 ### 其他
 
@@ -122,15 +122,15 @@ vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的�
 
 ##### 动词
 
--   `d`，删除，英文单词（delete）。
--   `c`，修改，英文单词（change）。
--   `y`，复制，英文单词（yank），在 vim 中其实就是复制（copy），只不过这里的复制，默认是把内容复制到 vim 的寄存器中，而不是我们的系统的剪切板。
+- `d`，删除，英文单词（delete）。
+- `c`，修改，英文单词（change）。
+- `y`，复制，英文单词（yank），在 vim 中其实就是复制（copy），只不过这里的复制，默认是把内容复制到 vim 的寄存器中，而不是我们的系统的剪切板。
 
 ##### 名词
 
--   `w`，单词，英文单词（word）。
--   `s`，句子，英文单词（sentence）。
--   `p`，段落，英文单词（paragraph）。
+- `w`，单词，英文单词（word）。
+- `s`，句子，英文单词（sentence）。
+- `p`，段落，英文单词（paragraph）。
 
 #### 文本对象操作 (Text Object)
 
@@ -167,12 +167,12 @@ https://github.com/ayamir/nvimdots
 
 ##### 快捷键
 
--   <CR> 编辑
--   <C-v> 左右分屏打开
--   <C-x> 上下分屏打开
--   <C-t> 新的标签页中打开
--   a 创建文件
--   d 删除文件
--   r 重命名文件
+- <CR> 编辑
+- <C-v> 左右分屏打开
+- <C-x> 上下分屏打开
+- <C-t> 新的标签页中打开
+- a 创建文件
+- d 删除文件
+- r 重命名文件
 
-#####
+##### 

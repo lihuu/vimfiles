@@ -84,7 +84,8 @@ editor['windwp/nvim-ts-autotag'] = {
     opt = true,
     after = 'nvim-treesitter',
     ft = {'html', 'xml','javascriptreact','typescriptreact','javascript'},
-    config=conf.autotag
+    config = conf.autotag,
+    commit = commits.nvim_ts_autotag
 }
 
 -- https://github.com/andymass/vim-matchup
