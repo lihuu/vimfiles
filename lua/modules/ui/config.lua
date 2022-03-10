@@ -73,13 +73,24 @@ end
 function config.nvim_tree()
     local tree_cb = require'nvim-tree.config'.nvim_tree_callback
     require('nvim-tree').setup({
+        actions = {
+            open_file = {
+                window_picker = {
+                    enable = true,
+                    exclude = {
+                        filetype = { 'notify', 'packer', 'qf' }, 
+                        buftype= { 'terminal' } 
+                    }
+                }, quit_on_open = true
+            }
+        },
         git = {
             enable = true,
             ignore=true,
             timeout=500
         },
         filters={
-            custom={'.git', 'node_modules', '.cache'},
+            custom = {'.git', 'node_modules', '.cache'},
             dotfiles=true
         },
         open_on_tab = false,
