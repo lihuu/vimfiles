@@ -239,3 +239,6 @@ let g:startify_custom_header_quotes =
       \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
 "}}}
 
+set foldlevelstart=99
+set foldcolumn=1
+autocmd FileType typescriptreact,javascript,typescript,javascriptreact setlocal fdm=syntax
