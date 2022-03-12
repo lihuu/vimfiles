@@ -19,8 +19,8 @@ function config.telescope()
         vim.cmd [[packadd telescope-project.nvim]]
     end
 
-    if not packer_plugins['telescope-file-browser'].loaded then
-        vim.cmd [[packadd telescope-file-browser]]
+    if not packer_plugins['telescope-file-browser.nvim'].loaded then
+        vim.cmd [[packadd telescope-file-browser.nvim]]
     end
 
 
@@ -83,7 +83,7 @@ function config.telescope()
     require('telescope').load_extension('fzy_native')
     require('telescope').load_extension('project')
     require('telescope').load_extension('frecency')
-    require('telescope').load_extension('telescope-file-browser')
+    require('telescope').load_extension('file_browser')
     vim.cmd [[command! Rg lua require('telescope.builtin').live_grep()]]
 end
 
