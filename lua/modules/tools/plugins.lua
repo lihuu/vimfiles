@@ -63,6 +63,13 @@ tools['nvim-telescope/telescope-project.nvim'] = {
 
 }
 
+-- https://github.com/nvim-telescope/telescope-file-browser.nvim
+tools['nvim-telescope/telescope-file-browser.nvim'] = {
+    opt = true,
+    commit = commits.telescope_file_browser,
+    after = 'telescope.nvim'
+}
+
 -- https://github.com/nvim-telescope/telescope-frecency.nvim
 tools['nvim-telescope/telescope-frecency.nvim'] = {
     opt = true,
