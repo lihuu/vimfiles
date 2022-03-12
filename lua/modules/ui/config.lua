@@ -264,7 +264,6 @@ function config.gitsigns()
         numhl = false,
         linehl = false,
         word_diff = false,
-        use_internal_diff = false,
         diff_opts = {internal = false},
         attach_to_untracked = true,
     }

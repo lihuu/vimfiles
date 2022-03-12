@@ -1,6 +1,6 @@
 local commits = {
     nvim_tree = '2457e141ae5c2e9c5d94a9550b37b421d25cfff1',
-    gitsigns ='5c487a804e462c284c159c800a803b8e0294d0a4',
+    gitsigns ='7de953329ff696408bd38d3218b0239839d285e0',
     nvim_bufferline = '463637a3ac86dcaacbcd47aa608f53aaad749696',
     nvim_treesitter = 'cada76c4901e2389c0f82ac11d0c9c61d5205e90',
     matchup = '7fd8806138f404498db7a3e848d8fa55ad61e7cf',
