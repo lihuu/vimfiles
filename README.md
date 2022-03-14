@@ -4,6 +4,14 @@ windows 系统中
 在$HOME目录中执行`git clone https://github.com/lihuu/vimfiles.git`
 Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim`
 
+### 基础
+
+#### vim 寄存器和剪贴板
+
+vim 中有多种寄存器，
+
+- 无名寄存器，这个是我们默认的寄存器。例如在当前行执行 `yy` 就会把当前行复制到无名寄存器中。
+
 #### 需要额外安装的依赖
 
 ##### nodejs
@@ -175,4 +183,4 @@ https://github.com/ayamir/nvimdots
 - d 删除文件
 - r 重命名文件
 
-##### 
+#####
