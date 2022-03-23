@@ -10,7 +10,7 @@ Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.
 
 vim 中有多种寄存器，
 
-- 无名寄存器，这个是我们默认的寄存器。例如在当前行执行 `yy` 就会把当前行复制到无名寄存器中。
+-   无名寄存器，这个是我们默认的寄存器。例如在当前行执行 `yy` 就会把当前行复制到无名寄存器中。
 
 #### 需要额外安装的依赖
 
@@ -83,25 +83,25 @@ https://github.com/wbthomason/packer.nvim
 
 ##### 特性
 
-- 声明式的插件描述
-- 支持依赖
-- 支持 luarocks 依赖
-- 支持懒加载
-- 自动编译高效的懒加载代码，提高启动速度
-- 使用 lua 配置和编写
-- 支持安装 hooks
-- 异步安装
-- 支持所动 git 版本，分支
-- 支持本地的插件
+-   声明式的插件描述
+-   支持依赖
+-   支持 luarocks 依赖
+-   支持懒加载
+-   自动编译高效的懒加载代码，提高启动速度
+-   使用 lua 配置和编写
+-   支持安装 hooks
+-   异步安装
+-   支持所动 git 版本，分支
+-   支持本地的插件
 
 ##### 基本使用命令
 
-- PackerCompile
-- PackerClean
-- PackerInstall
-- PackerUpdate
-- PackerSync 相当于先执行 `PackerUpdate` 然后执行 `PackerCompile`
-- PackerLoad 立即加载 opt 插件
+-   PackerCompile
+-   PackerClean
+-   PackerInstall
+-   PackerUpdate
+-   PackerSync 相当于先执行 `PackerUpdate` 然后执行 `PackerCompile`
+-   PackerLoad 立即加载 opt 插件
 
 ### 其他
 
@@ -130,42 +130,42 @@ vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的�
 
 ##### 动词
 
-- `d`，删除，英文单词（delete）。
-- `c`，修改，英文单词（change）。
-- `y`，复制，英文单词（yank），在 vim 中其实就是复制（copy），只不过这里的复制，默认是把内容复制到 vim 的寄存器中，而不是我们的系统的剪切板。
+-   `d`，删除，英文单词（delete）。
+-   `c`，修改，英文单词（change）。
+-   `y`，复制，英文单词（yank），在 vim 中其实就是复制（copy），只不过这里的复制，默认是把内容复制到 vim 的寄存器中，而不是我们的系统的剪切板。
 
 ##### 名词
 
-- `w`，单词，英文单词（word）。
-- `s`，句子，英文单词（sentence）。
-- `p`，段落，英文单词（paragraph）。
+-   `w`，单词，英文单词（word）。
+-   `s`，句子，英文单词（sentence）。
+-   `p`，段落，英文单词（paragraph）。
 
 #### 文本对象操作 (Text Object)
 
 ##### 文本修改
 
-- d 删除
-  - `dw` 删除一个单词
-  - `dd` 删除一行
-  - `D` 相当于 d$ 从当前字符删除到行尾
-- c 修改
-  - `cc` 修改整行
-  - `C` 相当于 c$ 删除到行尾，然后进入插入模式。
-- s 相当于 cl ，表示删除一个字符然后进入插入模式，S 相当于 cc 替换整行内容。
-- i 在当前字符前面进入插入模式，I 把光标移动到行首非空白字符上，然后进入插入模式。
-- a 在当前字符之后进入插入模式，A 在行尾进入插入模式。
-- o 当前行之下插入新行，O 当前之上插入新行。
-- r 替换光标下的字符，R 进入插入模式，Esc 退出插入模式。
-- u 撤销最近的一个修改动作，U 撤销当前行上的所有操作。
+-   d 删除
+    -   `dw` 删除一个单词
+    -   `dd` 删除一行
+    -   `D` 相当于 d$ 从当前字符删除到行尾
+-   c 修改
+    -   `cc` 修改整行
+    -   `C` 相当于 c$ 删除到行尾，然后进入插入模式。
+-   s 相当于 cl ，表示删除一个字符然后进入插入模式，S 相当于 cc 替换整行内容。
+-   i 在当前字符前面进入插入模式，I 把光标移动到行首非空白字符上，然后进入插入模式。
+-   a 在当前字符之后进入插入模式，A 在行尾进入插入模式。
+-   o 当前行之下插入新行，O 当前之上插入新行。
+-   r 替换光标下的字符，R 进入插入模式，Esc 退出插入模式。
+-   u 撤销最近的一个修改动作，U 撤销当前行上的所有操作。
 
 #### vim-surround 插件使用
 
 ```javascript
-const message = '';
-if ((message = 'Hello world')) {
-  if (true) {
-    console.log(message);
-  }
+const message = "";
+if ((message = "Hello world")) {
+    if (true) {
+        console.log(message);
+    }
 }
 ```
 
@@ -200,12 +200,14 @@ https://github.com/ayamir/nvimdots
 
 ##### 快捷键
 
-- <CR> 编辑
-- <C-v> 左右分屏打开
-- <C-x> 上下分屏打开
-- <C-t> 新的标签页中打开
-- a 创建文件
-- d 删除文件
-- r 重命名文件
+-   <CR> 编辑
+-   <C-v> 左右分屏打开
+-   <C-x> 上下分屏打开
+-   <C-t> 新的标签页中打开
+-   a 创建文件
+-   d 删除文件
+-   r 重命名文件
 
-#####
+##### vim tips
+
+https://vim.fandom.com/wiki/Best_Vim_Tips#Really_useful
