@@ -129,6 +129,7 @@ function config.nvim_tree()
             width = 30,
             side = 'left',
             auto_resize = true,
+            hide_root_folder = false,
             mappings = {
                 custom_only = true,
                 -- list of mappings to set on the tree manually

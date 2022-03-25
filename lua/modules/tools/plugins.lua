@@ -93,10 +93,10 @@ tools['michaelb/sniprun'] = {
 
 -- https://github.com/folke/which-key.nvim
 tools['folke/which-key.nvim'] = {
-    opt = true,
+    opt = false,
     commit=commits.which_key,
     keys = ",",
-    config = function() require("which-key").setup {} end
+    config = conf.whichkey
 }
 
 -- https://github.com/folke/trouble.nvim
