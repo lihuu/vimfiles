@@ -74,35 +74,39 @@ function config.nvim_tree()
     local tree_cb = require'nvim-tree.config'.nvim_tree_callback
     require('nvim-tree').setup({
         actions = {
+            chnage_dir = {
+                enable = true,
+                global = false
+            },
             open_file = {
                 window_picker = {
                     enable = true,
                     exclude = {
-                        filetype = { 'notify', 'packer', 'qf' }, 
-                        buftype= { 'terminal' } 
+                        filetype = { 'notify', 'packer', 'qf' },
+                        buftype= { 'terminal' }
                     }
                 }, quit_on_open = true
             }
         },
         git = {
             enable = true,
-            ignore=true,
-            timeout=500
+            ignore = true,
+            timeout = 400
         },
         filters={
             custom = {'.git', 'node_modules', '.cache'},
-            dotfiles=true
+            dotfiles = true
         },
         open_on_tab = false,
         disable_netrw = true,
         hijack_netrw = true,
         auto_close = true,
         update_cwd = false,
-        git_hl=1,
+        git_hl = 1,
         highlight_opened_files = true,
-        allow_resize=1,
-        quit_on_open=0,
-        hide_dotfiles=1,
+        allow_resize = 1,
+        quit_on_open = 0,
+        hide_dotfiles = 1,
         auto_ignore_ft = {'startify', 'dashboard'},
         update_to_buf_dir   = {
             enable = false,
@@ -121,8 +125,9 @@ function config.nvim_tree()
                 warning = "",
                 error = "",
             }
-        },trash={
-            cmd="trash",
+        },
+        trash={
+            cmd = "trash",
             require_confirm = true
         },
         view = {
@@ -170,7 +175,17 @@ function config.nvim_tree()
                     {key = "g?", cb = tree_cb("toggle_help")}
                 }
             }
+        },
+        log = {
+            enable = false,
+            truncate = false,
+            types = {
+                all = false,
+                config = false,
+                git = false
+            }
         }
+
     })
 end
 
