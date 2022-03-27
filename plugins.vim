@@ -30,7 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 
 Plug 'othree/html5.vim', {'for':['html']}
-Plug 'mattn/emmet-vim', {'for':['html','javascript','typescript','typescriptreact','javascriptreact']}
+Plug 'mattn/emmet-vim', {'for':['html','javascript','typescript','typescriptreact','javascriptreact'],'on':'EmmetInstall'}
 Plug 'elzr/vim-json',{'for':'json'}
 Plug 'turbio/bracey.vim', {'for':'html','on':'Bracey','do':'cd server & npm install'}
 "Javascript typescript reactjs 相关的插件
