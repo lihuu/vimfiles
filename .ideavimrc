@@ -12,6 +12,7 @@ Plug 'preservim/nerdtree'
 Plug 'machakann/vim-highlightedyank'
 Plug 'chrisbra/matchit'
 Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
 
 "Plug end
 "set vb t_vb=""
