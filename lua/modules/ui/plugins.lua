@@ -25,7 +25,11 @@ ui['hoob3rt/lualine.nvim'] = {
 }
 
 -- https://github.com/mhinz/vim-startify
-ui['mhinz/vim-startify'] = {opt = true, event = "BufWinEnter"}
+ui['mhinz/vim-startify'] = {
+    opt = true,
+    event = "BufWinEnter",
+    commit = commits.vim_statify
+}
 
 -- https://github.com/kyazdani42/nvim-tree.lua
 ui['kyazdani42/nvim-tree.lua'] = {

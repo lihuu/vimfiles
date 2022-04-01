@@ -31,6 +31,7 @@ local commits = {
     fzf = 'd6aa21476b2854694e6aa7b0941b8992a906c5ec',
     neogit = '3086635873ae37fc8e28d7de55c2969682104a7d',
     vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d',
-    vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0'
+    vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
+    vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2'
 }
 return commits
