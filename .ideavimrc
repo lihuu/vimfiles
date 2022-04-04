@@ -69,6 +69,7 @@ vnoremap <Leader><Leader>f :action IntroduceField<CR>
 vnoremap <Leader><Leader>c :action IntroduceConstant<CR>
 vnoremap <Leader><Leader>p :action IntroduceParameter<CR>
 vnoremap <Leader><Leader>P :action IntroduceFunctionalParameter<CR>
+vnoremap <Leader><Leader>R :action Rename<CR>
 
 
 
