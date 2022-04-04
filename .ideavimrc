@@ -66,8 +66,9 @@ vnoremap <Leader><Leader>m :action ExtractMethod<CR>
 vnoremap <Leader><Leader>i :action Inline<CR>
 vnoremap <Leader><Leader>v :action IntroduceVariable<CR>
 vnoremap <Leader><Leader>f :action IntroduceField<CR>
+vnoremap <Leader><Leader>c :action IntroduceConstant<CR>
 vnoremap <Leader><Leader>p :action IntroduceParameter<CR>
-vnoremap <Leader><Leader>p :action IntroduceFunctionalParameter<CR>
+vnoremap <Leader><Leader>P :action IntroduceFunctionalParameter<CR>
 
 
 
