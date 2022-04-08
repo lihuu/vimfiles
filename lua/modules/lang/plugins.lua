@@ -11,7 +11,7 @@ lang['fatih/vim-go'] = {
 
 -- https://github.com/rust-lang/rust.vim
 lang['rust-lang/rust.vim'] = {
-    opt = true, 
+    opt = true,
     ft = "rust"
 }
 
