@@ -131,8 +131,8 @@ editor['vimlab/split-term.vim'] = {
     cmd = {'Term', 'VTerm'}
 }
 
--- https://github.com/akinsho/nvim-toggleterm.lua
-editor['akinsho/nvim-toggleterm.lua'] = {
+-- https://github.com/akinsho/nvim-toggleterm.nvim
+editor['akinsho/toggleterm.nvim'] = {
     opt = true,
     event = 'BufRead',
     config = conf.toggleterm
