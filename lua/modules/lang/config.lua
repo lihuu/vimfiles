@@ -89,6 +89,10 @@ function config.lang_go()
 end
 
 function config.lang_org()
+    if not packer_plugins['nvim-treesitter'].loaded then
+        vim.cmd [[packadd nvim-treesitter]]
+    end
+    require('nvim-treesitter')
     require('orgmode').setup_ts_grammar()
     require('nvim-treesitter.configs').setup({
         highlight = {
