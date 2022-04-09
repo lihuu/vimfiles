@@ -23,11 +23,12 @@ lang['simrat39/rust-tools.nvim'] = {
 }
 
 -- https://github.com/kristijanhusak/orgmode.nvim
-lang['kristijanhusak/orgmode.nvim'] = {
-    opt = true,
-    ft = "org",
-    config = conf.lang_org
-}
+--lang['kristijanhusak/orgmode.nvim'] = {
+--    opt = true,
+--    ft = "org",
+--    requires = 'nvim-treesitter/nvim-treesitter',
+--    config = conf.lang_org
+--}
 
 -- https://github.com/iamcco/markdown-preview.nvim
 lang['iamcco/markdown-preview.nvim'] = {
