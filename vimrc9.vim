@@ -210,4 +210,19 @@ g:lightline = {
       \ },
       \ }
 
+def FormatLua()
+    const input getline(1, "$")
+    var error_file = tempname()
+    var flags = " -i "
+    const config_file = findfile(".lua-format", ".;")
 
+    if empty(config_file) == 0
+        flags = flags . " -c " . config_file
+    end
+
+    const output_str = system("lua-format" . flags . " 2> " . error_file,input)
+
+    if empty(output_str) == 0
+        const output = split(output_str,"\n")
+    end
+enddef
