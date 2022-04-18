@@ -1,6 +1,6 @@
 vim9script
 if !has('vim9script')
-  finish
+    finish
 endif
 #使用vim9 script 编写的配置
 const isWindows = has('win16') || has('win32') || has('win64')
@@ -9,9 +9,9 @@ const isLinux = has('linux')
 const isGui = has('gui_running')
 var configPath: string
 if isWindows
-  configPath = "$HOME/vimfiles"
+    configPath = "$HOME/vimfiles"
 else
-  configPath = "~/.vim"
+    configPath = "~/.vim"
 endif
 
 set nocompatible
@@ -76,25 +76,25 @@ autocmd FileType html set tabstop=2 shiftwidth=2
 
 
 def g:CompileAndRun()
-	exec "w"
-	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "!time ./%<"
-	elseif &filetype == 'cpp'
-		exec "!g++ % -std=c++11 -o %<"
-		exec "!time ./%<"
-	elseif &filetype == 'java' 
-		exec "!javac %" 
-		exec "!time java %<"
-	elseif &filetype == 'sh'
-		:!time bash %
-	elseif &filetype == 'lua'
+    exec "w"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -std=c++11 -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'java' 
+        exec "!javac %" 
+        exec "!time java %<"
+    elseif &filetype == 'sh'
+        :!time bash %
+    elseif &filetype == 'lua'
         exec "!lua %"
     elseif &filetype == 'js' || &filetype == 'javascript.jsx' || &filetype == 'javascript'
         #some common javascript file will be treat as jsx file
         exec "!node %"
-	elseif &filetype == 'python'
-		exec "!time python2.7 %"
+    elseif &filetype == 'python'
+        exec "!time python2.7 %"
     elseif &filetype == 'html'
         exec "!firefox % &"
     elseif &filetype == 'go'
@@ -103,7 +103,7 @@ def g:CompileAndRun()
     elseif &filetype == 'mkd'
         exec "!~/.vim/markdown.pl % > %.html &"
         exec "!firefox %.html &"
-	endif
+    endif
 enddef
 
 nmap <F5> :call g:CompileAndRun()<CR>
@@ -200,29 +200,64 @@ nnoremap <silent> <leader>gg :GitGutterToggle<cr>
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 g:lightline = {
-      \ 'colorscheme': 'darcula',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+            \ 'colorscheme': 'darcula',
+            \ 'active': {
+                \   'left': [ [ 'mode', 'paste' ],
+                \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+                \ },
+                \ 'component_function': {
+                    \   'gitbranch': 'FugitiveHead'
+                    \ },
+                    \ }
 
-def FormatLua()
-    const input getline(1, "$")
-    var error_file = tempname()
+def CopyDiffToBuffer(input: list<string>, output: list<string>, bufname: string)
+    const min_len = min([len(input), len(output)])
+
+    for i in range(0, min_len - 1)
+        const output_line = output[i]
+        const input_line  = input[i]
+        if input_line !=# output_line
+            call setline(i + 1, output_line) 
+        endif
+    endfor
+
+    if len(input) != len(output)
+        if min_len == len(output) 
+            call deletebufline(bufname, min_len + 1, "$")
+        else 
+            call append("$", output[min_len :])
+        endif
+    endif
+    redraw!
+enddef
+
+#调用lua-format 格式化lua脚本
+#参考：https://github.com/andrejlevkovitch/vim-lua-format
+def g:FormatLua()
+    const input = getline(1, "$")
+    const error_file = tempname()
     var flags = " -i "
     const config_file = findfile(".lua-format", ".;")
 
     if empty(config_file) == 0
-        flags = flags . " -c " . config_file
-    end
+        flags = flags .. " -c " .. config_file
+    endif
 
-    const output_str = system("lua-format" . flags . " 2> " . error_file,input)
+    const output_str = system("lua-format" .. flags .. " 2> " .. error_file, input)
 
     if empty(output_str) == 0
-        const output = split(output_str,"\n")
-    end
+        const output = split(output_str, "\n")
+        CopyDiffToBuffer(input, output, bufname("%"))
+        lexpr ""
+        lwindow
+    else
+        const errors = readfile(error_file)
+        const sourceFile = bufname("%")
+        call insert(errors, sourceFile)
+        set efm=%+P%f,line\ %l:%c\ %m,%-Q
+        lexpr errors
+        lwindow 5
+    endif
+
+    call delete(error_file)
 enddef
