@@ -243,5 +243,5 @@ set foldlevelstart=99
 set foldcolumn=1
 autocmd FileType typescriptreact,javascript,typescript,javascriptreact setlocal fdm=syntax
 
-autocmd FileType lua nnoremap <buffer> <c-k> :call LuaFormat()<cr>
-autocmd BufWrite *.lua call LuaFormat()
+"autocmd FileType lua nnoremap <buffer> <c-k> :call LuaFormat()<cr>
+autocmd BufWrite *.lua call FormatLua()
