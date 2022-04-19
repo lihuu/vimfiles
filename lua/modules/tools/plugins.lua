@@ -38,137 +38,127 @@ use {
 
 -- https://github.com/nvim-telescope/telescope.nvim
 tools['nvim-telescope/telescope.nvim'] = {
-    opt = true,
-    cmd = {'Telescope'},
-    config = conf.telescope,
-    commit = commits.telescope,
-    requires = {
-        {'nvim-lua/popup.nvim', opt = true},
-        {'nvim-lua/plenary.nvim', opt = true}
-    }
+  opt = true,
+  cmd = {'Telescope'},
+  config = conf.telescope,
+  commit = commits.telescope,
+  requires = {
+    {'nvim-lua/popup.nvim', opt = true}, {'nvim-lua/plenary.nvim', opt = true}
+  }
 }
 
 -- https://github.com/nvim-telescope/telescope-fzy-native.nvim
 tools['nvim-telescope/telescope-fzy-native.nvim'] = {
-    opt = true,
-    commit= commits.telescope_fzy_native,
-    after = 'telescope.nvim',
+  opt = true,
+  commit = commits.telescope_fzy_native,
+  after = 'telescope.nvim'
 }
 
 -- https://github.com/nvim-telescope/telescope-project.nvim
 tools['nvim-telescope/telescope-project.nvim'] = {
-    opt = true,
-    commit=commits.telescope_project,
-    after = 'telescope.nvim'
+  opt = true,
+  commit = commits.telescope_project,
+  after = 'telescope.nvim'
 
 }
 
 -- https://github.com/nvim-telescope/telescope-file-browser.nvim
 tools['nvim-telescope/telescope-file-browser.nvim'] = {
-    opt = true,
-    commit = commits.telescope_file_browser,
-    after = 'telescope.nvim'
+  opt = true,
+  commit = commits.telescope_file_browser,
+  after = 'telescope.nvim'
 }
 
 -- https://github.com/nvim-telescope/telescope-frecency.nvim
 tools['nvim-telescope/telescope-frecency.nvim'] = {
-    opt = true,
-    commit=commits.telescope_frecency,
-    after = 'telescope.nvim',
-    requires = {{'tami5/sqlite.lua', opt = true}}
+  opt = true,
+  commit = commits.telescope_frecency,
+  after = 'telescope.nvim',
+  requires = {{'tami5/sqlite.lua', opt = true}}
 }
 
 -- https://github.com/thinca/vim-quickrun
-tools['thinca/vim-quickrun'] = {
-    opt = true,
-    cmd = {'QuickRun', 'Q'}
-}
+tools['thinca/vim-quickrun'] = {opt = true, cmd = {'QuickRun', 'Q'}}
 
 -- https://github.com/michaelb/sniprun
 tools['michaelb/sniprun'] = {
-    opt = true,
-    run = 'bash ./install.sh',
-    cmd = {"SnipRun", "'<,'>SnipRun"}
+  opt = true,
+  run = 'bash ./install.sh',
+  cmd = {"SnipRun", "'<,'>SnipRun"}
 }
 
 -- https://github.com/folke/which-key.nvim
 tools['folke/which-key.nvim'] = {
-    opt = false,
-    commit=commits.which_key,
-    keys = ",",
-    config = conf.whichkey
+  opt = false,
+  commit = commits.which_key,
+  keys = ",",
+  config = conf.whichkey
 }
 
 -- https://github.com/folke/trouble.nvim
 tools['folke/trouble.nvim'] = {
-    opt = true,
-    cmd = {"Trouble", "TroubleToggle", "TroubleRefresh"},
-    config = conf.trouble
+  opt = true,
+  cmd = {"Trouble", "TroubleToggle", "TroubleRefresh"},
+  config = conf.trouble
 }
 
 -- https://github.com/dstein64/vim-startuptime
-tools['dstein64/vim-startuptime'] = {
-    opt = true, 
-    cmd = "StartupTime"
-}
+tools['dstein64/vim-startuptime'] = {opt = true, cmd = "StartupTime"}
 
 -- https://github.com/gelguy/wilder.nvim
 tools['gelguy/wilder.nvim'] = {
-    event = "CmdlineEnter",
-    config = conf.wilder,
-    requires = {{'romgrk/fzy-lua-native', after = 'wilder.nvim'}}
+  event = "CmdlineEnter",
+  config = conf.wilder,
+  requires = {{'romgrk/fzy-lua-native', after = 'wilder.nvim'}}
 }
-
 
 -- https://github.com/nathom/filetype.nvim
-tools['nathom/filetype.nvim'] = {
-    opt = false,
-    commit = commits.filetype
-}
+tools['nathom/filetype.nvim'] = {opt = false, commit = commits.filetype}
 
 -- https://github.com/prettier/vim-prettier
 tools['prettier/vim-prettier'] = {
-    opt = true,
-    ft= {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
-    cmd={"Prettier","PrettierAsync"},
-    run='yarn install',
-    config = conf.prettier,
-    commit = commits.prettier,
-    setup=function ()
-        -- Execute before load this plugin
-        --vim.g.perttier#quickfix_enabled=0
-        vim.cmd([[autocmd BufWritePre  *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync]])
-    end
+  opt = true,
+  ft = {
+    'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql',
+    'markdown', 'vue', 'svelte', 'yaml', 'html'
+  },
+  cmd = {"Prettier", "PrettierAsync"},
+  run = 'yarn install',
+  config = conf.prettier,
+  commit = commits.prettier,
+  setup = function()
+    -- Execute before load this plugin
+    -- vim.g.perttier#quickfix_enabled=0
+    vim.cmd(
+      [[autocmd BufWritePre  *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync]])
+  end
 }
 
 -- https://github.com/junegunn/fzf.vim
-tools['junegunn/fzf.vim']={
-    opt=true,
-    requires={{'junegunn/fzf',opt=true}},
-    commit = commits.fzf,
-    cmd={'Files','Buffers'}
+tools['junegunn/fzf.vim'] = {
+  opt = true,
+  requires = {{'junegunn/fzf', opt = true}},
+  commit = commits.fzf,
+  cmd = {'Files', 'Buffers'}
 }
 
 -- https://github.com/tpope/vim-fugitive
-tools['tpope/vim-fugitive']={
-    opt=true,
-    cmd={'Git'},
-    commit = commits.vim_fugitive
+tools['tpope/vim-fugitive'] = {
+  opt = true,
+  cmd = {'Git'},
+  commit = commits.vim_fugitive
 }
 
 -- https://github.com/TimUntersberger/neogit
-tools['TimUntersberger/neogit']={
-    requires='TimUntersberger/neogit',
-    opt=true,
-    config = conf.neogit,
-    commit = commits.neogit,
-    cmd={'Neogit'}
+tools['TimUntersberger/neogit'] = {
+  requires = 'TimUntersberger/neogit',
+  opt = true,
+  config = conf.neogit,
+  commit = commits.neogit,
+  cmd = {'Neogit'}
 }
 
 -- https://github.com/tpope/vim-surround
-tools['tpope/vim-surround'] = {
-    opt=false,
-    commit = commits.vim_surround
-}
+tools['tpope/vim-surround'] = {opt = false, commit = commits.vim_surround}
 
 return tools
