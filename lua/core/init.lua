@@ -18,7 +18,9 @@ local createdir = function()
   if vim.fn.isdirectory(global.cache_dir) == 0 then
     os.execute("mkdir -p " .. global.cache_dir)
     for _, v in pairs(data_dir) do
-      if vim.fn.isdirectory(v) == 0 then os.execute("mkdir -p " .. v) end
+      if vim.fn.isdirectory(v) == 0 then
+        os.execute("mkdir -p " .. v)
+      end
     end
   end
 end
@@ -65,7 +67,9 @@ local neovim_qt_config = function()
   vim.g.neovide_cursor_vfx_particle_density = 5.0
 end
 
-local lihuu_statify_config = function() vim.g.startify_files_number = 20 end
+local lihuu_statify_config = function()
+  vim.g.startify_files_number = 20
+end
 
 local lihuu_qf_config = function()
   vim.cmd([[
@@ -149,7 +153,9 @@ local function lihuu_vim_rooter_config()
 end
 
 local load_core = function()
-  if vim.g.vscode then return end
+  if vim.g.vscode then
+    return
+  end
 
   lihuu_statify_config()
   lihuu_nvim_tree_config()

@@ -1,5 +1,6 @@
 local lang = {}
 local conf = require('modules.lang.config')
+local vim = vim
 
 -- https://github.com/fatih/vim-go
 lang['fatih/vim-go'] = {
@@ -33,5 +34,12 @@ lang['iamcco/markdown-preview.nvim'] = {
   ft = "markdown",
   run = 'cd app && yarn install'
 }
+
+local LuaFormat = function()
+  local current_buff = vim.api.nvim_get_current_buf()
+  local line_count = vim.api.nvim_buf_line_councurrent_buff()
+  local lines = vim.api.nvim_buf_get_lines(current_buff, 0, -1, line_count,
+                                           false)
+end
 
 return lang

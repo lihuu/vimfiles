@@ -16,7 +16,9 @@ function config.lualine()
     local msg = 'No Active LSP'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then return icon .. msg end
+    if next(clients) == nil then
+      return icon .. msg
+    end
     for _, client in ipairs(clients) do
       local filetypes = client.config.filetypes
       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
@@ -296,9 +298,13 @@ function config.indent_blankline()
   vim.cmd('autocmd CursorMoved * IndentBlanklineRefresh')
 end
 
-function config.zen_mode() require('zen-mode').setup({}) end
+function config.zen_mode()
+  require('zen-mode').setup({})
+end
 
-function config.twilight() require('twilight').setup({}) end
+function config.twilight()
+  require('twilight').setup({})
+end
 
 function config.bqf()
   require('bqf').setup({
@@ -315,7 +321,9 @@ function config.bqf()
         local filename = vim.api.nvim_buf_get_name(bufnr)
         local fsize = vim.fn.getfsize(filename)
         -- file size greater than 100k can't be previewed automatically
-        if fsize > 100 * 1024 then ret = false end
+        if fsize > 100 * 1024 then
+          ret = false
+        end
         return ret
       end
     },

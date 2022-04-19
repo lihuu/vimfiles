@@ -1,6 +1,8 @@
 local config = {}
 
-function config.nvim_lsp() require('modules.completion.lspconfig') end
+function config.nvim_lsp()
+  require('modules.completion.lspconfig')
+end
 
 function config.cmp()
   local t = function(str)
@@ -109,7 +111,9 @@ function config.cmp()
     },
 
     snippet = {
-      expand = function(args) require("luasnip").lsp_expand(args.body) end
+      expand = function(args)
+        require("luasnip").lsp_expand(args.body)
+      end
     },
 
     -- You should specify your *installed* sources.

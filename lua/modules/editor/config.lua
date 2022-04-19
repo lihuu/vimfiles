@@ -139,7 +139,9 @@ function config.autotag()
   })
 end
 
-function config.nvim_colorizer() require('colorizer').setup() end
+function config.nvim_colorizer()
+  require('colorizer').setup()
+end
 
 function config.easymotion()
   vim.g.EasyMotion_do_mapping = 0
@@ -210,8 +212,9 @@ function config.dapui()
   dap.listeners.before.event_terminated['dapui_config'] = function()
     dapui.close()
   end
-  dap.listeners.before.event_exited['dapui_config'] =
-    function() dapui.close() end
+  dap.listeners.before.event_exited['dapui_config'] = function()
+    dapui.close()
+  end
 
   require("dapui").setup({
     icons = {expanded = "▾", collapsed = "▸"},
@@ -260,13 +263,17 @@ function config.dap()
     handle, pid_or_err = vim.loop.spawn("dlv", opts, function(code)
       stdout:close()
       handle:close()
-      if code ~= 0 then print('dlv exited with code', code) end
+      if code ~= 0 then
+        print('dlv exited with code', code)
+      end
     end)
     assert(handle, 'Error running dlv: ' .. tostring(pid_or_err))
     stdout:read_start(function(err, chunk)
       assert(not err, err)
       if chunk then
-        vim.schedule(function() require('dap.repl').append(chunk) end)
+        vim.schedule(function()
+          require('dap.repl').append(chunk)
+        end)
       end
     end)
     -- Wait for delve to start
@@ -331,7 +338,9 @@ function config.dap()
       name = "Attach to running Neovim instance",
       host = function()
         local value = vim.fn.input('Host [127.0.0.1]: ')
-        if value ~= "" then return value end
+        if value ~= "" then
+          return value
+        end
         return '127.0.0.1'
       end,
       port = function()
@@ -354,6 +363,8 @@ function config.dapinstal()
   })
 end
 
-function config.osv() require("osv").setup({}) end
+function config.osv()
+  require("osv").setup({})
+end
 
 return config

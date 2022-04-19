@@ -16,7 +16,9 @@ function Packer:load_plugins()
   local get_plugins_list = function()
     local list = {}
     local tmp = vim.split(fn.globpath(modules_dir, '*/plugins.lua'), '\n')
-    for _, f in ipairs(tmp) do list[#list + 1] = f:sub(#modules_dir - 6, -1) end
+    for _, f in ipairs(tmp) do
+      list[#list + 1] = f:sub(#modules_dir - 6, -1)
+    end
     return list
   end
 
@@ -44,7 +46,9 @@ function Packer:load_packer()
   local use = packer.use
   self:load_plugins()
   use {"wbthomason/packer.nvim", opt = true}
-  for _, repo in ipairs(self.repos) do use(repo) end
+  for _, repo in ipairs(self.repos) do
+    use(repo)
+  end
 end
 
 function Packer:init_ensure_plugins()
@@ -54,8 +58,9 @@ function Packer:init_ensure_plugins()
     local cmd = "!git clone https://github.com/wbthomason/packer.nvim " ..
                   packer_dir
     api.nvim_command(cmd)
-    uv.fs_mkdir(data_dir .. 'lua', 511,
-                function() assert("make compile path dir faield") end)
+    uv.fs_mkdir(data_dir .. 'lua', 511, function()
+      assert("make compile path dir faield")
+    end)
     self:load_packer()
     packer.install()
   end
@@ -63,12 +68,16 @@ end
 
 local plugins = setmetatable({}, {
   __index = function(_, key)
-    if not packer then Packer:load_packer() end
+    if not packer then
+      Packer:load_packer()
+    end
     return packer[key]
   end
 })
 
-function plugins.ensure_plugins() Packer:init_ensure_plugins() end
+function plugins.ensure_plugins()
+  Packer:init_ensure_plugins()
+end
 
 function plugins.convert_compile_file()
   local lines = {}
@@ -79,7 +88,9 @@ function plugins.convert_compile_file()
     lnum = lnum + 1
     if lnum > 15 then
       lines[#lines + 1] = line .. '\n'
-      if line == 'END' then break end
+      if line == 'END' then
+        break
+      end
     end
   end
   table.remove(lines, #lines)
@@ -93,7 +104,9 @@ function plugins.convert_compile_file()
   end
 
   local file = io.open(compile_to_lua, "w")
-  for _, line in ipairs(lines) do file:write(line) end
+  for _, line in ipairs(lines) do
+    file:write(line)
+  end
   file:close()
 
   os.remove(packer_compiled)
