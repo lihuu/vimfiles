@@ -4,8 +4,8 @@ local alert = function(message)
   vim.notify(vim.inspect(message))
 end
 
-local error_alert = function(message)
-  vim.notify(vim.inspect(message), "error")
+local error_alert = function(title, message)
+  vim.notify(vim.inspect(message), "error", {title = title})
 end
 
 local sub_array = function(source_array, start_index, end_index)
@@ -58,7 +58,7 @@ function _M.LuaFormat()
     vim.cmd('lwin')
   else
     local errors = vim.fn.readfile(error_file)
-    alert(errors)
+    error_alert("格式化出错啦", errors)
   end
   vim.fn.delete(error_file)
 end
