@@ -4,6 +4,10 @@ local alert = function(message)
   vim.notify(vim.inspect(message))
 end
 
+local error_alert = function(message)
+  vim.notify(vim.inspect(message), "error")
+end
+
 local sub_array = function(source_array, start_index, end_index)
   local resultArray = {}
   for i = start_index, end_index, 1 do
@@ -20,13 +24,11 @@ function _M.LuaFormat()
 
   local error_file = vim.fn.tempname()
 
-  local config_file = vim.fn.findfile(".lua-format", ",;")
+  -- local config_file = vim.fn.findfile(".lua-format", ".;")
 
   local flags = " -i "
 
-  if not config_file then
-    flags = flags .. " -c " .. config_file
-  end
+  -- if not config_file then flags = flags .. " -c " .. config_file end
 
   local outout_str = vim.fn.system(
                        'lua-format' .. flags .. " 2> " .. error_file, input)
@@ -48,7 +50,6 @@ function _M.LuaFormat()
         vim.fn.deletebufline(vim.fn.bufname('%'), min_line + 1, "$")
       else
         local left_line = sub_array(output, min_line + 1, #output)
-        alert(left_line)
         vim.fn.append("$", left_line)
       end
     end
@@ -63,3 +64,4 @@ function _M.LuaFormat()
 end
 
 return _M
+
