@@ -90,8 +90,6 @@ end
 local lihuu_nvim_tree_config = function()
   -- vim.g.nvim_tree_gitignore=1
   -- "0 by default, closes the tree when you open a file
-  vim.g.nvim_tree_indent_markers = 1
-  -- "0 by default, will enable file highlight for git attributes (can be used without the icons).
   vim.g.nvim_tree_git_hl = 1
   -- "0 by default, will enable folder and file icon highlight for opened files/directories.
   vim.g.nvim_tree_highlight_opened_files = 0
@@ -179,3 +177,4 @@ local load_core = function()
 end
 
 load_core()
+
