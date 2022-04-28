@@ -71,7 +71,7 @@ function config.nvim_tree()
   local tree_cb = require'nvim-tree.config'.nvim_tree_callback
   require('nvim-tree').setup({
     actions = {
-      chnage_dir = {enable = true, global = false},
+      change_dir = {enable = true, global = false},
       open_file = {
         window_picker = {
           enable = true,
@@ -80,33 +80,28 @@ function config.nvim_tree()
             buftype = {'terminal'}
           }
         },
-        quit_on_open = true
+        quit_on_open = true,
+        resize_window = true
       }
     },
     git = {enable = true, ignore = true, timeout = 400},
     filters = {custom = {'.git', 'node_modules', '.cache'}, dotfiles = true},
     open_on_tab = false,
+    auto_reload_on_write = true,
     disable_netrw = true,
     hijack_netrw = true,
-    auto_close = true,
     update_cwd = false,
-    git_hl = 1,
-    highlight_opened_files = true,
-    allow_resize = 1,
-    quit_on_open = 0,
-    hide_dotfiles = 1,
-    auto_ignore_ft = {'startify', 'dashboard'},
-    update_to_buf_dir = {enable = false, auto_open = true},
     update_focused_file = {enable = true, update_cwd = false, ignore_list = {}},
     diagnostics = {
       enable = true,
       icons = {hint = "", info = "", warning = "", error = ""}
     },
     trash = {cmd = "trash", require_confirm = true},
+    renderer = {indent_markers = {enable = true}},
     view = {
       width = 30,
       side = 'left',
-      auto_resize = true,
+      -- auto_resize = true,
       hide_root_folder = false,
       mappings = {
         custom_only = true,
@@ -399,3 +394,4 @@ function config.todo_comments()
 end
 
 return config
+

@@ -1,5 +1,5 @@
 local commits = {
-  nvim_tree = '2457e141ae5c2e9c5d94a9550b37b421d25cfff1',
+  nvim_tree = 'fd2332a33f0fc7c8545cd1c358ad032876318a43',
   gitsigns = '83ab3ca26ff5038f823060dfddda7a053e579b67',
   nvim_bufferline = '463637a3ac86dcaacbcd47aa608f53aaad749696',
   nvim_treesitter = 'cada76c4901e2389c0f82ac11d0c9c61d5205e90',
@@ -29,9 +29,10 @@ local commits = {
   filetype = 'ada8dcf39de20b30e9c8e0100148e56696704716',
   prettier = '5e6cca21e12587c02e32a06bf423519eb1e9f1b2',
   fzf = 'd6aa21476b2854694e6aa7b0941b8992a906c5ec',
-  neogit = '9987421e0724ce704d0035f50a7080c677a85d71',
+  neogit = 'c8dd268091ffcbcb673de59c5b37ff26a2eb24ed',
   vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d',
   vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
   vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2'
 }
 return commits
+
