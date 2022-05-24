@@ -71,6 +71,7 @@ g:mapleader = "\<space>"
 inoremap <c-u>  <ESC>~i
 nnoremap <leader>ev :silent! vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :silent! source $MYVIMRC<cr>
+cnoremap w!! w !sudo tee > /dev/null %
 
 autocmd FileType html set tabstop=2 shiftwidth=2
 
