@@ -44,7 +44,7 @@ set fdm=marker
 if isWindows && isGui
     set guifont=Consolas\ NF:h14:i
 else
-    set guifont=Monospace\ Italic\ 12
+    set guifont=Monospace\ Italic\ 16
 endif
 
 if isMac && has("gui_running")
