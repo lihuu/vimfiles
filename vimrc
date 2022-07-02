@@ -40,18 +40,10 @@ else
 endif
 " }}}
 
-if has("vim9script")
-    if s:isWindows
-        source $HOME/vimfiles/vimrc9.vim
-    else
-        source ~/.vim/vimrc9.vim
-    endif
+if s:isWindows
+    source $HOME/vimfiles/vimrc9.vim
 else
-    if s:isWindows
-        source $HOME/vimfiles/vimrc8.vim
-    else
-        source ~/.vim/vimrc8.vim
-    endif
+    source ~/.vim/vimrc9.vim
 endif
 
 "augroup filetyp_js
@@ -226,17 +218,17 @@ nnoremap <silent> <leader>gg :GitGutterToggle<cr>
 " => vim-startify config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vim-startify config {{{
- let g:startify_lists = [
-          \ { 'type': 'files',     'header': ['   MRU']            },
-          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-          \ { 'type': 'sessions',  'header': ['   Sessions']       },
-          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-          \ { 'type': 'commands',  'header': ['   Commands']       },
-          \ ]
+let g:startify_lists = [
+            \ { 'type': 'files',     'header': ['   MRU']            },
+            \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+            \ { 'type': 'sessions',  'header': ['   Sessions']       },
+            \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+            \ { 'type': 'commands',  'header': ['   Commands']       },
+            \ ]
 
 let g:startify_files_number = 20
 let g:startify_custom_header_quotes =
-      \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
+            \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
 "}}}
 
 set foldlevelstart=99

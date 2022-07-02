@@ -11,30 +11,29 @@
 "  for MS-DOS and Win32:  $VIM\_gvimrc
 "	    for OpenVMS:  sys$login:.gvimrc
 
+if has('macunix')||has('mac') 
+  set nocompatible
+  syntax on
+  set nu
+  syntax enable
+  colorscheme molokai
+  set ts=4
+  set shiftwidth=4
+  set expandtab
+  set ch=2		" Make command line two lines high
+  set mousehide		" Hide the mouse when typing text
+  set fdm=marker
+  "set guifont=Menlo:h16
+  set macligatures
+  "set guifont=Fira\ Code:h16
+  set guifont=Consolas\ NF:h20
+  "set guifont=Menlo\ Regular:h20
+  set t_Co=256
+  set background=dark
+  set transparency=20
 
-set nocompatible
-syntax on
-set nu
-syntax enable
-colorscheme molokai
-set ts=4
-set shiftwidth=4
-set expandtab
-set ch=2		" Make command line two lines high
-set mousehide		" Hide the mouse when typing text
-set fdm=marker
-"set guifont=Menlo:h16
-set macligatures
-"set guifont=Fira\ Code:h16
-set guifont=Consolas\ NF:h20
-"set guifont=Menlo\ Regular:h20
-set t_Co=256
-set background=dark
-set transparency=20
-
-set autoread
-"colorscheme macvim
-map <S-Insert> <MiddleMouse>
-map! <S-Insert> <MiddleMouse>
-
-
+  set autoread
+  "colorscheme macvim
+  map <S-Insert> <MiddleMouse>
+  map! <S-Insert> <MiddleMouse>
+endif
