@@ -57,6 +57,14 @@ https://github.com/powerline/fonts
 
 ### 一些插件的使用说明
 
+#### go 语言
+
+安装 gopls
+
+```bas
+go install golang.org/x/tools/gopls@latest
+```
+
 #### emmet 插件
 
 emmet 插件使用的是`mattn/emmet-vim`，补全的快捷键修改了为`<c-e>`，触发模式设置为仅编辑模式，在编辑模式下面使用`<c-e>`会补全。

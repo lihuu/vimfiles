@@ -262,3 +262,5 @@ def g:FormatLua()
 
     call delete(error_file)
 enddef
+
+#autocmd BufWritePost *.go silent! !gofmt -w %

@@ -100,6 +100,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'gregsexton/matchtag',{'for':'html'}
+Plug 'fatih/vim-go',{'for':'go','do': ':GoUpdateBinaries'}
 "Plug 'andrejlevkovitch/vim-lua-format',{'for':'lua'}
 
 "Gui only plugins
