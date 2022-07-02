@@ -42,7 +42,7 @@ if ! isGui
 endif
 set fdm=marker
 if isWindows && isGui
-    set guifont=Consolas\ NF:h14:i
+    set guifont=Consolas\ NF:h16:i
 else
     set guifont=Monospace\ Italic\ 16
 endif
