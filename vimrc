@@ -46,35 +46,8 @@ else
     source ~/.vim/vimrc9.vim
 endif
 
-"augroup filetyp_js
-""  autocmd!
-""  autocmd FileType javascript,typescriptreact,typescript setlocal foldmethod=syntax
-""  autocmd FileType javascript,typescriptreact,typescript setlocal foldlevelstart=99
-"augroup END
-
-"if WINDOWS()
-"  set directory=%USERDATA%.vim\swap//
-"else
-"  set directory=$HOME/.vim/swap//
-"endif
-"
-"
-
-"set noswapfile
-
-"if WINDOWS()
-"    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-"endif
-
-
-"set guifont=Consolas:h14:i
-"set guifont=Consolas:h14:i
-"set guifont=Fira\ Code:h13:i
 let $LANG='en'
-"source $VIMRUNTIME/delmenu.vim
-"source $VIMRUNTIME/menu.vim
 set diffexpr=MyDiff()
-"Diff function {{{
 function MyDiff()
     let opt = '-a --binary '
     if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
