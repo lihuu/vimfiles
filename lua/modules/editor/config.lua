@@ -21,32 +21,32 @@ function config.symbols_outline()
     },
     lsp_blacklist = {},
     symbols = {
-      File = {icon = "", hl = "TSURI"},
-      Module = {icon = "", hl = "TSNamespace"},
-      Namespace = {icon = "", hl = "TSNamespace"},
-      Package = {icon = "", hl = "TSNamespace"},
-      Class = {icon = "𝓒", hl = "TSType"},
-      Method = {icon = "ƒ", hl = "TSMethod"},
-      Property = {icon = "", hl = "TSMethod"},
-      Field = {icon = "", hl = "TSField"},
-      Constructor = {icon = "", hl = "TSConstructor"},
-      Enum = {icon = "ℰ", hl = "TSType"},
-      Interface = {icon = "ﰮ", hl = "TSType"},
-      Function = {icon = "", hl = "TSFunction"},
-      Variable = {icon = "", hl = "TSConstant"},
-      Constant = {icon = "", hl = "TSConstant"},
-      String = {icon = "𝓐", hl = "TSString"},
-      Number = {icon = "#", hl = "TSNumber"},
-      Boolean = {icon = "⊨", hl = "TSBoolean"},
-      Array = {icon = "", hl = "TSConstant"},
-      Object = {icon = "⦿", hl = "TSType"},
-      Key = {icon = "🔐", hl = "TSType"},
-      Null = {icon = "NULL", hl = "TSType"},
-      EnumMember = {icon = "", hl = "TSField"},
-      Struct = {icon = "𝓢", hl = "TSType"},
-      Event = {icon = "🗲", hl = "TSType"},
-      Operator = {icon = "+", hl = "TSOperator"},
-      TypeParameter = {icon = "𝙏", hl = "TSParameter"}
+      File = { icon = "", hl = "TSURI" },
+      Module = { icon = "", hl = "TSNamespace" },
+      Namespace = { icon = "", hl = "TSNamespace" },
+      Package = { icon = "", hl = "TSNamespace" },
+      Class = { icon = "𝓒", hl = "TSType" },
+      Method = { icon = "ƒ", hl = "TSMethod" },
+      Property = { icon = "", hl = "TSMethod" },
+      Field = { icon = "", hl = "TSField" },
+      Constructor = { icon = "", hl = "TSConstructor" },
+      Enum = { icon = "ℰ", hl = "TSType" },
+      Interface = { icon = "ﰮ", hl = "TSType" },
+      Function = { icon = "", hl = "TSFunction" },
+      Variable = { icon = "", hl = "TSConstant" },
+      Constant = { icon = "", hl = "TSConstant" },
+      String = { icon = "𝓐", hl = "TSString" },
+      Number = { icon = "#", hl = "TSNumber" },
+      Boolean = { icon = "⊨", hl = "TSBoolean" },
+      Array = { icon = "", hl = "TSConstant" },
+      Object = { icon = "⦿", hl = "TSType" },
+      Key = { icon = "🔐", hl = "TSType" },
+      Null = { icon = "NULL", hl = "TSType" },
+      EnumMember = { icon = "", hl = "TSField" },
+      Struct = { icon = "𝓢", hl = "TSType" },
+      Event = { icon = "🗲", hl = "TSType" },
+      Operator = { icon = "+", hl = "TSOperator" },
+      TypeParameter = { icon = "𝙏", hl = "TSParameter" }
     }
   }
 end
@@ -67,9 +67,10 @@ function config.nvim_treesitter()
   vim.api.nvim_command('set foldmethod=expr')
   vim.api.nvim_command('set foldexpr=nvim_treesitter#foldexpr()')
 
-  require'nvim-treesitter.configs'.setup {
-    ensure_installed = 'maintained',
-    highlight = {enable = true, disable = {'vim'}},
+  require 'nvim-treesitter.configs'.setup {
+    ensure_installed = "all",
+    ignore_install = { "phpdoc", "v", "vala" },
+    highlight = { enable = true, disable = { 'vim' } },
     textobjects = {
       select = {
         enable = true,
@@ -83,8 +84,8 @@ function config.nvim_treesitter()
       move = {
         enable = true,
         set_jumps = true, -- whether to set jumps in the jumplist
-        goto_next_start = {["]["] = "@function.outer", ["]m"] = "@class.outer"},
-        goto_next_end = {["]]"] = "@function.outer", ["]M"] = "@class.outer"},
+        goto_next_start = { ["]["] = "@function.outer", ["]m"] = "@class.outer" },
+        goto_next_end = { ["]]"] = "@function.outer", ["]M"] = "@class.outer" },
         goto_previous_start = {
           ["[["] = "@function.outer",
           ["[m"] = "@class.outer"
@@ -100,9 +101,9 @@ function config.nvim_treesitter()
       extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
       max_file_lines = 1000 -- Do not enable for files with more than 1000 lines, int
     },
-    context_commentstring = {enable = true, enable_autocmd = false},
-    matchup = {enable = true},
-    context = {enable = true, throttle = true}
+    context_commentstring = { enable = true, enable_autocmd = false },
+    matchup = { enable = true },
+    context = { enable = true, throttle = true }
   }
 end
 
@@ -217,42 +218,42 @@ function config.dapui()
   end
 
   require("dapui").setup({
-    icons = {expanded = "▾", collapsed = "▸"},
+    icons = { expanded = "▾", collapsed = "▸" },
     mappings = {
       -- Use a table to apply multiple mappings
-      expand = {"<CR>", "<2-LeftMouse>"},
+      expand = { "<CR>", "<2-LeftMouse>" },
       open = "o",
       remove = "d",
       edit = "e",
       repl = "r"
     },
     ayouts = {
-    {
-      elements = {
-      -- Elements can be strings or table with id and size keys.
-        { id = "scopes", size = 0.25 },
-        "breakpoints",
-        "stacks",
-        "watches",
+      {
+        elements = {
+          -- Elements can be strings or table with id and size keys.
+          { id = "scopes", size = 0.25 },
+          "breakpoints",
+          "stacks",
+          "watches",
+        },
+        size = 40,
+        position = "left",
       },
-      size = 40,
-      position = "left",
-    },
-    {
-      elements = {
-        "repl",
-        "console",
+      {
+        elements = {
+          "repl",
+          "console",
+        },
+        size = 10,
+        position = "bottom",
       },
-      size = 10,
-      position = "bottom",
     },
-  },
     floating = {
       max_height = nil,
       max_width = nil,
-      mappings = {close = {"q", "<Esc>"}}
+      mappings = { close = { "q", "<Esc>" } }
     },
-    windows = {indent = 1}
+    windows = { indent = 1 }
   })
 end
 
@@ -264,8 +265,8 @@ function config.dap()
     local pid_or_err
     local port = 38697
     local opts = {
-      stdio = {nil, stdout},
-      args = {"dap", "-l", "127.0.0.1:" .. port},
+      stdio = { nil, stdout },
+      args = { "dap", "-l", "127.0.0.1:" .. port },
       detached = true
     }
     handle, pid_or_err = vim.loop.spawn("dlv", opts, function(code)
@@ -286,18 +287,18 @@ function config.dap()
     end)
     -- Wait for delve to start
     vim.defer_fn(function()
-      callback({type = "server", host = "127.0.0.1", port = port})
+      callback({ type = "server", host = "127.0.0.1", port = port })
     end, 100)
   end
   -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
   dap.configurations.go = {
-    {type = "go", name = "Debug", request = "launch", program = "${file}"}, {
+    { type = "go", name = "Debug", request = "launch", program = "${file}" }, {
       type = "go",
       name = "Debug test", -- configuration for debugging test files
       request = "launch",
       mode = "test",
       program = "${file}"
-    }, -- works with go.mod packages and sub packages 
+    }, -- works with go.mod packages and sub packages
     {
       type = "go",
       name = "Debug test (go.mod)",
@@ -310,8 +311,8 @@ function config.dap()
   dap.adapters.python = {
     type = 'executable',
     command = os.getenv("HOME") ..
-      '/.local/share/nvim/dapinstall/python_dbg/bin/python',
-    args = {'-m', 'debugpy.adapter'}
+        '/.local/share/nvim/dapinstall/python_dbg/bin/python',
+    args = { '-m', 'debugpy.adapter' }
   }
   dap.configurations.python = {
     {
@@ -360,7 +361,7 @@ function config.dap()
   }
 
   dap.adapters.nlua = function(callback, con)
-    callback({type = 'server', host = con.host, port = con.port})
+    callback({ type = 'server', host = con.host, port = con.port })
   end
 end
 

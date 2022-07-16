@@ -2,7 +2,7 @@ local commits = {
   nvim_tree = 'fd2332a33f0fc7c8545cd1c358ad032876318a43',
   gitsigns = '83ab3ca26ff5038f823060dfddda7a053e579b67',
   nvim_bufferline = '463637a3ac86dcaacbcd47aa608f53aaad749696',
-  nvim_treesitter = 'cada76c4901e2389c0f82ac11d0c9c61d5205e90',
+  nvim_treesitter = '3bd228781bf4a927c5ceaf7a4687fed9f96d12b5',
   matchup = '7fd8806138f404498db7a3e848d8fa55ad61e7cf',
   nvim_ts_autotag = '57035b5814f343bc6110676c9ae2eacfcd5340c2',
   lspsaga = 'cb0e35d2e594ff7a9c408d2e382945d56336c040',
@@ -35,4 +35,3 @@ local commits = {
   vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2'
 }
 return commits
-
