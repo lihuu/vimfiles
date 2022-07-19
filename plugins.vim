@@ -98,7 +98,7 @@ Plug 'lihuu/fzf.vim',{'on':['Files','Buffers','Rg']}
 Plug 'preservim/nerdcommenter'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+"Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'gregsexton/matchtag',{'for':'html'}
 Plug 'fatih/vim-go',{'for':'go','do': ':GoUpdateBinaries'}
 "Plug 'andrejlevkovitch/vim-lua-format',{'for':'lua'}

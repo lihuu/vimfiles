@@ -198,7 +198,7 @@ g:gitgutter_enabled = 0
 nnoremap <silent> <leader>gg :GitGutterToggle<cr>
 
 
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+#nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 g:lightline = {
             \ 'colorscheme': 'darcula',
