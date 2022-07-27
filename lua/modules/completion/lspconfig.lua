@@ -157,7 +157,7 @@ local function install_severs()
     if ok then
       if not server:is_installed() then
         server:install()
-        print(vim.inspect('start to install lsp server:' .. name))
+        -- print(vim.inspect('start to install lsp server:' .. name))
       end
     end
   end
