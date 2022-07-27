@@ -1,44 +1,6 @@
-"Auto fold config ---- {{{
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
-" }}}
-" Detect os type {{{
-"函数尽量用大写字母开头
-"没有作用域限制的函数必须以一个大写字母开头!
-silent function! OSX()
-return has('macunix')||has('mac')
-endfunction
-
-silent function! LINUS()
-return has('unix') && !has('macunix') && !has('win32unix')
-endfunction
-
-silent function! WINDOWS()
-return (has('win32')||has('win64'))
-endfunction
-" }}}
-"Script wide variables  {{{
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
-let s:isNvim = has('nvim')
-
-if s:isNvim
-    if s:isWindows
-        let s:configPath="$HOME/AppData/Local/nvim"
-    else
-        let s:configPath="~/.config/nvim"
-    endif
-else
-    if s:isWindows
-        let s:configPath="$HOME/vimfiles"
-    else
-        let s:configPath="~/.vim"
-    endif
-endif
-" }}}
 
 if s:isWindows
     source $HOME/vimfiles/vimrc9.vim
@@ -76,11 +38,8 @@ function MyDiff()
         let &shellxquote=l:shxq_sav
     endif
 endfunction
-" }}}
 
-"Load plugins{{{
 filetype off
-"git clone https://github.com/VundleVim/Vundle.vim.git
 if s:isWindows
     set rtp+=$HOME/vimfiles/autoload/plug.vim
     call plug#begin('$HOME/vimfiles/plugged/')
@@ -113,12 +72,10 @@ let g:jsx_ext_required=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim wiki
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vim wiki config {{{
 let g:vimwiki_list = [{'path': '~/OneDrive/mywiki/'}]
 
 let delimitMate_matchpairs="(:),[:],{:}"
 au FileType vim,html let b:delimitMate_matchpairs = "(:),[:],{:}"
-"}}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,8 +99,6 @@ endif
 
 noremap <leader>fp :e $MYVIMRC<cr>
 
-"
-"sort lines
 noremap <leader>s :sort<cr>
 
 "move fastly
@@ -165,17 +120,15 @@ let g:airline_theme='virtualenv'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-rooter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vim-rooter config {{{
 let g:rooter_silent_chdir = 1
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json','pom.xml']
-"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 透明度设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if WINDOWS()
+if s:isWindows
     autocmd GUIEnter * silent! WToggleClean
     autocmd GUIEnter * silent! WSetAlpha 234
 endif
@@ -190,7 +143,6 @@ nnoremap <silent> <leader>gg :GitGutterToggle<cr>
 
 " => vim-startify config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vim-startify config {{{
 let g:startify_lists = [
             \ { 'type': 'files',     'header': ['   MRU']            },
             \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
@@ -202,7 +154,6 @@ let g:startify_lists = [
 let g:startify_files_number = 20
 let g:startify_custom_header_quotes =
             \ startify#fortune#predefined_quotes() + [['夫天地者，万物之逆旅也；光阴者，百代之过客也', '','李白']]
-"}}}
 
 set foldlevelstart=99
 set foldcolumn=1
