@@ -1,7 +1,9 @@
 local commits = {
-  nvim_tree = 'fd2332a33f0fc7c8545cd1c358ad032876318a43',
+  -- https://github.com/kyazdani42/nvim-tree.lua
+  nvim_tree = '7fcb48c852b9d58709169a4dc1ec634fa9ea56f9',
+  -- https://github.com/lewis6991/gitsigns.nvim
   gitsigns = '83ab3ca26ff5038f823060dfddda7a053e579b67',
-  nvim_bufferline = '463637a3ac86dcaacbcd47aa608f53aaad749696',
+  nvim_bufferline = 'c4dd9b4de03b891f648b098c25e4dc1bc48a13e5',
   nvim_treesitter = '3bd228781bf4a927c5ceaf7a4687fed9f96d12b5',
   matchup = '7fd8806138f404498db7a3e848d8fa55ad61e7cf',
   nvim_ts_autotag = '57035b5814f343bc6110676c9ae2eacfcd5340c2',
@@ -18,7 +20,8 @@ local commits = {
   telescope_project = 'ad33c9eb67de635ded67069af7552d5162497b1e',
   telescope_frecency = '979a6f3d882b7b5352cc6a751faa9c9427d40e74',
   telescope_file_browser = '84efd93ec772696c1cce2aada4d39f2756953964',
-  lualine = '7345986fb43c054c9ab2a7d231c5891f58cc6d37',
+  -- https://github.com/nvim-lualine/lualine.nvim
+  lualine = '788805771c1ca7fe2c6652c38523cf208908934c',
   web_devicons = 'ac71ca88b1136e1ecb2aefef4948130f31aa40d1',
   edge = '6030ccab62fe0ff8f9cf3271a24d9c026520ac13',
   zen_mode = 'f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c',
@@ -35,3 +38,4 @@ local commits = {
   vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2'
 }
 return commits
+

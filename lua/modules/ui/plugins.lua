@@ -58,15 +58,12 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
   config = conf.indent_blankline,
   commit = commits.indent_blankline
 }
---[[
---
 ui['akinsho/nvim-bufferline.lua'] = {
-    opt = true,
-    event = 'BufRead',
-    commit = commits.nvim_bufferline,
-    config = conf.nvim_bufferline
+  opt = true,
+  event = 'BufRead',
+  commit = commits.nvim_bufferline,
+  config = conf.nvim_bufferline
 }
---]]
 -- https://github.com/folke/zen-mode.nvim
 ui['folke/zen-mode.nvim'] = {
   opt = true,
@@ -149,3 +146,4 @@ ui['rcarriga/nvim-notify'] = {
 }
 
 return ui
+
