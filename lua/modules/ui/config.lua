@@ -191,6 +191,8 @@ end
 function config.nvim_bufferline()
   require('bufferline').setup {
     options = {
+      mode = "tabs",
+      -- mode = "buffers",
       number = "both",
       numbers = function(opts)
 
