@@ -9,6 +9,7 @@ ui['kyazdani42/nvim-web-devicons'] = {
   commit = commits.web_devicons
 }
 
+-- 主题
 -- https://github.com/sainnhe/edge
 ui['sainnhe/edge'] = {opt = false, config = conf.edge, commit = commits.edge}
 -- 底部的状态栏
