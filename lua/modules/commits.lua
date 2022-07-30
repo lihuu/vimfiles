@@ -20,7 +20,9 @@ local commits = {
   cmp = '97e454ce9b1371373105716d196c1017394bc947',
   -- https://github.com/windwp/nvim-autopairs
   autopairs = '972a7977e759733dd6721af7bcda7a67e40c010e',
-  luasnip = '065d52d45fbb30c117d260813ee2f72094cd1568',
+  -- https://github.com/L3MON4D3/LuaSnip
+  luasnip = 'd8cacf83a214b7dd80986a8a24e4adf3fdd4f069',
+  -- https://github.com/folke/which-key.nvim
   which_key = '312c386ee0eafc925c27869d2be9c11ebdb807eb',
   -- https://github.com/nvim-telescope/telescope.nvim
   telescope = 'b5833a682c511885887373aad76272ad70f7b3c2',
