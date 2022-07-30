@@ -9,6 +9,7 @@ ui['kyazdani42/nvim-web-devicons'] = {
   commit = commits.web_devicons
 }
 
+-- 主题
 -- https://github.com/sainnhe/edge
 ui['sainnhe/edge'] = {opt = false, config = conf.edge, commit = commits.edge}
 -- 底部的状态栏
@@ -58,15 +59,12 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
   config = conf.indent_blankline,
   commit = commits.indent_blankline
 }
---[[
---
 ui['akinsho/nvim-bufferline.lua'] = {
-    opt = true,
-    event = 'BufRead',
-    commit = commits.nvim_bufferline,
-    config = conf.nvim_bufferline
+  opt = true,
+  event = 'BufRead',
+  commit = commits.nvim_bufferline,
+  config = conf.nvim_bufferline
 }
---]]
 -- https://github.com/folke/zen-mode.nvim
 ui['folke/zen-mode.nvim'] = {
   opt = true,
@@ -149,3 +147,4 @@ ui['rcarriga/nvim-notify'] = {
 }
 
 return ui
+

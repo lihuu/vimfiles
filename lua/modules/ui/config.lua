@@ -97,7 +97,45 @@ function config.nvim_tree()
       icons = {hint = "", info = "", warning = "", error = ""}
     },
     trash = {cmd = "trash", require_confirm = true},
-    renderer = {indent_markers = {enable = true}},
+    renderer = {
+      indent_markers = {enable = true},
+      highlight_git = true,
+      -- none icon name all
+      highlight_opened_files = "none",
+      add_trailing = true,
+      group_empty = true,
+      special_files = {README = true, Makefile = true, MAKEFILE = true},
+      root_folder_modifier = ":~",
+      icons = {
+        show = {git = true, folder = true, file = true, folder_arrow = true},
+        padding = ' ',
+        glyphs = {
+          default = '',
+          symlink = '',
+          git = {
+            unstaged = "✗",
+            staged = "✓",
+            unmerged = "",
+            renamed = "➜",
+            untracked = "★",
+            deleted = "",
+            ignored = "◌"
+          },
+          folder = {
+            arrow_open = "",
+            arrow_closed = "",
+            default = "",
+            open = "",
+            empty = "",
+            empty_open = "",
+            symlink = "",
+            symlink_open = ""
+          }
+        }
+      }
+    },
+    respect_buf_cwd = true,
+    create_in_closed_folder = false,
     view = {
       width = 30,
       side = 'left',
@@ -153,6 +191,8 @@ end
 function config.nvim_bufferline()
   require('bufferline').setup {
     options = {
+      mode = "tabs",
+      -- mode = "buffers",
       number = "both",
       numbers = function(opts)
 
