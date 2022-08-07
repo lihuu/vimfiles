@@ -161,3 +161,4 @@ autocmd FileType typescriptreact,javascript,typescript,javascriptreact setlocal 
 
 "autocmd FileType lua nnoremap <buffer> <c-k> :call LuaFormat()<cr>
 autocmd BufWrite *.lua silent! call FormatLua()
+set cmdheight=1

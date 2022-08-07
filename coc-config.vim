@@ -155,8 +155,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-set cmdheight=1
-set updatetime=300
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
