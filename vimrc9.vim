@@ -31,6 +31,10 @@ set textwidth=100
 set cursorline
 set autoread
 set noshowmode
+set so=5
+set ruler
+
+set incsearch
 
 if has('termguicolors')
     set termguicolors
