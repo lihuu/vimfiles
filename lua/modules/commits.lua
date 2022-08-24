@@ -1,6 +1,6 @@
 local commits = {
   -- https://github.com/kyazdani42/nvim-tree.lua
-  nvim_tree = '7fcb48c852b9d58709169a4dc1ec634fa9ea56f9',
+  nvim_tree = 'c3ea264947671f44d836af5b7587e12c4b4611f9',
   -- https://github.com/lewis6991/gitsigns.nvim
   gitsigns = '83ab3ca26ff5038f823060dfddda7a053e579b67',
   -- https://github.com/akinsho/nvim-bufferline.lua
@@ -55,3 +55,4 @@ local commits = {
   vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2'
 }
 return commits
+
