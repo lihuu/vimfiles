@@ -21,7 +21,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-highlightedyank'
 Plug 'chrisbra/matchit'
+
 Plug 'tpope/vim-surround'
+"vim surround 模拟  
+"1. 选中内容周围添加引号，可以在visual 模式下面 先选中内容，然后按下 S"
+
 Plug 'terryma/vim-multiple-cursors'
 
 "Plug end
