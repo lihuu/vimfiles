@@ -6,11 +6,11 @@ local commits = {
   -- https://github.com/akinsho/nvim-bufferline.lua
   nvim_bufferline = 'c4dd9b4de03b891f648b098c25e4dc1bc48a13e5',
   -- https://github.com/nvim-treesitter/nvim-treesitter
-  nvim_treesitter = '3bd228781bf4a927c5ceaf7a4687fed9f96d12b5',
+  nvim_treesitter = '2eaf18826988f921ddb39e4a2e7d23d95bb0e52a',
   -- https://github.com/andymass/vim-matchup
   matchup = '7fd8806138f404498db7a3e848d8fa55ad61e7cf',
   -- https://github.com/windwp/nvim-ts-autotag
-  nvim_ts_autotag = '57035b5814f343bc6110676c9ae2eacfcd5340c2',
+  nvim_ts_autotag = 'fdefe46c6807441460f11f11a167a2baf8e4534b',
   -- https://github.com/glepnir/lspsaga.nvim
   lspsaga = '587c37d763b88faafe42c2ba114073106b38e4e2',
   -- https://github.com/ray-x/lsp_signature.nvim
@@ -19,7 +19,7 @@ local commits = {
   lsp_installer = '9894db12783fdd02be909cdd60e6d0fc20b9e46e',
   cmp = '97e454ce9b1371373105716d196c1017394bc947',
   -- https://github.com/windwp/nvim-autopairs
-  autopairs = '972a7977e759733dd6721af7bcda7a67e40c010e',
+  autopairs = '5fe24419e7a7ec536d78d60be1515b018ab41b15',
   -- https://github.com/L3MON4D3/LuaSnip
   luasnip = 'd8cacf83a214b7dd80986a8a24e4adf3fdd4f069',
   -- https://github.com/folke/which-key.nvim
