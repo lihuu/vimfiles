@@ -6,7 +6,7 @@ local commits = {
   -- https://github.com/akinsho/nvim-bufferline.lua
   nvim_bufferline = '83bf4dc7bff642e145c8b4547aa596803a8b4dc4',
   -- https://github.com/nvim-treesitter/nvim-treesitter
-  nvim_treesitter = '2eaf18826988f921ddb39e4a2e7d23d95bb0e52a',
+  nvim_treesitter = '37398c7d68826c8d6ae3f85cc52d83fd3dee4f84',
   -- https://github.com/andymass/vim-matchup
   matchup = '7fd8806138f404498db7a3e848d8fa55ad61e7cf',
   -- https://github.com/windwp/nvim-ts-autotag
