@@ -8,7 +8,7 @@ local commits = {
   -- https://github.com/nvim-treesitter/nvim-treesitter
   nvim_treesitter = '37398c7d68826c8d6ae3f85cc52d83fd3dee4f84',
   -- https://github.com/andymass/vim-matchup
-  matchup = '7fd8806138f404498db7a3e848d8fa55ad61e7cf',
+  matchup = '80ad7817e58755a602f993163f61f3500978ebe5',
   -- https://github.com/windwp/nvim-ts-autotag
   nvim_ts_autotag = 'fdefe46c6807441460f11f11a167a2baf8e4534b',
   -- https://github.com/glepnir/lspsaga.nvim
