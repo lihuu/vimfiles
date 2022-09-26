@@ -4,7 +4,7 @@ local commits = {
   -- https://github.com/lewis6991/gitsigns.nvim
   gitsigns = 'facca89a95aa5e492505270a60a30825be576d14',
   -- https://github.com/akinsho/nvim-bufferline.lua
-  nvim_bufferline = 'c4dd9b4de03b891f648b098c25e4dc1bc48a13e5',
+  nvim_bufferline = '83bf4dc7bff642e145c8b4547aa596803a8b4dc4',
   -- https://github.com/nvim-treesitter/nvim-treesitter
   nvim_treesitter = '2eaf18826988f921ddb39e4a2e7d23d95bb0e52a',
   -- https://github.com/andymass/vim-matchup
