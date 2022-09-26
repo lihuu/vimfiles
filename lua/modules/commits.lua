@@ -36,7 +36,7 @@ local commits = {
   telescope_file_browser = '84efd93ec772696c1cce2aada4d39f2756953964',
   -- https://github.com/nvim-lualine/lualine.nvim
   lualine = '788805771c1ca7fe2c6652c38523cf208908934c',
-  web_devicons = 'ac71ca88b1136e1ecb2aefef4948130f31aa40d1',
+  web_devicons = '969728506c0175644a1d448f55e311ccdada7eaf',
   -- https://github.com/sainnhe/edge
   edge = '33dbe6b7ac23f8666d36ad27db7f82ff58cb2408',
   zen_mode = 'f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c',
