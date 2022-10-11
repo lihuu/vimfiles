@@ -14,7 +14,7 @@ local commits = {
   -- https://github.com/glepnir/lspsaga.nvim
   lspsaga = '587c37d763b88faafe42c2ba114073106b38e4e2',
   -- https://github.com/ray-x/lsp_signature.nvim
-  lsp_signature = 'be39dacc17d51531f9e3a50f88de0a45683c6634',
+  lsp_signature = 'e65a63858771db3f086c8d904ff5f80705fd962b',
   -- https://github.com/williamboman/nvim-lsp-installer
   lsp_installer = '9894db12783fdd02be909cdd60e6d0fc20b9e46e',
   cmp = '97e454ce9b1371373105716d196c1017394bc947',
