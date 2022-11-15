@@ -32,7 +32,7 @@ endif
 " Gui Opacity
 "
 if exists('GuiWindowOpacity')
-    GuiWindowOpacity 0.8
+    GuiWindowOpacity 0.9
 endif
 
 if exists('GuiRenderLigatures')
