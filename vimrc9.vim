@@ -39,7 +39,8 @@ set incsearch
 if has('termguicolors')
     set termguicolors
 endif
-colorscheme molokai
+#colorscheme molokai
+colorscheme onedark
 if ! isGui
     set t_Co=256
     set mouse=a
