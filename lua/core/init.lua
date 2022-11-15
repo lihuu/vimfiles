@@ -119,8 +119,9 @@ local load_core = function()
   require('command'):init()
   require('core.event')
   pack.load_compile()
-  vim.cmd [[colorscheme molokai]]
+  -- vim.cmd [[colorscheme molokai]]
   -- lihuu_qf_config()
+  require('onedark').load()
 end
 
 load_core()
