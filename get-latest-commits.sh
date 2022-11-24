@@ -200,7 +200,7 @@ echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "vim_startify = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/vim-startuptime 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
-echo "vim_startuptime = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+echo "vim_startuptime = '`git log -n 1|grep "commit"|awk '{print $2}'|head -1`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/which-key.nvim 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "which_key = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
