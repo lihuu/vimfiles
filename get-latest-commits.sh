@@ -209,6 +209,39 @@ echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "wilder = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/zen-mode.nvim 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
-echo "zen_mode = '`git log -n 1|grep "commit"|awk '{print $2}'`'"
+echo "zen_mode = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/edge
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "edge = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/filetype.nvim
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "filetype= '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/friendly-snippets
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "friendly_snippets = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/nvim-comment
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "nvim_comment = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/nvim-dap
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "nvim_dap = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/nvim-dap-ui
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "nvim_dap_ui = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/nvim-notify
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "nvim_notify = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/nvim-web-devicons
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "nvim_web_devicons = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/onedark.nvim
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "onedark = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/vim-rooter
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "vim_rooter = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/start/vim-surround
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "vim_surround = '`git log -n 1|grep "commit"|awk '{print $2}'`'"
 echo "}"
 echo "return commits"

@@ -138,7 +138,28 @@ local commits = {
   -- https://github.com/gelguy/wilder.nvim
   wilder = '679f348dc90d80ff9ba0e7c470c40a4d038dcecf',
   -- https://github.com/folke/zen-mode.nvim
-  zen_mode = 'f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c'
+  zen_mode = 'f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c',
+  -- https://github.com/sainnhe/edge
+  edge = '33dbe6b7ac23f8666d36ad27db7f82ff58cb2408',
+  -- https://github.com/nathom/filetype.nvim
+  filetype = 'b522628a45a17d58fc0073ffd64f9dc9530a8027',
+  -- https://github.com/rafamadriz/friendly-snippets
+  friendly_snippets = 'c93311fbcc840210a2c0db574177d84a35a2c9c1',
+  -- https://github.com/terrortylor/nvim-comment
+  nvim_comment = 'e9ac16ab056695cad6461173693069ec070d2b23',
+  -- https://github.com/mfussenegger/nvim-dap
+  nvim_dap = '61643680dcb771a29073cd432894e2f81a7c2ae3',
+  -- https://github.com/rcarriga/nvim-dap-ui
+  nvim_dap_ui = 'a861906c8d1c457965c64ce6e83ea5e930bf8fd1',
+  -- https://github.com/rcarriga/nvim-notify
+  nvim_notify = '43c54aec682854b39a7e0e89b4c3ba00426d74a8',
+  -- https://github.com/kyazdani42/nvim-web-devicons
+  nvim_web_devicons = '969728506c0175644a1d448f55e311ccdada7eaf',
+  -- https://github.com/navarasu/onedark.nvim
+  onedark = 'cad3d983e57f467ba8e8252b0567e96dde9a8f0d',
+  -- https://github.com/airblade/vim-rooter
+  vim_rooter = '0415be8b5989e56f6c9e382a04906b7f719cfb38',
+  -- https://github.com/tpope/vim-surround
+  vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d'
 }
 return commits
-
