@@ -138,7 +138,7 @@ tools['prettier/vim-prettier'] = {
 tools['junegunn/fzf.vim'] = {
   opt = true,
   requires = {{'junegunn/fzf', opt = true}},
-  commit = commits.fzf,
+  commit = commits.fzf_vim,
   cmd = {'Files', 'Buffers'}
 }
 
@@ -162,3 +162,4 @@ tools['TimUntersberger/neogit'] = {
 tools['tpope/vim-surround'] = {opt = false, commit = commits.vim_surround}
 
 return tools
+

@@ -2,7 +2,7 @@ local commits = {
   -- https://github.com/Pocco81/DAPInstall.nvim
   DAPInstall = 'bbda2b062e5519cde4e10b6e4240d3dd1f867b20',
   -- https://github.com/L3MON4D3/LuaSnip
-  LuaSnip = 'd8cacf83a214b7dd80986a8a24e4adf3fdd4f069',
+  LuaSnip = '79f647218847b1cd204fede7dd89025e43fd00c3',
   -- https://github.com/rhysd/accelerated-jk
   accelerated_jk = '156c5158b72059404f6b8aaf15b59f87dd0aaa88',
   -- https://github.com/rmagatti/auto-session
@@ -48,9 +48,9 @@ local commits = {
   -- https://github.com/karb94/neoscroll.nvim
   neoscroll = '54c5c419f6ee2b35557b3a6a7d631724234ba97a',
   -- https://github.com/windwp/nvim-autopairs
-  nvim_autopairs = '5fe24419e7a7ec536d78d60be1515b018ab41b15',
+  nvim_autopairs = '5d75276fce887c0cf433bb1b9867717907211063',
   -- https://github.com/kevinhwang91/nvim-bqf
-  nvim_bqf = '8b62211ad7529c314e80b22968eef6ba275c781c',
+  nvim_bqf = '448fa92e7f3838e3b5adbce58b55c5f97a6d2cec',
   -- https://github.com/akinsho/nvim-bufferline.lua
   nvim_bufferline = '83bf4dc7bff642e145c8b4547aa596803a8b4dc4',
   -- https://github.com/hrsh7th/nvim-cmp
@@ -58,7 +58,7 @@ local commits = {
   -- https://github.com/SmiteshP/nvim-gps
   nvim_gps = 'f4734dff6fc2f33b5fd13412e56c4fce06650a74',
   -- https://github.com/williamboman/nvim-lsp-installer
-  nvim_lsp_installer = '9894db12783fdd02be909cdd60e6d0fc20b9e46e',
+  nvim_lsp_installer = '17e0bfa5f2c8854d1636fcd036dc8284db136baa',
   -- https://github.com/neovim/nvim-lspconfig
   nvim_lspconfig = 'ea5744f9243ec25a178a0bc403a4c8203ecc4f23',
   -- https://github.com/kyazdani42/nvim-tree.lua
@@ -124,7 +124,7 @@ local commits = {
   -- https://github.com/fatih/vim-go
   vim_go = '0550762a69a2ef13d9f723c9478155dbc6ad7ddb',
   -- https://github.com/andymass/vim-matchup
-  vim_matchup = '80ad7817e58755a602f993163f61f3500978ebe5',
+  vim_matchup = '55e3330436784fb8ccc35a5cfeb13e48bab9dcd2',
   -- https://github.com/prettier/vim-prettier
   vim_prettier = '5e6cca21e12587c02e32a06bf423519eb1e9f1b2',
   -- https://github.com/thinca/vim-quickrun
@@ -154,7 +154,7 @@ local commits = {
   -- https://github.com/rcarriga/nvim-notify
   nvim_notify = '43c54aec682854b39a7e0e89b4c3ba00426d74a8',
   -- https://github.com/kyazdani42/nvim-web-devicons
-  nvim_web_devicons = '969728506c0175644a1d448f55e311ccdada7eaf',
+  nvim_web_devicons = '3b1b794bc17b7ac3df3ae471f1c18f18d1a0f958',
   -- https://github.com/navarasu/onedark.nvim
   onedark = 'df090f9d72d43aa51dec5760c44da288b58a79b6',
   -- https://github.com/airblade/vim-rooter
@@ -163,3 +163,4 @@ local commits = {
   vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d'
 }
 return commits
+
