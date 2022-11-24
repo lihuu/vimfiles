@@ -62,7 +62,7 @@ local commits = {
   -- https://github.com/neovim/nvim-lspconfig
   nvim_lspconfig = 'ea5744f9243ec25a178a0bc403a4c8203ecc4f23',
   -- https://github.com/kyazdani42/nvim-tree.lua
-  nvim_tree = '9914780cbabdffe3cd030867f0bc34c6e51bcb95',
+  nvim_tree = '68a2a0971eb50f13e4d54498a2add73f131b9a85',
   -- https://github.com/nvim-treesitter/nvim-treesitter
   nvim_treesitter = '37398c7d68826c8d6ae3f85cc52d83fd3dee4f84',
   -- https://github.com/romgrk/nvim-treesitter-context
@@ -163,4 +163,3 @@ local commits = {
   vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d'
 }
 return commits
-
