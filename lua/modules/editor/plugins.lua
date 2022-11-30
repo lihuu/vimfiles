@@ -33,9 +33,9 @@ editor['simrat39/symbols-outline.nvim'] = {
 
 -- https://github.com/nvim-treesitter/nvim-treesitter
 editor['nvim-treesitter/nvim-treesitter'] = {
-  opt = true,
+  -- opt = false,
   run = ':TSUpdate',
-  event = 'BufRead',
+  -- event = 'BufRead',
   config = conf.nvim_treesitter,
   commit = commits.nvim_treesitter
 }
@@ -56,7 +56,8 @@ editor['romgrk/nvim-treesitter-context'] = {
 editor['p00f/nvim-ts-rainbow'] = {
   opt = true,
   after = 'nvim-treesitter',
-  event = 'BufRead'
+  event = 'BufRead',
+  commit = commits.nvim_ts_rainbow
 }
 
 -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
@@ -159,3 +160,4 @@ editor['rcarriga/nvim-dap-ui'] = {
 editor['airblade/vim-rooter'] = {opt = false}
 
 return editor
+

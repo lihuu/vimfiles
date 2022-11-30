@@ -35,7 +35,6 @@ function config.lualine()
 
   require('lualine').setup({
     options = {icons_enabled = true, theme = 'onedark', disabled_filetypes = {}},
-
     sections = {
       lualine_a = {'mode', 'tabs'},
       lualine_b = {{'branch'}, {'diff'}},

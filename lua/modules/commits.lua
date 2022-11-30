@@ -6,7 +6,7 @@ local commits = {
   -- https://github.com/akinsho/nvim-bufferline.lua
   nvim_bufferline = '83bf4dc7bff642e145c8b4547aa596803a8b4dc4',
   -- https://github.com/nvim-treesitter/nvim-treesitter
-  nvim_treesitter = '37398c7d68826c8d6ae3f85cc52d83fd3dee4f84',
+  nvim_treesitter = '8fe4e3625a4bfda2924518981fb9a08c0609e0c8',
   -- https://github.com/andymass/vim-matchup
   matchup = '80ad7817e58755a602f993163f61f3500978ebe5',
   -- https://github.com/windwp/nvim-ts-autotag
@@ -35,7 +35,7 @@ local commits = {
   -- https://github.com/nvim-telescope/telescope-file-browser.nvim
   telescope_file_browser = '84efd93ec772696c1cce2aada4d39f2756953964',
   -- https://github.com/nvim-lualine/lualine.nvim
-  lualine = '788805771c1ca7fe2c6652c38523cf208908934c',
+  lualine = 'bfa0d99ba6f98d077dd91779841f1c88b7b5c165',
   web_devicons = '969728506c0175644a1d448f55e311ccdada7eaf',
   -- https://github.com/sainnhe/edge
   edge = '33dbe6b7ac23f8666d36ad27db7f82ff58cb2408',
@@ -52,6 +52,9 @@ local commits = {
   neogit = '74c9e29b61780345d3ad9d7a4a4437607caead4a',
   vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d',
   vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
-  vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2'
+  vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2',
+  nvim_ts_rainbow = '064fd6c0a15fae7f876c2c6dd4524ca3fad96750'
+
 }
 return commits
+
