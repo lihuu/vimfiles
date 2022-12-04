@@ -34,7 +34,7 @@ function config.lualine()
   local gps = require("nvim-gps")
 
   require('lualine').setup({
-    options = {icons_enabled = true, theme = 'onedark', disabled_filetypes = {}},
+    options = {icons_enabled = true, theme = 'auto', disabled_filetypes = {}},
     sections = {
       lualine_a = {'mode', 'tabs'},
       lualine_b = {{'branch'}, {'diff'}},
@@ -68,7 +68,7 @@ function config.lualine()
   })
 end
 
--- https://github.com/kyazdani42/nvim-tree.lua
+-- https://github.com/kyazdani42/nvim-tree.lu
 function config.nvim_tree()
   local tree_cb = require'nvim-tree.config'.nvim_tree_callback
   require('nvim-tree').setup({

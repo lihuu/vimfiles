@@ -13,15 +13,15 @@ ui['kyazdani42/nvim-web-devicons'] = {
 -- https://github.com/sainnhe/edge
 ui['sainnhe/edge'] = {opt = false, config = conf.edge, commit = commits.edge}
 -- 底部的状态栏
+ui['navarasu/onedark.nvim'] = {opt = false, config = conf.onedark}
 -- https://github.com/nvim-lualine/lualine.nvim
-ui['hoob3rt/lualine.nvim'] = {
+ui['nvim-lualine/lualine.nvim'] = {
   opt = true,
-  after = 'nvim-gps',
+  -- after = 'nvim-gps',
   config = conf.lualine,
+  requires = {'kyazdani42/nvim-web-devicons', opt = true},
   commit = commits.lualine
 }
-
-ui['navarasu/onedark.nvim'] = {opt = false, config = conf.onedark}
 
 -- https://github.com/mhinz/vim-startify
 ui['mhinz/vim-startify'] = {
