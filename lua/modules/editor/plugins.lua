@@ -56,7 +56,8 @@ editor['romgrk/nvim-treesitter-context'] = {
 editor['p00f/nvim-ts-rainbow'] = {
   opt = true,
   after = 'nvim-treesitter',
-  event = 'BufRead'
+  event = 'BufRead',
+  commit = commits.nvim_ts_rainbow
 }
 
 -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
@@ -159,3 +160,4 @@ editor['rcarriga/nvim-dap-ui'] = {
 editor['airblade/vim-rooter'] = {opt = false}
 
 return editor
+
