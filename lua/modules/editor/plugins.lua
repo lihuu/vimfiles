@@ -136,7 +136,8 @@ editor['norcalli/nvim-colorizer.lua'] = {
 editor['rmagatti/auto-session'] = {
   opt = true,
   cmd = {'SaveSession', 'RestoreSession', 'DeleteSession'},
-  config = conf.auto_session
+  config = conf.auto_session,
+  commit = commits.auto_session
 }
 
 -- https://github.com/jdhao/better-escape.vim

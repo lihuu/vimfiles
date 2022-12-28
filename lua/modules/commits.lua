@@ -54,7 +54,8 @@ local commits = {
   vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d',
   vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
   vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2',
-  nvim_ts_rainbow = '064fd6c0a15fae7f876c2c6dd4524ca3fad96750'
+  nvim_ts_rainbow = '064fd6c0a15fae7f876c2c6dd4524ca3fad96750',
+  auto_session = 'c8b2f4048f846387361bd04cc185bf1aa7d2e3d1'
 }
 return commits
 
