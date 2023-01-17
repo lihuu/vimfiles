@@ -26,15 +26,15 @@ local commits = {
   -- https://github.com/folke/which-key.nvim
   which_key = '312c386ee0eafc925c27869d2be9c11ebdb807eb',
   -- https://github.com/nvim-telescope/telescope.nvim
-  telescope = 'b5833a682c511885887373aad76272ad70f7b3c2',
-  telescope_fzf_native = 'b8662b076175e75e6497c59f3e2799b879d7b954',
+  telescope = '2f32775405f6706348b71d0bb8a15a22852a61e4',
+  telescope_fzf_native = 'fab3e2212e206f4f8b3bbaa656e129443c9b802e',
   telescope_fzy_native = '7b3d2528102f858036627a68821ccf5fc1d78ce4',
   -- https://github.com/nvim-telescope/telescope-project.nvim
-  telescope_project = 'ad33c9eb67de635ded67069af7552d5162497b1e',
+  telescope_project = '8e8ee37b7210761502cdf2c3a82b5ba8fb5b2972',
   -- https://github.com/nvim-telescope/telescope-frecency.nvim
-  telescope_frecency = '979a6f3d882b7b5352cc6a751faa9c9427d40e74',
+  telescope_frecency = '62cbd4e7f55fb6de2b8081087ce97026022ffcd2',
   -- https://github.com/nvim-telescope/telescope-file-browser.nvim
-  telescope_file_browser = '84efd93ec772696c1cce2aada4d39f2756953964',
+  telescope_file_browser = '304508fb7bea78e3c0eeddd88c4837501e403ae8',
   -- https://github.com/nvim-lualine/lualine.nvim
   lualine = '788805771c1ca7fe2c6652c38523cf208908934c',
   web_devicons = '969728506c0175644a1d448f55e311ccdada7eaf',
