@@ -62,7 +62,7 @@ editor['romgrk/nvim-treesitter-context'] = {
 
 -- https://github.com/p00f/nvim-ts-rainbow
 editor['lihuu/nvim-ts-rainbow'] = {
-  opt = true,
+  opt = false,
   after = 'nvim-treesitter',
   event = 'BufRead',
   commit = commits.nvim_ts_rainbow
