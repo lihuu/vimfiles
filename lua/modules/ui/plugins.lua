@@ -24,11 +24,11 @@ ui['hoob3rt/lualine.nvim'] = {
 ui['navarasu/onedark.nvim'] = {opt = false, config = conf.onedark}
 
 -- https://github.com/mhinz/vim-startify
-ui['mhinz/vim-startify'] = {
-  opt = true,
-  event = "BufWinEnter",
-  commit = commits.vim_statify
-}
+-- ui['mhinz/vim-startify'] = {
+--  opt = true,
+--  event = "BufWinEnter",
+--  commit = commits.vim_statify
+-- }
 
 -- https://github.com/kyazdani42/nvim-tree.lua
 ui['kyazdani42/nvim-tree.lua'] = {

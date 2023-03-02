@@ -17,7 +17,7 @@ local commits = {
   -- https://github.com/ray-x/lsp_signature.nvim
   lsp_signature = 'e65a63858771db3f086c8d904ff5f80705fd962b',
   -- https://github.com/williamboman/nvim-lsp-installer
-  lsp_installer = '9894db12783fdd02be909cdd60e6d0fc20b9e46e',
+  lsp_installer = '17e0bfa5f2c8854d1636fcd036dc8284db136baa',
   cmp = '97e454ce9b1371373105716d196c1017394bc947',
   -- https://github.com/windwp/nvim-autopairs
   autopairs = '5fe24419e7a7ec536d78d60be1515b018ab41b15',
@@ -55,7 +55,8 @@ local commits = {
   vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
   vim_statify = '81e36c352a8deea54df5ec1e2f4348685569bed2',
   nvim_ts_rainbow = '064fd6c0a15fae7f876c2c6dd4524ca3fad96750',
-  auto_session = 'c8b2f4048f846387361bd04cc185bf1aa7d2e3d1'
+  auto_session = 'c8b2f4048f846387361bd04cc185bf1aa7d2e3d1',
+  nvim_lspconfig = '95b7a69bc6da2a6a740584ea3c555e5327638b7d'
 }
 return commits
 

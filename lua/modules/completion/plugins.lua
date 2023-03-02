@@ -6,14 +6,15 @@ local commits = require('modules.commits')
 completion['neovim/nvim-lspconfig'] = {
   opt = true,
   event = 'BufReadPre',
-  config = conf.nvim_lsp
+  config = conf.nvim_lsp,
+  commit = commits.nvim_lspconfig
 }
 
 -- https://github.com/williamboman/nvim-lsp-installer
-completion['williamboman/nvim-lsp-installer'] = {
+completion['lihuu/nvim-lsp-installer'] = {
   opt = true,
-  after = 'nvim-lspconfig',
-  commit = commits.lsp_installer
+  after = 'nvim-lspconfig'
+  -- commit = commits.lsp_installer
 }
 
 -- https://github.com/glepnir/lspsaga.nvim
@@ -36,13 +37,13 @@ completion['hrsh7th/nvim-cmp'] = {
   config = conf.cmp,
   event = 'InsertEnter',
   requires = {
-    { 'saadparwaiz1/cmp_luasnip', after = 'LuaSnip' },
-    { 'hrsh7th/cmp-buffer', after = 'cmp_luasnip' },
-    { 'hrsh7th/cmp-nvim-lsp', after = 'cmp-buffer' },
-    { 'hrsh7th/cmp-nvim-lua', after = 'cmp-nvim-lsp' },
-    { 'andersevenrud/cmp-tmux', branch = 'compe', after = 'cmp-nvim-lua' },
-    { 'hrsh7th/cmp-path', after = 'cmp-tmux' },
-    { 'f3fora/cmp-spell', after = 'cmp-path' }
+    {'saadparwaiz1/cmp_luasnip', after = 'LuaSnip'},
+    {'hrsh7th/cmp-buffer', after = 'cmp_luasnip'},
+    {'hrsh7th/cmp-nvim-lsp', after = 'cmp-buffer'},
+    {'hrsh7th/cmp-nvim-lua', after = 'cmp-nvim-lsp'},
+    {'andersevenrud/cmp-tmux', branch = 'compe', after = 'cmp-nvim-lua'},
+    {'hrsh7th/cmp-path', after = 'cmp-tmux'},
+    {'f3fora/cmp-spell', after = 'cmp-path'}
   }
 }
 
@@ -76,3 +77,4 @@ requires={{'jose-elias-alvarez/null-ls.nvim',config=conf.nullls},'nvim-lua/plena
 --]]
 
 return completion
+

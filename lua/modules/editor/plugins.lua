@@ -24,6 +24,14 @@ editor['terrortylor/nvim-comment'] = {
   end
 }
 
+editor['startup-nvim/startup.nvim'] = {
+  opt = false,
+  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+  config = function()
+    require"startup".setup({theme = 'dashboard'})
+  end
+}
+
 -- https://github.com/simrat39/symbols-outline.nvim
 editor['simrat39/symbols-outline.nvim'] = {
   opt = true,
