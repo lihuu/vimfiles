@@ -65,6 +65,8 @@ local commits = {
   nvim_tree = '9914780cbabdffe3cd030867f0bc34c6e51bcb95',
   -- https://github.com/nvim-treesitter/nvim-treesitter
   nvim_treesitter = '9dd1b9c09707bf1cdd565b999c79ac6461602591',
+  -- https://github.com/romgrk/nvim-treesitter-context
+  nvim_treesitter_context = '895ec44f5c89bc67ba5440aef3d1f2efa3d59a41',
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   nvim_treesitter_textobjects = '4b30081d2736e09f90c890a8a7adfe4df36f5b36',
   -- https://github.com/windwp/nvim-ts-autotag

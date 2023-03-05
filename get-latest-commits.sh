@@ -99,9 +99,9 @@ echo "nvim_tree = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "nvim_treesitter = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
-#cd ~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-context 
-#echo "--`git remote -v|awk '{print $2}'|head -1`"
-#echo "nvim_treesitter_context = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
+cd ~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-context 
+echo "--`git remote -v|awk '{print $2}'|head -1`"
+echo "nvim_treesitter_context = '`git log -n 1|grep "^commit"|awk '{print $2}'`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "nvim_treesitter_textobjects = '`git log -n 1|grep "commit"|awk '{print $2}'`',"
