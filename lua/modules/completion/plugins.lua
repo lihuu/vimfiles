@@ -37,13 +37,13 @@ completion['hrsh7th/nvim-cmp'] = {
   config = conf.cmp,
   event = 'InsertEnter',
   requires = {
-    {'saadparwaiz1/cmp_luasnip', after = 'LuaSnip'},
-    {'hrsh7th/cmp-buffer', after = 'cmp_luasnip'},
-    {'hrsh7th/cmp-nvim-lsp', after = 'cmp-buffer'},
-    {'hrsh7th/cmp-nvim-lua', after = 'cmp-nvim-lsp'},
-    {'andersevenrud/cmp-tmux', branch = 'compe', after = 'cmp-nvim-lua'},
-    {'hrsh7th/cmp-path', after = 'cmp-tmux'},
-    {'f3fora/cmp-spell', after = 'cmp-path'}
+    { 'saadparwaiz1/cmp_luasnip', after = 'LuaSnip' },
+    { 'hrsh7th/cmp-buffer',       after = 'cmp_luasnip' },
+    { 'hrsh7th/cmp-nvim-lsp',     after = 'cmp-buffer' },
+    { 'hrsh7th/cmp-nvim-lua',     after = 'cmp-nvim-lsp' },
+    { 'andersevenrud/cmp-tmux',   branch = 'compe',      after = 'cmp-nvim-lua' },
+    { 'hrsh7th/cmp-path',         after = 'cmp-tmux' },
+    { 'f3fora/cmp-spell',         after = 'cmp-path' }
   }
 }
 
@@ -52,7 +52,7 @@ completion['L3MON4D3/LuaSnip'] = {
   after = 'nvim-cmp',
   config = conf.luasnip,
   requires = 'rafamadriz/friendly-snippets',
-  commit = commits.luasnip
+  commit = commits.LuaSnip
 }
 
 -- https://github.com/windwp/nvim-autopairs
@@ -68,13 +68,10 @@ opt = true,
 cmd = "Copilot"
 }
 --]]
-
 --[[completion['jose-elias-alvarez/nvim-lsp-ts-utils'] = {
 opt=true,
 after='nvim-lspconfig',
 requires={{'jose-elias-alvarez/null-ls.nvim',config=conf.nullls},'nvim-lua/plenary.nvim'},
 }
 --]]
-
 return completion
-
