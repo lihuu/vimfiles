@@ -54,7 +54,7 @@ local commits = {
   -- https://github.com/akinsho/nvim-bufferline.lua
   nvim_bufferline = '83bf4dc7bff642e145c8b4547aa596803a8b4dc4',
   -- https://github.com/hrsh7th/nvim-cmp
-  nvim_cmp = '01f697a68905f9dcae70960a9eb013695a17f9a2',
+  nvim_cmp = 'feed47fd1da7a1bad2c7dca456ea19c8a5a9823a',
   -- https://github.com/SmiteshP/nvim-gps
   nvim_gps = 'f4734dff6fc2f33b5fd13412e56c4fce06650a74',
   -- https://github.com/lihuu/nvim-lsp-installer
@@ -72,9 +72,9 @@ local commits = {
   -- https://github.com/windwp/nvim-ts-autotag
   nvim_ts_autotag = 'fdefe46c6807441460f11f11a167a2baf8e4534b',
   -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
-  nvim_ts_context_commentstring = 'a0f89563ba36b3bacd62cf967b46beb4c2c29e52',
+  nvim_ts_context_commentstring = '729d83ecb990dc2b30272833c213cc6d49ed5214',
   -- https://github.com/lihuu/nvim-ts-rainbow
-  nvim_ts_rainbow = '064fd6c0a15fae7f876c2c6dd4524ca3fad96750',
+  nvim_ts_rainbow = 'ef95c15a935f97c65a80e48e12fe72d49aacf9b9',
   -- https://github.com/jbyuki/one-small-step-for-vimkind
   one_small_step_for_vimkind = 'aef1bdbb8347e6daaf33d5109002f3df243ebfe9',
   -- https://github.com/wbthomason/packer.nvim
@@ -122,7 +122,7 @@ local commits = {
   -- https://github.com/tpope/vim-fugitive
   vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
   -- https://github.com/fatih/vim-go
-  vim_go = 'b8a41085bfd67fee97ad075c6df65590ce7417a7',
+  vim_go = '23cc4bca2f586c8c2f7d2cb78bbbfec4b7361763',
   -- https://github.com/andymass/vim-matchup
   vim_matchup = '3a48818a8113a502f245c29d894201421727577a',
   -- https://github.com/prettier/vim-prettier
