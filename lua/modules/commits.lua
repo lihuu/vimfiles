@@ -120,8 +120,7 @@ local commits = {
   -- https://github.com/hrsh7th/vim-eft
   vim_eft = '419deb0c45141c11cfd2648b8523f520f8413ec2',
   -- https://github.com/tpope/vim-fugitive
-  vim_fugitive = 'fa33145cc12003005b92d7e536025ed5833b9c4f
-commit/rebase',
+  vim_fugitive = 'fa33145cc12003005b92d7e536025ed5833b9c4f',
   -- https://github.com/fatih/vim-go
   vim_go = '23cc4bca2f586c8c2f7d2cb78bbbfec4b7361763',
   -- https://github.com/andymass/vim-matchup
