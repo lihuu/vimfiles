@@ -2,11 +2,11 @@ local commits = {
   -- https://github.com/Pocco81/DAPInstall.nvim
   DAPInstall = 'bbda2b062e5519cde4e10b6e4240d3dd1f867b20',
   -- https://github.com/L3MON4D3/LuaSnip
-  LuaSnip = '58236e8b2f20de23ff35106dace9212b41d78860',
+  LuaSnip = '9b5be5e9b460fad7134991d3fd0434466959db08',
   -- https://github.com/rhysd/accelerated-jk
   accelerated_jk = '156c5158b72059404f6b8aaf15b59f87dd0aaa88',
   -- https://github.com/rmagatti/auto-session
-  auto_session = 'c8b2f4048f846387361bd04cc185bf1aa7d2e3d1',
+  auto_session = '04ccdac802200ecc363b251cf922b2b022bb515c',
   -- https://github.com/jdhao/better-escape.vim
   better_escape = '6b16a45a839727977277f6ab11bded63e9ed86bb',
   -- https://github.com/hrsh7th/cmp-buffer
@@ -30,21 +30,21 @@ local commits = {
   -- https://github.com/romgrk/fzy-lua-native
   fzy_lua_native = '085c7d262aa35cc55a8523e8c1618d398bf717a7',
   -- https://github.com/lewis6991/gitsigns.nvim
-  gitsigns = 'facca89a95aa5e492505270a60a30825be576d14',
+  gitsigns = '3b6c0a6412b31b91eb26bb8f712562cf7bb1d3be',
   -- https://github.com/lukas-reineke/indent-blankline.nvim
-  indent_blankline = '0f8df7e43f0cae4c44e0e8383436ad602f333419',
+  indent_blankline = '018bd04d80c9a73d399c1061fa0c3b14a7614399',
   -- https://github.com/ray-x/lsp_signature.nvim
-  lsp_signature = 'e65a63858771db3f086c8d904ff5f80705fd962b',
+  lsp_signature = '6f6252f63b0baf0f2224c4caea33819a27f3f550',
   -- https://github.com/glepnir/lspsaga.nvim
-  lspsaga = '587c37d763b88faafe42c2ba114073106b38e4e2',
+  lspsaga = 'c39cafb10867357ef7004c60b914db448977a531',
   -- https://github.com/hoob3rt/lualine.nvim
-  lualine = '788805771c1ca7fe2c6652c38523cf208908934c',
+  lualine = 'e99d733e0213ceb8f548ae6551b04ae32e590c80',
   -- https://github.com/iamcco/markdown-preview.nvim
   markdown_preview = '02cc3874738bc0f86e4b91f09b8a0ac88aef8e96',
   -- https://github.com/sbdchd/neoformat
   neoformat = '891fad5829f91cbc3d0866f7abd028d233b8763e',
   -- https://github.com/TimUntersberger/neogit
-  neogit = '74c9e29b61780345d3ad9d7a4a4437607caead4a',
+  neogit = '85380916cec322b1351785cac4f4e3f24de36b2a',
   -- https://github.com/karb94/neoscroll.nvim
   neoscroll = 'd7601c26c8a183fa8994ed339e70c2d841253e93',
   -- https://github.com/windwp/nvim-autopairs
@@ -52,7 +52,7 @@ local commits = {
   -- https://github.com/kevinhwang91/nvim-bqf
   nvim_bqf = 'b71e6bc220ea2ef8f09d5e6b39d52609a965f322',
   -- https://github.com/akinsho/nvim-bufferline.lua
-  nvim_bufferline = '83bf4dc7bff642e145c8b4547aa596803a8b4dc4',
+  nvim_bufferline = '3677aceb9a72630b0613e56516c8f7151b86f95c',
   -- https://github.com/hrsh7th/nvim-cmp
   nvim_cmp = 'feed47fd1da7a1bad2c7dca456ea19c8a5a9823a',
   -- https://github.com/SmiteshP/nvim-gps
@@ -60,11 +60,11 @@ local commits = {
   -- https://github.com/lihuu/nvim-lsp-installer
   nvim_lsp_installer = 'a5997d4e2982273b609d991bdd8abb968b894475',
   -- https://github.com/neovim/nvim-lspconfig
-  nvim_lspconfig = '95b7a69bc6da2a6a740584ea3c555e5327638b7d',
+  nvim_lspconfig = '6a9f922eb6e7412a4e940e20f4d76fd4e0e3feec',
   -- https://github.com/kyazdani42/nvim-tree.lua
-  nvim_tree = '9914780cbabdffe3cd030867f0bc34c6e51bcb95',
+  nvim_tree = 'bbb6d4891009de7dab05ad8fc2d39f272d7a751c',
   -- https://github.com/nvim-treesitter/nvim-treesitter
-  nvim_treesitter = '9dd1b9c09707bf1cdd565b999c79ac6461602591',
+  nvim_treesitter = '5a87bc98dabd0d38152a6fa774005f7ecbd40f1b',
   -- https://github.com/romgrk/nvim-treesitter-context
   nvim_treesitter_context = '895ec44f5c89bc67ba5440aef3d1f2efa3d59a41',
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
@@ -92,23 +92,23 @@ local commits = {
   -- https://github.com/simrat39/symbols-outline.nvim
   symbols_outline = '512791925d57a61c545bc303356e8a8f7869763c',
   -- https://github.com/nvim-telescope/telescope-file-browser.nvim
-  telescope_file_browser = '304508fb7bea78e3c0eeddd88c4837501e403ae8',
+  telescope_file_browser = '61b3769065131129716974f7fb63f82ee409bd80',
   -- https://github.com/nvim-telescope/telescope-frecency.nvim
-  telescope_frecency = '62cbd4e7f55fb6de2b8081087ce97026022ffcd2',
+  telescope_frecency = 'e5696afabd8753d772987ea48434d9c0d8b0aa6b',
   -- https://github.com/nvim-telescope/telescope-fzy-native.nvim
-  telescope_fzy_native = '7b3d2528102f858036627a68821ccf5fc1d78ce4',
+  telescope_fzy_native = '282f069504515eec762ab6d6c89903377252bf5b',
   -- https://github.com/nvim-telescope/telescope-project.nvim
   telescope_project = '8e8ee37b7210761502cdf2c3a82b5ba8fb5b2972',
   -- https://github.com/nvim-telescope/telescope.nvim
-  telescope = '2f32775405f6706348b71d0bb8a15a22852a61e4',
+  telescope = 'a3f17d3baf70df58b9d3544ea30abe52a7a832c2',
   -- https://github.com/folke/todo-comments.nvim
-  todo_comments = '672cd22bd15928434374ac52d0cf38dd250231df',
+  todo_comments = '74c7d28cb50b0713c881ef69bcb6cdd77d8907d1',
   -- https://github.com/akinsho/toggleterm.nvim
   toggleterm = '31d38d11390bcd35a568fcc65a79b7d6ec89de62',
   -- https://github.com/folke/trouble.nvim
   trouble = '67337644e38144b444d026b0df2dc5fa0038930f',
   -- https://github.com/folke/twilight.nvim
-  twilight = '8ab43c0fdc246fdd82382d7ef4ec383f8f755ef9',
+  twilight = '9410252bed96887ca5a86bf16435a3a51a0e6ce5',
   -- https://github.com/romainl/vim-cool
   vim_cool = '80c19445728d70595c2f72d0436527e28292ebd9',
   -- https://github.com/itchyny/vim-cursorword
@@ -120,7 +120,8 @@ local commits = {
   -- https://github.com/hrsh7th/vim-eft
   vim_eft = '419deb0c45141c11cfd2648b8523f520f8413ec2',
   -- https://github.com/tpope/vim-fugitive
-  vim_fugitive = 'a93ceff61f070a095c3c712c389247a80897e3b0',
+  vim_fugitive = 'fa33145cc12003005b92d7e536025ed5833b9c4f
+commit/rebase',
   -- https://github.com/fatih/vim-go
   vim_go = '23cc4bca2f586c8c2f7d2cb78bbbfec4b7361763',
   -- https://github.com/andymass/vim-matchup
@@ -134,13 +135,13 @@ local commits = {
   -- https://github.com/dstein64/vim-startuptime
   vim_startuptime = '6580cf539c33a212f4f5542068a3b4dd2b3ad834',
   -- https://github.com/folke/which-key.nvim
-  which_key = '312c386ee0eafc925c27869d2be9c11ebdb807eb',
+  which_key = 'fb027738340502b556c3f43051f113bcaa7e8e63',
   -- https://github.com/gelguy/wilder.nvim
   wilder = '679f348dc90d80ff9ba0e7c470c40a4d038dcecf',
   -- https://github.com/folke/zen-mode.nvim
-  zen_mode = 'f1cc53d32b49cf962fb89a2eb0a31b85bb270f7c',
+  zen_mode = '4f2e70d75b7ece1c2a7c852664db492537078996',
   -- https://github.com/sainnhe/edge
-  edge = '33dbe6b7ac23f8666d36ad27db7f82ff58cb2408',
+  edge = 'bc581eccc5a5f7f2cebbe48df23080f2178f32bc',
   -- https://github.com/nathom/filetype.nvim
   filetype = 'b522628a45a17d58fc0073ffd64f9dc9530a8027',
   -- https://github.com/rafamadriz/friendly-snippets
@@ -160,6 +161,6 @@ local commits = {
   -- https://github.com/airblade/vim-rooter
   vim_rooter = '4f52ca556a0b9e257bf920658714470ea0320b7a',
   -- https://github.com/tpope/vim-surround
-  vim_surround = 'aeb933272e72617f7c4d35e1f003be16836b948d'
+  vim_surround = '3d188ed2113431cf8dac77be61b842acb64433d9'
 }
 return commits
