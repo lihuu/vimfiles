@@ -226,3 +226,10 @@ https://github.com/ayamir/nvimdots
 ##### vim tips
 
 https://vim.fandom.com/wiki/Best_Vim_Tips#Really_useful
+
+##### 启动的时候打印详细的日志
+
+```bash
+# 9 表示日志的级别
+vim -V9myVim1.log
+```
