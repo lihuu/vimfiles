@@ -63,12 +63,12 @@ editor['romgrk/nvim-treesitter-context'] = {
 }
 
 -- https://github.com/p00f/nvim-ts-rainbow
-editor['lihuu/nvim-ts-rainbow'] = {
-  opt = false,
-  after = 'nvim-treesitter',
-  event = 'BufRead',
-  commit = commits.nvim_ts_rainbow
-}
+-- editor['lihuu/nvim-ts-rainbow'] = {
+--  opt = false,
+--  after = 'nvim-treesitter',
+--  event = 'BufRead',
+-- commit = commits.nvim_ts_rainbow
+-- }
 
 -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
 editor['JoosepAlviste/nvim-ts-context-commentstring'] = {

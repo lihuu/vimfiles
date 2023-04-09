@@ -111,9 +111,9 @@ echo "nvim_ts_autotag = '`git log -n 1|grep "^commit"|awk '{print $2}'`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/nvim-ts-context-commentstring 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "nvim_ts_context_commentstring = '`git log -n 1|grep "^commit"|awk '{print $2}'`',"
-cd ~/.local/share/nvim/site/pack/packer/opt/nvim-ts-rainbow 
-echo "--`git remote -v|awk '{print $2}'|head -1`"
-echo "nvim_ts_rainbow = '`git log -n 1|grep "^commit"|awk '{print $2}'`',"
+#cd ~/.local/share/nvim/site/pack/packer/opt/nvim-ts-rainbow 
+#echo "--`git remote -v|awk '{print $2}'|head -1`"
+#echo "nvim_ts_rainbow = '`git log -n 1|grep "^commit"|awk '{print $2}'`',"
 cd ~/.local/share/nvim/site/pack/packer/opt/one-small-step-for-vimkind 
 echo "--`git remote -v|awk '{print $2}'|head -1`"
 echo "one_small_step_for_vimkind = '`git log -n 1|grep "^commit"|awk '{print $2}'`',"

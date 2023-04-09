@@ -113,7 +113,7 @@ tools['gelguy/wilder.nvim'] = {
 }
 
 -- https://github.com/nathom/filetype.nvim
-tools['nathom/filetype.nvim'] = {opt = false, commit = commits.filetype}
+--tools['nathom/filetype.nvim'] = {opt = false, commit = commits.filetype}
 
 -- https://github.com/prettier/vim-prettier
 tools['prettier/vim-prettier'] = {
