@@ -121,7 +121,8 @@ local load_core = function()
   pack.load_compile()
   -- vim.cmd [[colorscheme molokai]]
   -- lihuu_qf_config()
-  require('onedark').load()
+  --require('onedark').load()
+  vim.cmd("colorscheme onedark")
 end
 
 load_core()

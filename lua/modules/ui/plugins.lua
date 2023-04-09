@@ -21,7 +21,7 @@ ui['hoob3rt/lualine.nvim'] = {
   commit = commits.lualine
 }
 
-ui['navarasu/onedark.nvim'] = {opt = false, config = conf.onedark}
+--ui['navarasu/onedark.nvim'] = {opt = false, config = conf.onedark}
 
 -- https://github.com/mhinz/vim-startify
 ui['mhinz/vim-startify'] = {

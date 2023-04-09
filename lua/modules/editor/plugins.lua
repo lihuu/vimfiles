@@ -8,7 +8,7 @@ editor['junegunn/vim-easy-align'] = {opt = true, cmd = 'EasyAlign'}
 -- https://github.com/itchyny/vim-cursorword
 editor['itchyny/vim-cursorword'] = {
   opt = true,
-  event = {'BufReadPre', 'BufNewFile'},
+  event = {'BufReadPost', 'BufNewFile'},
   config = conf.vim_cursorwod
 }
 
@@ -69,6 +69,11 @@ editor['romgrk/nvim-treesitter-context'] = {
 --  event = 'BufRead',
 -- commit = commits.nvim_ts_rainbow
 -- }
+
+editor['HiPhish/nvim-ts-rainbow2'] = {
+ opt = false,
+ after = 'nvim-treesitter',
+}
 
 -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
 editor['JoosepAlviste/nvim-ts-context-commentstring'] = {
@@ -169,6 +174,8 @@ editor['rcarriga/nvim-dap-ui'] = {
 
 -- https://github.com/airblade/vim-rooter
 editor['airblade/vim-rooter'] = {opt = false}
+
+editor['olimorris/onedarkpro.nvim']= {opt=false}
 
 return editor
 

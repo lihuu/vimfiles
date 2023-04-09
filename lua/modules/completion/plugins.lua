@@ -5,7 +5,7 @@ local commits = require('modules.commits')
 -- https://github.com/neovim/nvim-lspconfig
 completion['neovim/nvim-lspconfig'] = {
   opt = true,
-  event = 'BufReadPre',
+  event = 'BufReadPost',
   config = conf.nvim_lsp,
   commit = commits.nvim_lspconfig
 }
