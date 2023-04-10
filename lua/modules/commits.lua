@@ -2,11 +2,11 @@ local commits = {
   -- https://github.com/Pocco81/DAPInstall.nvim
   DAPInstall = 'bbda2b062e5519cde4e10b6e4240d3dd1f867b20',
   -- https://github.com/L3MON4D3/LuaSnip
-  LuaSnip = 'bc8ec05022743d3f08bda7a76c6bb5e9a9024581',
+  LuaSnip = '8fdb06d4601c019a9ee880473646364bdbed3206',
   -- https://github.com/rhysd/accelerated-jk
   accelerated_jk = '156c5158b72059404f6b8aaf15b59f87dd0aaa88',
   -- https://github.com/rmagatti/auto-session
-  auto_session = '1d3dd70a2d48e0f3441128eb4fb0b437a0bf2cc4',
+  auto_session = 'f391aba10ee61927a1cceb9ea3a9dde501e87e9e',
   -- https://github.com/jdhao/better-escape.vim
   better_escape = '6b16a45a839727977277f6ab11bded63e9ed86bb',
   -- https://github.com/hrsh7th/cmp-buffer
@@ -36,7 +36,7 @@ local commits = {
   -- https://github.com/ray-x/lsp_signature.nvim
   lsp_signature = '775c0cdf5be5adcc08f27c9058edb00b5b517520',
   -- https://github.com/glepnir/lspsaga.nvim
-  lspsaga = '44af2ab1fee6bf166a001f7f006284a13737b45e',
+  lspsaga = '1fbb3e4721354d0d0a20a28bb77b3f83fe68538b',
   -- https://github.com/hoob3rt/lualine.nvim
   lualine = '84ffb80e452d95e2c46fa29a98ea11a240f7843e',
   -- https://github.com/iamcco/markdown-preview.nvim
@@ -64,7 +64,7 @@ local commits = {
   -- https://github.com/kyazdani42/nvim-tree.lua
   nvim_tree = '086bf310bd19a7103ee7d761eb59f89f3dd23e21',
   -- https://github.com/nvim-treesitter/nvim-treesitter
-  nvim_treesitter = 'a57d2a599b57a619f58a5c91c89d9bf12f8977b2',
+  nvim_treesitter = 'fa9fe9a95ba481e26e11eede4657f8c5350a0eaa',
   -- https://github.com/romgrk/nvim-treesitter-context
   nvim_treesitter_context = '38203f5e6c62617b3c07662dc71ce3047ecd90d3',
   -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
@@ -73,14 +73,12 @@ local commits = {
   nvim_ts_autotag = '7a1c677985b8fc4cdfdb87dd55fbc16dadd86bbe',
   -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
   nvim_ts_context_commentstring = '729d83ecb990dc2b30272833c213cc6d49ed5214',
-  -- https://github.com/lihuu/nvim-ts-rainbow
-  nvim_ts_rainbow = 'ef95c15a935f97c65a80e48e12fe72d49aacf9b9',
   -- https://github.com/jbyuki/one-small-step-for-vimkind
   one_small_step_for_vimkind = 'a0729e2478759583a49c62966836beec46fc5e1d',
   -- https://github.com/wbthomason/packer.nvim
   packer = '1d0cf98a561f7fd654c970c49f917d74fafe1530',
   -- https://github.com/nvim-lua/plenary.nvim
-  plenary = '253d34830709d690f013daf2853a9d21ad7accab',
+  plenary = '0c31c398261567cda89b66ddffc69d39495f63ae',
   -- https://github.com/nvim-lua/popup.nvim
   popup = 'b7404d35d5d3548a82149238289fa71f7f6de4ac',
   -- https://github.com/michaelb/sniprun
@@ -100,11 +98,11 @@ local commits = {
   -- https://github.com/nvim-telescope/telescope-project.nvim
   telescope_project = 'fa081e35ba7397e5147a51ece693aa3afda167fc',
   -- https://github.com/nvim-telescope/telescope.nvim
-  telescope = '2ea61f1952f0ad10e4fcc282468a06d3e69674c2',
+  telescope = '7141515a7cabde46449675a403ed564416363887',
   -- https://github.com/folke/todo-comments.nvim
   todo_comments = '8febc60a76feefd8203077ef78b6a262ea1a41f9',
   -- https://github.com/akinsho/toggleterm.nvim
-  toggleterm = 'b86982429325112d2b20c6d0cc7a5c4b182ab705',
+  toggleterm = '2e477f7ee8ee8229ff3158e3018a067797b9cd38',
   -- https://github.com/folke/trouble.nvim
   trouble = '2ae7237c2917d661f458443c9a88680f8ca2d7b2',
   -- https://github.com/folke/twilight.nvim
@@ -141,8 +139,6 @@ local commits = {
   zen_mode = 'd907e638c879642d226d27469b53db6925f69d4c',
   -- https://github.com/sainnhe/edge
   edge = 'bdebafb8229403a1e138344802b6817b1cf660e8',
-  -- https://github.com/nathom/filetype.nvim
-  filetype = 'b522628a45a17d58fc0073ffd64f9dc9530a8027',
   -- https://github.com/rafamadriz/friendly-snippets
   friendly_snippets = '8d91ba2dc2421a54981115f61b914974f938fa77',
   -- https://github.com/terrortylor/nvim-comment
@@ -155,8 +151,6 @@ local commits = {
   nvim_notify = '50d037041ada0895aeba4c0215cde6d11b7729c4',
   -- https://github.com/kyazdani42/nvim-web-devicons
   nvim_web_devicons = 'f16ec8f6e5d23e4349501dae46e0a661918e086e',
-  -- https://github.com/navarasu/onedark.nvim
-  onedark = 'dd640f6cfb0e370cfd3db389f04b172508848bd3',
   -- https://github.com/airblade/vim-rooter
   vim_rooter = '4f52ca556a0b9e257bf920658714470ea0320b7a',
   -- https://github.com/tpope/vim-surround
