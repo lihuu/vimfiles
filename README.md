@@ -128,6 +128,10 @@ sudo apt-get install -y nodejs
 lua-lsp 可以通过`luarocks`这个包管理器安装，在 Mac 系统中，可能没有`luarocks`这个包管理器。
 需要使用`brew install luarocks`先安装 lua 的包管理器。
 
+**coc-yaml**插件
+schema 配置
+https://www.schemastore.org/json/
+
 ### vim 的一些使用技巧
 
 #### 普通模式
