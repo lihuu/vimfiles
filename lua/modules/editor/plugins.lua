@@ -81,8 +81,8 @@ editor['JoosepAlviste/nvim-ts-context-commentstring'] = {
   after = 'nvim-treesitter'
 }
 
--- https://github.com/SmiteshP/nvim-gps
-editor['SmiteshP/nvim-gps'] = {
+-- https://github.com/lihuu/nvim-gps
+editor['lihuu/nvim-gps'] = {
   opt = true,
   after = 'nvim-treesitter',
   config = conf.nvim_gps
