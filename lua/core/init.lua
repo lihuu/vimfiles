@@ -97,6 +97,18 @@ local function lihuu_vim_rooter_config()
   vim.g.rooter_change_directory_for_non_project_files = 'current'
 end
 
+local function neovide_config()
+  if vim.g.neovide then
+    -- set neovide config here
+    -- neovide cursor mode config: railgun, torpedo, pixeldust
+    -- for more values, please check the official website
+    -- https://neovide.dev/configuration.html
+    vim.g.neovide_cursor_vfx_mode=""
+  end
+end
+
+
+
 local load_core = function()
   if vim.g.vscode then
     return
@@ -123,6 +135,7 @@ local load_core = function()
   -- lihuu_qf_config()
   --require('onedark').load()
   vim.cmd("colorscheme onedark")
+  neovide_config()
 end
 
 load_core()
