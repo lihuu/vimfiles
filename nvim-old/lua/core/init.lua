@@ -1,7 +1,7 @@
 local global = require 'core.global'
 local vim = vim
 
-function _G.dump(...)
+function _G.dump1(...)
   local objects = vim.tbl_map(vim.inspect, {...})
   print(unpack(objects))
 end
