@@ -20,5 +20,4 @@ map("n", "<leader>bn", ":tabnew<cr>", { desc = "New tab" })
 map("n", "<leader>l", ":BufferLineCycleNext<cr>", { desc = "Next buffer" })
 map("n", "<leader>h", ":BufferLineCyclePrev<cr>", { desc = "Pre buffer" })
 map("n", "<leader>bk", ":bdelete<cr>", { desc = "Close buffer" })
-
-
+map("n", "<leader>gg", ":Neogit<cr>", { desc = "Open neogit" })
