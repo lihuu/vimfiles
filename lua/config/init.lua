@@ -23,7 +23,7 @@ function config.nvim_tree()
         },
         git = { enable = true, ignore = true, timeout = 400 },
         filters = { custom = { '.git', 'node_modules', '.cache' }, dotfiles = true },
-        open_on_tab = false,
+        open_on_tab = true,
         auto_reload_on_write = true,
         disable_netrw = true,
         hijack_netrw = true,

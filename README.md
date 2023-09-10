@@ -57,6 +57,9 @@ https://github.com/powerline/fonts
 
 ### 一些插件的使用说明
 
+#### 关于lazyvim
+https://www.lazyvim.org/
+
 #### go 语言
 
 安装 gopls

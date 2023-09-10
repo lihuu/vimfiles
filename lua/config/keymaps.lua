@@ -3,20 +3,22 @@
 -- Add any additional keymaps here
 
 local function map(mode, lhs, rhs, opts)
-    local keys = require("lazy.core.handler").handlers.keys
-    ---@cast keys LazyKeysHandler
-    -- do not create the keymap if a lazy keys handler exists
-    if not keys.active[keys.parse({ lhs, mode = mode }).id] then
-      opts = opts or {}
-      opts.silent = opts.silent ~= false
-      if opts.remap and not vim.g.vscode then
-        opts.remap = nil
-      end
-      vim.keymap.set(mode, lhs, rhs, opts)
+  local keys = require("lazy.core.handler").handlers.keys
+  ---@cast keys LazyKeysHandler
+  -- do not create the keymap if a lazy keys handler exists
+  if not keys.active[keys.parse({ lhs, mode = mode }).id] then
+    opts = opts or {}
+    opts.silent = opts.silent ~= false
+    if opts.remap and not vim.g.vscode then
+      opts.remap = nil
     end
+    vim.keymap.set(mode, lhs, rhs, opts)
   end
+end
 
-map('n', '<leader>bn',':tabnew<cr>',{desc="New tab"})
-map('n', '<leader>l',':tabnext<cr>',{desc="Next tab"})
-map('n', '<leader>h',':tabpre<cr>',{desc="Next pre"})
-map('n', '<leader>bk',':tabdelete<cr>',{desc="Close tab"})
+map("n", "<leader>bn", ":tabnew<cr>", { desc = "New tab" })
+map("n", "<leader>l", ":BufferLineCycleNext<cr>", { desc = "Next buffer" })
+map("n", "<leader>h", ":BufferLineCyclePrev<cr>", { desc = "Pre buffer" })
+map("n", "<leader>bk", ":bdelete<cr>", { desc = "Close buffer" })
+
+
