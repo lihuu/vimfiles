@@ -61,4 +61,10 @@ return {
     lazy = true,
     cmd = "Neogit",
   },
+  {
+    "smoka7/hop.nvim",
+    version = "*",
+    opts = {},
+    config = config.hop,
+  },
 }
