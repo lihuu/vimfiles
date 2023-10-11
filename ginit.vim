@@ -1,5 +1,6 @@
 " neovim-qt config
 "
+set mouse=a
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 

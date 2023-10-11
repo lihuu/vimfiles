@@ -4,7 +4,7 @@
 
 local function map(mode, lhs, rhs, opts)
   local keys = require("lazy.core.handler").handlers.keys
-  ---@cast keys LazyKeysHandler
+  -- @cast keys LazyKeysHandler
   -- do not create the keymap if a lazy keys handler exists
   if not keys.active[keys.parse({ lhs, mode = mode }).id] then
     opts = opts or {}
@@ -25,3 +25,4 @@ map("n", "<c-j>", "5j", { desc = "5 times j" })
 map("n", "<c-k>", "5k", { desc = "5 times k" })
 map("n", "<c-h>", "5h", { desc = "5 times h" })
 map("n", "<c-l>", "5l", { desc = "5 times l" })
+map("n", "<leader>fp", ":e $MYVIMRC<cr>", { desc = "open my vim config file" })
