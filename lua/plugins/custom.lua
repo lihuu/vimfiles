@@ -67,4 +67,8 @@ return {
     opts = {},
     config = config.hop,
   },
+  {
+    "notjedi/nvim-rooter.lua",
+    config = config.nvim_rooter,
+  },
 }

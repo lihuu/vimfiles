@@ -27,8 +27,8 @@ function config.nvim_tree()
     auto_reload_on_write = true,
     disable_netrw = true,
     hijack_netrw = true,
-    update_cwd = false,
-    update_focused_file = { enable = true, update_cwd = false, ignore_list = {} },
+    update_cwd = true,
+    update_focused_file = { enable = true, update_cwd = true, ignore_list = {} },
     diagnostics = {
       enable = true,
       icons = { hint = "", info = "", warning = "", error = "" },
@@ -77,7 +77,7 @@ function config.nvim_tree()
       width = 30,
       side = "left",
       -- auto_resize = true,
-      hide_root_folder = false,
+      -- hide_root_folder = false,
     },
     log = {
       enable = false,
@@ -92,6 +92,15 @@ function config.hop()
   local hop = require("hop")
   hop.setup({})
   vim.keymap.set("n", "<leader><leader>w", ":HopWord<cr>", { remap = true })
+end
+
+function config.nvim_rooter()
+  require("nvim-rooter").setup({
+    rooter_patterns = { ".git", ".hg", ".svn" },
+    trigger_patterns = { "*" },
+    manual = false,
+    fallback_to_parent = true,
+  })
 end
 
 return config
