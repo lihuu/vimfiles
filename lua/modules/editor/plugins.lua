@@ -8,7 +8,7 @@ editor['junegunn/vim-easy-align'] = {opt = true, cmd = 'EasyAlign'}
 -- https://github.com/itchyny/vim-cursorword
 editor['itchyny/vim-cursorword'] = {
   opt = true,
-  event = {'BufReadPre', 'BufNewFile'},
+  event = {'BufReadPost', 'BufNewFile'},
   config = conf.vim_cursorwod
 }
 
@@ -24,6 +24,16 @@ editor['terrortylor/nvim-comment'] = {
   end
 }
 
+--[[
+editor['startup-nvim/startup.nvim'] = {
+  opt = false,
+  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+  config = function()
+    require"startup".setup({theme = 'dashboard'})
+  end
+}
+--]]
+
 -- https://github.com/simrat39/symbols-outline.nvim
 editor['simrat39/symbols-outline.nvim'] = {
   opt = true,
@@ -33,7 +43,7 @@ editor['simrat39/symbols-outline.nvim'] = {
 
 -- https://github.com/nvim-treesitter/nvim-treesitter
 editor['nvim-treesitter/nvim-treesitter'] = {
-  opt = true,
+  opt = false,
   run = ':TSUpdate',
   event = 'BufRead',
   config = conf.nvim_treesitter,
@@ -53,10 +63,16 @@ editor['romgrk/nvim-treesitter-context'] = {
 }
 
 -- https://github.com/p00f/nvim-ts-rainbow
-editor['p00f/nvim-ts-rainbow'] = {
-  opt = true,
-  after = 'nvim-treesitter',
-  event = 'BufRead'
+-- editor['lihuu/nvim-ts-rainbow'] = {
+--  opt = false,
+--  after = 'nvim-treesitter',
+--  event = 'BufRead',
+-- commit = commits.nvim_ts_rainbow
+-- }
+
+editor['HiPhish/nvim-ts-rainbow2'] = {
+ opt = false,
+ after = 'nvim-treesitter',
 }
 
 -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
@@ -135,7 +151,8 @@ editor['norcalli/nvim-colorizer.lua'] = {
 editor['rmagatti/auto-session'] = {
   opt = true,
   cmd = {'SaveSession', 'RestoreSession', 'DeleteSession'},
-  config = conf.auto_session
+  config = conf.auto_session,
+  commit = commits.auto_session
 }
 
 -- https://github.com/jdhao/better-escape.vim
@@ -158,4 +175,7 @@ editor['rcarriga/nvim-dap-ui'] = {
 -- https://github.com/airblade/vim-rooter
 editor['airblade/vim-rooter'] = {opt = false}
 
+editor['olimorris/onedarkpro.nvim']= {opt=false}
+
 return editor
+

@@ -6,6 +6,7 @@
 "   * E.g. map gh <Action>(ShowErrorDescription) <- execute hover on gh.
 "   * ⚠️ Mappings to <Action> don't work with noremap
 "
+" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 
 
 let mapleader=" "
@@ -21,7 +22,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
 Plug 'machakann/vim-highlightedyank'
 Plug 'chrisbra/matchit'
+
 Plug 'tpope/vim-surround'
+"vim surround 模拟  
+"1. 选中内容周围添加引号，可以在visual 模式下面 先选中内容，然后按下 S"
+
 Plug 'terryma/vim-multiple-cursors'
 
 "Plug end
@@ -61,7 +66,7 @@ nnoremap <c-l> 5l
 nnoremap <Leader><Leader>r :action Run<CR>
 nnoremap <Leader><Leader>d :action Debug<CR>
 
-"重构相关的快捷键
+"重构相关的快捷键，必须选中的情况下才能触发
 vnoremap <Leader><Leader>m :action ExtractMethod<CR>
 vnoremap <Leader><Leader>i :action Inline<CR>
 vnoremap <Leader><Leader>v :action IntroduceVariable<CR>
@@ -70,6 +75,10 @@ vnoremap <Leader><Leader>c :action IntroduceConstant<CR>
 vnoremap <Leader><Leader>p :action IntroduceParameter<CR>
 vnoremap <Leader><Leader>P :action IntroduceFunctionalParameter<CR>
 vnoremap <Leader><Leader>R :action Rename<CR>
+"其他的快捷键
+"
+ nnoremap <Leader>db :action ActivateDatabaseToolWindow<CR>
+
 
 
 

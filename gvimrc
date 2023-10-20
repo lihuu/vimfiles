@@ -16,7 +16,8 @@ if has('macunix')||has('mac')
   syntax on
   set nu
   syntax enable
-  colorscheme molokai
+  "colorscheme molokai
+  colorscheme onedark
   set ts=4
   set shiftwidth=4
   set expandtab

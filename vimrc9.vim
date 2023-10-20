@@ -31,11 +31,16 @@ set textwidth=100
 set cursorline
 set autoread
 set noshowmode
+set so=5
+set ruler
+
+set incsearch
 
 if has('termguicolors')
     set termguicolors
 endif
-colorscheme molokai
+#colorscheme molokai
+colorscheme onedark
 if ! isGui
     set t_Co=256
     set mouse=a

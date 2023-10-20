@@ -17,5 +17,6 @@
   "prettier.trailingComma": "all",
   "prettier.bracketSpacing": true,
   "prettier.semi": true,
-  "prettier.tslintIntegration": false
+  "prettier.tslintIntegration": false,
+  "snippets.ultisnips.pythonPrompt": false
 }

@@ -148,7 +148,7 @@ local lsp_installer = require("nvim-lsp-installer")
 local function install_severs()
   local servers = {
     "tsserver", 'bashls', 'cmake', 'cssls', 'clangd', 'html', 'jsonls', 'gopls',
-    'jdtls', 'pyright', 'powershell_es', 'lemminx', 'sumneko_lua', 'vimls',
+    'jdtls', 'pyright', 'powershell_es', 'lemminx', 'lua_ls', 'vimls',
     'diagnosticls', 'dockerls', 'sqlls', 'yamlls'
   }
   -- 'denols','dockerls','cmake','sqlls','yamlls'
@@ -157,7 +157,6 @@ local function install_severs()
     if ok then
       if not server:is_installed() then
         server:install()
-        -- print(vim.inspect('start to install lsp server:' .. name))
       end
     end
   end
@@ -166,7 +165,7 @@ end
 local function setup_servers()
   install_severs()
   lsp_installer.on_server_ready(function(server)
-    if server.name == 'lua' or server.name == 'sumneko_lua' then
+    if server.name == 'lua_ls' then
       server:setup({
         capabilities = capabilities,
         flags = {debounce_text_changes = 500},

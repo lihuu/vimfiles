@@ -9,6 +9,9 @@ function config.edge()
   vim.g.edge_show_eob = 1
   vim.g.edge_better_performance = 1
 end
+function config.onedark()
+  require('onedark').setup({style = 'darker'})
+end
 
 function config.lualine()
   local function lsp()

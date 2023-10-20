@@ -1,3 +1,5 @@
+let s:isMac = has('mac')||has('macunix')
+let s:isLinux = has('linux')
 "Deleted plugins {{{
 "Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 "Plug 'FuzzyFinder'
@@ -117,4 +119,13 @@ endif
 
 Plug 'dstein64/vim-startuptime',{'on':['StartupTime']}
 Plug 'itchyny/vim-cursorword'
+
+if s:isMac||s:isLinux
+    Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
+endif
+
+if s:isMac
+    Plug 'github/copilot.vim'
+endif
+
 
