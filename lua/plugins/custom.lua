@@ -71,4 +71,12 @@ return {
     "notjedi/nvim-rooter.lua",
     config = config.nvim_rooter,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      autotag = {
+        enable = true,
+      },
+    },
+  },
 }
