@@ -1,1 +1,12 @@
-{"extras":[],"news":{"NEWS.md":"2123"},"version":2,"hashes":{"C:\/Users\/lihu1\/AppData\/Local\/nvim-data\/lazy\/LazyVim\/NEWS.md":"2035"}}
+{
+  "extras": [
+    "lazyvim.plugins.extras.lang.markdown"
+  ],
+  "hashes": {
+    "C:/Users/lihu1/AppData/Local/nvim-data/lazy/LazyVim/NEWS.md": "2035"
+  },
+  "news": {
+    "NEWS.md": "2123"
+  },
+  "version": 2
+}
