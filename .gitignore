@@ -14,3 +14,5 @@ session
 .vscode
 *.swl
 tags*
+
+.idea
