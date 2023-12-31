@@ -79,4 +79,8 @@ return {
       },
     },
   },
+  {
+    "rainbowhxch/accelerated-jk.nvim",
+    config = config.move_faster,
+  },
 }
