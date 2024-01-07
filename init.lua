@@ -3,6 +3,7 @@ require("config.lazy")
 
 if vim.g.neovide then
   -- config neovide
+  local global = require("core.global")
   vim.g.neovide_transparency = 0.9
   vim.g.neovide_scroll_animation_length = 0.3
   vim.g.neovide_hide_mouse_when_typing = true
@@ -39,4 +40,9 @@ if vim.g.neovide then
     pattern = "[/\\?]",
     callback = set_ime,
   })
+
+  if global.is_mac then
+    -- 针对mac系统的neovide的配置
+    vim.opt.guifont = "JetBrainsMono Nerd Font:h18"
+  end
 end
