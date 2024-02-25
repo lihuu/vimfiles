@@ -5,7 +5,7 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = "NvimTreeToggle",
-    keys = { { "<leader>fn", "<cmd>NvimTreeToggle<cr>", "Toggle NvimTree" } },
+    keys = { { "<leader>fe", "<cmd>NvimTreeToggle<cr>", "Toggle NvimTree" } },
     config = config.nvim_tree,
   },
   {
@@ -82,5 +82,33 @@ return {
   {
     "rainbowhxch/accelerated-jk.nvim",
     config = config.move_faster,
+  },
+  {
+    "hrsh7th/cmp-nvim-lua",
+    config = function()
+      require("cmp").setup({
+        sources = {
+          { name = "nvim_lua" },
+        },
+      })
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        lua_ls = {
+          diagnostics = {
+            globals = { "vim", "hs", "spoon", "ngx" },
+          },
+          workspace = {
+            library = {
+              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+              [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+            },
+          },
+        },
+      },
+    },
   },
 }
