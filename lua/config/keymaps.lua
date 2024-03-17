@@ -1,6 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+local global = require("core.global")
 
 local function map(mode, lhs, rhs, opts)
   local keys = require("lazy.core.handler").handlers.keys
@@ -28,5 +29,8 @@ map("n", "<c-l>", "5l", { desc = "5 times l" })
 map("n", "<leader>fp", ":e $MYVIMRC<cr>", { desc = "open my vim config file" })
 map("n", "j", "<Plug>(accelerated_jk_gj)", {})
 map("n", "k", "<Plug>(accelerated_jk_gk)", {})
-map("n", "<c-v>", '"+gP', { desc = "paste text in normal mode" })
-map("v", "<c-c>", '"+y', { desc = "copy text" })
+if global.is_windows then
+  -- only windows need this
+  map("n", "<c-v>", '"+gP', { desc = "paste text in normal mode" })
+  map("v", "<c-c>", '"+y', { desc = "copy text" })
+end
