@@ -17,6 +17,8 @@ set hlsearch
 set incsearch
 set noerrorbells
 set novisualbell
+set which-key
+set timeoutlen=5000
 "Plug start
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
@@ -29,6 +31,47 @@ Plug 'tpope/vim-surround'
 
 Plug 'terryma/vim-multiple-cursors'
 
+">
+"        <count>ai         (A)n (I)ndentation level and line above.
+"        <count>ii         (I)nner (I)ndentation level (no line above).
+"        <count>aI         (A)n (I)ndentation level and lines above/below.
+"        <count>iI         (I)nner (I)ndentation level (no lines above/below).
+"<
+
+Plug 'vim-indent-object'
+
+"Comment stuff out.  Then uncomment it later.  Relies on 'commentstring' to be
+"correctly set, or uses b:commentary_format if it is set.
+
+"Assign b:commentary_startofline to insert comment characters at column 1
+"regardless of indentation.
+
+""                                                *gc*
+"gc{motion}              Comment or uncomment lines that {motion} moves over.
+
+""                                                *gcc*
+"gcc                     Comment or uncomment [count] lines.
+
+""                                                *v_gc*
+""{Visual}gc              Comment or uncomment the highlighted lines.
+
+                                                ""*o_gc*
+"gc                      Text object for a comment (operator pending mode
+""                        only.)
+"
+                                                ""*gcgc* *gcu*
+"gcgc                    Uncomment the current and adjacent commented lines.
+"gcu
+                                                "*:Commentary*
+"":[range]Commentary      Comment or uncomment [range] lines
+
+"The |User| CommentaryPost autocommand fires after a successful operation and
+"can be used for advanced customization.
+
+ "vim:tw=78:et:ft=help:norl:
+Plug 'vim-commentary'
+
+
 "Plug end
 "set vb t_vb=""
 "set pythonthreedll=python36.dll
@@ -36,6 +79,7 @@ set visualbell t_vb=
 set noundofile
 set nobackup
 set noswapfile
+set vim-paragraph-motion
 
 "Custome key mappings
 
