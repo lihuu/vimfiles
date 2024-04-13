@@ -84,16 +84,6 @@ return {
     config = config.move_faster,
   },
   {
-    "hrsh7th/cmp-nvim-lua",
-    config = function()
-      require("cmp").setup({
-        sources = {
-          { name = "nvim_lua" },
-        },
-      })
-    end,
-  },
-  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
@@ -108,6 +98,18 @@ return {
             },
           },
         },
+        eslint = {},
+      },
+      setup = {
+        eslint = function()
+          require("lazyvim.util").lsp.on_attach(function(client)
+            if client.name == "eslint" then
+              client.server_capabilities.documentFormattingProvider = true
+            elseif client.name == "tsserver" then
+              client.server_capabilities.documentFormattingProvider = false
+            end
+          end)
+        end,
       },
     },
   },

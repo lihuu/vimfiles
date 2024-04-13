@@ -21,9 +21,9 @@ function config.nvim_tree()
         resize_window = true,
       },
     },
-    defaults={
+    defaults = {
       lazh = false,
-      version = false
+      version = false,
     },
     git = { enable = true, ignore = true, timeout = 400 },
     filters = { custom = { ".git", "node_modules", ".cache" }, dotfiles = true },
