@@ -125,8 +125,6 @@ if s:isMac||s:isLinux
     Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 endif
 
-if s:isMac
-    Plug 'github/copilot.vim'
-endif
+Plug 'github/copilot.vim'
 
 
