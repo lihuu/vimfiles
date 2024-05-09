@@ -7,6 +7,13 @@
 "   * ⚠️ Mappings to <Action> don't work with noremap
 "
 " https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+" 需要安装插件
+" ideavim
+" Ideavim-EasyMotion
+" IdeaVimExtension 
+" which-key
+" CodeGlance Pro
+" TranslateAction
 
 
 let mapleader=" "
@@ -19,6 +26,7 @@ set noerrorbells
 set novisualbell
 set which-key
 set timeoutlen=5000
+ set keep-english-in-normal
 "Plug start
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
@@ -125,8 +133,6 @@ vnoremap <Leader><Leader>R :action Rename<CR>
 "其他的快捷键
 "
  nnoremap <Leader>db :action ActivateDatabaseToolWindow<CR>
-
-
 
 
 
