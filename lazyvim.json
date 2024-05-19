@@ -1,13 +1,9 @@
 {
-  "extras": [
-    "lazyvim.plugins.extras.coding.copilot",
-    "lazyvim.plugins.extras.lang.markdown"
-  ],
   "hashes": {
     "C:/Users/lihu1/AppData/Local/nvim-data/lazy/LazyVim/NEWS.md": "2035"
   },
   "news": {
-    "NEWS.md": "3314"
+    "NEWS.md": "4944"
   },
-  "version": 3
+  "version": 4
 }
