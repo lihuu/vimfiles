@@ -4,16 +4,16 @@ set mouse=a
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 
-if exists(':GuiFont')
+"if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-    if s:isWindows
-        GuiFont! Consolas\ NF:h14
-    elseif s:isMac
-        GuiFont! Consolas\ NF:h25
-    else
-        GuiFont! Consolas\ NF:h14
-    endif
-endif
+"    if s:isWindows
+"        GuiFont! Consolas\ NF:h14
+"    elseif s:isMac
+"        GuiFont! JetBrainsMono\ Nerd\ Font:h25
+"    else
+"        GuiFont! Consolas\ NF:h14
+"    endif
+"endif
 
 " Disable GUI Tabline
 if exists(':GuiTabline')
@@ -41,10 +41,12 @@ if exists('GuiRenderLigatures')
 endif
 
 " Right Click Context Menu (Copy-Cut-Paste)
-nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
-inoremap <silent><RightMouse> <Esc>:call GuiShowContextMenu()<CR>
-xnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>gv
-snoremap <silent><RightMouse> <C-G>:call GuiShowContextMenu()<CR>gv
+if s:isMac
+  nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
+  inoremap <silent><RightMouse> <Esc>:call GuiShowContextMenu()<CR>
+  xnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>gv
+  snoremap <silent><RightMouse> <C-G>:call GuiShowContextMenu()<CR>gv
+endif
 
 call rpcnotify(0, 'Gui', 'WindowOpacity', 0.9)
 call rpcnotify(0, "Gui","WindowMaximized",1)
