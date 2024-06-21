@@ -129,7 +129,7 @@ vnoremap <Leader><Leader>f :action IntroduceField<CR>
 vnoremap <Leader><Leader>c :action IntroduceConstant<CR>
 vnoremap <Leader><Leader>p :action IntroduceParameter<CR>
 vnoremap <Leader><Leader>P :action IntroduceFunctionalParameter<CR>
-vnoremap <Leader><Leader>R :action Rename<CR>
+vnoremap <Leader><Leader>r :action RenameElement<CR>
 "其他的快捷键
 "
  nnoremap <Leader>db :action ActivateDatabaseToolWindow<CR>
