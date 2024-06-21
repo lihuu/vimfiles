@@ -122,14 +122,15 @@ nnoremap <Leader><Leader>r :action Run<CR>
 nnoremap <Leader><Leader>d :action Debug<CR>
 
 "重构相关的快捷键，必须选中的情况下才能触发
-vnoremap <Leader><Leader>m :action ExtractMethod<CR>
-vnoremap <Leader><Leader>i :action Inline<CR>
-vnoremap <Leader><Leader>v :action IntroduceVariable<CR>
-vnoremap <Leader><Leader>f :action IntroduceField<CR>
-vnoremap <Leader><Leader>c :action IntroduceConstant<CR>
-vnoremap <Leader><Leader>p :action IntroduceParameter<CR>
-vnoremap <Leader><Leader>P :action IntroduceFunctionalParameter<CR>
-vnoremap <Leader><Leader>r :action RenameElement<CR>
+vnoremap <Leader><Leader>m <ESC>:action ExtractMethod<CR>
+vnoremap <Leader><Leader>i <ESC>:action Inline<CR>
+vnoremap <Leader><Leader>v <ESC>:action IntroduceVariable<CR>
+vnoremap <Leader><Leader>f <ESC>:action IntroduceField<CR>
+vnoremap <Leader><Leader>c <ESC>:action IntroduceConstant<CR>
+vnoremap <Leader><Leader>p <ESC>:action IntroduceParameter<CR>
+vnoremap <Leader><Leader>P <ESC>:action IntroduceFunctionalParameter<CR>
+"vnoremap <Leader><Leader>r :action RenameElement<CR><ESC>gh
+vnoremap <Leader><Leader>r <ESC>:action RenameElement<CR>
 "其他的快捷键
 "
  nnoremap <Leader>db :action ActivateDatabaseToolWindow<CR>
