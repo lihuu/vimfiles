@@ -26,8 +26,8 @@ if has('macunix')||has('mac')
   set fdm=marker
   "set guifont=Menlo:h16
   set macligatures
-  "set guifont=Fira\ Code:h16
-  set guifont=Consolas\ NF:h20
+  set guifont=Fira\ Code:h16
+  "set guifont=Consolas\ NF:h20
   "set guifont=Menlo\ Regular:h20
   set t_Co=256
   set background=dark

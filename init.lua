@@ -41,6 +41,10 @@ if vim.g.neovide then
     callback = set_ime,
   })
 
+  if global.is_windows then
+    vim.opt.guifont = "BlexMono Nerd Font:h14"
+  end
+
   if global.is_mac then
     -- 针对mac系统的neovide的配置
     vim.opt.guifont = "JetBrainsMono Nerd Font:h18"

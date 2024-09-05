@@ -1,19 +1,26 @@
 " neovim-qt config
 "
+"
+"
 set mouse=a
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 
-"if exists(':GuiFont')
+if s:isWindows
+  source $USERPROFILE/AppData/Local/nvim/nvim_gui_shim.vim
+endif
+
+
+if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-"    if s:isWindows
-"        GuiFont! Consolas\ NF:h14
-"    elseif s:isMac
-"        GuiFont! JetBrainsMono\ Nerd\ Font:h25
-"    else
-"        GuiFont! Consolas\ NF:h14
-"    endif
-"endif
+    if s:isWindows
+        GuiFont! BlexMono\ Nerd\ Font:h14
+    elseif s:isMac
+        GuiFont! JetBrainsMono\ Nerd\ Font:h25
+    else
+        GuiFont! Consolas\ NF:h14
+    endif
+endif
 
 " Disable GUI Tabline
 if exists(':GuiTabline')
