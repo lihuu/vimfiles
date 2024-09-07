@@ -50,3 +50,7 @@ if vim.g.neovide then
     vim.opt.guifont = "JetBrainsMono Nerd Font:h18"
   end
 end
+
+local function file_exists(path)
+  return vim.loop.fs_stat(path) ~= nil
+end

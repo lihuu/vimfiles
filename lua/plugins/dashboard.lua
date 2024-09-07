@@ -1,5 +1,4 @@
 --Generate logo on this website: https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=NEOVIM
-
 local neovim = [[
 ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
 ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
@@ -41,9 +40,19 @@ local function process(logo)
   return vim.split(logo, "\n")
 end
 
-return {
+local logos = {
   neovim = process(neovim),
   lihuvim = process(lihuvim),
   lihuu = process(lihuu),
   silentstorm = process(silentstorm),
+}
+
+return {
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    opts = function(_, opts)
+      opts.config.header = logos.lihuvim
+    end,
+  },
 }

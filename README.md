@@ -58,6 +58,7 @@ https://github.com/powerline/fonts
 ### 一些插件的使用说明
 
 #### 关于lazyvim
+
 https://www.lazyvim.org/
 
 #### go 语言
@@ -176,8 +177,8 @@ vim 的命令的结构，基本符合英文的语法，（动词 + 名词）的�
 #### vim-surround 插件使用
 
 ```javascript
-const message = '';
-if ((message = 'Hello world')) {
+const message = "";
+if ((message = "Hello world")) {
   if (true) {
     console.log(message);
   }
@@ -239,4 +240,9 @@ https://vim.fandom.com/wiki/Best_Vim_Tips#Really_useful
 ```bash
 # 9 表示日志的级别
 vim -V9myVim1.log
+
 ```
+
+#### vim学习资料
+
+https://lazyvim-ambitious-devs.phillips.codes/
