@@ -8,4 +8,7 @@ return {
     keys = { { "<leader>fe", "<cmd>NvimTreeToggle<cr>", "Toggle NvimTree" } },
     config = config.nvim_tree,
   },
+  {
+    "ellisonleao/gruvbox.nvim",
+  },
 }

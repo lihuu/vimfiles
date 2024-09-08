@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 local global = require("core.global")
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
@@ -47,8 +47,8 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax", "grubox" } },
-  colorscheme = "grubox",
+  install = { colorscheme = { "tokyonight", "habamax", "grubox", "gruvbox" } },
+  colorscheme = "gruvbox",
   checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {

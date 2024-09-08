@@ -4,6 +4,8 @@
 --
 local opt = vim.opt
 
+local global = require("core.global")
+
 -- This file is automatically loaded by plugins.core
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -105,3 +107,7 @@ end
 vim.g.markdown_recommended_style = 0
 
 opt.relativenumber = false
+
+--if global.is_windows then
+--  opt.fileformats = { "unix" }
+--end
