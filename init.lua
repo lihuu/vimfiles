@@ -49,6 +49,12 @@ if vim.g.neovide then
     -- 针对mac系统的neovide的配置
     vim.opt.guifont = "JetBrainsMono Nerd Font:h18"
   end
+
+  vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+      vim.cmd("lcd ~/")
+    end,
+  })
 end
 
 local function file_exists(path)
