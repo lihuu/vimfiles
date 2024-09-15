@@ -50,14 +50,4 @@ if vim.g.neovide then
     -- vim.opt.guifont = "JetBrainsMono Nerd Font:h18"
     vim.opt.guifont = "BlexMono Nerd Font:h18"
   end
-
-  vim.api.nvim_create_autocmd("VimEnter", {
-    callback = function()
-      vim.cmd("lcd ~/")
-    end,
-  })
-end
-
-local function file_exists(path)
-  return vim._load_package.fs_stat(path) ~= nil
 end
