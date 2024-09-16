@@ -115,8 +115,6 @@ https://github.com/wbthomason/packer.nvim
 - PackerSync 相当于先执行 `PackerUpdate` 然后执行 `PackerCompile`
 - PackerLoad 立即加载 opt 插件
 
-### 其他
-
 #### coc.nvim
 
 coc.nvim 这个插件对 nodejs 有版本的要求，可能系统默认的版本不能符合要求。
@@ -246,3 +244,43 @@ vim -V9myVim1.log
 #### vim学习资料
 
 https://lazyvim-ambitious-devs.phillips.codes/
+
+#### 脚本调试
+
+在 Vim 中查看脚本的加载情况可以使用 :scriptnames 命令。这个命令会列出 Vim 在当前会话中加载的所有脚本文件，包括插件、配置文件、颜色方案等。每个脚本都有一个编号和路径，方便查看具体加载的文件。
+
+```
+:scriptnames
+```
+
+可以使用以下方法将输出内容捕获到一个新的 buffer 中进行查看：
+
+##### 方法一：使用 `redir` 命令
+
+1. **打开 Vim** 并执行以下命令来将 `:scriptnames` 的输出重定向到一个寄存器，然后将其写入当前 buffer：
+
+   ```vim
+   :redir @a
+   :silent scriptnames
+   :redir END
+   :new
+   :put a
+   ```
+
+   解释：
+   - `:redir @a`：将输出重定向到寄存器 `a`。
+   - `:silent scriptnames`：执行 `:scriptnames` 命令，但不在命令行中显示输出。
+   - `:redir END`：结束重定向。
+   - `:new`：打开一个新的 buffer。
+   - `:put a`：将寄存器 `a` 的内容插入到新 buffer 中。
+
+##### 方法二：使用 `:execute` 命令（Vim 8+）
+
+如果你使用的是 Vim 8 及以上版本，可以通过 `execute` 结合 `setline()` 命令直接将输出放入 buffer 中：
+
+```vim
+:new
+:call setline(1, execute('scriptnames'))
+```
+
+这个命令直接创建一个新 buffer，并将 `:scriptnames` 的输出插入到这个 buffer 的第一行开始。

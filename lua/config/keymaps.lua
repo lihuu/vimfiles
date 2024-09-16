@@ -36,3 +36,11 @@ if global.is_windows then
   map("n", "<c-v>", '"+gP', { desc = "paste text in normal mode" })
   map("v", "<c-c>", '"+y', { desc = "copy text" })
 end
+
+local function show_scriptnames_in_buffer()
+  vim.cmd("new")
+  local output = vim.fn.execute("scriptnames")
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, vim.split(output, "\n"))
+end
+
+vim.api.nvim_create_user_command("ShowScriptnames", show_scriptnames_in_buffer, {})

@@ -48,8 +48,6 @@ endif
 set fdm=marker
 if isWindows && isGui
     set guifont=Consolas\ NF:h16:i
-else
-    set guifont=Monospace\ Italic\ 16
 endif
 
 if isMac && has("gui_running")
@@ -237,6 +235,7 @@ def CopyDiffToBuffer(input: list<string>, output: list<string>, bufname: string)
     redraw!
 enddef
 
+
 #调用lua-format 格式化lua脚本
 #参考：https://github.com/andrejlevkovitch/vim-lua-format
 def g:FormatLua()
@@ -269,3 +268,12 @@ def g:FormatLua()
 enddef
 
 #autocmd BufWritePost *.go silent! !gofmt -w %
+def ShowScriptnamesInBuffer()
+  tabnew
+  const input = execute('scriptnames')
+  const result = split(input, "\n")
+  call setline(1, result)
+enddef
+
+command! ShowScriptnames call ShowScriptnamesInBuffer()
+

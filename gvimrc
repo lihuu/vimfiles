@@ -1,22 +1,8 @@
-" An example for a gvimrc file.
-" The commands in this are executed when the GUI is started, after the vimrc
-" has been executed.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2016 Apr 05
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.gvimrc
-"	      for Amiga:  s:.gvimrc
-"  for MS-DOS and Win32:  $VIM\_gvimrc
-"	    for OpenVMS:  sys$login:.gvimrc
-
-if has('macunix')||has('mac') 
+if has('gui_macvim')
   set nocompatible
   syntax on
   set nu
   syntax enable
-  "colorscheme molokai
   colorscheme onedark
   set ts=4
   set shiftwidth=4
@@ -24,17 +10,12 @@ if has('macunix')||has('mac')
   set ch=2		" Make command line two lines high
   set mousehide		" Hide the mouse when typing text
   set fdm=marker
-  "set guifont=Menlo:h16
   set macligatures
-  set guifont=Fira\ Code:h16
-  "set guifont=Consolas\ NF:h20
-  "set guifont=Menlo\ Regular:h20
+  set guifont=BlexMono\ Nerd\ Font:h18
   set t_Co=256
   set background=dark
   set transparency=20
-
   set autoread
-  "colorscheme macvim
   map <S-Insert> <MiddleMouse>
   map! <S-Insert> <MiddleMouse>
 endif
