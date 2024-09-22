@@ -1,6 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-
+local vim = require("core.global").vim
 if vim.g.neovide then
   -- config neovide
   local global = require("core.global")

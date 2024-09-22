@@ -81,13 +81,25 @@ return {
     opts = {
       servers = {
         lua_ls = {
-          diagnostics = {
-            globals = { "vim", "hs", "spoon", "ngx" },
-          },
-          workspace = {
-            library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = { "vim", "hs", "spoon", "ngx" },
+              },
+              workspace = {
+                library = {
+                  vim.fn.expand("$VIMRUNTIME/lua"),
+                  vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
+                },
+              },
+            },
+            hint = {
+              enable = true,
+              setType = false,
+              paramType = true,
+              paramName = "Disable",
+              semicolon = "Disable",
+              arrayIndex = "Disable",
             },
           },
         },

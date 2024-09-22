@@ -1,4 +1,6 @@
-local global = {}
+local global = {
+  vim = vim,
+}
 
 function global:load_variables()
   local os_name = vim.uv.os_uname().sysname
