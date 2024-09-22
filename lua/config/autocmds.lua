@@ -123,3 +123,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.shiftspace = 4
   end,
 })
+
+-- just disable annoying spell check for markdown and txt
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "txt" },
+  callback = function()
+    vim.opt_local.spell = false
+  end,
+})
