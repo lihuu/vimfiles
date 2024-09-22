@@ -39,7 +39,6 @@ set incsearch
 if has('termguicolors')
     set termguicolors
 endif
-#colorscheme molokai
 colorscheme onedark
 if ! isGui
     set t_Co=256
@@ -47,7 +46,7 @@ if ! isGui
 endif
 set fdm=marker
 if isWindows && isGui
-    set guifont=Consolas\ NF:h16:i
+    set guifont=BlexMono\ Nerd\ Font\ Mono:h16:i
 endif
 
 if isMac && has("gui_running")
@@ -74,11 +73,25 @@ g:mapleader = "\<space>"
 inoremap <c-u>  <ESC>~i
 nnoremap <leader>ev :silent! vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :silent! source $MYVIMRC<cr>
+noremap <c-j> 5j
+noremap <c-k> 5k
+noremap <c-h> 5h
+noremap <c-l> 5l
+noremap <leader>fp :e $MYVIMRC<cr>
+noremap <leader>s :sort<cr>
+nnoremap <silent> <leader>gg :GitGutterToggle<cr>
 cnoremap w!! w !sudo tee > /dev/null %
 
+# autocmd config
 autocmd FileType html set tabstop=2 shiftwidth=2
+autocmd BufWrite *.lua silent! call FormatLua()
+autocmd FileType typescriptreact,javascript,typescript,javascriptreact setlocal fdm=syntax
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html Prettier
 
 
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+# functions 
 def g:CompileAndRun()
     exec "w"
     if &filetype == 'c'
@@ -109,6 +122,21 @@ def g:CompileAndRun()
         exec "!firefox %.html &"
     endif
 enddef
+
+
+var config_dir = fnamemodify(substitute($MYVIMRC, '\\', '/', 'g'), ':h')
+
+def LoadConfigFile(name: string)
+    var config_file = config_dir .. "/" .. name
+    if filereadable(config_file)
+        execute 'source ' .. config_file
+    else
+        echohl WarningMsg
+        echom 'File not found: ' .. config_file
+        echohl None
+    endif
+enddef
+
 
 nmap <F5> :call g:CompileAndRun()<CR>
 
@@ -276,4 +304,36 @@ def ShowScriptnamesInBuffer()
 enddef
 
 command! ShowScriptnames call ShowScriptnamesInBuffer()
+
+
+if isWindows
+    autocmd GUIEnter * silent! WToggleClean
+    autocmd GUIEnter * silent! WSetAlpha 234
+endif
+
+
+
+g:jsx_ext_required = 0
+
+g:vimwiki_list = [{'path': '~/OneDrive/mywiki/'}]
+
+g:prettier#autoformat = 0                                                                                       
+
+LoadConfigFile('coc-config.vim')
+LoadConfigFile('markdown-preview-config.vim')
+g:airline_theme = 'virtualenv'
+
+g:rooter_silent_chdir = 1
+g:rooter_change_directory_for_non_project_files = 'current'
+g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json', 'pom.xml']
+g:gitgutter_enabled = 0
+
+g:startify_files_number = 20
+
+set foldlevelstart=99
+set foldcolumn=1
+
+set cmdheight=1
+
+iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
 

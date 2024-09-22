@@ -1,46 +1,22 @@
 let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
-"Deleted plugins {{{
-"Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
-"Plug 'FuzzyFinder'
-"Plug 'Gundo'
-"Plug 'JavaScript-Indent'
-"Plug 'L9'
-"Plug 'Mark'
-"Plug 'PasteBin.vim'
-"Plug 'VisIncr'
-"Plug 'gtags.vim'
-"Plug 'gtk-vim-syntax'
-"Plug 'jQuery'
-"Plug 'matchit.zip'
-"Plug 'codota/tabnine-vim'
-"Plug 'terryma/vim-multiple-cursors'
-"Plug 'starcraftman/vim-eclim'
-" }}}
 
+
+call plug#begin()
 "nerdtree 这个插件相关的插件
 Plug 'preservim/nerdtree',{'on':'NERDTreeToggle'}
-"Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 Plug 'mileszs/ack.vim',{'on':'Ack'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/lightline.vim'
-
 Plug 'othree/html5.vim', {'for':['html']}
 Plug 'mattn/emmet-vim', {'for':['html','javascript','typescript','typescriptreact','javascriptreact'],'on':'EmmetInstall'}
 Plug 'elzr/vim-json',{'for':'json'}
 Plug 'turbio/bracey.vim', {'for':'html','on':'Bracey','do':'cd server & npm install'}
-"Javascript typescript reactjs 相关的插件
-"Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6', {'for':['javascript','typescript','typescriptreact','javascriptreact']}
-"Plug 'mxw/vim-jsx'
 Plug 'yuezk/vim-js', {'for':['javascript','typescript','typescriptreact','javascriptreact']}
-"Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim', {'for':['typescript','typescriptreact']}
 Plug 'peitalin/vim-jsx-typescript',{'for':'typescriptreact'}
 
@@ -61,14 +37,11 @@ Plug 'toml-lang/toml', {'for':'toml'}
 "
 "彩虹括号
 Plug 'luochen1990/rainbow'
-"Plug Markdown config
 Plug 'plasticboy/vim-markdown', {'for':'markdown'}
 Plug 'tyru/open-browser.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' ,'for':'markdown' }
 Plug 'vimwiki/vimwiki',{'for':'vimwiki','on':['VimwikiIndex']}
 
-"Git config 
-"
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
@@ -82,9 +55,7 @@ Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript','typescript','typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'neoclide/coc.nvim',{'branch':'release'}
-"Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/c.vim',{'for':'c'}
 Plug 'davidhalter/jedi-vim',{'for':'python'}
@@ -115,7 +86,6 @@ if has('gui_running')
     " brew cask install font-hack-nerd-font
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-scripts/wimproved.vim'
-    "基于Ai的代码补全工具，但是需要依赖YouComplete，由于安装了coc可以安装coc-tabnine
 endif
 
 Plug 'dstein64/vim-startuptime',{'on':['StartupTime']}
@@ -126,5 +96,8 @@ if s:isMac||s:isLinux
 endif
 
 Plug 'github/copilot.vim'
+
+
+call plug#end()
 
 
