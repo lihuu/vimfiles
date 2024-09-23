@@ -24,6 +24,7 @@ set autoread
 set noshowmode
 set so=5
 set ruler
+set shortmess=atI
 
 set incsearch
 
