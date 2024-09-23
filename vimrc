@@ -16,3 +16,5 @@ endfunction
 call s:LoadConfigFile('plugins.vim')
 call s:LoadConfigFile('vimrc9.vim')
 
+let g:startify_session_autoload=0
+let g:startify_update_oldfiles=0
