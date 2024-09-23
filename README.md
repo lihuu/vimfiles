@@ -1,18 +1,18 @@
-## vim 配置文件
+# vim 配置文件
 
 windows 系统中
 在$HOME目录中执行`git clone https://github.com/lihuu/vimfiles.git`
 Linux或者Macos在，$目录执行`git clone https://github.com/lihuu/vimfiles.git .vim`
 
-### 基础
+## 基础
 
-#### vim 寄存器和剪贴板
+### vim 寄存器和剪贴板
 
-vim 中有多种寄存器，
+    vim 中有多种寄存器，
 
 - 无名寄存器，这个是我们默认的寄存器。例如在当前行执行 `yy` 就会把当前行复制到无名寄存器中。
 
-#### 需要额外安装的依赖
+### 需要额外安装的依赖
 
 ##### nodejs
 
@@ -268,6 +268,7 @@ https://lazyvim-ambitious-devs.phillips.codes/
    ```
 
    解释：
+
    - `:redir @a`：将输出重定向到寄存器 `a`。
    - `:silent scriptnames`：执行 `:scriptnames` 命令，但不在命令行中显示输出。
    - `:redir END`：结束重定向。
@@ -284,3 +285,19 @@ https://lazyvim-ambitious-devs.phillips.codes/
 ```
 
 这个命令直接创建一个新 buffer，并将 `:scriptnames` 的输出插入到这个 buffer 的第一行开始。
+
+## 其他
+
+排查vim启动时间，启动的时候加上 --startuptime 参数，例如：
+
+```bash
+vim --startuptime startuptime.log
+```
+
+启动的时候会生成一个日志文件，可以查看vim启动的时间
+
+```
+
+
+
+```

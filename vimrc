@@ -1,3 +1,6 @@
+if !has('vim9script')
+    finish
+endif
 let s:config_file = substitute($MYVIMRC, '\\', '/', 'g')
 let s:config_dir = fnamemodify(s:config_file, ':h')
 
@@ -10,6 +13,6 @@ function! s:LoadConfigFile(filename)
     endif
 endfunction
 
-call s:LoadConfigFile('vimrc9.vim')
 call s:LoadConfigFile('plugins.vim')
+call s:LoadConfigFile('vimrc9.vim')
 

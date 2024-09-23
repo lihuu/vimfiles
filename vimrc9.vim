@@ -1,18 +1,8 @@
 vim9script
-if !has('vim9script')
-    finish
-endif
-#使用vim9 script 编写的配置
 const isWindows = has('win16') || has('win32') || has('win64')
 const isMac = has('mac') || has('macunix')
 const isLinux = has('linux')
 const isGui = has('gui_running')
-var configPath: string
-if isWindows
-    configPath = "$HOME/vimfiles"
-else
-    configPath = "~/.vim"
-endif
 
 set nocompatible
 if !isWindows
@@ -27,6 +17,7 @@ syntax enable
 set ts=4
 set shiftwidth=4
 set expandtab
+set softtabstop=4
 set textwidth=100
 set cursorline
 set autoread
@@ -327,8 +318,6 @@ g:rooter_silent_chdir = 1
 g:rooter_change_directory_for_non_project_files = 'current'
 g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json', 'pom.xml']
 g:gitgutter_enabled = 0
-
-g:startify_files_number = 20
 
 set foldlevelstart=99
 set foldcolumn=1

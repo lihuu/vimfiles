@@ -51,7 +51,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'phanviet/vim-monokai-pro'
 
 Plug 'andreshazard/vim-freemarker'
-Plug 'mhinz/vim-startify'
+Plug 'lihuu/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/DrawIt'

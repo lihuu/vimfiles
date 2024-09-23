@@ -26,6 +26,7 @@ return {
         "yaml-language-server",
         "ruff",
         "ruff-lsp",
+        "vim-language-server",
       },
     },
   },
