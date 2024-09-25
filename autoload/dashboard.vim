@@ -58,32 +58,14 @@ function! dashboard#instance() abort
                 \ statusline=dashboard
 
     " 在这里绘制需要展示的图形
-    call s:paintDashBoard()
+    call dashboard#content#paintDashBoard(1)
     " 设置buf为未修改状态以及当前buffer为只读
 endfunction
 
 
 function! dashboard#resize()
     if &filetype == 'dashboard'
-        call s:paintDashBoard()
+      call dashboard#content#paintDashBoard(0)
     endif
-endfunction
-
-function! s:paintDashBoard()
-    " 在这里绘制需要展示的图形
-    if !&modifiable
-        setlocal modifiable
-    endif
-    if !s:buf_is_empty(0)
-        silent! %d _
-    endif
-    call dashboard#content#paintHeader()
-    let l:lines = s:GetRecentFiles()
-    let l:max_length = dashboard#utils#maxLineLength(l:lines)
-    let l:width = winwidth(0)
-    let l:padding = max([0, (l:width - l:max_length) / 2])
-    call append("$", repeat(" ", l:padding-4) . "Recent files:")
-    call dashboard#utils#centerLines(l:lines,l:padding)
-    silent! setlocal nomodified nomodifiable
 endfunction
 
