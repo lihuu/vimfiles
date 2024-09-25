@@ -77,6 +77,8 @@ Plug 'fatih/vim-go',{'for':'go','do': ':GoUpdateBinaries'}
 Plug 'dhruvasagar/vim-table-mode'
 "Plug 'andrejlevkovitch/vim-lua-format',{'for':'lua'}
 
+Plug 'ryanoasis/vim-devicons'
+
 "Gui only plugins
 if has('gui_running')
     "File icons plugin
@@ -84,7 +86,6 @@ if has('gui_running')
     "在MacOs中，如果安装了homebrew
     " brew tap homebrew/cask-fonts
     " brew cask install font-hack-nerd-font
-    Plug 'ryanoasis/vim-devicons'
     Plug 'vim-scripts/wimproved.vim'
 endif
 

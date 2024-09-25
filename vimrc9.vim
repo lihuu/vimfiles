@@ -112,6 +112,8 @@ def g:CompileAndRun()
     elseif &filetype == 'mkd'
         exec "!~/.vim/markdown.pl % > %.html &"
         exec "!firefox %.html &"
+    elseif &filetype == 'vim'
+        exec ":source %"
     endif
 enddef
 
