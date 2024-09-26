@@ -245,6 +245,8 @@ vim -V9myVim1.log
 
 https://lazyvim-ambitious-devs.phillips.codes/
 
+[vim9 script中文手册](https://yianwillis.github.io/vimcdoc/doc/vim9.html)
+
 #### 脚本调试
 
 在 Vim 中查看脚本的加载情况可以使用 :scriptnames 命令。这个命令会列出 Vim 在当前会话中加载的所有脚本文件，包括插件、配置文件、颜色方案等。每个脚本都有一个编号和路径，方便查看具体加载的文件。

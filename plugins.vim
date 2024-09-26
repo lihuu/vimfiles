@@ -78,6 +78,7 @@ Plug 'dhruvasagar/vim-table-mode'
 "Plug 'andrejlevkovitch/vim-lua-format',{'for':'lua'}
 
 Plug 'ryanoasis/vim-devicons'
+Plug 'lihuu/vim9-dashboard'
 
 "Gui only plugins
 if has('gui_running')
