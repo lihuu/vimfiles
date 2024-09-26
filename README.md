@@ -53,7 +53,9 @@ python 目前不能安装 python3.10 的，会出现版本的问题
 
 有些插件会依赖 powerline 字体 ，需要安装这些字体
 
-https://github.com/powerline/fonts
+[powerline fonts](https://github.com/powerline/fonts)
+[nerdfonts](https://github.com/ryanoasis/nerd-fonts)
+[nerdfonts cheat-sheet](https://www.nerdfonts.com/cheat-sheet)
 
 ### 一些插件的使用说明
 
