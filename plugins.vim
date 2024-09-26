@@ -1,5 +1,6 @@
 let s:isMac = has('mac')||has('macunix')
 let s:isLinux = has('linux')
+let s:isWindows = has('win32')||has('win64')
 
 
 call plug#begin()
@@ -97,8 +98,9 @@ if s:isMac||s:isLinux
     Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 endif
 
-Plug 'github/copilot.vim'
-
+if s:isWindows || s:isMac
+    Plug 'github/copilot.vim'
+endif
 
 call plug#end()
 
