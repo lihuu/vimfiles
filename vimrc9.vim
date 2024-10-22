@@ -45,9 +45,11 @@ if isMac && has("gui_running")
     set transparency=20
 endif
 set langmenu='en'
+if isWindows
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
 source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
 set fileencodings=utf-8,chinese,latin-1,latin1
 set encoding=utf-8
 set nobackup
@@ -337,3 +339,6 @@ g:vim_dashboard_custom_header = [
        '███████╗██║██║  ██║╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║',
        '╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝',
        '']
+
+
+g:autoim_toggle_shortcut = 'shift'

@@ -102,6 +102,9 @@ if s:isWindows || s:isMac
     Plug 'github/copilot.vim'
 endif
 
+
+Plug 'lipingcoding/autoim.vim'
+
 call plug#end()
 
 
