@@ -28,14 +28,16 @@ local spec = {
   { import = "lazyvim.plugins.extras.editor.refactoring" },
   { import = "lazyvim.plugins.extras.formatting.prettier" },
   { import = "lazyvim.plugins.extras.editor.telescope" },
+  { import = "lazyvim.plugins.extras.ai.copilot" },
+  { import = "lazyvim.plugins.extras.ui.dashboard-nvim" },
   { import = "plugins" },
 }
 
 -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 -- import/override with your plugins
-if not global.is_linux then
-  spec[#spec + 1] = { import = "lazyvim.plugins.extras.coding.copilot" }
-end
+--if not global.is_linux then
+--  spec[#spec + 1] = { import = "lazyvim.plugins.extras.coding.copilot" }
+-- end
 
 require("lazy").setup({
   spec = spec,
