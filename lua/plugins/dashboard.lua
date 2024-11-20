@@ -98,31 +98,22 @@ local sunday = [[
 ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   
 ]]
 
-local function process(logo)
-  logo = string.rep("\n", 8) .. logo .. "\n\n"
-  return vim.split(logo, "\n")
-end
-
-local logos = {
-  neovim = process(neovim),
-  lihuvim = process(lihuvim),
-  lihuu = process(lihuu),
-  silentstorm = process(silentstorm),
-  monday = process(monday),
-  tuesday = process(tuesday),
-  wenesday = process(wenesday),
-  thursday = process(thursday),
-  friday = process(friday),
-  saturday = process(saturday),
-  sunday = process(sunday),
-}
-
 return {
   {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    opts = function(_, opts)
-      opts.config.header = logos.lihuvim
-    end,
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = lihuvim,
+        },
+        -- sections = {
+        --   { section = "header" },
+        --   { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+        --   { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+        --   { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        --   { section = "startup" },
+        -- },
+      },
+    },
   },
 }
