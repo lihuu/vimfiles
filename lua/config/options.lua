@@ -108,6 +108,8 @@ vim.g.markdown_recommended_style = 0
 
 opt.relativenumber = false
 
+vim.g.lazyvim_blink_main = true
+
 --if global.is_windows then
 --  opt.fileformats = { "unix" }
 --end
