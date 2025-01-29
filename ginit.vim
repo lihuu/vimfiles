@@ -6,9 +6,9 @@ set mouse=a
 let s:isWindows = has('win16') || has('win32') || has('win64')
 let s:isMac = has('mac')||has('macunix')
 
-if s:isWindows
-  source $USERPROFILE/AppData/Local/nvim/nvim_gui_shim.vim
-endif
+let s:config_file = substitute($MYVIMRC, '\\', '/', 'g')
+let s:config_dir = fnamemodify(s:config_file, ':h')
+execute 'source' . s:config_dir . '/nvim_gui_shim.vim'
 
 
 if exists(':GuiFont')
@@ -16,7 +16,7 @@ if exists(':GuiFont')
     if s:isWindows
         GuiFont! BlexMono\ Nerd\ Font:h14
     elseif s:isMac
-        GuiFont! JetBrainsMono\ Nerd\ Font:h25
+        GuiFont! BlexMono\ Nerd\ Font\ Mono:h25:i
     else
         GuiFont! Consolas\ NF:h14
     endif
