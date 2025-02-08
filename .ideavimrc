@@ -26,7 +26,11 @@ set noerrorbells
 set novisualbell
 set which-key
 set timeoutlen=5000
- set keep-english-in-normal
+"normal 模式自动切换英文输入法
+set keep-english-in-normal
+" 回到insert模式时恢复输入法
+set keep-english-in-normal-and-restore-in-insert
+
 "Plug start
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
@@ -135,6 +139,3 @@ vnoremap <Leader><Leader>r <ESC>:action RenameElement<CR>
 "其他的快捷键
 "
  nnoremap <Leader>db :action ActivateDatabaseToolWindow<CR>
-
-
-
