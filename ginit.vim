@@ -8,10 +8,9 @@ let s:isMac = has('mac')||has('macunix')
 
 let s:config_file = substitute($MYVIMRC, '\\', '/', 'g')
 let s:config_dir = fnamemodify(s:config_file, ':h')
-if !has('neovide')
+if !exists("g:neovide")
   execute 'source' . s:config_dir . '/nvim_gui_shim.vim'
 endif
-
 
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
