@@ -90,6 +90,7 @@ return {
                 library = {
                   vim.fn.expand("$VIMRUNTIME/lua"),
                   vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
+                  "/opt/homebrew/Caskroom/hammerspoon/1.0.0/Hammerspoon.app/Contents/Resources/extensions",
                 },
               },
             },

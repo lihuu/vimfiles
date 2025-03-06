@@ -103,7 +103,7 @@ if s:isWindows || s:isMac
 endif
 
 
-"Plug 'lipingcoding/autoim.vim'
+Plug 'lihuu/autoim.vim'
 
 call plug#end()
 
