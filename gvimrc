@@ -14,7 +14,7 @@ if has('gui_macvim')
   set guifont=BlexMono\ Nerd\ Font:h18
   set t_Co=256
   set background=dark
-  set transparency=20
+  set transparency=10
   set autoread
   map <S-Insert> <MiddleMouse>
   map! <S-Insert> <MiddleMouse>
