@@ -114,6 +114,9 @@ return {
         --   { section = "startup" },
         -- },
       },
+      notifier = {
+        timeout = 10000,
+      },
     },
   },
 }
