@@ -31,6 +31,9 @@ set keep-english-in-normal
 " 回到insert模式时恢复输入法
 set keep-english-in-normal-and-restore-in-insert
 
+set mini-ai
+set peekaboo
+
 "Plug start
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
