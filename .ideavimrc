@@ -24,7 +24,7 @@ set hlsearch
 set incsearch
 set noerrorbells
 set novisualbell
-set which-key
+"set which-key
 set timeoutlen=5000
 "normal 模式自动切换英文输入法
 set keep-english-in-normal
