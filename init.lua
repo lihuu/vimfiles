@@ -4,7 +4,7 @@ local vim = require("core.global").vim
 if vim.g.neovide then
   -- config neovide
   local global = require("core.global")
-  vim.g.neovide_transparency = 0.9
+  vim.g.neovide_opacity = 0.9
   vim.g.neovide_scroll_animation_length = 0.3
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_confirm_quit = true
