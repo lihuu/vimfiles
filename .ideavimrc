@@ -120,10 +120,10 @@ nnoremap <Leader>zf :action CollapseBlock<CR>
 "nnoremap <Leader>h <esc>:tabprevious<CR>
 nmap <Leader>l <Action>(NextTab)
 nmap <Leader>h <Action>(PreviousTab)
-nnoremap <c-j> 5j
-nnoremap <c-k> 5k
-nnoremap <c-h> 5h
-nnoremap <c-l> 5l
+nnoremap <c-s-j> 5j
+nnoremap <c-s-k> 5k
+nnoremap <c-s-h> 5h
+nnoremap <c-s-l> 5l
 
 nnoremap <Leader><Leader>r :action Run<CR>
 nnoremap <Leader><Leader>d :action Debug<CR>
