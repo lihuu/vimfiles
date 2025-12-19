@@ -70,6 +70,9 @@ return {
       autotag = {
         enable = true,
       },
+      ensure_installed = {
+        "swift",
+      },
     },
   },
   {
@@ -80,6 +83,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        sourcekit = {},
         lua_ls = {
           settings = {
             Lua = {
