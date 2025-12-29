@@ -28,6 +28,7 @@ return {
         darkScheme = "tokyonight",
         lightScheme = "dayfox",
         interval = 5000,
+        notify = false,
       })
     end,
   },
