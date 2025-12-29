@@ -113,3 +113,46 @@ vim.g.lazyvim_blink_main = true
 --if global.is_windows then
 --  opt.fileformats = { "unix" }
 --end
+--
+--
+-- --- 灵活的内存盘/临时路径配置 ---
+
+-- 1. 尝试从环境变量获取路径，如果没有设置，则使用 nil
+local env_mem_path = vim.fn.getenv("NVIM_TMP_PATH")
+if env_mem_path == vim.NIL then
+  env_mem_path = ""
+end
+
+-- 2. 只有当环境变量存在且有效时，才执行路径重定向
+if env_mem_path and env_mem_path ~= "" then
+  -- 确保路径以 / 结尾，方便拼接子目录
+  if env_mem_path:sub(-1) ~= "/" then
+    env_mem_path = env_mem_path .. "/"
+  end
+
+  -- 定义子目录结构
+  local dirs = {
+    env_mem_path .. "nvim/swap",
+    env_mem_path .. "nvim/undo",
+    env_mem_path .. "nvim/backup",
+    env_mem_path .. "nvim/view",
+  }
+
+  -- 自动创建目录
+  for _, dir in ipairs(dirs) do
+    if vim.fn.isdirectory(dir) == 0 then
+      vim.fn.mkdir(dir, "p", "0700")
+    end
+  end
+
+  -- 3. 应用配置 (使用 // 结尾以避免文件名冲突)
+  vim.opt.directory = env_mem_path .. "nvim/swap//"
+  vim.opt.undofile = true
+  vim.opt.undodir = env_mem_path .. "nvim/undo//"
+  vim.opt.backupdir = env_mem_path .. "nvim/backup//"
+  vim.opt.viewdir = env_mem_path .. "nvim/view//"
+
+  -- 优化保存体验
+  vim.opt.backup = false
+  vim.opt.writebackup = true
+end
