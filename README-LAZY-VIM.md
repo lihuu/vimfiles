@@ -6,11 +6,3 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## 主题配置
 
 https://vimcolorschemes.com/i/top/b.light
-
-```lua
-
-```
-
-```
-
-```

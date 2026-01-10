@@ -59,7 +59,7 @@ python 目前不能安装 python3.10 的，会出现版本的问题
 
 ### 一些插件的使用说明
 
-#### 关于lazyvim
+#### 关于 lazyvim
 
 https://www.lazyvim.org/
 
@@ -243,11 +243,11 @@ vim -V9myVim1.log
 
 ```
 
-#### vim学习资料
+#### vim 学习资料
 
 https://lazyvim-ambitious-devs.phillips.codes/
 
-[vim9 script中文手册](https://yianwillis.github.io/vimcdoc/doc/vim9.html)
+[vim9 script 中文手册](https://yianwillis.github.io/vimcdoc/doc/vim9.html)
 
 #### 脚本调试
 
@@ -292,16 +292,10 @@ https://lazyvim-ambitious-devs.phillips.codes/
 
 ## 其他
 
-排查vim启动时间，启动的时候加上 --startuptime 参数，例如：
+排查 vim 启动时间，启动的时候加上 --startuptime 参数，例如：
 
 ```bash
 vim --startuptime startuptime.log
 ```
 
-启动的时候会生成一个日志文件，可以查看vim启动的时间
-
-```
-
-
-
-```
+启动的时候会生成一个日志文件，可以查看 vim 启动的时间
