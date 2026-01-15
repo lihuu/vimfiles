@@ -19,7 +19,7 @@ if exists(':GuiFont')
     elseif s:isMac
         GuiFont! BlexMono\ Nerd\ Font\ Mono:h25:i
     else
-        GuiFont! Consolas\ NF:h14
+        GuiFont! BlexMono\ Nerd\ Font\ Mono:h16:i
     endif
 endif
 

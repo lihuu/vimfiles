@@ -19,3 +19,7 @@ if has('gui_macvim')
   map <S-Insert> <MiddleMouse>
   map! <S-Insert> <MiddleMouse>
 endif
+
+if has('gui_gtk3')
+  set guifont=BlexMono\ Nerd\ Font\ Mono:h18
+endif
