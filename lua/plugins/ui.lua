@@ -23,7 +23,7 @@ return {
 
     config = function()
       require("auto-colorscheme").setup({
-        mode = "auto",
+        mode = "dark",
         -- ⚠️ 如果修改了下面的主题，请确保它们已安装或在 dependencies 中声明
         darkScheme = "tokyonight",
         lightScheme = "dayfox",
