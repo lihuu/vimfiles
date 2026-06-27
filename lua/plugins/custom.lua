@@ -1,6 +1,7 @@
 local config = require("config")
 
 return {
+  { "saghen/blink.lib" },
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
