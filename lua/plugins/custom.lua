@@ -27,18 +27,18 @@ return {
           return vim.trim(ret)
         end,
         offsets = {
-          --   {
-          --     filetype = "neo-tree",
-          --     text = "Neo-tree",
-          --     highlight = "Directory",
-          --     text_align = "left",
-          --   },
           {
-            filetype = "NvimTree",
-            text = "File Explorer",
-            text_align = "center",
-            padding = 1,
+            filetype = "neo-tree",
+            text = "Neo-tree",
+            highlight = "Directory",
+            text_align = "left",
           },
+          --   {
+          --     filetype = "NvimTree",
+          --     text = "File Explorer",
+          --     text_align = "center",
+          --     padding = 1,
+          --   },
         },
       },
     },
