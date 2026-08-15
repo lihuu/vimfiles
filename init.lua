@@ -50,4 +50,24 @@ if vim.g.neovide then
     -- vim.opt.guifont = "JetBrainsMono Nerd Font:h18"
     vim.opt.guifont = "BlexMono Nerd Font:h18"
   end
+
+  -- clipboard: Cmd+C / Cmd+V 直达系统剪贴板
+  -- (Neovide 不拦截这些按键, 只转发给 nvim, 需要显式映射)
+  vim.g.neovide_input_use_logo = true -- 兼容旧版本 Neovide (默认会吞掉 Cmd 键)
+
+  local function copy_to_system()
+    vim.cmd([[normal! "+y]])
+  end
+
+  local function paste_from_system()
+    vim.api.nvim_paste(vim.fn.getreg("+"), true, -1)
+  end
+
+  vim.keymap.set("v", "<D-c>", copy_to_system, { silent = true, desc = "Copy to system clipboard" })
+  vim.keymap.set(
+    { "n", "i", "v", "c", "t" },
+    "<D-v>",
+    paste_from_system,
+    { silent = true, desc = "Paste from system clipboard" }
+  )
 end

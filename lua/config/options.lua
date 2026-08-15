@@ -37,9 +37,10 @@ vim.g.lazygit_config = true
 vim.g.deprecation_warnings = false
 
 opt.autowrite = true -- Enable auto write
--- only set clipboard if not in ssh, to make sure the OSC 52
--- integration works automatically. Requires Neovim >= 0.10.0
-opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
+-- Use Neovim's own unnamed register for yank/delete/paste.
+-- System clipboard is only touched via the explicit "+ register (see <leader>y / <leader>P).
+-- "+ still works everywhere: pbcopy/pbpaste in terminal, OSC 52 over SSH, Neovide natively.
+opt.clipboard = ""
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
